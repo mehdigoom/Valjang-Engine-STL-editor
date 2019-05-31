@@ -380,4 +380,6 @@ function StartAppMain()
         SwitchCombineModeUI(false);
         SwitchSpinner(false);
     }
+
+    
 }

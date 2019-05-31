@@ -1181,6 +1181,7 @@ var AppMain = /** @class */ (function () {
         rayOrigin.delete();
         intersection.delete();
         // Mesh update
+        //Bloque model ici
         this.UpdateValjangEngineMesh();
         // Bbox update
         //this.showBBoxes();
