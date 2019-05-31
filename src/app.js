@@ -1008,7 +1008,7 @@ var AppMain = /** @class */ (function () {
         // Set background color
         this._scene.clearColor.r = 100 / 255;
         this._scene.clearColor.g = 100 / 255;
-        this._scene.clearColor.b = 150 / 255;
+        this._scene.clearColor.b = 200 / 255;
         // Move the light with the camera
         this._scene.registerBeforeRender(function () {
             _this._light.position = _this._camera.position;
@@ -1043,18 +1043,7 @@ var AppMain = /** @class */ (function () {
                     mat.setTranslation(new ValjangEngine.Vector3(intersection.X(), intersection.Y(), intersection.Z()));
                     _this._uiRingCursor.setPivotMatrix(mat);
                 }
-                else {
-                    var uiRingPos = babRay.origin.add(babRay.direction.scale(babRay.origin.length()));
-                    var mat = _this._camera.getWorldMatrix().clone();
-                    var row0 = mat.getRow(0).scaleInPlace(_this._sculptingRadius);
-                    var row1 = mat.getRow(1).scaleInPlace(_this._sculptingRadius);
-                    var row2 = mat.getRow(2).scaleInPlace(_this._sculptingRadius);
-                    mat.setRow(0, row1);
-                    mat.setRow(1, row2);
-                    mat.setRow(2, row0);
-                    mat.setTranslation(uiRingPos);
-                    _this._uiRingCursor.setPivotMatrix(mat);
-                }
+               
             }
         });
         // input events
