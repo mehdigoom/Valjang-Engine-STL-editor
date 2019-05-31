@@ -299,6 +299,8 @@ function Load3DModel(filename)
     oReq.send(null);
 }
 
+
+
 function getQueryStringValue(key)
 {
     return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace("/[\.\+\*]/g", "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
@@ -319,6 +321,7 @@ function StartAppMain()
     let modelToLoad = getQueryStringValue("model");
     switch(modelToLoad)
     {
+        //model list hear
         case "sphere":
             SetMeshItemToScene(AppSDK_GenSphere());
             break;
