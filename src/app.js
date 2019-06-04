@@ -432,7 +432,7 @@ var ValjangEngineSubMesh = /** @class */ (function () {
         meshData.applyToMesh(this._ValjangEnginesMesh, true);
     }
     ValjangEngineSubMesh.prototype.Cleanup = function () {
-        //this._subMesh.delete();
+        this._subMesh.delete();
         this._subMesh = null;
         this._ValjangEnginesMesh.dispose();
         this._ValjangEnginesMesh = null;
@@ -667,6 +667,11 @@ var AppMain = /** @class */ (function () {
         return this._isInCombineMode;
     };
     AppMain.prototype.StartCombineToSceneMode = function (meshItemToCombine) {
+        
+    
+        
+        
+        
         if (meshItemToCombine == null)
             return;
         this._cameraHasToSpin = false; // Strop camera spinning, if user starts to interact
@@ -717,6 +722,22 @@ var AppMain = /** @class */ (function () {
             this._isInCombineMode = false;
             this.ReadaptToModelSize();
         }
+    };
+    //
+    AppMain.prototype.Tem = function () {
+if(this._isInCombineMode){
+
+//this._meshItemToCombine.position =_camera.position 
+console.log("JE SUIS LA !");
+
+
+
+}
+
+
+
+
+
     };
     AppMain.prototype.DoCSGOperation = function (opType) {
         var that = this;
@@ -1012,7 +1033,9 @@ var AppMain = /** @class */ (function () {
         // Move the light with the camera
         this._scene.registerBeforeRender(function () {
             _this._light.position = _this._camera.position;
+            
             if (_this.IsInCombineMode()) {
+            
             }
             else if (_this._meshItem != null) {
                 /*let mat: ValjangEngine.Matrix = this._camera.getWorldMatrix();
@@ -1047,9 +1070,12 @@ var AppMain = /** @class */ (function () {
                
             }
         });
+        
+
         // input events
         this._scene.onPointerDown = function (e, p) {
             if (_this.IsInCombineMode()) {
+               
                 _this._manipulator.onPointerDown(e, p);
             }
             else if (_this._meshItem != null) {
