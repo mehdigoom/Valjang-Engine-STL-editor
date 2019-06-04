@@ -946,7 +946,7 @@ var AppMain = /** @class */ (function () {
         this._camera.attachControl(this._canvas, false);
         // create a basic light, aiming 0,1,0 - meaning, to the sky
         this._light = new ValjangEngine.PointLight('light1', new ValjangEngine.Vector3(0, 1, 0), this._scene);
-        this._light.diffuse = new ValjangEngine.Color3(0.50, 0.50, 1.0);
+        this._light.diffuse = new ValjangEngine.Color3(0.5, 0, 0.5);
         // Ring cursor
         this.CreateUIRingCursor();
         // Create move, rot, scale manipulator
@@ -1006,9 +1006,9 @@ var AppMain = /** @class */ (function () {
         else
             this._camera.target = ValjangEngine.Vector3.Zero();
         // Set background color
-        this._scene.clearColor.r = 50 / 255;
-        this._scene.clearColor.g = 100 / 255;
-        this._scene.clearColor.b = 200/ 255;
+        this._scene.clearColor.r = 140/ 255;
+        this._scene.clearColor.g = 175/ 255;
+        this._scene.clearColor.b = 175/ 255;
         // Move the light with the camera
         this._scene.registerBeforeRender(function () {
             _this._light.position = _this._camera.position;
