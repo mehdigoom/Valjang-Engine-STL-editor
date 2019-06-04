@@ -1006,9 +1006,9 @@ var AppMain = /** @class */ (function () {
         else
             this._camera.target = ValjangEngine.Vector3.Zero();
         // Set background color
-        this._scene.clearColor.r = 100 / 255;
+        this._scene.clearColor.r = 50 / 255;
         this._scene.clearColor.g = 100 / 255;
-        this._scene.clearColor.b = 200 / 255;
+        this._scene.clearColor.b = 200/ 255;
         // Move the light with the camera
         this._scene.registerBeforeRender(function () {
             _this._light.position = _this._camera.position;
@@ -1040,6 +1040,7 @@ var AppMain = /** @class */ (function () {
                     up.normalize();
                     var mat = new ValjangEngine.Matrix();
                     ValjangEngine.Matrix.FromXYZAxesToRef(left.scale(_this._sculptingRadius), at.scale(_this._sculptingRadius), up.scale(_this._sculptingRadius), mat);
+                   //posision cecle
                     mat.setTranslation(new ValjangEngine.Vector3(intersection.X(), intersection.Y(), intersection.Z()));
                     _this._uiRingCursor.setPivotMatrix(mat);
                 }
