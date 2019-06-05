@@ -14,7 +14,6 @@ function InitModule()
             console.log("APP loaded.");
             AppSDK_Init();
             StartAppMain();
-            
         }
         document.head.appendChild(appScript);
     }
@@ -37,7 +36,7 @@ if (1)
         window.onerror = function myErrorHandler(errorMsg, url, lineNumber)
         {
             //alert("WASM failed to initialize, fallback to ASM.JS library.");
-            console.log("WASM failed to initialize, fallback to ASM.JS library.");
+           // console.log("WASM failed to initialize, fallback to ASM.JS library.");
             InitModule();
             let cpplibasmjsScript = document.createElement('script');
             cpplibasmjsScript.src = "src/cpplib.js";
