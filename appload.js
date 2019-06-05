@@ -14,6 +14,7 @@ function InitModule()
             console.log("APP loaded.");
             AppSDK_Init();
             StartAppMain();
+            
         }
         document.head.appendChild(appScript);
     }

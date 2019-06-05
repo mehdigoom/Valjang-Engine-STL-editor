@@ -732,13 +732,7 @@ console.log("JE SUIS LA !");
 
 
 
-}
-
-
-
-
-
-    };
+}};
     AppMain.prototype.DoCSGOperation = function (opType) {
         var that = this;
         setTimeout(function () {
