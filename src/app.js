@@ -417,6 +417,7 @@ var ValjangEngineSubMesh = /** @class */ (function () {
             this._ValjangEnginesMesh.material = material;
             this._ValjangEnginesMesh.material.freeze();
         }
+        
         var meshData = new ValjangEngine.VertexData();
         var buf = this._subMesh.Triangles();
         var triangles = new Uint32Array(buf.buffer, buf.byteOffset, buf.byteLength / 4);
@@ -438,6 +439,7 @@ var ValjangEngineSubMesh = /** @class */ (function () {
         this._ValjangEnginesMesh = null;
     };
     ValjangEngineSubMesh.prototype.Update = function () {
+      
         var curVersionNumber = this._subMesh.GetVersionNumber();
         if (this._versionNumber != curVersionNumber) {
             this._versionNumber = curVersionNumber;
@@ -664,7 +666,20 @@ var AppMain = /** @class */ (function () {
         }
     };
     AppMain.prototype.IsInCombineMode = function () {
+        
+        
+        
+        //BOUCLE
+        //appelle de ma fonction tempon !
+if(this._isInCombineMode){
+    this.Tem();
+};
+
+
+
+
         return this._isInCombineMode;
+      
     };
     AppMain.prototype.StartCombineToSceneMode = function (meshItemToCombine) {
         
@@ -708,31 +723,37 @@ var AppMain = /** @class */ (function () {
         this._meshToCombine.computeWorldMatrix(true);
         this._isInCombineMode = true;
         this.ReadaptToModelSize();
+      
         // Set manipulator to handle that object
         this._manipulator.ForceMeshSelection(this._meshToCombine);
         this._manipulator.Start();
     };
     AppMain.prototype.StopCombineToSceneMode = function () {
+        
         if (this._isInCombineMode) {
+            
             this.ClearMeshItemToCombine(true);
-            this._manipulator.Stop();
+           this._manipulator.Stop();
             this._meshToCombine.dispose();
             this._meshToCombine = null;
             this._uiRingCursor.isVisible = true;
             this._isInCombineMode = false;
             this.ReadaptToModelSize();
+
         }
     };
-    //
-    AppMain.prototype.Tem = function () {
-if(this._isInCombineMode){
+    //MA fonction
+ AppMain.prototype.Tem = function () {
 
-//this._meshItemToCombine.position =_camera.position 
-console.log("JE SUIS LA !");
+     this._uiRingCursor.isVisible = true
+//  this._isInCombineMode = false;
+ this._meshToCombine.position = this._uiRingCursor.rayDirection;
+
+//console.log("JE SUIS LA !");
 
 
 
-}};
+};
     AppMain.prototype.DoCSGOperation = function (opType) {
         var that = this;
         setTimeout(function () {
@@ -1186,6 +1207,8 @@ console.log("JE SUIS LA !");
                 this._brushDig.UpdateStroke(ray, this._sculptingRadius, this._sculptingStrengthRatio);
                 break;
         }
+
+     
         ray.delete();
         rayDirection.delete();
         rayOrigin.delete();
