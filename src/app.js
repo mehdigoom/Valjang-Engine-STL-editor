@@ -745,9 +745,14 @@ if(this._isInCombineMode){
     //MA fonction
  AppMain.prototype.Tem = function () {
 
-     this._uiRingCursor.isVisible = true
+
+
+    this._scene.onPointerMove()
+
+
+   //  this._uiRingCursor.isVisible = true
 //  this._isInCombineMode = false;
- this._meshToCombine.position = this._uiRingCursor.rayDirection;
+ //this._meshToCombine.position = this._uiRingCursor.rayDirection;
 
 //console.log("JE SUIS LA !");
 
