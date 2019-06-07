@@ -747,7 +747,7 @@ if(this._isInCombineMode){
 
 
 
-    this._scene.onPointerMove()
+  //UTILISE SA !  this._scene.onPointerMove(_)
 
 
    //  this._uiRingCursor.isVisible = true
