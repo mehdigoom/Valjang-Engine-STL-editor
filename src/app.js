@@ -709,6 +709,7 @@ if(this._isInCombineMode){
         this._meshToCombine.isPickable = true;
         meshData.applyToMesh(this._meshToCombine, false);
         // Position mesh to combine
+
         var bbox = this._meshItem.GetBBox();
         var firstModelRadius = Math.max(Math.max(bbox.Extents().X(), bbox.Extents().Y()), bbox.Extents().Z());
         bbox.delete();
@@ -723,7 +724,7 @@ if(this._isInCombineMode){
         this._meshToCombine.computeWorldMatrix(true);
         this._isInCombineMode = true;
         this.ReadaptToModelSize();
-      
+       // position.scaleInPlace(this._uiRingCursor.position);
         // Set manipulator to handle that object
         this._manipulator.ForceMeshSelection(this._meshToCombine);
         this._manipulator.Start();
@@ -745,19 +746,10 @@ if(this._isInCombineMode){
     //MA fonction
  AppMain.prototype.Tem = function () {
 
-
-
-  //UTILISE SA !  this._scene.onPointerMove(_)
-
-
-   //  this._uiRingCursor.isVisible = true
-//  this._isInCombineMode = false;
- //this._meshToCombine.position = this._uiRingCursor.rayDirection;
-
-//console.log("JE SUIS LA !");
-
-
-
+ 
+ 
+   
+ //position.scaleInPlace(positionShift);
 };
     AppMain.prototype.DoCSGOperation = function (opType) {
         var that = this;

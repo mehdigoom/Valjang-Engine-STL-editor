@@ -755,7 +755,7 @@ var AppMain = /** @class */ (function () {
             this._brushDig.delete();
         this._brushDig = new Module.BrushDig(this._meshItem);
         this._material = new ValjangEngine.StandardMaterial("meshMaterial", this._scene);
-        //this._scene.ambientColor = new ValjangEngine.Color3(0.4, 0.4, 0.4);
+        this._scene.ambientColor = new ValjangEngine.Color3(0.4, 0.4, 0.4);
         //this._material.ambientColor = new ValjangEngine.Color3(90.0 / 255.0, 90.0 / 255.0, 90.0 / 255.0);
         this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
         this._material.diffuseColor = new ValjangEngine.Color3(240.0 / 255.0, 220.0 / 255.0, 200.0 / 255.0);
