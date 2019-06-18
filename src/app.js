@@ -923,6 +923,10 @@ if(this._isInCombineMode){
             // Update sub meshes internal structure
             this._meshItem.UpdateSubMeshes();
             // Update it to ValjangEngine
+
+
+
+            
             for (var i = 0; i < this._meshItem.GetSubMeshCount(); ++i) {
                 var submesh = this._meshItem.GetSubMesh(i);
                 var subMeshID = submesh.GetID().toString();
