@@ -651,6 +651,8 @@ var AppMain = /** @class */ (function () {
         this._camera.radius = this._modelRadius * 3.4;
         this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
         this._camera.upperRadiusLimit = this._camera.radius * 2.0;
+        console.log("Raduis Objet :"+this._modelRadius)
+        console.log("Valeur Max: "+boundMin +" et Valeur Min : "+boundMax )
     };
     AppMain.prototype.GetCurMeshItem = function () {
         return this._meshItem;
@@ -672,6 +674,36 @@ var AppMain = /** @class */ (function () {
         //BOUCLE
         //appelle de ma fonction tempon !
 if(this._isInCombineMode){
+    
+    var firstMeshBBox = this._meshItem.GetBBox();
+    this._modelRadius = Math.max(Math.max(firstMeshBBox.Extents().X(), firstMeshBBox.Extents().Y()), firstMeshBBox.Extents().Z());
+    this._sculptingRadius = this._modelRadius * this._uiSculptingSize;
+    var boundFirstMin = firstMeshBBox.Min();
+    var boundFirstMax = firstMeshBBox.Max();
+    var boundMin = new ValjangEngine.Vector3(boundFirstMin.X(), boundFirstMin.Y(), boundFirstMin.Z());
+    var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y(), boundFirstMax.Z());
+    firstMeshBBox.delete();
+    if (this._isInCombineMode && this._meshToCombine) {
+        var secondMeshBoundingInfo = this._meshToCombine.getBoundingInfo();
+        var secondMeshMatrix = this._meshToCombine.getWorldMatrix();
+        var secondMeshMinBound = ValjangEngine.Vector3.TransformCoordinates(secondMeshBoundingInfo.minimum, secondMeshMatrix);
+        var secondMeshMaxBound = ValjangEngine.Vector3.TransformCoordinates(secondMeshBoundingInfo.maximum, secondMeshMatrix);
+        boundMin.x = Math.min(boundMin.x, secondMeshMinBound.x);
+        boundMin.y = Math.min(boundMin.y, secondMeshMinBound.y);
+        boundMin.z = Math.min(boundMin.z, secondMeshMinBound.z);
+        boundMax.x = Math.max(boundMax.x, secondMeshMaxBound.x);
+        boundMax.y = Math.max(boundMax.y, secondMeshMaxBound.y);
+        boundMax.z = Math.max(boundMax.z, secondMeshMaxBound.z);
+        var delta = boundMax.subtract(boundMin);
+        this._modelRadius = Math.max(Math.max(delta.x, delta.y), delta.z) * 0.5;
+    }
+    // Retarget camera
+    this._camera.setTarget(new ValjangEngine.Vector3((boundMin.x + boundMax.x) * 0.5, (boundMin.y + boundMax.y) * 0.5, (boundMin.z + boundMax.z) * 0.5));
+    this._camera.minZ = 0;
+    this._camera.radius = this._modelRadius * 3.4;
+    this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
+    this._camera.upperRadiusLimit = this._camera.radius * 2.0;
+    
     this.Tem();
 };
 
@@ -688,6 +720,7 @@ if(this._isInCombineMode){
         
         
         if (meshItemToCombine == null)
+        
             return;
         this._cameraHasToSpin = false; // Strop camera spinning, if user starts to interact
         this._meshItemToCombine = meshItemToCombine;
@@ -718,9 +751,11 @@ if(this._isInCombineMode){
         bbox.delete();
         bbox = null;
         var positionShift = firstModelRadius + secondModelRadius;
-        var position = ValjangEngine.Vector3.Right(); //this._camera.getWorldMatrix().getRow(0).toVector3();
+        var position = ValjangEngine.Vector3.Up(); //this._camera.getWorldMatrix().getRow(0).toVector3();
+       
         position.scaleInPlace(positionShift);
         this._meshToCombine.position = position;
+        
         this._meshToCombine.computeWorldMatrix(true);
         this._isInCombineMode = true;
         this.ReadaptToModelSize();
@@ -745,9 +780,6 @@ if(this._isInCombineMode){
     };
     //MA fonction
  AppMain.prototype.Tem = function () {
-
- 
- 
    
  //position.scaleInPlace(positionShift);
 };
@@ -820,7 +852,7 @@ if(this._isInCombineMode){
         this._material = new ValjangEngine.StandardMaterial("meshMaterial", this._scene);
         //this._scene.ambientColor = new ValjangEngine.Color3(0.4, 0.4, 0.4);
         //this._material.ambientColor = new ValjangEngine.Color3(90.0 / 255.0, 90.0 / 255.0, 90.0 / 255.0);
-        this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
+       // this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
         this._material.diffuseColor = new ValjangEngine.Color3(240.0 / 255.0, 220.0 / 255.0, 200.0 / 255.0);
         this._material.specularColor = new ValjangEngine.Color3(200.0 / 255.0, 200.0 / 255.0, 200.0 / 255.0);
         this._material.specularPower = 1000;
@@ -990,51 +1022,7 @@ if(this._isInCombineMode){
         this._manipulator = new Manipulator(this._engine, this._scene, this._camera);
         // Create starting model
         Module.SculptEngine.SetTriangleOrientationInverted(true);
-        /*let modelToLoad = getQueryStringValue("model");
-        switch(modelToLoad)
-        {
-            case "sphere":
-                this.GenSphere();
-                break;
-            case "box":
-                this.GenBox();
-                break;
-            case "cylinder":
-                this.GenCylinder();
-                break;
-            case "cube":
-                this.GenCube();
-                break;
-            case "pyramid":
-                this.Load3DModel('pyramid.tct');
-                break;
-            case "disk":
-                this.Load3DModel('disk.tct');
-                break;
-            case "ring":
-                this.Load3DModel('ring.tct');
-                break;
-            case "mug":
-                this.Load3DModel('mug.tct');
-                break;
-            case "head":
-                this.Load3DModel('head.tct');
-                break;
-            case "girl":
-                this.Load3DModel('girl.tct');
-                break;
-            case "boy":
-                this.Load3DModel('boy.tct');
-                break;
-            case "cat":
-                this.Load3DModel('cat.tct');
-                break;
-            case "gearknob":
-                this.Load3DModel('gearknob.tct');
-                break;
-            default:
-                this.GenSphere();
-        }*/
+    
         // Bbox update
         //this.showBBoxes();
         // Set the target of the camera to the first imported mesh
@@ -1062,6 +1050,7 @@ if(this._isInCombineMode){
                         _this._sculptPoint = null;
                 }
                 // Update cursor
+             //   UPDATE CERCLE
                 var babRay = _this._scene.createPickingRay(_this._uiCursorScreenPos.x, _this._uiCursorScreenPos.y, null, _this._camera);
                 var intersection = new Module.Vector3(0, 0, 0);
                 var intersectionNormal = new Module.Vector3(0, 0, 0);
