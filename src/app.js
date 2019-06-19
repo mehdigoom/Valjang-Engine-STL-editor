@@ -834,6 +834,7 @@ if(this._isInCombineMode){
             var sculptBound = new Module.BBox(new Module.Vector3(bMin.X() * scaleRatio, bMin.Y() * scaleRatio, bMin.Z() * scaleRatio), new Module.Vector3(bMax.X() * scaleRatio, bMax.Y() * scaleRatio, bMax.Z() * scaleRatio));
             this._meshItem.SetSculptingBoudary(sculptBound);
             this.CreateUISculptBoundary(sculptBound);
+            this.CreateUISculptboard(sculptBound);
         }
         this._cameraHasToSpin = true;
         //this._meshItem.SetBBoxRenderer(this._DEBUG_BoundingBoxRenderer);
@@ -855,7 +856,7 @@ if(this._isInCombineMode){
        // this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
         this._material.diffuseColor = new ValjangEngine.Color3(240.0 / 255.0, 220.0 / 255.0, 200.0 / 255.0);
         this._material.specularColor = new ValjangEngine.Color3(200.0 / 255.0, 200.0 / 255.0, 200.0 / 255.0);
-        this._material.specularPower = 1000;
+        this._material.specularPower = 10000;
         this._material.backFaceCulling = true;
         this._material.freeze();
         if (this._useSubMeshes == false) {
@@ -996,6 +997,39 @@ if(this._isInCombineMode){
             // Triangle indices
             this._mesh.setIndices(triangles);
         }
+    };
+
+    AppMain.prototype.CreateUISculptboard = function (bounds) {
+        // Create wireframe box
+
+        var bMin = bounds.Min() ;
+        var bMax = bounds.Max() ;
+
+        var boxVertices = [];
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(-45, bMin.Y(), -45));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(),bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(45, bMin.Y(), 45));
+        
+        // Register it to ValjangEngine
+        if (this._uiSculptboard != null) {
+            this._uiSculptboard .dispose();
+            this._uiSculptboard  = null;
+        }
+        this._uiSculptboard  = ValjangEngine.Mesh.CreateLines("UISculptboard", boxVertices, this._scene);
+        this._uiSculptboard.isVisible = true;
     };
     AppMain.prototype.createScene = function () {
         var _this = this;
