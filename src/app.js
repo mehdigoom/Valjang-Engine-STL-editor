@@ -767,7 +767,7 @@ if(this._isInCombineMode){
     AppMain.prototype.StopCombineToSceneMode = function () {
         
         if (this._isInCombineMode) {
-            
+         
             this.ClearMeshItemToCombine(true);
            this._manipulator.Stop();
             this._meshToCombine.dispose();
@@ -775,12 +775,12 @@ if(this._isInCombineMode){
             this._uiRingCursor.isVisible = true;
             this._isInCombineMode = false;
             this.ReadaptToModelSize();
-
+           
         }
     };
     //MA fonction
  AppMain.prototype.Tem = function () {
-   
+ //   AppMain.prototype.limiteactualise()
  //position.scaleInPlace(positionShift);
 };
     AppMain.prototype.DoCSGOperation = function (opType) {
@@ -822,6 +822,12 @@ if(this._isInCombineMode){
     AppMain.prototype.CSGIntersect = function () {
         this.DoCSGOperation(CsgType.Intersect);
     };
+
+    AppMain.prototype.limiteactualise = function(){
+        this._meshItem.SetSculptingBoudary(sculptBound);
+        this.CreateUISculptBoundary(sculptBound);
+        this.CreateUISculptboard(sculptBound);
+    }
     AppMain.prototype.CreateNewScene = function (meshItem) {
         if (this._meshItem != null)
             this._meshItem.delete();
@@ -1151,6 +1157,7 @@ if(this._isInCombineMode){
                 rayDirection.delete();
                 rayOrigin.delete();
                 intersection.delete();
+                
             }
         };
         this._scene.onPointerMove = function (e, p) {
