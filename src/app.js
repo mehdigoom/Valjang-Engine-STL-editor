@@ -999,29 +999,32 @@ if(this._isInCombineMode){
         }
     };
 
+    //UI SOL 
     AppMain.prototype.CreateUISculptboard = function (bounds) {
         // Create wireframe box
 
-        var bMin = bounds.Min() ;
-        var bMax = bounds.Max() ;
-
+        var bMin = bounds.Min();
+        var bMax = bounds.Max();
         var boxVertices = [];
         boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMin.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(45, bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMax.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMax.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMax.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMax.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(-45, bMin.Y(), -45));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(),bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(45, bMin.Y(), 45));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMax.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMax.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(45, bMin.Y(), bMin.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(-45, bMin.Y(), bMax.Z()));
+        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(),bMax.Z()));
+        
+        
+  
         
         // Register it to ValjangEngine
         if (this._uiSculptboard != null) {
