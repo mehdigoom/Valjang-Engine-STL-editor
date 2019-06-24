@@ -826,7 +826,7 @@ if(this._isInCombineMode){
     AppMain.prototype.limiteactualise = function(){
         this._meshItem.SetSculptingBoudary(sculptBound);
         this.CreateUISculptBoundary(sculptBound);
-        this.CreateUISculptboard(sculptBound);
+        
     }
     AppMain.prototype.CreateNewScene = function (meshItem) {
         if (this._meshItem != null)
@@ -840,7 +840,7 @@ if(this._isInCombineMode){
             var sculptBound = new Module.BBox(new Module.Vector3(bMin.X() * scaleRatio, bMin.Y() * scaleRatio, bMin.Z() * scaleRatio), new Module.Vector3(bMax.X() * scaleRatio, bMax.Y() * scaleRatio, bMax.Z() * scaleRatio));
             this._meshItem.SetSculptingBoudary(sculptBound);
             this.CreateUISculptBoundary(sculptBound);
-            this.CreateUISculptboard(sculptBound);
+         
         }
         this._cameraHasToSpin = true;
         //this._meshItem.SetBBoxRenderer(this._DEBUG_BoundingBoxRenderer);
@@ -1005,41 +1005,8 @@ if(this._isInCombineMode){
         }
     };
 
-    //UI SOL 
-    AppMain.prototype.CreateUISculptboard = function (bounds) {
-        // Create wireframe box
-
-        var bMin = bounds.Min();
-        var bMax = bounds.Max();
-        var boxVertices = [];
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(45, bMin.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMax.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMax.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMax.Y(), bMax.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMax.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMax.Y(), bMax.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMax.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(45, bMin.Y(), bMin.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(-45, bMin.Y(), bMax.Z()));
-        boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(),bMax.Z()));
-        
-        
-  
-        
-        // Register it to ValjangEngine
-        if (this._uiSculptboard != null) {
-            this._uiSculptboard .dispose();
-            this._uiSculptboard  = null;
-        }
-        this._uiSculptboard  = ValjangEngine.Mesh.CreateLines("UISculptboard", boxVertices, this._scene);
-        this._uiSculptboard.isVisible = true;
-    };
+ 
+   
     AppMain.prototype.createScene = function () {
         var _this = this;
         // create a basic BJS Scene object
