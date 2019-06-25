@@ -30,6 +30,13 @@ var Manipulator = /** @class */ (function () {
         this._allDirMeshMaterial.diffuseColor = new ValjangEngine.Color3(1.0, 1.0, 0.0);
         this._allDirMeshMaterial.freeze();
         this._mode = ManipulatorMode.Move;
+
+
+
+
+
+
+
     }
     Manipulator.prototype.Start = function () {
         this._mode = ManipulatorMode.Move;
@@ -620,6 +627,9 @@ var AppMain = /** @class */ (function () {
         }
         this._uiSculptBoundary = ValjangEngine.Mesh.CreateLines("UISculptBoundary", boxVertices, this._scene);
         this._uiSculptBoundary.isVisible = true;
+
+
+    
     };
     AppMain.prototype.ReadaptToModelSize = function () {
         // Get model size (to adjust sculpting radius)
@@ -653,6 +663,30 @@ var AppMain = /** @class */ (function () {
         this._camera.upperRadiusLimit = this._camera.radius * 2.0;
         console.log("Raduis Objet :"+this._modelRadius)
         console.log("Valeur Max: "+boundMin +" et Valeur Min : "+boundMax )
+
+    
+            //debut regle
+//Creation of a repeated textured material
+var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+materialPlane.diffuseTexture = new ValjangEngine.Texture("re.jpg", this._scene);
+materialPlane.specularColor = new ValjangEngine.Color3(0, 0, 0);
+materialPlane.backFaceCulling = false;//Allways show the front and the back of an element
+
+//Creation of a plane
+var plane = ValjangEngine.Mesh.CreatePlane("plane", this._modelRadius*4, this._scene);
+plane.rotation.x = Math.PI / 2;
+plane.material = materialPlane;
+
+
+
+plane.position.y =-200
+plane.ArcRotateCamera
+
+    //fin regle
+    
+
+
+
     };
     AppMain.prototype.GetCurMeshItem = function () {
         return this._meshItem;
