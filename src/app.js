@@ -929,7 +929,7 @@ if(this._isInCombineMode){
        // this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
         this._material.diffuseColor = new ValjangEngine.Color3(240.0 / 255.0, 220.0 / 255.0, 200.0 / 255.0);
         this._material.specularColor = new ValjangEngine.Color3(200.0 / 255.0, 200.0 / 255.0, 200.0 / 255.0);
-        this._material.specularPower = 10000;
+        this._material.specularPower = 10;
         this._material.backFaceCulling = true;
         this._material.freeze();
         if (this._useSubMeshes == false) {
@@ -1234,6 +1234,7 @@ if(this._isInCombineMode){
                         case BrushType.Dig:
                             _this._brushDig.EndStroke();
                             break;
+                         
                     }
                     // Update model size, sculpting radius, camera placement
                     //this.ReadaptToModelSize();
