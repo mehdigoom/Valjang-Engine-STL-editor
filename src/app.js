@@ -260,6 +260,7 @@ var Manipulator = /** @class */ (function () {
         this.StopMode(this._mode);
         this._mode = mode;
         this.StartMode(this._mode);
+        
     };
     Manipulator.prototype.StartMode = function (mode) {
         switch (mode) {
@@ -410,6 +411,7 @@ var Manipulator = /** @class */ (function () {
         this._meshScaleAll.renderingGroupId = 1;
         this._meshScaleAll.material = this._allDirMeshMaterial;
         this._meshScaleAll.isVisible = false;
+        
     };
     return Manipulator;
 }());
@@ -451,6 +453,7 @@ var ValjangEngineSubMesh = /** @class */ (function () {
         if (this._versionNumber != curVersionNumber) {
             this._versionNumber = curVersionNumber;
             this.UpdataMeshData();
+            
         }
     };
     ValjangEngineSubMesh.prototype.UpdataMeshData = function () {
@@ -588,6 +591,7 @@ var AppMain = /** @class */ (function () {
     };
     AppMain.prototype.CreateUIRingCursor = function () {
         // Create wireframe ring (diameter 1.0)
+        
         var nbSegments = 100;
         var stepAngle = (2.0 * Math.PI) / nbSegments;
         var circleVertices = [];
@@ -598,6 +602,7 @@ var AppMain = /** @class */ (function () {
         this._uiRingCursor = ValjangEngine.Mesh.CreateLines("UIRingCursor", circleVertices, this._scene);
         this._uiRingCursor.renderingGroupId = 1; // To avoid z-buffer test
         this._uiRingCursor.isVisible = true; // Hidden while an object isn't set in the scene
+        
     };
     AppMain.prototype.CreateUISculptBoundary = function (bounds) {
         // Create wireframe box
@@ -624,10 +629,10 @@ var AppMain = /** @class */ (function () {
         if (this._uiSculptBoundary != null) {
             this._uiSculptBoundary.dispose();
             this._uiSculptBoundary = null;
+            
         }
         this._uiSculptBoundary = ValjangEngine.Mesh.CreateLines("UISculptBoundary", boxVertices, this._scene);
         this._uiSculptBoundary.isVisible = true;
-
 
     
     };
@@ -640,7 +645,9 @@ var AppMain = /** @class */ (function () {
         var boundFirstMax = firstMeshBBox.Max();
         var boundMin = new ValjangEngine.Vector3(boundFirstMin.X(), boundFirstMin.Y(), boundFirstMin.Z());
         var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y(), boundFirstMax.Z());
+       
         firstMeshBBox.delete();
+      
         if (this._isInCombineMode && this._meshToCombine) {
             var secondMeshBoundingInfo = this._meshToCombine.getBoundingInfo();
             var secondMeshMatrix = this._meshToCombine.getWorldMatrix();
@@ -653,8 +660,10 @@ var AppMain = /** @class */ (function () {
             boundMax.y = Math.max(boundMax.y, secondMeshMaxBound.y);
             boundMax.z = Math.max(boundMax.z, secondMeshMaxBound.z);
             var delta = boundMax.subtract(boundMin);
-            this._modelRadius = Math.max(Math.max(delta.x, delta.y), delta.z) * 0.5;
+          
         }
+        
+       
         // Retarget camera
         this._camera.setTarget(new ValjangEngine.Vector3((boundMin.x + boundMax.x) * 0.5, (boundMin.y + boundMax.y) * 0.5, (boundMin.z + boundMax.z) * 0.5));
         this._camera.minZ = 0;
@@ -664,30 +673,37 @@ var AppMain = /** @class */ (function () {
         console.log("Raduis Objet :"+this._modelRadius)
         console.log("Valeur Max: "+boundMin +" et Valeur Min : "+boundMax )
 
-    
-            //debut regle
-//Creation of a repeated textured material
+       
+       
+        
+
+
+    };
+
+
+
+
+
+AppMain.prototype.Gengrille = function(combine){
+
+
 var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-materialPlane.diffuseTexture = new ValjangEngine.Texture("re.jpg", this._scene);
-materialPlane.specularColor = new ValjangEngine.Color3(0, 0, 0);
-materialPlane.backFaceCulling = false;//Allways show the front and the back of an element
+materialPlane.diffuseTexture = new ValjangEngine.Texture("grille.png", this._scene);
+materialPlane.specularColor = new ValjangEngine.Color3(1, 1, 1);
+materialPlane.diffuseTexture.hasAlpha = true;
+
+//materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
 //Creation of a plane
 var plane = ValjangEngine.Mesh.CreatePlane("plane", this._modelRadius*4, this._scene);
 plane.rotation.x = Math.PI / 2;
 plane.material = materialPlane;
-
-
-
 plane.position.y =-200
-plane.ArcRotateCamera
-
-    //fin regle
-    
 
 
 
-    };
+
+    }
     AppMain.prototype.GetCurMeshItem = function () {
         return this._meshItem;
     };
@@ -699,12 +715,13 @@ plane.ArcRotateCamera
             if (eraseData)
                 this._meshItemToCombine.delete();
             this._meshItemToCombine = null;
+            
         }
     };
     AppMain.prototype.IsInCombineMode = function () {
+       
         
-        
-        
+
         //BOUCLE
         //appelle de ma fonction tempon !
 if(this._isInCombineMode){
@@ -756,6 +773,7 @@ if(this._isInCombineMode){
         if (meshItemToCombine == null)
         
             return;
+            
         this._cameraHasToSpin = false; // Strop camera spinning, if user starts to interact
         this._meshItemToCombine = meshItemToCombine;
         // Hide ring cursor
@@ -926,11 +944,15 @@ if(this._isInCombineMode){
         this.ReadaptToModelSize();
         // Show cursor
         this._uiRingCursor.isVisible = true;
+        //appelle fonction  this.Gengrille()
+        this.Gengrille()
     };
     AppMain.prototype.GenSphere = function () {
         var generator = new Module.GenSphere();
         var mesh = generator.Generate(100.0);
+       
         generator.delete();
+        
         return mesh;
     };
     AppMain.prototype.GenBox = function () {
