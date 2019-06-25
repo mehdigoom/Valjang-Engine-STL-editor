@@ -670,19 +670,38 @@ var AppMain = /** @class */ (function () {
         this._camera.radius = this._modelRadius * 3.4;
         this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
         this._camera.upperRadiusLimit = this._camera.radius * 2.0;
-        console.log("Raduis Objet :"+this._modelRadius)
-        console.log("Valeur Max: "+boundMin +" et Valeur Min : "+boundMax )
 
-       
-       
-        
+        //console.log("Raduis Objet :"+this._modelRadius)
+        //console.log("Valeur Max: "+boundMin +" et Valeur Min : "+boundMax )
 
+       console.log("Taille profondeur: "+ boundMax.x*2 + " mm")
+       console.log("Taille Largeur: "+ boundMax.z*2 + " mm")
+       console.log("Taille Hauteur: "+ boundMax.Y*2 + " mm")
+     
 
     };
 
 
 
+AppMain.prototype.GenRegle = function(){
+    var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+    materialPlane.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+    materialPlane.specularColor = new ValjangEngine.Color3(0 ,0, 0);
+   materialPlane.diffuseTexture.hasAlpha = true;
+    
+    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+    
+    //Creation of a plane
+    var plane = ValjangEngine.Mesh.CreatePlane("Regle", this._modelRadius*4, this._scene);
+    //plane.rotation.x = Math.PI / 2;
+    plane.material = materialPlane;
+    plane.position.y =-1
+    
+    plane.position.x =200
+    plane.rotation.y= Math.PI / 2;
+   
 
+}
 
 AppMain.prototype.Gengrille = function(combine){
 
@@ -695,7 +714,7 @@ materialPlane.diffuseTexture.hasAlpha = true;
 //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
 //Creation of a plane
-var plane = ValjangEngine.Mesh.CreatePlane("plane", this._modelRadius*4, this._scene);
+var plane = ValjangEngine.Mesh.CreatePlane("Plane", this._modelRadius*4, this._scene);
 plane.rotation.x = Math.PI / 2;
 plane.material = materialPlane;
 plane.position.y =-200
@@ -755,7 +774,7 @@ if(this._isInCombineMode){
     this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
     this._camera.upperRadiusLimit = this._camera.radius * 2.0;
     
-    this.Tem();
+
 };
 
 
@@ -830,11 +849,7 @@ if(this._isInCombineMode){
            
         }
     };
-    //MA fonction
- AppMain.prototype.Tem = function () {
- //   AppMain.prototype.limiteactualise()
- //position.scaleInPlace(positionShift);
-};
+
     AppMain.prototype.DoCSGOperation = function (opType) {
         var that = this;
         setTimeout(function () {
@@ -932,7 +947,7 @@ if(this._isInCombineMode){
                 this._mesh = new ValjangEngine.Mesh("mesh", this._scene);
                 this._mesh.freezeWorldMatrix();
                 this._mesh.material = this._material;
-                this._mesh.material.freeze();
+               // this._mesh.material.freeze();
             }
             this._mesh.sideOrientation = ValjangEngine.Mesh.FRONTSIDE;
             this._mesh.isPickable = false;
@@ -946,10 +961,11 @@ if(this._isInCombineMode){
         this._uiRingCursor.isVisible = true;
         //appelle fonction  this.Gengrille()
         this.Gengrille()
+        this.GenRegle()
     };
     AppMain.prototype.GenSphere = function () {
         var generator = new Module.GenSphere();
-        var mesh = generator.Generate(100.0);
+        var mesh = generator.Generate(100);
        
         generator.delete();
         
