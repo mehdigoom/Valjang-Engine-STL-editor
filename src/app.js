@@ -699,9 +699,83 @@ AppMain.prototype.GenRegle = function(){
     
     plane.position.x =200
     plane.rotation.y= Math.PI / 2;
-   
+//----------------------REGLE 2--------------------------------
+var materialPlane2 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+materialPlane2.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+materialPlane2.specularColor = new ValjangEngine.Color3(0 ,0, 0);
+materialPlane2.diffuseTexture.hasAlpha = true;
 
+//materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+
+//Creation of a plane
+var plane2 = ValjangEngine.Mesh.CreatePlane("Regle", this._modelRadius*4, this._scene);
+//plane.rotation.x = Math.PI / 2;
+plane2.material = materialPlane2;
+plane2.position.y =-1
+
+plane2.position.x =0
+plane2.rotation.y= Math.PI / 1;
+plane2.position.z = -200
+
+
+//----------------------REGLE 3--------------------------------
+var materialPlane3 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+materialPlane3.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+materialPlane3.specularColor = new ValjangEngine.Color3(0 ,0, 0);
+materialPlane3.diffuseTexture.hasAlpha = true;
+
+//materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+
+//Creation of a plane
+var plane3 = ValjangEngine.Mesh.CreatePlane("Regle", this._modelRadius*4, this._scene);
+//plane.rotation.x = Math.PI / 2;
+plane3.material = materialPlane3;
+plane3.position.y =-1
+
+plane3.position.x =-0
+plane3.position.z = 200
+plane3.rotation.y= Math.PI / 200;
+
+
+
+//----------------------REGLE 4--------------------------------
+var materialPlane4 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+materialPlane4.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+materialPlane4.specularColor = new ValjangEngine.Color3(0 ,0, 0);
+materialPlane4.diffuseTexture.hasAlpha = true;
+
+//materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+
+//Creation of a plane
+var plane4 = ValjangEngine.Mesh.CreatePlane("Regle", this._modelRadius*4, this._scene);
+//plane.rotation.x = Math.PI / 2;
+plane4.material = materialPlane4;
+plane4.position.y =-1
+
+plane4.position.x =-0
+
+plane4.rotation.z= Math.PI / -200;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 AppMain.prototype.Gengrille = function(combine){
 
