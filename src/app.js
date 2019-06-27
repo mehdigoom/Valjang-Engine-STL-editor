@@ -757,6 +757,42 @@ plane4.position.x =-0
 plane4.rotation.z= Math.PI / -200;
 }
 
+///FLECHE
+AppMain.prototype.Genfleche = function(){
+
+//Fleche Y
+    var materialfleche = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+    materialfleche.diffuseTexture = new ValjangEngine.Texture("Y.png", this._scene);
+    materialfleche.specularColor = new ValjangEngine.Color3(0, 100, 0);
+    materialfleche.diffuseTexture.hasAlpha = true;
+    
+    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+    
+    //Creation of a plane
+    var plane = ValjangEngine.Mesh.CreatePlane("Plane", this._modelRadius*4, this._scene);
+    //plane.rotation.x = Math.PI / 2;
+    plane.material = materialfleche;
+   // plane.position.y =0
+    plane.position.x = 200
+    
+    //fleche X
+
+    
+
+
+
+
+
+
+
+
+    //Fleche Z
+
+
+
+
+    
+        }
 
 
 
@@ -775,9 +811,7 @@ plane4.rotation.z= Math.PI / -200;
 
 
 
-
-
-AppMain.prototype.Gengrille = function(combine){
+AppMain.prototype.Gengrille = function(){
 
 
 var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
@@ -1036,6 +1070,7 @@ if(this._isInCombineMode){
         //appelle fonction  this.Gengrille()
         this.Gengrille()
         this.GenRegle()
+        this.Genfleche()
     };
     AppMain.prototype.GenSphere = function () {
         var generator = new Module.GenSphere();
