@@ -253,6 +253,7 @@ var Manipulator = /** @class */ (function () {
         }
     };
     Manipulator.prototype.ForceMeshSelection = function (mesh) {
+        
         this._forcedMeshSelect = mesh;
         this.SelectObject(mesh);
     };
@@ -773,8 +774,11 @@ AppMain.prototype.Genfleche = function(){
     var plane = ValjangEngine.Mesh.CreatePlane("Plane", this._modelRadius*2, this._scene);
     //plane.rotation.x = Math.PI / 2;
     plane.material = materialfleche;
- plane.position.y =-100
-    plane.position.x = 200
+    plane.position.y =-100
+    
+    plane.position.x =200
+    plane.rotation.y= Math.PI / 2;
+  //  plane.position.y =-1
     
     //fleche X
 
