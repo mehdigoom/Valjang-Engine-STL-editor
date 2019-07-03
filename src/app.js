@@ -1,4 +1,6 @@
 var ManipulatorMode;
+var activmanipulator= Boolean("true");
+
 (function (ManipulatorMode) {
     ManipulatorMode[ManipulatorMode["Move"] = 0] = "Move";
     ManipulatorMode[ManipulatorMode["Rotate"] = 1] = "Rotate";
@@ -41,6 +43,7 @@ var Manipulator = /** @class */ (function () {
     Manipulator.prototype.Start = function () {
         this._mode = ManipulatorMode.Move;
         this.StartMode(this._mode);
+        
     };
     Manipulator.prototype.Stop = function () {
         this.StopMode(this._mode);
@@ -280,6 +283,7 @@ var Manipulator = /** @class */ (function () {
                     this._meshRotYaw.isVisible = true;
                     this._meshRotRoll.setAbsolutePosition(this._curSelectedMesh.getAbsolutePosition());
                     this._meshRotRoll.isVisible = true;
+                    
                 }
                 break;
             case ManipulatorMode.Scale:
@@ -875,7 +879,7 @@ plane.position.y =-200
         
 
         //BOUCLE
-        //appelle de ma fonction tempon !
+       
 if(this._isInCombineMode){
     
     var firstMeshBBox = this._meshItem.GetBBox();
@@ -1164,6 +1168,7 @@ if(this._isInCombineMode){
         return new Blob([objBinFileData], { type: "application/octet-binary" });
     };
     AppMain.prototype.UpdateValjangEngineMesh = function () {
+
         if (this._useSubMeshes) {
             // Update sub meshes internal structure
             this._meshItem.UpdateSubMeshes();
@@ -1428,7 +1433,13 @@ if(this._isInCombineMode){
         intersection.delete();
         // Mesh update
         //Bloque model ici
-        this.UpdateValjangEngineMesh();
+      
+
+                this.UpdateValjangEngineMesh();
+            
+            
+      
+   
         // Bbox update
         //this.showBBoxes();
     };
