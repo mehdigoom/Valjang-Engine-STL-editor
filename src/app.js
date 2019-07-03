@@ -783,8 +783,22 @@ AppMain.prototype.Genfleche = function(){
     //fleche X
 
     
-
-
+    var materialflecheX = new ValjangEngine.StandardMaterial("texturePlaneX", this._scene);
+    materialflecheX.diffuseTexture = new ValjangEngine.Texture("X.png", this._scene);
+    materialflecheX.specularColor = new ValjangEngine.Color3(100, 0, 0);
+    materialflecheX.diffuseTexture.hasAlpha = true;
+    
+    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+    
+    //Creation of a plane
+    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", this._modelRadius*2, this._scene);
+    //plane.rotation.x = Math.PI / 2;
+    plane2.material = materialflecheX;
+    plane2.position.y =-200
+    plane2.rotation.z = Math.PI / 2;
+    plane2.position.x =200
+    plane2.rotation.y= Math.PI / 2;
+    plane2.position.z =100
 
 
 
@@ -795,7 +809,29 @@ AppMain.prototype.Genfleche = function(){
 
 
 
+    var materialflecheZ = new ValjangEngine.StandardMaterial("texturePlaneZ", this._scene);
+    materialflecheZ.diffuseTexture = new ValjangEngine.Texture("Z.png", this._scene);
+    materialflecheZ.specularColor = new ValjangEngine.Color3(0, 0, 100);
+    materialflecheZ.diffuseTexture.hasAlpha = true;
+    
+    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+    
+    //Creation of a plane
+    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", this._modelRadius*2, this._scene);
+    //plane.rotation.x = Math.PI / 2;
+    plane2.material = materialflecheZ;
+   
+    plane2.rotation.z = Math.PI / 1;
 
+    plane2.rotation.y= Math.PI / 2;
+  
+    plane2.rotation.x = Math.PI / 2;
+
+
+    plane2.position.y =-200
+    
+    plane2.position.x =100
+    plane2.rotation.y= Math.PI / 2;
     
         }
 
@@ -1042,7 +1078,7 @@ if(this._isInCombineMode){
        // this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
         this._material.diffuseColor = new ValjangEngine.Color3(240.0 / 255.0, 220.0 / 255.0, 200.0 / 255.0);
         this._material.specularColor = new ValjangEngine.Color3(200.0 / 255.0, 200.0 / 255.0, 200.0 / 255.0);
-        this._material.specularPower = 10;
+        this._material.specularPower = 100;
         this._material.backFaceCulling = true;
         this._material.freeze();
         if (this._useSubMeshes == false) {
@@ -1210,8 +1246,13 @@ if(this._isInCombineMode){
         // attach the camera to the canvas
         this._camera.attachControl(this._canvas, false);
         // create a basic light, aiming 0,1,0 - meaning, to the sky
+
+
+
+//lumiere color et back 
+
         this._light = new ValjangEngine.PointLight('light1', new ValjangEngine.Vector3(0, 1, 0), this._scene);
-        this._light.diffuse = new ValjangEngine.Color3(0.5, 0, 0.5);
+        this._light.diffuse = new ValjangEngine.Color3(0.5, 0.5, 0.5);
         // Ring cursor
         this.CreateUIRingCursor();
         // Create move, rot, scale manipulator
