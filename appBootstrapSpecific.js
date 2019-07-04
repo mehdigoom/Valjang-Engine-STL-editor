@@ -1,28 +1,28 @@
 function LitCurBrushButton(brushButton)
 {
     // Unlit all brush buttons that are not selected, and light the other
-    var brushMenu = document.getElementById("brushMenu");
-    if (brushMenu != null)
-    {
-        var curChild = brushMenu.firstChild;
-        while (curChild != null)
-        {
-            if ((curChild.getAttribute != null) && (curChild.getAttribute("userdata") == "brushButton"))
-            {
-                if (curChild != brushButton)
-                {
-                    curChild.classList.remove("btn-primary");
-                    curChild.classList.add("btn-default");
-                }
-                else
-                {
-                    curChild.classList.add("btn-primary");
-                    curChild.classList.remove("btn-default");
-                }
-            }
-            curChild = curChild.nextSibling;
-        }
-    }
+    // var brushMenu = document.getElementById("brushMenu");
+    // if (brushMenu != null)
+    // {
+    //     var curChild = brushMenu.firstChild;
+    //     while (curChild != null)
+    //     {
+    //         if ((curChild.getAttribute != null) && (curChild.getAttribute("userdata") == "brushButton"))
+    //         {
+    //             if (curChild != brushButton)
+    //             {
+    //                 curChild.classList.remove("btn-primary");
+    //                 curChild.classList.add("btn-default");
+    //             }
+    //             else
+    //             {
+    //                 curChild.classList.add("btn-primary");
+    //                 curChild.classList.remove("btn-default");
+    //             }
+    //         }
+    //         curChild = curChild.nextSibling;
+    //     }
+    // }
 }
 
 function SwitchSpinner(switchOnOff)

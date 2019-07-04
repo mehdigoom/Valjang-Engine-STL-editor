@@ -11,7 +11,7 @@ function InitModule()
         appScript.src = "src/app.js";
         appScript.onload = function ()
         {
-            console.log("APP loaded.");
+            console.log("APP loaded. Valjang Engine : Ready !");
             AppSDK_Init();
             StartAppMain();
         }

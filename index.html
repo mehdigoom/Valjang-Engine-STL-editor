@@ -192,37 +192,37 @@
         </center>
     </script>
 </head>
-<body style="overflow:hidden; width:100%; height:100%; margin:0; padding:0; background-color: #1A1A18">
+<body >
     
-    <div  style="display:inline;">
+    <div  >
         <!--Top left-->
-        <div id="mainUI" class="btn-group-vertical" >
+        <div id="mainUI" class="Barre" >
         
             <!--color-->
           
         <!--Top right-->
-        <div id="brushMenu" class="BasGauche" >
+        <div id="brushMenu" >
                
-                        <label class="btn label label-default unselectable"> Shapes </label>
-                        <button id="openButton" class="btn btn-default btn-sm"> Open </button>
+                        <label> Shapes </label>
+                        <button id="openButton" > Open </button>
                         <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
                         <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
-                        <button id="saveButton" class="btn btn-default btn-sm" userdata="unlocked"> Save file </button>
-                        <label class="btn label label-default unselectable"> Display </label>
+                        <button id="saveButton" userdata="unlocked"> Save file </button>
+                        <label "> Display </label>
                         <!--fullscreen-->
-                        <button id="fullScreenButton" class="btn btn-default btn-sm" style="pointer-events: auto"> Fullscreen </button>
+                        <button id="fullScreenButton" > Fullscreen </button>
                 
-            <label class="btn label label-default unselectable"> Brushes </label>
-            <button id="drawButton" class="btn btn-primary btn-sm" userdata="brushButton"> Draw </button>
-            <button id="inflateButton" class="btn btn-default btn-sm" userdata="brushButton"> Inflate </button>
-            <button id="digButton" class="btn btn-default btn-sm" userdata="brushButton"> Dig </button>
-            <button id="flattenButton" class="btn btn-default btn-sm" userdata="brushButton"> Flatten </button>
-            <button id="dragButton" class="BasDroite" userdata="brushButton"> Drag </button>
-            <div class="btn-default btn-sm" style="display: table">
-                <div class="unselectable" style="display: table-cell; ">
-                    Mirror
+            <label > Brushes </label>
+            <button id="drawButton"  userdata="brushButton"> Draw </button>
+            <button id="inflateButton" userdata="brushButton"> Inflate </button>
+            <button id="digButton"  userdata="brushButton"> Dig </button>
+            <button id="flattenButton"  userdata="brushButton"> Flatten </button>
+            <button id="dragButton"  userdata="brushButton"> Drag </button>
+            <div class="btn-default btn-sm" >
+                <div  >
+                    
                 </div>
-                <div style="display: table-cell; padding-left: 10%; padding-top: 2%;">
+                <div >
                     <div class="slider-switch">
                         <input id="mirrorSwitch"
                                type="checkbox"
@@ -235,7 +235,7 @@
             </div>
         </div>
         <!--botton right-->
-        <div style="position:absolute; right:0%; bottom:0%; ">
+        <div >
             <div>
                 <label class="label unselectable"> Brush strength </label>
             </div>
@@ -246,16 +246,16 @@
                 <label class="label unselectable"> Brush size </label>
             </div>
             <div>
-                <input id="sliderSize" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
+                <input id="sliderSize" data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
             </div>
         </div>
         <!--bottom left-->
  
         <!--Undo/redo (left and right side)-->
-        <button id="undoButton" class="btn ombre" style="position:absolute; left:0%; top:48%;">
+        <button id="undoButton" class="btn ombre" >
             <span class="glyphicon glyphicon-chevron-left"></span>
         Undo</button>
-        <button id="redoButton" class="btn ombre" style="position:absolute; right:0%; top:48%;">
+        <button id="redoButton" class="btn ombre" >
             <span class="glyphicon glyphicon-chevron-right"></span>
         Redo</button>
 

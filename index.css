@@ -276,3 +276,17 @@ background: #D35600;
   margin-left: auto;
   margin-right: auto; 
 }
+
+.Barre
+{
+
+  position: absolute; bottom: 0;
+  width: 100%;
+height: 200px; 
+/* Shape */
+border-radius:50% 50% 50% 50%;
+
+/* Background */
+background-color:rgba(255,255,255,.8);
+
+}
