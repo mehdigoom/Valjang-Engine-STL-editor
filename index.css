@@ -283,13 +283,34 @@ background: #D35600;
 
   position: absolute; bottom: 30px;
 
-  width: 90%;
-height: 200px; 
+ 
 /* Shape */
 border-radius:10% ;
 
 /* Background */
 background-color:rgba(255,255,255,.8);
-margin-left: 30px;
+
+
+}
+.undo{
+
+  float:left;
+scroll-margin-left: auto;
+  max-width: 20%;
+  min-height: 10em;
+
+  display: table-cell;
+  vertical-align: middle
+
+
+
+}
+.redo{
+  scroll-margin-right: auto;
+  float:right;
+  max-width: 20%;
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle
 
 }
