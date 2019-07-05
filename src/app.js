@@ -1097,9 +1097,11 @@ if(this._isInCombineMode){
         // Show cursor
         this._uiRingCursor.isVisible = true;
         //appelle fonction  this.Gengrille()
+    
         this.Gengrille()
         this.GenRegle()
         this.Genfleche()
+        
     };
     AppMain.prototype.GenSphere = function () {
         var generator = new Module.GenSphere();
@@ -1236,6 +1238,8 @@ if(this._isInCombineMode){
         this._camera.attachControl(this._canvas, false);
         // create a basic light, aiming 0,1,0 - meaning, to the sky
 
+       // POUR DEMO A SUPPRIMER 
+        Load3DModel('bust.stl');
 
 
 //lumiere color et back 

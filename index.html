@@ -205,10 +205,10 @@
                
                         <label> Shapes </label>
                         <button id="openButton" > Open </button>
-                        <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
+                        <label for="loadButton" class="btn btn-default btn-sm"> Load file </label>
                         <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
                         <button id="saveButton" userdata="unlocked"> Save file </button>
-                        <label "> Display </label>
+                        <label > Display </label>
                         <!--fullscreen-->
                         <button id="fullScreenButton" > Fullscreen </button>
                 
@@ -267,22 +267,22 @@
     <div id="combineUI" style="display:none;">
             <!-- Rotate and scale -->
             <div>
-                <div class="btn-group">
-                    <button id="moveButton" class="btn btn-default">
+                <div >
+                    <button id="moveButton" >
                         Move
                     </button>
-                    <button id="rotateButton" class="btn btn-default">
+                    <button id="rotateButton">
                         Rotate
                     </button>
-                    <button id="scaleButton" class="btn btn-default">
+                    <button id="scaleButton" >
                         Scale
                     </button>
        
                 </div>
             </div>
             <!-- Merge, substract, intersect -->
-            <div style="position:absolute; left:0%; bottom:0%; width:100%; text-align: center;">
-                <div class="btn-group">
+            <div >
+                <div >
                     <button id="mergeButton" >
                         Merge
                     </button>
@@ -294,7 +294,7 @@
                     </button>
                 </div>        <!-- Cancel -->
             </div>
-            <button id="cancelCombineButton" class="btn btn-default" style="position:absolute; right:0%; top:0%;">
+            <button id="cancelCombineButton" >
                 Cancel
             </button>
         </div>

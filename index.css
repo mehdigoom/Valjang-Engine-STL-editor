@@ -275,18 +275,21 @@ background: #D35600;
   display: block;
   margin-left: auto;
   margin-right: auto; 
+  position: absolute; bottom: 0;
 }
 
 .Barre
 {
 
-  position: absolute; bottom: 0;
-  width: 100%;
+  position: absolute; bottom: 30px;
+
+  width: 90%;
 height: 200px; 
 /* Shape */
-border-radius:50% 50% 50% 50%;
+border-radius:10% ;
 
 /* Background */
 background-color:rgba(255,255,255,.8);
+margin-left: 30px;
 
 }
