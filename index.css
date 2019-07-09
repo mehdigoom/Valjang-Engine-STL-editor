@@ -263,7 +263,8 @@ background: #D35600;
 
 	/* Shadows */
 	box-shadow:
-	0px 0px 270px 0px rgb(0, 0, 0);
+  0px 0px 270px 0px rgb(0, 0, 0);
+  overflow: hidden;
 }   
 .item
 {
@@ -273,9 +274,12 @@ background: #D35600;
 {
   visibility: visible;
   display: block;
-  margin-left: auto;
-  margin-right: auto; 
-  position: absolute; bottom: 0;
+width: 90%;
+  position: absolute; 
+  bottom: 50% ;
+  left:50%;
+  transform: translate(-50%,50%)
+  
 }
 
 .Barre
