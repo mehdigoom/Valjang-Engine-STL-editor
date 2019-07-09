@@ -676,7 +676,7 @@ var AppMain = /** @class */ (function () {
         this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
         this._camera.upperRadiusLimit = this._camera.radius * 2.0;
 
-        //console.log("Raduis Objet :"+this._modelRadius)
+        console.log("Raduis Objet :"+this._modelRadius)
         //console.log("Valeur Max: "+boundMin +" et Valeur Min : "+boundMax )
 
        console.log("Taille profondeur: "+ boundMax.x*2 + " mm")
@@ -1239,7 +1239,7 @@ if(this._isInCombineMode){
         // create a basic light, aiming 0,1,0 - meaning, to the sky
 
        // POUR DEMO A SUPPRIMER 
-        Load3DModel('bust.stl');
+        //Load3DModel('bust.stl');
 
 
 //lumiere color et back 
