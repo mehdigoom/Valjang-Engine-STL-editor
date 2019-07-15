@@ -1239,7 +1239,7 @@ if(this._isInCombineMode){
         // create a basic light, aiming 0,1,0 - meaning, to the sky
 
        // POUR DEMO A SUPPRIMER 
-        Load3DModel('bust.stl');
+       // Load3DModel('bust.stl');
 
 
 //lumiere color et back 

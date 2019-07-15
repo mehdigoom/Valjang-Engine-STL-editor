@@ -23,11 +23,12 @@
 
 /* Sliders color */
 #CustomSlider .slider-selection {
-	background: #BABABA;
+    background: rgb(3, 20, 248);
+    rotate: 90
 }
 
 #CustomSlider .slider-handle {
-	background: #D35600;
+	background: rgb(173, 180, 245);
 }
 
 /* Buttons color */

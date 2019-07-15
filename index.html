@@ -72,79 +72,79 @@
                 <div class="liste" role="listbox">
                     <div class="item active">
                         <a href="javascript:bootbox.hideAll();SetMeshItemToScene(AppSDK_GenSphere());">
-                            <img src="3d_models/sphere.jpg" alt="Sphere" style="   width:10%;">
+                            <img src="3d_models/sphere.jpg" alt="Sphere" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('A.stl');">
-                            <img src="3d_models/A.png" alt="A" style="   width:10%;">
+                            <img src="3d_models/A.png" alt="A" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();SetMeshItemToScene(AppSDK_GenCylinder());">
-                            <img src="3d_models/cylinder.jpg" alt="Cylinder" style="   width:30%;">
+                            <img src="3d_models/cylinder.jpg" alt="Cylinder" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();SetMeshItemToScene(AppSDK_GenCube());">
-                            <img src="3d_models/cube.jpg" alt="Cube" style="   width:30%;">
+                            <img src="3d_models/cube.jpg" alt="Cube" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('pyramid.stl');">
-                            <img src="3d_models/pyramid.jpg" alt="Pyramid" style="   width:30%;">
+                            <img src="3d_models/pyramid.jpg" alt="Pyramid" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('disk.stl');">
-                            <img src="3d_models/disk.jpg" alt="Disk" style="   width:30%;">
+                            <img src="3d_models/disk.jpg" alt="Disk" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('ring.stl');">
-                            <img src="3d_models/ring.jpg" alt="Ring" style="   width:30%;">
+                            <img src="3d_models/ring.jpg" alt="Ring" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('mug.stl');">
-                            <img src="3d_models/mug.jpg" alt="Mug" style="   width:30%;">
+                            <img src="3d_models/mug.jpg" alt="Mug" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('head.stl');">
-                            <img src="3d_models/head.jpg" alt="Head" style="   width:30%;">
+                            <img src="3d_models/head.jpg" alt="Head" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('girl.stl');">
-                            <img src="3d_models/girl.jpg" alt="Girl" style="   width:30%;">
+                            <img src="3d_models/girl.jpg" alt="Girl" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('boy.stl');">
-                            <img src="3d_models/boy.jpg" alt="Boy" style="   width:30%;">
+                            <img src="3d_models/boy.jpg" alt="Boy" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('cat.stl');">
-                            <img src="3d_models/cat.jpg" alt="Cat" style="   width:30%;">
+                            <img src="3d_models/cat.jpg" alt="Cat" style="   width:100%;">
                         </a>
                     </div>
 
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();Load3DModel('gearknob.stl');">
-                            <img src="3d_models/gearknob.jpg" alt="GearKnob" style="   width:30%;">
+                            <img src="3d_models/gearknob.jpg" alt="GearKnob" style="   width:100%;">
                         </a>
                     </div>
                 </div>
@@ -193,7 +193,16 @@
     </script>
 </head>
 <body >
-    
+    <img  id="undoButton" 
+    src="src/UNDO.png"
+    alt="UNDO" 
+    class="undo glyphicon glyphicon-chevron-right"/>
+
+    <img id="redoButton"
+    src="src/REDO.png"
+    alt="REDO glyphicon glyphicon-chevron-right"
+    class="redo" />
+
     <!--div class = "aplatir"></div-->
     <!--div class = "tampon"></div-->
     <!--div class = "etirer"></div-->
@@ -213,54 +222,39 @@
         <!--Top right-->
         <div id="brushMenu" >
                
-               
-                        <label> Shapes </label>
-                        <button id="openButton" > Open </button>
-                        <label for="loadButton" class="btn btn-default btn-sm"> Load file </label>
-                        <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
-                        <button id="saveButton" userdata="unlocked"> Save file </button>
-                        <label > Display </label>
+           
+                
+                
+                       
+            
                         <!--fullscreen-->
                         <button id="fullScreenButton" > Fullscreen </button>
-                
-            <label > Brushes </label>
-            <button id="drawButton"  userdata="brushButton"> Draw </button>
-            <button id="inflateButton" userdata="brushButton"> Inflate </button>
-            <button id="digButton"  userdata="brushButton"> Dig </button>
-            <button id="flattenButton"  userdata="brushButton"> Flatten </button>
-            <button id="dragButton"  userdata="brushButton"> Drag </button>
-            <div class="btn-default btn-sm" >
-                <div  >
-                    
-                </div>
-                <div >
-                    <div class="slider-switch">
-                        <input id="mirrorSwitch"
-                               type="checkbox"
-                               onchange="
-                                   AppSDK_SwitchMirrorMode(this.checked);
-                               "/>
-                        <label for="mirrorSwitch" class="label-primary"></label>
-                    </div>
-                </div>
-            </div>
+                            <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
+                            <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
+                            <button id="saveButton" class = "imprimer" userdata="unlocked"> </button>
+                        <!--BUG A CORRIGER !-->
+                            <input id="mirrorSwitch"
+                            class="mirroir" 
+                                   type="checkbox"
+
+                                   onchange="
+                                       AppSDK_SwitchMirrorMode(this.checked);
+                                   "/>
+                      
+        
+            <button class = "tampon" id="openButton" >  </button>
+            <input id="sliderSize" data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
+            <input id="sliderStrength" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.01" data-slider-value="0.5" data-slider-tooltip="hide" />
+            <button id="drawButton" class = "dessiner" userdata="brushButton"> </button>
+            <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
+            <button id="digButton" class = "creuser" userdata="brushButton">  </button>
+            <button id="flattenButton" class = "aplatir" userdata="brushButton">  </button>
+            
+            <button id="dragButton" class = "etirer" userdata="brushButton"> </button>
+        
         </div>
         <!--botton right-->
-        <div >
-            <div>
-                
-                <label class="label unselectable"> Brush strength </label>
-            </div>
-            <div>
-                <input id="sliderStrength" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.01" data-slider-value="0.5" data-slider-tooltip="hide" />
-            </div>
-            <div>
-                <label class="label unselectable"> Brush size </label>
-            </div>
-            <div>
-                <input id="sliderSize" data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
-            </div>
-        </div>
+      
         <!--bottom left-->
  
         <!--Undo/redo (left and right side)-->
@@ -274,16 +268,7 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
         Redo</button>-->
 
-        <img  id="undoButton" 
-        src="src/UNDO.png"
-        alt="UNDO" 
-        class="undo glyphicon glyphicon-chevron-right"/>
-   
-        <img id="redoButton"
-        src="src/REDO.png"
-        alt="REDO glyphicon glyphicon-chevron-right"
-        class="redo" />
-
+       
 
         
     </div>

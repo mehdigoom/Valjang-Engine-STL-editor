@@ -131,9 +131,11 @@
 .aplatir
 {
   margin: 100px auto;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
+  background-size: 100%;
   border-radius: 400px;
+  
   background-image: url("src/Aplatir_animation_1.png");
   background-image: url("src/Aplatir_animation_2.png");
   background-image: url("src/Aplatir_animation_3.png");
@@ -390,10 +392,11 @@
 
 .tampon
 {
-  margin: 100px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
   background-image: url("src/Tampon_animation_1.png");
   background-image: url("src/Tampon_animation_2.png");
   background-image: url("src/Tampon_animation_3.png");
@@ -572,10 +575,11 @@
 
 .etirer
 {
-  margin: 100px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
   background-image: url("src/Etirer_animation_1.png");
   background-image: url("src/Etirer_animation_2.png");
   background-image: url("src/Etirer_animation_3.png");
@@ -741,10 +745,11 @@
 
 .dessiner
 {
-  margin: 100px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
   background-image: url("src/Dessiner_animation_1.png");
   background-image: url("src/Dessiner_animation_2.png");
   background-image: url("src/Dessiner_animation_3.png");
@@ -906,10 +911,11 @@
 
 .creuser
 {
-  margin: 100px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
   background-image: url("src/Creuser_animation_1.png");
   background-image: url("src/Creuser_animation_2.png");
   background-image: url("src/Creuser_animation_3.png");
@@ -1190,10 +1196,12 @@
 
 .mirroir
 {
-  margin: 100px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
+    position: absolute;
   background-image: url("src/Mirroir_animation_1.png");
   background-image: url("src/Mirroir_animation_2.png");
   background-image: url("src/Mirroir_animation_3.png");
@@ -1421,10 +1429,11 @@
 
 .galerie
 {
-  margin: 100px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
   background-image: url("src/Galerie_animation_1.png");
   background-image: url("src/Galerie_animation_2.png");
   background-image: url("src/Galerie_animation_3.png");
@@ -1640,10 +1649,11 @@
 
 .imprimer
 {
-  margin: 100px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 400px;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
   background-image: url("src/Imprimer_animation_1.png");
   background-image: url("src/Imprimer_animation_2.png");
   background-image: url("src/Imprimer_animation_3.png");
@@ -1891,12 +1901,12 @@ background: #D35600;
 }
 
 .slider-switch > input[type="checkbox"]:checked + label::before {
-  background: rgb(212, 118, 16);
+  background: rgb(0, 16, 245);
   opacity: 0.5;
 }
 
 .slider-switch > input[type="checkbox"]:checked + label::after {
-  background: rgb(247, 247, 247);
+  background: rgb(70, 57, 189);
   left: 20px;
 }
 
@@ -1951,46 +1961,48 @@ background: #D35600;
 }
 .active
 {
-  visibility: visible;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; 
-  position: absolute; bottom: 0;
+    visibility: visible;
+    display: block;
+  width: 90%;
+    position: absolute; 
+    bottom: 50% ;
+    left:50%;
+    transform: translate(-50%,50%)
+  
 }
 
 .Barre
 {
 
-  position: absolute; bottom: 30px;
+position: absolute; 
+left:0;
+right: 0;
+bottom: 0;
 
- 
-/* Shape */
-border-radius:10% ;
-
-/* Background */
-background-color:rgba(255,255,255,.8);
+background-image: url("src/FondVIEWER_blanc.png");
+background-size: cover;
 
 
 }
 .undo{
 
-  float:left;
-scroll-margin-left: auto;
-  max-width: 20%;
-  min-height: 10em;
-
-  display: table-cell;
-  vertical-align: middle
 
 
-
-}
-.redo{
-  scroll-margin-right: auto;
-  float:right;
-  max-width: 20%;
-  min-height: 10em;
-  display: table-cell;
-  vertical-align: middle
-
-}
+    max-width: 20%;
+    min-height: 10em;
+  position: absolute;
+  top :50%;
+  bottom: 50%;
+  left: 0
+  
+  
+  }
+  .redo{
+  
+  right: 0;
+    max-width: 20%;
+    min-height: 10em;
+    top:50%;
+    bottom: 50%;
+  position: absolute;
+  }
