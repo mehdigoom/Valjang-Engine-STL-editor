@@ -1975,13 +1975,13 @@ background: #D35600;
 {
 
 position: absolute; 
-left:0;
-right: 0;
-bottom: 0;
-
+bottom: -6%;
+left: 20%;
 background-image: url("src/FondVIEWER_blanc.png");
-background-size: cover;
-
+vertical-align:bottom;
+background-size: contain;
+background-repeat: no-repeat;
+background-position-y: 85px;
 
 }
 .undo{

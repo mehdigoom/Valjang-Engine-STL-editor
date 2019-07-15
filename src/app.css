@@ -24,7 +24,7 @@
 /* Sliders color */
 #CustomSlider .slider-selection {
     background: rgb(3, 20, 248);
-    rotate: 90
+  
 }
 
 #CustomSlider .slider-handle {
@@ -64,6 +64,7 @@
     height: 0px;
     position: relative; 
     width: 40px;  
+    
 }
 
 .slider-switch > label::before {
