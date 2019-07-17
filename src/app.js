@@ -630,6 +630,7 @@ var AppMain = /** @class */ (function () {
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMax.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMax.Z()));
+    
         // Register it to ValjangEngine
         if (this._uiSculptBoundary != null) {
             this._uiSculptBoundary.dispose();
