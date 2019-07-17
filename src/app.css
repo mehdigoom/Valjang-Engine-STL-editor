@@ -28,36 +28,13 @@
 }
 
 #CustomSlider .slider-handle {
-	background: rgb(173, 180, 245);
+    background: rgb(173, 180, 245);
+    
 }
 
-/* Buttons color */
-.btn-default, .btn-default:active, .btn-default:visited {
-    background-color: #D47610    ;
-    color: #FFFFFF    ;
-    border-color: #777777    ;
-}
 
-.btn-default:hover {
-    background-color: #D68730    ;
-    border-color: #777777    ;
-}
 
-.btn-primary, .btn-primary:active, .btn-primary:hover, .btn-primary:visited {
-    background-color: #ED8C23    ;
-    color: #FFFFFF    ;
-    border-color: #777777    ;
-}
 
-.btn-info, .btn-info:hover, .btn-info:active, .btn-info:visited {
-    background-color: #FA753A    ;
-    border-color: #777777    ;
-}
-
-/* Checkboxes (slider shaped) */
-.slider-switch > input[type="checkbox"] {
-    display: none;   
-}
 
 .slider-switch > label {
     cursor: pointer;
@@ -92,16 +69,6 @@
     top: -4px;
     transition: all 0.3s ease-in-out;
     width: 24px;
-}
-
-.slider-switch > input[type="checkbox"]:checked + label::before {
-    background: rgb(212, 118, 16);
-    opacity: 0.5;
-}
-
-.slider-switch > input[type="checkbox"]:checked + label::after {
-    background: #00000000;
-    left: 20px;
 }
 
 /* Spinner */
