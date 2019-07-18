@@ -1937,7 +1937,7 @@ background: #D35600;
 
 	/* Dimensions */
 	width:88px;
-	height:575px;
+	height:100%;
 
 	/* Shape */
 	border-radius:0% 0% 0% 0%;
@@ -2011,7 +2011,6 @@ background-position-y: 85px;
   right:10px;
   max-width: 8%;
     max-height: 8%;
-   
     top:50%;
     bottom: 50%;
   position: absolute;
