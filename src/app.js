@@ -1,6 +1,6 @@
 var ManipulatorMode;
 var activmanipulator= Boolean("true");
-
+var raduislimit
 (function (ManipulatorMode) {
     ManipulatorMode[ManipulatorMode["Move"] = 0] = "Move";
     ManipulatorMode[ManipulatorMode["Rotate"] = 1] = "Rotate";
@@ -804,7 +804,7 @@ AppMain.prototype.Genfleche = function(){
     materialflecheZ.diffuseTexture.hasAlpha = true;
     
     //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
-    
+    console.log("Raduis x2:"+this._modelRadius*2)
     //Creation of a plane
     var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", this._modelRadius*2, this._scene);
     //plane.rotation.x = Math.PI / 2;
@@ -877,7 +877,7 @@ plane.position.y =-200
     };
     AppMain.prototype.IsInCombineMode = function () {
        
-        
+      
 
         //BOUCLE
        
@@ -985,6 +985,12 @@ if(this._isInCombineMode){
             this._isInCombineMode = false;
             this.ReadaptToModelSize();
            
+        }
+        //limite tempon 
+        if(this._modelRadius >this.raduislimit){
+            console.log("Aie ! Tu à depassé la limite !")
+            AppSDK_Undo()
+            
         }
     };
 
@@ -1102,6 +1108,7 @@ if(this._isInCombineMode){
         this.Gengrille()
         this.GenRegle()
         this.Genfleche()
+this.raduislimit = this._modelRadius*2
         
     };
     AppMain.prototype.GenSphere = function () {
@@ -1171,7 +1178,7 @@ if(this._isInCombineMode){
         return new Blob([objBinFileData], { type: "application/octet-binary" });
     };
     AppMain.prototype.UpdateValjangEngineMesh = function () {
-
+       
         if (this._useSubMeshes) {
             // Update sub meshes internal structure
             this._meshItem.UpdateSubMeshes();
@@ -1197,6 +1204,7 @@ if(this._isInCombineMode){
                     }
                 }
             }
+            
         }
         else {
             var buf = this._meshItem.Triangles();
@@ -1448,6 +1456,7 @@ if(this._isInCombineMode){
         // Bbox update
         //this.showBBoxes();
     };
+    
     return AppMain;
 }());
 //# sourceMappingURL=app.js.map
