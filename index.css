@@ -1978,7 +1978,7 @@ background: #D35600;
 {
     display: inline;
 position: absolute; 
-bottom: 0px;
+bottom: -5%;
 left: 20%;
 scale: 110%;
 background-image: url("src/FondVIEWER_blanc.png");

@@ -1347,10 +1347,7 @@ declare module ValjangEngine {
          */
         static STAGE_POSTTRANSPARENT: number;
     }
-    /**
-     * Represents a scene to be rendered by the engine.
-     * @see http://doc.ValjangEnginejs.com/page.php?p=21911
-     */
+    
     class Scene implements IAnimatable {
         private static _FOGMODE_NONE;
         private static _FOGMODE_EXP;
@@ -1771,19 +1768,7 @@ declare module ValjangEngine {
          */
         executeWhenReady(func: () => void): void;
         _checkIsReady(): void;
-        /**
-         * Will start the animation sequence of a given target
-         * @param target - the target
-         * @param {number} from - from which frame should animation start
-         * @param {number} to - till which frame should animation run.
-         * @param {boolean} [loop] - should the animation loop
-         * @param {number} [speedRatio] - the speed in which to run the animation
-         * @param {Function} [onAnimationEnd] function to be executed when the animation ended.
-         * @param {ValjangEngine.Animatable} [animatable] an animatable object. If not provided a new one will be created from the given params.
-         * @return {ValjangEngine.Animatable} the animatable object created for this animation
-         * @see ValjangEngine.Animatable
-         * @see http://doc.ValjangEnginejs.com/page.php?p=22081
-         */
+        
         beginAnimation(target: any, from: number, to: number, loop?: boolean, speedRatio?: number, onAnimationEnd?: () => void, animatable?: Animatable): Animatable;
         beginDirectAnimation(target: any, animations: Animation[], from: number, to: number, loop?: boolean, speedRatio?: number, onAnimationEnd?: () => void): Animatable;
         getAnimatableByTarget(target: any): Animatable;
@@ -4151,9 +4136,7 @@ declare module ValjangEngine {
 }
 
 declare module ValjangEngine.Debug {
-    /**
-    * Demo available here: http://www.ValjangEnginejs-playground.com/#1BZJVJ#8
-    */
+  
     class SkeletonViewer {
         skeleton: Skeleton;
         mesh: AbstractMesh;
@@ -4607,16 +4590,9 @@ declare module ValjangEngine {
         private _orthoRight;
         private _orthoTop;
         private _orthoBottom;
-        /**
-         * Creates a DirectionalLight object in the scene, oriented towards the passed direction (Vector3).
-         * The directional light is emitted from everywhere in the given direction.
-         * It can cast shawdows.
-         * Documentation : http://doc.ValjangEnginejs.com/tutorials/lights
-         */
+     
         constructor(name: string, direction: Vector3, scene: Scene);
-        /**
-         * Returns the string "DirectionalLight".
-         */
+       
         getClassName(): string;
         /**
          * Returns the integer 1.
@@ -4667,12 +4643,7 @@ declare module ValjangEngine {
         groundColor: Color3;
         direction: Vector3;
         private _worldMatrix;
-        /**
-         * Creates a HemisphericLight object in the scene according to the passed direction (Vector3).
-         * The HemisphericLight simulates the ambient environment light, so the passed direction is the light reflection direction, not the incoming direction.
-         * The HemisphericLight can't cast shadows.
-         * Documentation : http://doc.ValjangEnginejs.com/tutorials/lights
-         */
+       
         constructor(name: string, direction: Vector3, scene: Scene);
         protected _buildUniformLayout(): void;
         /**
@@ -4822,10 +4793,7 @@ declare module ValjangEngine {
         _excludedMeshesIds: string[];
         _includedOnlyMeshesIds: string[];
         _uniformBuffer: UniformBuffer;
-        /**
-         * Creates a Light object in the scene.
-         * Documentation : http://doc.ValjangEnginejs.com/tutorials/lights
-         */
+      
         constructor(name: string, scene: Scene);
         protected _buildUniformLayout(): void;
         /**
@@ -4933,16 +4901,7 @@ declare module ValjangEngine {
          * In case of direction provided, the shadow will not use a cube texture but simulate a spot shadow as a fallback
          */
         direction: Vector3;
-        /**
-         * Creates a PointLight object from the passed name and position (Vector3) and adds it in the scene.
-         * A PointLight emits the light in every direction.
-         * It can cast shadows.
-         * If the scene camera is already defined and you want to set your PointLight at the camera position, just set it :
-         * ```javascript
-         * var pointLight = new ValjangEngine.PointLight("pl", camera.position, scene);
-         * ```
-         * Documentation : http://doc.ValjangEnginejs.com/tutorials/lights
-         */
+     
         constructor(name: string, position: Vector3, scene: Scene);
         /**
          * Returns the string "PointLight"
@@ -5098,7 +5057,7 @@ declare module ValjangEngine {
          * - `exponent` (float) is the light decay speed with the distance from the emission spot.
          * A spot light is a simply light oriented cone.
          * It can cast shadows.
-         * Documentation : http://doc.ValjangEnginejs.com/tutorials/lights
+         * Documentation : http://valjang.fr/tutorials/lights
          */
         constructor(name: string, position: Vector3, direction: Vector3, angle: number, exponent: number, scene: Scene);
         /**
@@ -8476,7 +8435,7 @@ declare module ValjangEngine {
         /**
         * new Path3D(path, normal, raw)
         * Creates a Path3D. A Path3D is a logical math object, so not a mesh.
-        * please read the description in the tutorial :  http://doc.ValjangEnginejs.com/tutorials/How_to_use_Path3D
+        * please read the description in the tutorial :  http://valjang.fr/tutorials/How_to_use_Path3D
         * path : an array of Vector3, the curve axis of the Path3D
         * normal (optional) : Vector3, the first wanted normal to the curve. Ex (0, 1, 0) for a vertical normal.
         * raw (optional, default false) : boolean, if true the returned Path3D isn't normalized. Useful to depict path acceleration or speed.
@@ -8516,7 +8475,7 @@ declare module ValjangEngine {
         private _points;
         private _length;
         /**
-         * Returns a Curve3 object along a Quadratic Bezier curve : http://doc.ValjangEnginejs.com/tutorials/How_to_use_Curve3#quadratic-bezier-curve
+         * Returns a Curve3 object along a Quadratic Bezier curve : http://valjang.fr/tutorials/How_to_use_Curve3#quadratic-bezier-curve
          * @param v0 (Vector3) the origin point of the Quadratic Bezier
          * @param v1 (Vector3) the control point
          * @param v2 (Vector3) the end point of the Quadratic Bezier
@@ -8524,7 +8483,7 @@ declare module ValjangEngine {
          */
         static CreateQuadraticBezier(v0: Vector3, v1: Vector3, v2: Vector3, nbPoints: number): Curve3;
         /**
-         * Returns a Curve3 object along a Cubic Bezier curve : http://doc.ValjangEnginejs.com/tutorials/How_to_use_Curve3#cubic-bezier-curve
+         * Returns a Curve3 object along a Cubic Bezier curve : http://valjang.fr/tutorials/How_to_use_Curve3#cubic-bezier-curve
          * @param v0 (Vector3) the origin point of the Cubic Bezier
          * @param v1 (Vector3) the first control point
          * @param v2 (Vector3) the second control point
@@ -8533,7 +8492,7 @@ declare module ValjangEngine {
          */
         static CreateCubicBezier(v0: Vector3, v1: Vector3, v2: Vector3, v3: Vector3, nbPoints: number): Curve3;
         /**
-         * Returns a Curve3 object along a Hermite Spline curve : http://doc.ValjangEnginejs.com/tutorials/How_to_use_Curve3#hermite-spline
+         * Returns a Curve3 object along a Hermite Spline curve : http://valjang.fr/tutorials/How_to_use_Curve3#hermite-spline
          * @param p1 (Vector3) the origin point of the Hermite Spline
          * @param t1 (Vector3) the tangent vector at the origin point
          * @param p2 (Vector3) the end point of the Hermite Spline
@@ -8550,7 +8509,7 @@ declare module ValjangEngine {
         /**
          * A Curve3 object is a logical object, so not a mesh, to handle curves in the 3D geometric space.
          * A Curve3 is designed from a series of successive Vector3.
-         * Tuto : http://doc.ValjangEnginejs.com/tutorials/How_to_use_Curve3#curve3-object
+         * Tuto : http://valjang.fr/tutorials/How_to_use_Curve3#curve3-object
          */
         constructor(points: Vector3[]);
         /**
@@ -9916,7 +9875,7 @@ declare module ValjangEngine {
         private _sortLODLevels();
         /**
          * Add a mesh as LOD level triggered at the given distance.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/How_to_use_LOD
+         * tuto : http://valjang.fr/tutorials/How_to_use_LOD
          * @param {number} distance The distance from the center of the object to show this level
          * @param {Mesh} mesh The mesh to be added as LOD level
          * @return {Mesh} This mesh (for chaining)
@@ -9925,20 +9884,20 @@ declare module ValjangEngine {
         /**
          * Returns the LOD level mesh at the passed distance or null if not found.
          * It is related to the method `addLODLevel(distance, mesh)`.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/How_to_use_LOD
+         * tuto : http://valjang.fr/tutorials/How_to_use_LOD
          * Returns an object Mesh or `null`.
          */
         getLODLevelAtDistance(distance: number): Mesh;
         /**
          * Remove a mesh from the LOD array
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/How_to_use_LOD
+         * tuto : http://valjang.fr/tutorials/How_to_use_LOD
          * @param {Mesh} mesh The mesh to be removed.
          * @return {Mesh} This mesh (for chaining)
          */
         removeLODLevel(mesh: Mesh): Mesh;
         /**
          * Returns the registered LOD mesh distant from the parameter `camera` position if any, else returns the current mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/How_to_use_LOD
+         * tuto : http://valjang.fr/tutorials/How_to_use_LOD
          */
         getLOD(camera: Camera, boundingSphere?: BoundingSphere): AbstractMesh;
         /**
@@ -10043,7 +10002,7 @@ declare module ValjangEngine {
         isDisposed(): boolean;
         /**
          * Sets the mesh side orientation : ValjangEngine.Mesh.FRONTSIDE, ValjangEngine.Mesh.BACKSIDE, ValjangEngine.Mesh.DOUBLESIDE or ValjangEngine.Mesh.DEFAULTSIDE
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Discover_Basic_Elements#side-orientation
+         * tuto : http://valjang.fr/tutorials/Discover_Basic_Elements#side-orientation
          */
         sideOrientation: number;
         /**
@@ -10139,7 +10098,7 @@ declare module ValjangEngine {
         updateVerticesData(kind: string, data: number[] | Float32Array, updateExtends?: boolean, makeItUnique?: boolean): Mesh;
         /**
          * This method updates the vertex positions of an updatable mesh according to the `positionFunction` returned values.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#other-shapes-updatemeshpositions
+         * tuto : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#other-shapes-updatemeshpositions
          * The parameter `positionFunction` is a simple JS function what is passed the mesh `positions` array. It doesn't need to return anything.
          * The parameter `computeNormals` is a boolean (default true) to enable/disable the mesh normal recomputation after the vertex position update.
          * Returns the Mesh.
@@ -10227,7 +10186,7 @@ declare module ValjangEngine {
          * Modifies the mesh geometry according to the passed transformation matrix.
          * This method returns nothing but it really modifies the mesh even if it's originally not set as updatable.
          * The mesh normals are modified accordingly the same transformation.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/How_Rotations_and_Translations_Work#baking-transform
+         * tuto : http://valjang.fr/tutorials/How_Rotations_and_Translations_Work#baking-transform
          * Note that, under the hood, this method sets a new VertexBuffer each call.
          * Returns the Mesh.
          */
@@ -10236,7 +10195,7 @@ declare module ValjangEngine {
          * Modifies the mesh geometry according to its own current World Matrix.
          * The mesh World Matrix is then reset.
          * This method returns nothing but really modifies the mesh even if it's originally not set as updatable.
-         * tuto : tuto : http://doc.ValjangEnginejs.com/tutorials/How_Rotations_and_Translations_Work#baking-transform
+         * tuto : tuto : http://valjang.fr/tutorials/How_Rotations_and_Translations_Work#baking-transform
          * Note that, under the hood, this method sets a new VertexBuffer each call.
          * Returns the Mesh.
          */
@@ -10315,7 +10274,7 @@ declare module ValjangEngine {
          * - rotationQuaternion
          * - setPivotMatrix
          * - scaling
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/How_to_use_Instances
+         * tuto : http://valjang.fr/tutorials/How_to_use_Instances
          * Warning : this method is not supported for Line mesh and LineSystem
          */
         createInstance(name: string): InstancedMesh;
@@ -10353,17 +10312,17 @@ declare module ValjangEngine {
         /**
          * Creates a ribbon mesh.
          * Please consider using the same method from the MeshBuilder class instead.
-         * The ribbon is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * The ribbon is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
          *
-         * Please read this full tutorial to understand how to design a ribbon : http://doc.ValjangEnginejs.com/tutorials/Ribbon_Tutorial
+         * Please read this full tutorial to understand how to design a ribbon : http://valjang.fr/tutorials/Ribbon_Tutorial
          * The parameter `pathArray` is a required array of paths, what are each an array of successive Vector3. The pathArray parameter depicts the ribbon geometry.
          * The parameter `closeArray` (boolean, default false) creates a seam between the first and the last paths of the path array.
          * The parameter `closePath` (boolean, default false) creates a seam between the first and the last points of each path of the path array.
          * The parameter `offset` (positive integer, default : rounded half size of the pathArray length), is taken in account only if the `pathArray` is containing a single path.
          * It's the offset to join together the points from the same path. Ex : offset = 10 means the point 1 is joined to the point 11.
-         * The optional parameter `instance` is an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#ribbon
+         * The optional parameter `instance` is an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#ribbon
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateRibbon(name: string, pathArray: Vector3[][], closeArray: boolean, closePath: boolean, offset: number, scene?: Scene, updatable?: boolean, sideOrientation?: number, instance?: Mesh): Mesh;
@@ -10373,7 +10332,7 @@ declare module ValjangEngine {
          * The parameter `radius` sets the radius size (float) of the polygon (default 0.5).
          * The parameter `tessellation` sets the number of polygon sides (positive integer, default 64). So a tessellation valued to 3 will build a triangle, to 4 a square, etc.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateDisc(name: string, radius: number, tessellation: number, scene?: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -10382,7 +10341,7 @@ declare module ValjangEngine {
          * Please consider using the same method from the MeshBuilder class instead.
          * The parameter `size` sets the size (float) of each box side (default 1).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateBox(name: string, size: number, scene?: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -10392,7 +10351,7 @@ declare module ValjangEngine {
          * The parameter `diameter` sets the diameter size (float) of the sphere (default 1).
          * The parameter `segments` sets the sphere number of horizontal stripes (positive integer, default 32).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateSphere(name: string, segments: number, diameter: number, scene?: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -10405,7 +10364,7 @@ declare module ValjangEngine {
          * The parameter `tessellation` sets the number of cylinder sides (positive integer, default 24). Set it to 3 to get a prism for instance.
          * The parameter `subdivisions` sets the number of rings along the cylinder height (positive integer, default 1).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateCylinder(name: string, height: number, diameterTop: number, diameterBottom: number, tessellation: number, subdivisions: any, scene?: Scene, updatable?: any, sideOrientation?: number): Mesh;
@@ -10416,7 +10375,7 @@ declare module ValjangEngine {
          * The parameter `thickness` sets the diameter size of the tube of the torus (float, default 0.5).
          * The parameter `tessellation` sets the number of torus sides (postive integer, default 16).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateTorus(name: string, diameter: number, thickness: number, tessellation: number, scene?: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -10428,7 +10387,7 @@ declare module ValjangEngine {
          * The parameter `tubularSegments` sets the number of tubes to decompose the knot into (positive integer, default 32).
          * The parameters `p` and `q` are the number of windings on each axis (positive integers, default 2 and 3).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateTorusKnot(name: string, radius: number, tube: number, radialSegments: number, tubularSegments: number, p: number, q: number, scene?: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -10438,7 +10397,7 @@ declare module ValjangEngine {
          * A line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter.
          * Like every other parametric shape, it is dynamically updatable by passing an existing instance of LineMesh to this static function.
          * The parameter `points` is an array successive Vector3.
-         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
+         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
          * When updating an instance, remember that only point positions can change, not the number of points.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -10452,7 +10411,7 @@ declare module ValjangEngine {
          * The parameter `dashNb` is the intended total number of dashes (positive integer, default 200).
          * The parameter `dashSize` is the size of the dashes relatively the dash number (positive float, default 3).
          * The parameter `gapSize` is the size of the gap between two successive dashes relatively the dash number (positive float, default 1).
-         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
+         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
          * When updating an instance, remember that only point positions can change, not the number of points.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -10474,29 +10433,29 @@ declare module ValjangEngine {
         static ExtrudePolygon(name: string, shape: Vector3[], depth: number, scene: Scene, holes?: Vector3[][], updatable?: boolean, sideOrientation?: number): Mesh;
         /**
          * Creates an extruded shape mesh.
-         * The extrusion is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * The extrusion is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
          * Please consider using the same method from the MeshBuilder class instead.
          *
-         * Please read this full tutorial to understand how to design an extruded shape : http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes#extrusion
+         * Please read this full tutorial to understand how to design an extruded shape : http://valjang.fr/tutorials/Parametric_Shapes#extrusion
          * The parameter `shape` is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be
          * extruded along the Z axis.
          * The parameter `path` is a required array of successive Vector3. This is the axis curve the shape is extruded along.
          * The parameter `rotation` (float, default 0 radians) is the angle value to rotate the shape each step (each path point), from the former step (so rotation added each step) along the curve.
          * The parameter `scale` (float, default 1) is the value to scale the shape.
          * The parameter `cap` sets the way the extruded shape is capped. Possible values : ValjangEngine.Mesh.NO_CAP (default), ValjangEngine.Mesh.CAP_START, ValjangEngine.Mesh.CAP_END, ValjangEngine.Mesh.CAP_ALL
-         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
+         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
          * Remember you can only change the shape or path point positions, not their number when updating an extruded shape.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static ExtrudeShape(name: string, shape: Vector3[], path: Vector3[], scale: number, rotation: number, cap: number, scene?: Scene, updatable?: boolean, sideOrientation?: number, instance?: Mesh): Mesh;
         /**
          * Creates an custom extruded shape mesh.
-         * The custom extrusion is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * The custom extrusion is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
          * Please consider using the same method from the MeshBuilder class instead.
          *
-         * Please read this full tutorial to understand how to design a custom extruded shape : http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes#extrusion
+         * Please read this full tutorial to understand how to design a custom extruded shape : http://valjang.fr/tutorials/Parametric_Shapes#extrusion
          * The parameter `shape` is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be
          * extruded along the Z axis.
          * The parameter `path` is a required array of successive Vector3. This is the axis curve the shape is extruded along.
@@ -10519,10 +10478,10 @@ declare module ValjangEngine {
          * The parameter `ribbonClosePath` (boolean, default false) forces the extrusion underlying ribbon to close all the paths in its `pathArray`.
          * The parameter `ribbonCloseArray` (boolean, default false) forces the extrusion underlying ribbon to close its `pathArray`.
          * The parameter `cap` sets the way the extruded shape is capped. Possible values : ValjangEngine.Mesh.NO_CAP (default), ValjangEngine.Mesh.CAP_START, ValjangEngine.Mesh.CAP_END, ValjangEngine.Mesh.CAP_ALL
-         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
+         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
          * Remember you can only change the shape or path point positions, not their number when updating an extruded shape.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static ExtrudeShapeCustom(name: string, shape: Vector3[], path: Vector3[], scaleFunction: Function, rotationFunction: Function, ribbonCloseArray: boolean, ribbonClosePath: boolean, cap: number, scene: Scene, updatable?: boolean, sideOrientation?: number, instance?: Mesh): Mesh;
@@ -10535,7 +10494,7 @@ declare module ValjangEngine {
          * The parameter `radius` (positive float, default 1) is the radius value of the lathe.
          * The parameter `tessellation` (positive integer, default 64) is the side number of the lathe.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateLathe(name: string, shape: Vector3[], radius: number, tessellation: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -10544,7 +10503,7 @@ declare module ValjangEngine {
          * Please consider using the same method from the MeshBuilder class instead.
          * The parameter `size` sets the size (float) of both sides of the plane at once (default 1).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreatePlane(name: string, size: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -10576,7 +10535,7 @@ declare module ValjangEngine {
         }, scene: Scene, updatable?: boolean): Mesh;
         /**
          * Creates a ground mesh from a height map.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/14._Height_Map
+         * tuto : http://valjang.fr/tutorials/14._Height_Map
          * Please consider using the same method from the MeshBuilder class instead.
          * The parameter `url` sets the URL of the height map image resource.
          * The parameters `width` and `height` (positive floats, default 10) set the ground width and height sizes.
@@ -10594,7 +10553,7 @@ declare module ValjangEngine {
         static CreateGroundFromHeightMap(name: string, url: string, width: number, height: number, subdivisions: number, minHeight: number, maxHeight: number, scene: Scene, updatable?: boolean, onReady?: (mesh: GroundMesh) => void): GroundMesh;
         /**
          * Creates a tube mesh.
-         * The tube is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * The tube is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
          * Please consider using the same method from the MeshBuilder class instead.
          * The parameter `path` is a required array of successive Vector3. It is the curve used as the axis of the tube.
          * The parameter `radius` (positive float, default 1) sets the tube radius size.
@@ -10608,9 +10567,9 @@ declare module ValjangEngine {
          *     return radius; }
          * ```
          * The parameter `cap` sets the way the extruded shape is capped. Possible values : ValjangEngine.Mesh.NO_CAP (default), ValjangEngine.Mesh.CAP_START, ValjangEngine.Mesh.CAP_END, ValjangEngine.Mesh.CAP_ALL
-         * The optional parameter `instance` is an instance of an existing Tube object to be updated with the passed `pathArray` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#tube
+         * The optional parameter `instance` is an instance of an existing Tube object to be updated with the passed `pathArray` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#tube
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateTube(name: string, path: Vector3[], radius: number, tessellation: number, radiusFunction: {
@@ -10626,10 +10585,10 @@ declare module ValjangEngine {
          * You can build other polyhedron types than the 15 embbeded ones by setting the parameter `custom` (`polyhedronObject`, default null). If you set the parameter `custom`, this overwrittes the parameter `type`.
          * A `polyhedronObject` is a formatted javascript object. You'll find a full file with pre-set polyhedra here : https://github.com/ValjangEngineJS/Extensions/tree/master/Polyhedron
          * You can set the color and the UV of each side of the polyhedron with the parameters `faceColors` (Color4, default `(1, 1, 1, 1)`) and faceUV (Vector4, default `(0, 0, 1, 1)`).
-         * To understand how to set `faceUV` or `faceColors`, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://doc.ValjangEnginejs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
+         * To understand how to set `faceUV` or `faceColors`, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://valjang.fr/tutorials/CreateBox_Per_Face_Textures_And_Colors
          * The parameter `flat` (boolean, default true). If set to false, it gives the polyhedron a single global face, so less vertices and shared normals. In this case, `faceColors` and `faceUV` are ignored.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreatePolyhedron(name: string, options: {
@@ -10652,7 +10611,7 @@ declare module ValjangEngine {
          * The parameter `subdivisions` sets the number of subdivisions (postive integer, default 4). The more subdivisions, the more faces on the icosphere whatever its size.
          * The parameter `flat` (boolean, default true) gives each side its own normals. Set it to false to get a smooth continuous light reflection on the surface.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateIcoSphere(name: string, options: {
@@ -11024,14 +10983,14 @@ declare module ValjangEngine {
         private static updateSideOrientation(orientation, scene);
         /**
          * Creates a box mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#box
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#box
          * The parameter `size` sets the size (float) of each box side (default 1).
          * You can set some different box dimensions by using the parameters `width`, `height` and `depth` (all by default have the same value than `size`).
          * You can set different colors and different images to each box side by using the parameters `faceColors` (an array of 6 Color3 elements) and `faceUV` (an array of 6 Vector4 elements).
-         * Please read this tutorial : http://doc.ValjangEnginejs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
+         * Please read this tutorial : http://valjang.fr/tutorials/CreateBox_Per_Face_Textures_And_Colors
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateBox(name: string, options: {
@@ -11048,7 +11007,7 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a sphere mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#sphere
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#sphere
          * The parameter `diameter` sets the diameter size (float) of the sphere (default 1).
          * You can set some different sphere dimensions, for instance to build an ellipsoid, by using the parameters `diameterX`, `diameterY` and `diameterZ` (all by default have the same value than `diameter`).
          * The parameter `segments` sets the sphere number of horizontal stripes (positive integer, default 32).
@@ -11056,7 +11015,7 @@ declare module ValjangEngine {
          * You can create an unclosed sphere on its height with the parameter `slice` (positive float, default1), valued between 0 and 1, what is the height ratio (longitude).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateSphere(name: string, options: {
@@ -11074,13 +11033,13 @@ declare module ValjangEngine {
         }, scene: any): Mesh;
         /**
          * Creates a plane polygonal mesh.  By default, this is a disc.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#disc
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#disc
          * The parameter `radius` sets the radius size (float) of the polygon (default 0.5).
          * The parameter `tessellation` sets the number of polygon sides (positive integer, default 64). So a tessellation valued to 3 will build a triangle, to 4 a square, etc.
          * You can create an unclosed polygon with the parameter `arc` (positive float, default 1), valued between 0 and 1, what is the ratio of the circumference : 2 x PI x ratio
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateDisc(name: string, options: {
@@ -11094,14 +11053,14 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a sphere based upon an icosahedron with 20 triangular faces which can be subdivided.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#icosphere
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#icosphere
          * The parameter `radius` sets the radius size (float) of the icosphere (default 1).
          * You can set some different icosphere dimensions, for instance to build an ellipsoid, by using the parameters `radiusX`, `radiusY` and `radiusZ` (all by default have the same value than `radius`).
          * The parameter `subdivisions` sets the number of subdivisions (postive integer, default 4). The more subdivisions, the more faces on the icosphere whatever its size.
          * The parameter `flat` (boolean, default true) gives each side its own normals. Set it to false to get a smooth continuous light reflection on the surface.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateIcoSphere(name: string, options: {
@@ -11118,18 +11077,18 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a ribbon mesh.
-         * The ribbon is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * The ribbon is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
          *
-         * Please read this full tutorial to understand how to design a ribbon : http://doc.ValjangEnginejs.com/tutorials/Ribbon_Tutorial
+         * Please read this full tutorial to understand how to design a ribbon : http://valjang.fr/tutorials/Ribbon_Tutorial
          * The parameter `pathArray` is a required array of paths, what are each an array of successive Vector3. The pathArray parameter depicts the ribbon geometry.
          * The parameter `closeArray` (boolean, default false) creates a seam between the first and the last paths of the path array.
          * The parameter `closePath` (boolean, default false) creates a seam between the first and the last points of each path of the path array.
          * The parameter `offset` (positive integer, default : rounded half size of the pathArray length), is taken in account only if the `pathArray` is containing a single path.
          * It's the offset to join the points from the same path. Ex : offset = 10 means the point 1 is joined to the point 11.
-         * The optional parameter `instance` is an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#ribbon
+         * The optional parameter `instance` is an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#ribbon
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture.
          * The parameter `uvs` is an optional flat array of `Vector2` to update/set each ribbon vertex with its own custom UV values instead of the computed ones.
          * The parameters `colors` is an optional flat array of `Color4` to set/update each ribbon vertex with its own custom color values.
@@ -11154,7 +11113,7 @@ declare module ValjangEngine {
         }, scene?: Scene): Mesh;
         /**
          * Creates a cylinder or a cone mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#cylinder-or-cone
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#cylinder-or-cone
          * The parameter `height` sets the height size (float) of the cylinder/cone (float, default 2).
          * The parameter `diameter` sets the diameter of the top and bottom cap at once (float, default 1).
          * The parameters `diameterTop` and `diameterBottom` overwrite the parameter `diameter` and set respectively the top cap and bottom cap diameter (floats, default 1). The parameter "diameterBottom" can't be zero.
@@ -11173,7 +11132,7 @@ declare module ValjangEngine {
          * Example how to set colors and textures on a sliced cylinder : http://www.html5gamedevs.com/topic/17945-creating-a-closed-slice-of-a-cylinder/#comment-106379
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateCylinder(name: string, options: {
@@ -11195,13 +11154,13 @@ declare module ValjangEngine {
         }, scene: any): Mesh;
         /**
          * Creates a torus mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#torus
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#torus
          * The parameter `diameter` sets the diameter size (float) of the torus (default 1).
          * The parameter `thickness` sets the diameter size of the tube of the torus (float, default 0.5).
          * The parameter `tessellation` sets the number of torus sides (postive integer, default 16).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateTorus(name: string, options: {
@@ -11215,14 +11174,14 @@ declare module ValjangEngine {
         }, scene: any): Mesh;
         /**
          * Creates a torus knot mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#torus-knot
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#torus-knot
          * The parameter `radius` sets the global radius size (float) of the torus knot (default 2).
          * The parameter `radialSegments` sets the number of sides on each tube segments (positive integer, default 32).
          * The parameter `tubularSegments` sets the number of tubes to decompose the knot into (positive integer, default 32).
          * The parameters `p` and `q` are the number of windings on each axis (positive integers, default 2 and 3).
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreateTorusKnot(name: string, options: {
@@ -11240,12 +11199,12 @@ declare module ValjangEngine {
         /**
          * Creates a line system mesh.
          * A line system is a pool of many lines gathered in a single mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#linesystem
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#linesystem
          * A line system mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of lines as an input parameter.
          * Like every other parametric shape, it is dynamically updatable by passing an existing instance of LineSystem to this static function.
          * The parameter `lines` is an array of lines, each line being an array of successive Vector3.
          * The optional parameter `instance` is an instance of an existing LineSystem object to be updated with the passed `lines` parameter. The way to update it is the same than for
-         * updating a simple Line mesh, you just need to update every line in the `lines` array : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
+         * updating a simple Line mesh, you just need to update every line in the `lines` array : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
          * When updating an instance, remember that only line point positions can change, not the number of points, neither the number of lines.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -11256,11 +11215,11 @@ declare module ValjangEngine {
         }, scene: Scene): LinesMesh;
         /**
          * Creates a line mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#lines
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#lines
          * A line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter.
          * Like every other parametric shape, it is dynamically updatable by passing an existing instance of LineMesh to this static function.
          * The parameter `points` is an array successive Vector3.
-         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
+         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
          * When updating an instance, remember that only point positions can change, not the number of points.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -11271,14 +11230,14 @@ declare module ValjangEngine {
         }, scene: Scene): LinesMesh;
         /**
          * Creates a dashed line mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#dashed-lines
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#dashed-lines
          * A dashed line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter.
          * Like every other parametric shape, it is dynamically updatable by passing an existing instance of LineMesh to this static function.
          * The parameter `points` is an array successive Vector3.
          * The parameter `dashNb` is the intended total number of dashes (positive integer, default 200).
          * The parameter `dashSize` is the size of the dashes relatively the dash number (positive float, default 3).
          * The parameter `gapSize` is the size of the gap between two successive dashes relatively the dash number (positive float, default 1).
-         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
+         * The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines
          * When updating an instance, remember that only point positions can change, not the number of points.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -11292,21 +11251,21 @@ declare module ValjangEngine {
         }, scene: Scene): LinesMesh;
         /**
          * Creates an extruded shape mesh.
-         * The extrusion is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#extruded-shapes
+         * The extrusion is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#extruded-shapes
          *
-         * Please read this full tutorial to understand how to design an extruded shape : http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes#extrusion
+         * Please read this full tutorial to understand how to design an extruded shape : http://valjang.fr/tutorials/Parametric_Shapes#extrusion
          * The parameter `shape` is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be
          * extruded along the Z axis.
          * The parameter `path` is a required array of successive Vector3. This is the axis curve the shape is extruded along.
          * The parameter `rotation` (float, default 0 radians) is the angle value to rotate the shape each step (each path point), from the former step (so rotation added each step) along the curve.
          * The parameter `scale` (float, default 1) is the value to scale the shape.
          * The parameter `cap` sets the way the extruded shape is capped. Possible values : ValjangEngine.Mesh.NO_CAP (default), ValjangEngine.Mesh.CAP_START, ValjangEngine.Mesh.CAP_END, ValjangEngine.Mesh.CAP_ALL
-         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
+         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
          * Remember you can only change the shape or path point positions, not their number when updating an extruded shape.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -11325,10 +11284,10 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates an custom extruded shape mesh.
-         * The custom extrusion is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
-         * tuto :http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#custom-extruded-shapes
+         * The custom extrusion is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * tuto :http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#custom-extruded-shapes
          *
-         * Please read this full tutorial to understand how to design a custom extruded shape : http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes#extrusion
+         * Please read this full tutorial to understand how to design a custom extruded shape : http://valjang.fr/tutorials/Parametric_Shapes#extrusion
          * The parameter `shape` is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be
          * extruded along the Z axis.
          * The parameter `path` is a required array of successive Vector3. This is the axis curve the shape is extruded along.
@@ -11351,11 +11310,11 @@ declare module ValjangEngine {
          * The parameter `ribbonClosePath` (boolean, default false) forces the extrusion underlying ribbon to close all the paths in its `pathArray`.
          * The parameter `ribbonCloseArray` (boolean, default false) forces the extrusion underlying ribbon to close its `pathArray`.
          * The parameter `cap` sets the way the extruded shape is capped. Possible values : ValjangEngine.Mesh.NO_CAP (default), ValjangEngine.Mesh.CAP_START, ValjangEngine.Mesh.CAP_END, ValjangEngine.Mesh.CAP_ALL
-         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
+         * The optional parameter `instance` is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#extruded-shape
          * Remember you can only change the shape or path point positions, not their number when updating an extruded shape.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -11377,7 +11336,7 @@ declare module ValjangEngine {
         /**
          * Creates lathe mesh.
          * The lathe is a shape with a symetry axis : a 2D model shape is rotated around this axis to design the lathe.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#lathe
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#lathe
          *
          * The parameter `shape` is a required array of successive Vector3. This array depicts the shape to be rotated in its local space : the shape must be designed in the xOy plane and will be
          * rotated around the Y axis. It's usually a 2D shape, so the Vector3 z coordinates are often set to zero.
@@ -11388,7 +11347,7 @@ declare module ValjangEngine {
          * The parameter `cap` sets the way the extruded shape is capped. Possible values : ValjangEngine.Mesh.NO_CAP (default), ValjangEngine.Mesh.CAP_START, ValjangEngine.Mesh.CAP_END, ValjangEngine.Mesh.CAP_ALL
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -11407,13 +11366,13 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a plane mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#plane
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#plane
          * The parameter `size` sets the size (float) of both sides of the plane at once (default 1).
          * You can set some different plane dimensions by using the parameters `width` and `height` (both by default have the same value than `size`).
          * The parameter `sourcePlane` is a Plane instance. It builds a mesh plane from a Math plane.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreatePlane(name: string, options: {
@@ -11428,7 +11387,7 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a ground mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#plane
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#plane
          * The parameters `width` and `height` (floats, default 1) set the width and height sizes of the ground.
          * The parameter `subdivisions` (positive integer) sets the number of subdivisions per side.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
@@ -11443,7 +11402,7 @@ declare module ValjangEngine {
         }, scene: any): Mesh;
         /**
          * Creates a tiled ground mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#tiled-ground
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#tiled-ground
          * The parameters `xmin` and `xmax` (floats, default -1 and 1) set the ground minimum and maximum X coordinates.
          * The parameters `zmin` and `zmax` (floats, default -1 and 1) set the ground minimum and maximum Z coordinates.
          * The parameter `subdivisions` is a javascript object `{w: positive integer, h: positive integer}` (default `{w: 6, h: 6}`). `w` and `h` are the
@@ -11469,8 +11428,8 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a ground mesh from a height map.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/14._Height_Map
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#ground-from-a-height-map
+         * tuto : http://valjang.fr/tutorials/14._Height_Map
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#ground-from-a-height-map
          * The parameter `url` sets the URL of the height map image resource.
          * The parameters `width` and `height` (positive floats, default 10) set the ground width and height sizes.
          * The parameter `subdivisions` (positive integer, default 1) sets the number of subdivision per side.
@@ -11518,7 +11477,7 @@ declare module ValjangEngine {
         /**
          * Creates an extruded polygon mesh, with depth in the Y direction.
          * You can set different colors and different images to the top, bottom and extruded side by using the parameters `faceColors` (an array of 3 Color3 elements) and `faceUV` (an array of 3 Vector4 elements).
-         * Please read this tutorial : http://doc.ValjangEnginejs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
+         * Please read this tutorial : http://valjang.fr/tutorials/CreateBox_Per_Face_Textures_And_Colors
         */
         static ExtrudePolygon(name: string, options: {
             shape: Vector3[];
@@ -11533,9 +11492,9 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a tube mesh.
-         * The tube is a parametric shape :  http://doc.ValjangEnginejs.com/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
+         * The tube is a parametric shape :  http://valjang.fr/tutorials/Parametric_Shapes.  It has no predefined shape. Its final shape will depend on the input parameters.
          *
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#tube
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#tube
          * The parameter `path` is a required array of successive Vector3. It is the curve used as the axis of the tube.
          * The parameter `radius` (positive float, default 1) sets the tube radius size.
          * The parameter `tessellation` (positive float, default 64) is the number of sides on the tubular surface.
@@ -11549,10 +11508,10 @@ declare module ValjangEngine {
          * ```
          * The parameter `arc` (positive float, maximum 1, default 1) is the ratio to apply to the tube circumference : 2 x PI x arc.
          * The parameter `cap` sets the way the extruded shape is capped. Possible values : ValjangEngine.Mesh.NO_CAP (default), ValjangEngine.Mesh.CAP_START, ValjangEngine.Mesh.CAP_END, ValjangEngine.Mesh.CAP_ALL
-         * The optional parameter `instance` is an instance of an existing Tube object to be updated with the passed `pathArray` parameter : http://doc.ValjangEnginejs.com/tutorials/How_to_dynamically_morph_a_mesh#tube
+         * The optional parameter `instance` is an instance of an existing Tube object to be updated with the passed `pathArray` parameter : http://valjang.fr/tutorials/How_to_dynamically_morph_a_mesh#tube
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture.
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
@@ -11575,7 +11534,7 @@ declare module ValjangEngine {
         /**
          * Creates a polyhedron mesh.
          *
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#polyhedron
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#polyhedron
          * The parameter `type` (positive integer, max 14, default 0) sets the polyhedron type to build among the 15 embbeded types. Please refer to the type sheet in the tutorial
          *  to choose the wanted type.
          * The parameter `size` (positive float, default 1) sets the polygon size.
@@ -11583,11 +11542,11 @@ declare module ValjangEngine {
          * You can build other polyhedron types than the 15 embbeded ones by setting the parameter `custom` (`polyhedronObject`, default null). If you set the parameter `custom`, this overwrittes the parameter `type`.
          * A `polyhedronObject` is a formatted javascript object. You'll find a full file with pre-set polyhedra here : https://github.com/ValjangEngineJS/Extensions/tree/master/Polyhedron
          * You can set the color and the UV of each side of the polyhedron with the parameters `faceColors` (Color4, default `(1, 1, 1, 1)`) and faceUV (Vector4, default `(0, 0, 1, 1)`).
-         * To understand how to set `faceUV` or `faceColors`, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://doc.ValjangEnginejs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
+         * To understand how to set `faceUV` or `faceColors`, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://valjang.fr/tutorials/CreateBox_Per_Face_Textures_And_Colors
          * The parameter `flat` (boolean, default true). If set to false, it gives the polyhedron a single global face, so less vertices and shared normals. In this case, `faceColors` and `faceUV` are ignored.
          * You can also set the mesh side orientation with the values : ValjangEngine.Mesh.FRONTSIDE (default), ValjangEngine.Mesh.BACKSIDE or ValjangEngine.Mesh.DOUBLESIDE
          * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4).
-         * Detail here : http://doc.ValjangEnginejs.com/tutorials/02._Discover_Basic_Elements#side-orientation
+         * Detail here : http://valjang.fr/tutorials/02._Discover_Basic_Elements#side-orientation
          * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
          */
         static CreatePolyhedron(name: string, options: {
@@ -11607,7 +11566,7 @@ declare module ValjangEngine {
         }, scene: Scene): Mesh;
         /**
          * Creates a decal mesh.
-         * tuto : http://doc.ValjangEnginejs.com/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#decals
+         * tuto : http://valjang.fr/tutorials/Mesh_CreateXXX_Methods_With_Options_Parameter#decals
          * A decal is a mesh usually applied as a model onto the surface of another mesh. So don't forget the parameter `sourceMesh` depicting the decal.
          * The parameter `position` (Vector3, default `(0, 0, 0)`) sets the position of the decal in World coordinates.
          * The parameter `normal` (Vector3, default `Vector3.Up`) sets the normal of the mesh where the decal is applied onto in World coordinates.
@@ -12211,7 +12170,7 @@ declare module ValjangEngine {
 
 declare module ValjangEngine {
     /**
-    * Full documentation here : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System
+    * Full documentation here : http://valjang.fr/overviews/Solid_Particle_System
     */
     class SolidParticleSystem implements IDisposable {
         /**
@@ -12245,7 +12204,7 @@ declare module ValjangEngine {
         mesh: Mesh;
         /**
         * This empty object is intended to store some SPS specific or temporary values in order to lower the Garbage Collector activity.
-        * Please read : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#garbage-collector-concerns
+        * Please read : http://valjang.fr/overviews/Solid_Particle_System#garbage-collector-concerns
         */
         vars: any;
         /**
@@ -12254,7 +12213,7 @@ declare module ValjangEngine {
         * Each element of this array is an object `{idx: int, faceId: int}`.
         * `idx` is the picked particle index in the `SPS.particles` array
         * `faceId` is the picked face index counted within this particle.
-        * Please read : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#pickable-particles
+        * Please read : http://valjang.fr/overviews/Solid_Particle_System#pickable-particles
         */
         pickedParticles: {
             idx: number;
@@ -12369,7 +12328,7 @@ declare module ValjangEngine {
         private _addParticle(idx, idxpos, model, shapeId, idxInShape, bInfo?);
         /**
         * Adds some particles to the SPS from the model shape. Returns the shape id.
-        * Please read the doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#create-an-immutable-sps
+        * Please read the doc : http://valjang.fr/overviews/Solid_Particle_System#create-an-immutable-sps
         * `mesh` is any Mesh object that will be used as a model for the solid particles.
         * `nb` (positive integer) the number of particles to be created from this model
         * `positionFunction` is an optional javascript function to called for each particle on SPS creation.
@@ -12404,7 +12363,7 @@ declare module ValjangEngine {
         dispose(): void;
         /**
         * Visibilty helper : Recomputes the visible size according to the mesh bounding box
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#sps-visibility
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#sps-visibility
         * Returns the SPS.
         */
         refreshVisibleSize(): SolidParticleSystem;
@@ -12412,17 +12371,17 @@ declare module ValjangEngine {
         * Visibility helper : Sets the size of a visibility box, this sets the underlying mesh bounding box.
         * @param size the size (float) of the visibility box
         * note : this doesn't lock the SPS mesh bounding box.
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#sps-visibility
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#sps-visibility
         */
         setVisibilityBox(size: number): void;
         /**
         * Sets the SPS as always visible or not
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#sps-visibility
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#sps-visibility
         */
         isAlwaysVisible: boolean;
         /**
         * Sets the SPS visibility box as locked or not. This enables/disables the underlying mesh bounding box updates.
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#sps-visibility
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#sps-visibility
         */
         isVisibilityBoxLocked: boolean;
         /**
@@ -12456,19 +12415,19 @@ declare module ValjangEngine {
         /**
         * This function does nothing. It may be overwritten to set all the particle first values.
         * The SPS doesn't call this function, you may have to call it by your own.
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#particle-management
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#particle-management
         */
         initParticles(): void;
         /**
         * This function does nothing. It may be overwritten to recycle a particle.
         * The SPS doesn't call this function, you may have to call it by your own.
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#particle-management
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#particle-management
         */
         recycleParticle(particle: SolidParticle): SolidParticle;
         /**
         * Updates a particle : this function should  be overwritten by the user.
         * It is called on each particle by `setParticles()`. This is the place to code each particle behavior.
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#particle-management
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#particle-management
         * ex : just set a particle position or velocity and recycle conditions
         */
         updateParticle(particle: SolidParticle): SolidParticle;
@@ -12478,7 +12437,7 @@ declare module ValjangEngine {
         * @param particle the current particle
         * @param vertex the current index of the current particle
         * @param pt the index of the current vertex in the particle shape
-        * doc : http://doc.ValjangEnginejs.com/overviews/Solid_Particle_System#update-each-particle-shape
+        * doc : http://valjang.fr/overviews/Solid_Particle_System#update-each-particle-shape
         * ex : just set a vertex particle position
         */
         updateParticleVertex(particle: SolidParticle, vertex: Vector3, pt: number): Vector3;
@@ -15713,16 +15672,8 @@ declare module ValjangEngine {
         private _textureType;
         private _isCube;
         private _defaultTextureMatrix;
-        /**
-         * Creates a ShadowGenerator object.
-         * A ShadowGenerator is the required tool to use the shadows.
-         * Each light casting shadows needs to use its own ShadowGenerator.
-         * Required parameters :
-         * - `mapSize` (integer): the size of the texture what stores the shadows. Example : 1024.
-         * - `light`: the light object generating the shadows.
-         * - `useFullFloatFirst`: by default the generator will try to use half float textures but if you need precision (for self shadowing for instance), you can use this option to enforce full float texture.
-         * Documentation : http://doc.ValjangEnginejs.com/tutorials/shadows
-         */
+       
+        
         constructor(mapSize: number, light: IShadowLight, useFullFloatFirst?: boolean);
         private _initializeGenerator();
         private _initializeShadowMap();
@@ -15767,13 +15718,7 @@ declare module ValjangEngine {
 }
 
 declare module ValjangEngine {
-    /**
-     * The Physically based material base class of BJS.
-     *
-     * This offers the main features of a standard PBR material.
-     * For more information, please refer to the documentation :
-     * http://doc.ValjangEnginejs.com/extensions/Physically_Based_Rendering
-     */
+   
     abstract class PBRBaseMaterial extends PushMaterial {
         /**
          * Intensity of the direct lights e.g. the four lights available in your scene.
@@ -15969,11 +15914,7 @@ declare module ValjangEngine {
          * And/Or occlude the blended part.
          */
         protected _useAlphaFresnel: boolean;
-        /**
-         * Specifies the environment BRDF texture used to comput the scale and offset roughness values
-         * from cos thetav and roughness:
-         * http://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf
-         */
+       
         protected _environmentBRDFTexture: BaseTexture;
         /**
          * Default configuration related to image processing available in the PBR Material.
@@ -16110,13 +16051,7 @@ declare module ValjangEngine.Internals {
 }
 
 declare module ValjangEngine {
-    /**
-     * The Physically based material of BJS.
-     *
-     * This offers the main features of a standard PBR material.
-     * For more information, please refer to the documentation :
-     * http://doc.ValjangEnginejs.com/extensions/Physically_Based_Rendering
-     */
+   
     class PBRMaterial extends PBRBaseMaterial {
         private static _PBRMATERIAL_OPAQUE;
         /**
@@ -16708,12 +16643,7 @@ declare module ValjangEngine {
 }
 
 declare module ValjangEngine {
-    /**
-     * This represents a texture coming from an HDR input.
-     *
-     * The only supported format is currently panorama picture stored in RGBE format.
-     * Example of such files can be found on HDRLib: http://hdrlib.com/
-     */
+   
     class HDRCubeTexture extends BaseTexture {
         private static _facesMapping;
         private _useInGammaSpace;
