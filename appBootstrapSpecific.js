@@ -231,8 +231,9 @@ function InitGUIRelatedElements()
         }
     }
     document.getElementById("openButton").onclick = function ()
-    {
+    {bootbox.hideAll();
         bootbox.dialog({
+
             message: document.getElementById('ChoseObject').innerHTML,
             backdrop: true,
             onEscape: function () { }   // So that backdrop works on dialog

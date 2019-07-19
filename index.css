@@ -1930,11 +1930,11 @@ background: #D35600;
  
     position:absolute;
 	display:block;
-
+    overflow:scroll;
 	/* Position */
 	top:0px;
 	left:0px;
-
+    
 	/* Dimensions */
 	width:88px;
 	height:100%;
