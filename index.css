@@ -1931,13 +1931,14 @@ background: #D35600;
     position:absolute;
 	display:block;
     overflow:scroll;
-	/* Position */
-	top:0px;
-	left:0px;
+    /* Position */
     
+	top:30%;
+	left:10px;
+   
 	/* Dimensions */
-	width:88px;
-	height:100%;
+	width:120px;
+	height:50%;
 
 	/* Shape */
 	border-radius:0% 0% 0% 0%;
@@ -1978,14 +1979,15 @@ background: #D35600;
 {
     display: inline;
 position: absolute; 
-bottom: -5%;
+bottom: 1%;
 left: 20%;
 scale: 110%;
+background-position-y: 85px;
 background-image: url("src/FondVIEWER_blanc.png");
 vertical-align:bottom;
 background-size: contain;
 background-repeat: no-repeat;
-background-position-y: 85px;
+
 
 
 }

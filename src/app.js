@@ -1,6 +1,8 @@
 var ManipulatorMode;
 var activmanipulator= Boolean("true");
 var raduislimit
+var Ymax
+var Ysize
 (function (ManipulatorMode) {
     ManipulatorMode[ManipulatorMode["Move"] = 0] = "Move";
     ManipulatorMode[ManipulatorMode["Rotate"] = 1] = "Rotate";
@@ -630,7 +632,10 @@ var AppMain = /** @class */ (function () {
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMax.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMax.Z()));
-    
+        this.Ymax =bMax.Y()
+    this.Ysize = bMin.Y()
+    console.log("Ymax= "+ this.Ymax)
+    console.log("Ysize ="+ this.Ysize )
         // Register it to ValjangEngine
         if (this._uiSculptBoundary != null) {
             this._uiSculptBoundary.dispose();
@@ -650,9 +655,12 @@ var AppMain = /** @class */ (function () {
         var boundFirstMin = firstMeshBBox.Min();
         var boundFirstMax = firstMeshBBox.Max();
         var boundMin = new ValjangEngine.Vector3(boundFirstMin.X(), boundFirstMin.Y(), boundFirstMin.Z());
-        var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y(), boundFirstMax.Z());
-       
-        firstMeshBBox.delete();
+        var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y()*2, boundFirstMax.Z());
+
+
+
+
+       firstMeshBBox.delete();
       
         if (this._isInCombineMode && this._meshToCombine) {
             var secondMeshBoundingInfo = this._meshToCombine.getBoundingInfo();
@@ -983,15 +991,21 @@ if(this._isInCombineMode){
             this._meshToCombine = null;
             this._uiRingCursor.isVisible = true;
             this._isInCombineMode = false;
-            this.ReadaptToModelSize();
+           // this.ReadaptToModelSize();
            
         }
         //limite tempon 
+// BUG A CORRIGER !
         if(this._modelRadius >this.raduislimit){
             console.log("Aie ! Tu à depassé la limite !")
             AppSDK_Undo()
             
+        }else if (this._modelRadius > Ysize) {
+            console.log("Aie ! Tu à depassé la limite !")
+            AppSDK_Undo()
         }
+            
+        
     };
 
     AppMain.prototype.DoCSGOperation = function (opType) {
@@ -1109,6 +1123,7 @@ if(this._isInCombineMode){
         this.GenRegle()
         this.Genfleche()
 this.raduislimit = this._modelRadius*2
+
         
     };
     AppMain.prototype.GenSphere = function () {
