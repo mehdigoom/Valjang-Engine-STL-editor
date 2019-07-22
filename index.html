@@ -39,10 +39,10 @@
       
             <div class="Popup">
                   <center>
-                      <font style="font-size:30px">Chose output file format:</font></center>
+                      <font style="font-size:30px">Choisir format:</font></center>
         <br>
         <center>
-            <button  onclick="bootbox.hideAll();">Close</button>
+            <button  onclick="bootbox.hideAll();">Fermer</button>
                 <button id="stlButton"
                         
                         onclick="
@@ -159,15 +159,15 @@
         <br>
         <center>
             <div class="Popup">
-                    <center><font style="font-size:30px">Create a new scene or combine with existing one ?</font></center>
+                    <center><font style="font-size:30px">Apliquer le tampon?</font></center>
                 <button id="createButton" 
                         
                         onclick="
                             bootbox.hideAll(); 
-                            AppSDK_CreateNewScene(meshItemToCreateOrCombine); 
-                            meshItemToCreateOrCombine = null;
+                           // AppSDK_CreateNewScene(meshItemToCreateOrCombine); 
+                            //meshItemToCreateOrCombine = null;
                         ">
-                    Create
+                    non j'ai fait erreur!
                 </button>
                 <button id="combineButton"
                         
@@ -180,7 +180,7 @@
 
 
 
-                    Combine
+                    Oui, je veux le placer.
                 </button>
             </div>
         </center>
@@ -228,7 +228,7 @@
                         <button id="fullScreenButton" class="full"></button>
                             <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
                             <input  id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
-                            <button id="saveButton" class = "imprimer" userdata="unlocked"> </button>
+                            <button id="saveButton" class = "imprimer" userdata="unlocked">Imprimer avec Dood </button>
                     
                             <!--BUG A CORRIGER !-->
                         
@@ -238,12 +238,12 @@
         
             <input id="sliderSize" data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
             <input id="sliderStrength" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.01" data-slider-value="0.5" data-slider-tooltip="hide" />
-            <button id="drawButton" class = "dessiner" userdata="brushButton"> </button>
+            <button id="drawButton" class = "dessiner" userdata="brushButton">dessiner</button>
             <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
-            <button id="digButton" class = "creuser" userdata="brushButton">  </button>
-            <button id="flattenButton" class = "aplatir" userdata="brushButton">  </button>
+            <button id="digButton" class = "creuser" userdata="brushButton">creuser</button>
+            <button id="flattenButton" class = "aplatir" userdata="brushButton">aplatir</button>
             
-            <button id="dragButton" class = "etirer" userdata="brushButton"> </button>
+            <button id="dragButton" class = "etirer" userdata="brushButton">etirer</button>
         
         
         <!--botton right-->
@@ -271,13 +271,13 @@
             <div>
                 <div >
                     <img  id="moveButton"  src="src/MOVE.png" style = "width: 100px; height: 100px;">
-                
+                Deplacer
                 </img>
                     <img id="rotateButton" src="src/ROTATE.png"style = "width: 100px; height: 100px;">
-                    
+                    Rotation
                     </img>
                     <img id="scaleButton" src="src/SCALE.png" style = "width: 100px; height: 100px;">
-                      
+                      Redimansioner 
                     </img>
        
                 </div>
@@ -286,10 +286,10 @@
             <div >
                 <div >
                     <button id="mergeButton" >
-                        Merge
+                        Ajouter matiére
                     </button>
                     <button id="subtractButton" >
-                        Subtract
+                        Creusé forme
                     </button>
                     <button hidden id="intersectButton" >
                         Intersection
@@ -297,10 +297,10 @@
                 </div>        <!-- Cancel -->
             </div>
             <button id="cancelCombineButton" >
-                Cancel
+                Annuler
             </button>
         </div>
-    <div id="spinner" class="tectrid-spinner" style="display:inline;"></div>
+    <div id="spinner" class="tectrid-spinner" style="display:inline;"> Chargement...</div>
     <!--WebGL-->
     <canvas id="renderCanvas" class="Canvas"  ></canvas>
     <!-- astro print -->

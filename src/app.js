@@ -997,11 +997,11 @@ if(this._isInCombineMode){
         //limite tempon 
 // BUG A CORRIGER !
         if(this._modelRadius >this.raduislimit){
-            console.log("Aie ! Tu à depassé la limite !")
+            bootbox.alert("Oups, il y pas a la place :(")
             AppSDK_Undo()
             
         }else if (this._modelRadius > Ysize) {
-            console.log("Aie ! Tu à depassé la limite !")
+            bootbox.alert("Oups, il y pas a la place :(")
             AppSDK_Undo()
         }
             
