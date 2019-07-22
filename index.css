@@ -1928,8 +1928,9 @@ background: #D35600;
 	left:10px;
    
 	/* Dimensions */
-	width:220px;
+	width:150px;
 	height:50%;
+    resize: both;
 
 	/* Shape */
 	border-radius:10% 10% 10% 10%;
@@ -1968,11 +1969,11 @@ background: #D35600;
 
 .Barre
 {
-    display: inline;
+
 position: absolute; 
 bottom: -5%;
 left: 20%;
-scale: 110%;
+
 background-position-y: 85px;
 background-image: url("src/FondVIEWER_blanc.png");
 vertical-align:bottom;
@@ -2029,8 +2030,17 @@ background-repeat: no-repeat;
 .popup{
     top: 50%;
     left: 50%;
-    width: 120px;
-    height: 120px;
+    width: 50%;
+    height:50%;
     margin-left: -60px;
     margin-top: -60px;
 }
+
+
+
+
+
+
+
+
+

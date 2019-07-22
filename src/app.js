@@ -920,6 +920,13 @@ if(this._isInCombineMode){
         return this._isInCombineMode;
       
     };
+
+    AppMain.prototype.Textesaisie = function()
+    {
+        bootbox.prompt("Texte à apliqué", function(result){ 
+            console.log(result); 
+        });
+    }
     AppMain.prototype.StartCombineToSceneMode = function (meshItemToCombine) {
         
     
@@ -959,7 +966,7 @@ if(this._isInCombineMode){
         bbox.delete();
         bbox = null;
         var positionShift = firstModelRadius + secondModelRadius;
-        var position = ValjangEngine.Vector3.Up(); //this._camera.getWorldMatrix().getRow(0).toVector3();
+        var position = ValjangEngine.Vector3.Up(); this._camera.getWorldMatrix().getRow(0).toVector3();
        
         position.scaleInPlace(positionShift);
         this._meshToCombine.position = position;
@@ -987,12 +994,19 @@ if(this._isInCombineMode){
         }
         //limite tempon 
 // BUG A CORRIGER !
+
         if(this._modelRadius >this.raduislimit){
-            bootbox.alert("Oups, il y pas a la place :(")
+            bootbox.alert({
+                message: "Oups, il y pas a la place :(",
+
+            });
             AppSDK_Undo()
             
         }else if (this._modelRadius > Ysize) {
-            bootbox.alert("Oups, il y pas a la place :(")
+            bootbox.alert({
+                message: "Oups, il y pas a la place :(",
+  
+            });
             AppSDK_Undo()
         }
             
@@ -1118,7 +1132,7 @@ this.raduislimit = this._modelRadius*2
 this._mesh.material.unfreeze();
      
 this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 255.0, 91 / 255.0);
-this._mesh.material.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+
     };
     AppMain.prototype.GenSphere = function () {
         var generator = new Module.GenSphere();
