@@ -544,20 +544,11 @@ var AppMain = /** @class */ (function () {
         this._brushType = brushType;
     };
     AppMain.prototype.changeColor = function (color) {
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
-        var colorRed = parseInt(result[1], 16);
-        var colorGreen = parseInt(result[2], 16);
-        var colorBlue = parseInt(result[3], 16);
-        this._mesh.material.unfreeze();
-        if (color == "#F0DCC8")
-            this._mesh.material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
-        else
-            this._mesh.material.emissiveColor = new ValjangEngine.Color3(colorRed / (255 * 15), colorGreen / (255 * 15), colorBlue / (255 * 15));
-        this._mesh.material.diffuseColor = new ValjangEngine.Color3(colorRed / 255, colorGreen / 255, colorBlue / 255);
-        setTimeout(function () {
-            this._mesh.material.freeze();
-        }, 100);
-    };
+        
+
+       
+        };
+    
     AppMain.prototype.IsInFullScreen = function () {
         return this._fullScreen;
     };
@@ -1101,6 +1092,7 @@ if(this._isInCombineMode){
             meshData.indices = triangles;
             meshData.positions = vertices;
             meshData.normals = normals;
+            meshData.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
             if (this._mesh == null) {
                 this._mesh = new ValjangEngine.Mesh("mesh", this._scene);
                 this._mesh.freezeWorldMatrix();
@@ -1123,7 +1115,9 @@ if(this._isInCombineMode){
         this.GenRegle()
         this.Genfleche()
 this.raduislimit = this._modelRadius*2
-
+this._mesh.material.unfreeze();
+     this._mesh.material
+this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 255.0, 91 / 255.0);
         
     };
     AppMain.prototype.GenSphere = function () {
@@ -1268,8 +1262,9 @@ this.raduislimit = this._modelRadius*2
 
 //lumiere color et back 
 
-        this._light = new ValjangEngine.PointLight('light1', new ValjangEngine.Vector3(0, 1, 0), this._scene);
-        this._light.diffuse = new ValjangEngine.Color3(0.5, 0.5, 0.5);
+        this._light = new ValjangEngine.PointLight('light1', new ValjangEngine.Vector3(0, 0, 0), this._scene);
+        this._light.diffuse = new ValjangEngine.Color3(0.2, 0.2, 0.2);
+      
         // Ring cursor
         this.CreateUIRingCursor();
         // Create move, rot, scale manipulator
@@ -1286,8 +1281,8 @@ this.raduislimit = this._modelRadius*2
             this._camera.target = ValjangEngine.Vector3.Zero();
         // Set background color
         this._scene.clearColor.r = 140/ 255;
-        this._scene.clearColor.g = 175/ 255;
-        this._scene.clearColor.b = 175/ 255;
+        this._scene.clearColor.g = 190/ 255;
+        this._scene.clearColor.b = 250/ 255;
         // Move the light with the camera
         this._scene.registerBeforeRender(function () {
             _this._light.position = _this._camera.position;
