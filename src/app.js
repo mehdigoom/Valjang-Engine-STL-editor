@@ -1092,7 +1092,7 @@ if(this._isInCombineMode){
             meshData.indices = triangles;
             meshData.positions = vertices;
             meshData.normals = normals;
-            meshData.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+           
             if (this._mesh == null) {
                 this._mesh = new ValjangEngine.Mesh("mesh", this._scene);
                 this._mesh.freezeWorldMatrix();
@@ -1116,9 +1116,9 @@ if(this._isInCombineMode){
         this.Genfleche()
 this.raduislimit = this._modelRadius*2
 this._mesh.material.unfreeze();
-     this._mesh.material
+     
 this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 255.0, 91 / 255.0);
-        
+this._mesh.material.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
     };
     AppMain.prototype.GenSphere = function () {
         var generator = new Module.GenSphere();
