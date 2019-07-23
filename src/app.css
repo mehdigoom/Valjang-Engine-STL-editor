@@ -4,11 +4,12 @@
     height  : 100%;
     margin  : 0;
     padding : 0;
+    -webkit-appearance: slider-vertical;
 }
 
 
 .Canvas{
-    background:#c0c0c0;
+    background:#08afe2;
   width:100%;
   height:auto;
 }
@@ -20,6 +21,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    
 }
 
 /* Sliders color */
@@ -71,6 +73,7 @@
     transition: all 0.3s ease-in-out;
     width: 24px;
 }
+
 
 /* Spinner */
 .tectrid-spinner{

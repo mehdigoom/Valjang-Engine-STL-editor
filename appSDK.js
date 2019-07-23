@@ -143,7 +143,7 @@ function AppSDK_SaveToBlob(fileExt)   // fileExt could be "stl" or "obj" regardi
 
 // ========== Color ==========
 
-function AppSDK_ChangeColor(color)  // Color is a string in the form "#rrggbb", like #F5BFA8
+function AppSDK_ChangeColor(color)  // Color is a str.ing in the form "#rrggbb", like #F5BFA8
 {
     if(window.app != null)
         window.app.changeColor(color);

@@ -1820,14 +1820,7 @@ box-shadow:
   user-select: none;
 }
 
-/* Sliders color */
-#CustomSlider .slider-selection {
-background: #BABABA;
-}
 
-#CustomSlider .slider-handle {
-background: #D35600;
-}
 
 /* Buttons color */
 .btn-default, .btn-default:active, .btn-default:visited {

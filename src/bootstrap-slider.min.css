@@ -60,12 +60,14 @@
         }
         .slider.slider-horizontal .slider-tick.triangle,.slider.slider-horizontal .slider-handle.triangle{
             position:relative;top:50%;
+           
             transform:translateY(-50%);
             border-width:0 10px 10px 10px;
             width:0;
             height:0;
             border-bottom-color:#0480be;
             margin-top:0
+            
         }
         .slider.slider-horizontal .slider-tick-container{
             white-space:nowrap;position:absolute;
