@@ -1645,6 +1645,7 @@
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
+
   background-image: url("src/Imprimer_animation_1.png");
   background-image: url("src/Imprimer_animation_2.png");
   background-image: url("src/Imprimer_animation_3.png");
@@ -1967,8 +1968,8 @@ position: absolute;
 bottom: -10%;
 left: 25%;
 right: 25%;
-
-background-position-y: 85px;
+vertical-align: middle;
+background-position-y: 78px;
 background-image: url("src/FondVIEWER_blanc.png");
 vertical-align:bottom;
 background-size: contain;
@@ -2028,6 +2029,18 @@ background-repeat: no-repeat;
     height:50%;
     margin-left: -60px;
     margin-top: -60px;
+}
+.BTN{
+
+    display: inline-block;
+    position:relative;
+ 
+    left: auto;
+    right: auto;
+    bottom: 20px;
+    vertical-align: middle
+ /* on positionne l'élément à la moitié de l'écran */
+  
 }
 
 

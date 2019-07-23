@@ -11,7 +11,7 @@
 .Canvas{
     background:#08afe283;
   width:100%;
-  height:auto;
+  height:100ù;
 }
 
 .unselectable {
@@ -26,12 +26,12 @@
 
 /* Sliders color */
 #CustomSlider .slider-selection {
-    background: rgb(3, 20, 248);
+    background: #337ab7;
     
 }
 
 #CustomSlider .slider-handle {
-    background: rgb(173, 180, 245);
+    background: rgb(4, 24, 207);
     
 }
 

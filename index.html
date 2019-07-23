@@ -221,37 +221,43 @@
                 
                        
             
-                        <!--fullscreen-->
+                
+                                                
+                        <button class= "tampon BTN" id="openButton" >  </button>
+                        <button id="drawButton" class = "dessiner BTN" userdata="brushButton"></button>
+                        <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
+                        <button id="digButton" class = "creuser BTN" userdata="brushButton"></button>
+                        <button id="flattenButton" class = "aplatir BTN" userdata="brushButton"></button>
                         
-                        <button class= "tampon" id="openButton" >  </button>
+                        <button id="dragButton" class = "etirer BTN" userdata="brushButton"></button>
+
+
+
                     
-                        <button id="fullScreenButton" class="full"></button>
+                        
                             <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
                             <input  id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
-                            <button id="saveButton" class = "imprimer" userdata="unlocked">Imprimer avec Dood </button>
+
+                            <input id="sliderSize" classe = "BTN"data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
+                            <p class="BTN">Diamétre</p>  
+                         <input id="sliderStrength"classe = "BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.01" data-slider-value="0.5" data-slider-tooltip="hide" />
+                         <p class="BTN">Force</p>  
+           
+         <button id="fullScreenButton" class="full BTN"></button>
+            <button id="saveButton" class = "imprimer BTN" userdata="unlocked"> </button>
+          
+                <div class="slider-switch BTN">
+                    <input id="mirrorSwitch"
+                           type="checkbox"
+                           onchange="
+                               AppSDK_SwitchMirrorMode(this.checked);
+                           "/>
+                           
+                    <label for="mirrorSwitch" class="label-primary BTN"></label>
+                    <p>Mirroir</p>
+
                     
-                            <!--BUG A CORRIGER !-->
-                        
-      
-                      
-        
-        
-            
-                            <input id="sliderSize" data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
-           
-           
-                            <input id="sliderStrength" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.01" data-slider-value="0.5" data-slider-tooltip="hide" />
-            
-            
-            
-                <button id="drawButton" class = "dessiner" userdata="brushButton">dessiner</button>
-            <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
-            <button id="digButton" class = "creuser" userdata="brushButton">creuser</button>
-            <button id="flattenButton" class = "aplatir" userdata="brushButton">aplatir</button>
-            
-            <button id="dragButton" class = "etirer" userdata="brushButton">etirer</button>
-        
-        
+                </div>
         <!--botton right-->
       
         <!--bottom left-->
@@ -271,18 +277,18 @@
 
         
     </div>
-    <input id="mirrorSwitch" class="mirroir" type="checkbox" onchange="AppSDK_SwitchMirrorMode(this.checked);"/>
-    <div id="combineUI" class="Barre" style="display:none;">
+    
+    <div id="combineUI" style="display:none;"class ="Barre">
             <!-- Rotate and scale -->
             <div>
                 <div >
-                    <img  id="moveButton"  src="src/MOVE.png" style = "width: 100px; height: 100px;">
+                    <img  id="moveButton"  src="src/MOVE.png" class="BTN"style = "width: 100px; height: 100px;" >
                 Deplacer
                 </img>
-                    <img id="rotateButton" src="src/ROTATE.png"style = "width: 100px; height: 100px;">
+                    <img id="rotateButton" src="src/ROTATE.png"class="BTN"style = "width: 100px; height: 100px;">
                     Rotation
                     </img>
-                    <img id="scaleButton" src="src/SCALE.png" style = "width: 100px; height: 100px;">
+                    <img id="scaleButton" src="src/SCALE.png" class="BTN"style = "width: 100px; height: 100px;">
                       Redimansioner 
                     </img>
        
@@ -291,13 +297,13 @@
             <!-- Merge, substract, intersect -->
             <div >
                 <div >
-                    <button id="mergeButton" >
+                    <button id="mergeButton" class="BTN" >
                         Ajouter matiére
                     </button>
-                    <button id="subtractButton" >
+                    <button id="subtractButton" class="BTN" >
                         Creusé forme
                     </button>
-                    <button hidden id="intersectButton" >
+                    <button hidden id="intersectButton" class="BTN" >
                         Intersection
                     </button>
                 </div>        <!-- Cancel -->
