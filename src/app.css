@@ -9,7 +9,7 @@
 
 
 .Canvas{
-    background:#08afe2;
+    background:#08afe283;
   width:100%;
   height:auto;
 }
@@ -27,7 +27,7 @@
 /* Sliders color */
 #CustomSlider .slider-selection {
     background: rgb(3, 20, 248);
-  
+    
 }
 
 #CustomSlider .slider-handle {
