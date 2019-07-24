@@ -1459,11 +1459,9 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                 break;
             case BrushType.Drag:
                 this._brushDrag.UpdateStroke(ray, this._sculptingRadius, this._sculptingStrengthRatio);
-                 
                 break;
             case BrushType.Dig:
-               
-             this._brushDig.UpdateStroke(ray, this._sculpt<ingRadius, this._sculptingStrengthRatio);
+                this._brushDig.UpdateStroke(ray, this._sculptingRadius, this._sculptingStrengthRatio);
                 break;
         }
 
