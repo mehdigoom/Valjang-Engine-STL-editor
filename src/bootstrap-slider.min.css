@@ -85,6 +85,7 @@
             left:initial;
             right:0
         }
+        
         .slider.slider-horizontal.slider-rtl .slider-tick,.slider.slider-horizontal.slider-rtl .slider-handle{
             margin-left:initial;
             margin-right:-10px

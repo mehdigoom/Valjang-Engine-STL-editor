@@ -1380,6 +1380,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                 
             }
         };
+        
         this._scene.onPointerMove = function (e, p) {
             if (_this.IsInCombineMode()) {
                 _this._manipulator.onPointerMove(e, p);

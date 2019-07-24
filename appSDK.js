@@ -204,6 +204,7 @@ function AppSDK_SetSculptingStrengthRatio(ratio)    // ratio goes from 0.0 to 1.
         window.app.SetSculptingStrengthRatio(ratio);
 }
 
+
 function AppSDK_SetSculptingRadiusRatio(ratio)    // ratio regarding model size, 1.0 encompass the whole model
 {
     if(window.app != null)
