@@ -526,12 +526,12 @@ var AppMain = /** @class */ (function () {
         this._sculptLimitBoundingPercent = 0.0;
         this._cameraSpinningSpeed = 0.0; // In degrees per second
         this._cameraHasToSpin = false;
-        if (Module.SculptEngine.HasExpired())
+       if (Module.SculptEngine.HasExpired())
             alert("Product has expired on " + Module.SculptEngine.GetExpirationDate() + "\nIt won't function anymore, please update your version.");
-        // Create canvas and engine
+         //Create canvas and engine
         this._canvas = document.getElementById(canvasElement);
         this._engine = new ValjangEngine.Engine(this._canvas, true);
-    }
+}
     AppMain.prototype.SetSculptingStrengthRatio = function (ratio) {
         this._sculptingStrengthRatio = ratio;
     };

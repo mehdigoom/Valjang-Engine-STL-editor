@@ -69,8 +69,9 @@
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
             
 
-                <button href="javascript:bootbox.hideAll();">fermer</button>
+               
                 <div class="liste" role="listbox">
+                        <button onclick="javascript:bootbox.hideAll();">fermer</button>
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();SetMeshItemToScene(AppSDK_GenSphere());">
                             <img src="3d_models/sphere.jpg" alt="Sphere" style="   width:90%;">
@@ -177,10 +178,6 @@
                             AppSDK_StartCombineToSceneMode(meshItemToCreateOrCombine);
                             SwitchCombineModeUI(true);
                         ">
-
-
-
-
                     Oui, je veux le placer.
                 </button>
             </div>
@@ -309,7 +306,7 @@
                     </button>
                 </div>        <!-- Cancel -->
             </div>
-            <button id="cancelCombineButton" >
+            <button id="cancelCombineButton" class="BTN">
                 Annuler
             
             </button>
