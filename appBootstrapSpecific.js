@@ -157,14 +157,14 @@ function InitGUIRelatedElements()
         formatter: function (value)
         {
             AppSDK_SetSculptingStrengthRatio(value);
-            return 'Current value: ' + value;
+           
         }
     });
     let sliderSize = new Slider('#sliderSize', {
         formatter: function (value)
         {
             AppSDK_SetSculptingRadiusRatio(value);
-            return 'Current value: ' + value;
+           
         }
     });
     // Bottom left

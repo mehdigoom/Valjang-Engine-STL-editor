@@ -60,12 +60,14 @@
         }
         .slider.slider-horizontal .slider-tick.triangle,.slider.slider-horizontal .slider-handle.triangle{
             position:relative;top:50%;
+           
             transform:translateY(-50%);
             border-width:0 10px 10px 10px;
             width:0;
             height:0;
             border-bottom-color:#0480be;
             margin-top:0
+            
         }
         .slider.slider-horizontal .slider-tick-container{
             white-space:nowrap;position:absolute;
@@ -83,6 +85,7 @@
             left:initial;
             right:0
         }
+        
         .slider.slider-horizontal.slider-rtl .slider-tick,.slider.slider-horizontal.slider-rtl .slider-handle{
             margin-left:initial;
             margin-right:-10px
@@ -92,8 +95,10 @@
             right:0
         }
         .slider.slider-vertical{
-            height:210px;
+            bottom: 50%;
+            height:70px;
             width:20px
+            
         }
         .slider.slider-vertical .slider-track{
             width:10px;

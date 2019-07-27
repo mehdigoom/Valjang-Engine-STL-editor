@@ -526,12 +526,12 @@ var AppMain = /** @class */ (function () {
         this._sculptLimitBoundingPercent = 0.0;
         this._cameraSpinningSpeed = 0.0; // In degrees per second
         this._cameraHasToSpin = false;
-        if (Module.SculptEngine.HasExpired())
+       if (Module.SculptEngine.HasExpired())
             alert("Product has expired on " + Module.SculptEngine.GetExpirationDate() + "\nIt won't function anymore, please update your version.");
-        // Create canvas and engine
+         //Create canvas and engine
         this._canvas = document.getElementById(canvasElement);
         this._engine = new ValjangEngine.Engine(this._canvas, true);
-    }
+}
     AppMain.prototype.SetSculptingStrengthRatio = function (ratio) {
         this._sculptingStrengthRatio = ratio;
     };
@@ -1380,6 +1380,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                 
             }
         };
+        
         this._scene.onPointerMove = function (e, p) {
             if (_this.IsInCombineMode()) {
                 _this._manipulator.onPointerMove(e, p);
@@ -1448,6 +1449,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
         var rayOrigin = new Module.Vector3(babRay.origin.x, babRay.origin.y, babRay.origin.z);
         var rayDirection = new Module.Vector3(babRay.direction.x, babRay.direction.y, babRay.direction.z);
         var ray = new Module.Ray(rayOrigin, rayDirection, this._rayLength);
+        //brush mode
         switch (this._brushType) {
             case BrushType.Draw:
                 this._brushDraw.UpdateStroke(ray, this._sculptingRadius, this._sculptingStrengthRatio);

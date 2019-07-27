@@ -1645,6 +1645,7 @@
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
+
   background-image: url("src/Imprimer_animation_1.png");
   background-image: url("src/Imprimer_animation_2.png");
   background-image: url("src/Imprimer_animation_3.png");
@@ -1789,13 +1790,7 @@ box-shadow:
 	box-shadow:
 	0px 0px 38px 0px rgb(81, 0, 255);
 }
-.btn
-{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
 
-}
 
  body {
 
@@ -1811,46 +1806,9 @@ box-shadow:
   touch-action: none;
 }
 
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
-/* Sliders color */
-#CustomSlider .slider-selection {
-background: #BABABA;
-}
 
-#CustomSlider .slider-handle {
-background: #D35600;
-}
 
-/* Buttons color */
-.btn-default, .btn-default:active, .btn-default:visited {
- 
-
-  border-color: #777777   ;
-}
-
-.btn-default:hover {
-  background-color: #D68730   ;
-  border-color: #777777   ;
-}
-
-.btn-primary, .btn-primary:active, .btn-primary:hover, .btn-primary:visited {
-  background-color: #ED8C23   ;
-  color: #FFFFFF   ;
-  border-color: #777777   ;
-}
-
-.btn-info, .btn-info:hover, .btn-info:active, .btn-info:visited {
-  background-color: #FA753A   ;
-  border-color: #777777   ;
-}
 
 /* Checkboxes (slider shaped) */
 .slider-switch > input[type="checkbox"] {
@@ -1901,6 +1859,7 @@ background: #D35600;
   left: 20px;
 }
 
+
 /* Spinner */
 .tectrid-spinner{
   border: 16px solid #f3f3f3; /* Light grey */
@@ -1916,6 +1875,8 @@ background: #D35600;
   pointer-events: none;
   animation: tectrid-spinner-spin 2s linear infinite;
 }
+
+
 .liste
 {
  
@@ -1948,7 +1909,9 @@ background: #D35600;
 	box-shadow:
 	0px 0px 0px 0px rgb(0, 0, 0);
 }
-}   
+}
+
+
 .item
 {
 
@@ -1957,6 +1920,8 @@ background: #D35600;
 
     transform: translate(-50%,50%)
 }
+
+
 .active
 {
     visibility: visible;
@@ -1967,14 +1932,17 @@ background: #D35600;
   
 }
 
+
 .Barre
 {
 
 position: absolute; 
-bottom: -5%;
-left: 20%;
-
-background-position-y: 85px;
+display: flex;
+bottom: -10%;
+left: 25%;
+right: 25%;
+vertical-align: middle;
+background-position-y: 78px;
 background-image: url("src/FondVIEWER_blanc.png");
 vertical-align:bottom;
 background-size: contain;
@@ -2009,12 +1977,15 @@ background-repeat: no-repeat;
     bottom: 50%;
   position: absolute;
   }
-  
-  
-  
+
+
+
   input[type="checkbox"] {
     display:none;
   }
+
+
+
 
 .full{
     position: absolute;
@@ -2024,8 +1995,9 @@ background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 400px;
     background-image: url("src/FullSCREEN.png");
-    
 }
+
+
 
 .popup{
     top: 50%;
@@ -2034,6 +2006,25 @@ background-repeat: no-repeat;
     height:50%;
     margin-left: -60px;
     margin-top: -60px;
+}
+.BTN{
+    display: inline-block;
+    background-repeat: no-repeat;
+    position:relative;
+    bottom: 20px;
+    vertical-align: middle
+  
+}
+
+
+
+
+.scroll{
+    position: absolute;
+               top: 10px;
+               left: 0px;
+               width: 200px;
+               text-align: center;
 }
 
 

@@ -29,6 +29,7 @@ interface SliderOptions {
      * The number of digits shown after the decimal. Defaults to the number of digits after the decimal of step value.
      */
     precision?: number;
+    
     /**
      * Default: 'horizontal'
      * set the orientation. Accepts 'vertical' or 'horizontal'
