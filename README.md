@@ -4,4 +4,4 @@ Compatible browser: Mozilla Firefox, Google Chrome
 Do not use property of Dood Studio.
 
 
-based on superpowers/ValjangEngineand three.js/Babylon.js and Tectrid
+based on superpowers/ValjangEngine and three.js/Babylon.js and Tectrid
