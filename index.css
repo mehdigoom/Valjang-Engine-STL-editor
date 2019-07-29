@@ -911,6 +911,8 @@
 
 .creuser
 {
+
+    
     margin: 100px auto;
     width: 100px;
     height: 100px;
@@ -1897,29 +1899,11 @@ box-shadow:
 	border-radius:10% 10% 10% 10%;
 
 	/* Background */
-	background-color:rgba(255,255,255,.8);
+	background-color:rgba(0, 0, 0, 0.63);
 
-	/* Borders */
-	border-top:0px solid rgb(0, 0, 0);
-	border-bottom:0px solid rgb(0, 0, 0);
-	border-left:0px solid rgb(0, 0, 0);
-	border-right:0px solid rgb(0, 0, 0);
-
-	/* Shadows */
-	box-shadow:
-	0px 0px 0px 0px rgb(0, 0, 0);
-}
 }
 
 
-.item
-{
-
-    display: block;
-  width: 90%;
-
-    transform: translate(-50%,50%)
-}
 
 
 .active
@@ -2008,7 +1992,7 @@ background-repeat: no-repeat;
     margin-top: -60px;
 }
 .BTN{
-    display: inline-block;
+    display: flex;
     background-repeat: no-repeat;
     position:relative;
     bottom: 20px;

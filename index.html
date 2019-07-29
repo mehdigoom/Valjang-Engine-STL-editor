@@ -204,7 +204,41 @@
     <!--div class = "galerie"></div-->
     <!--div class = "imprimer"></div-->
 
-    </div><div  >
+    <div id="combineUI" style="display:none;"class ="Barre">
+        <!-- Rotate and scale -->
+        <div>
+            <div >
+                <img  id="moveButton"  src="src/MOVE.png" class="BTN"style = "width: 100px; height: 100px;" >
+            Deplacer
+            </img>
+                <img id="rotateButton" src="src/ROTATE.png"class="BTN"style = "width: 100px; height: 100px;">
+                Rotation
+                </img>
+                <img id="scaleButton" src="src/SCALE.png" class="BTN"style = "width: 100px; height: 100px;">
+                  Redimansioner 
+                </img>
+   
+            </div>
+        </div>
+        <!-- Merge, substract, intersect -->
+        <div >
+            <div >
+                <button id="mergeButton" class="BTN" >
+                    Ajouter matiére
+                </button>
+                <button id="subtractButton" class="BTN" >
+                    Creusé forme
+                </button>
+                <button hidden id="intersectButton" class="BTN" >
+                    Intersection
+                </button>
+            </div>        <!-- Cancel -->
+        </div>
+        <button id="cancelCombineButton" class="BTN">
+            Annuler
+        
+        </button>
+    </div>
          
         <!--Top </div> left-->
         <div id="mainUI" class="Barre" >
@@ -251,7 +285,7 @@
                                AppSDK_SwitchMirrorMode(this.checked);
                            "/>
                            
-                    <label for="mirrorSwitch" class="label-primary BTN"></label>
+                    <label for="mirrorSwitch" class=" BTN"></label>
                     <p>Mirroir</p>
 
                     
@@ -276,41 +310,7 @@
         
     </div>
     
-    <div id="combineUI" style="display:none;"class ="Barre">
-            <!-- Rotate and scale -->
-            <div>
-                <div >
-                    <img  id="moveButton"  src="src/MOVE.png" class="BTN"style = "width: 100px; height: 100px;" >
-                Deplacer
-                </img>
-                    <img id="rotateButton" src="src/ROTATE.png"class="BTN"style = "width: 100px; height: 100px;">
-                    Rotation
-                    </img>
-                    <img id="scaleButton" src="src/SCALE.png" class="BTN"style = "width: 100px; height: 100px;">
-                      Redimansioner 
-                    </img>
-       
-                </div>
-            </div>
-            <!-- Merge, substract, intersect -->
-            <div >
-                <div >
-                    <button id="mergeButton" class="BTN" >
-                        Ajouter matiére
-                    </button>
-                    <button id="subtractButton" class="BTN" >
-                        Creusé forme
-                    </button>
-                    <button hidden id="intersectButton" class="BTN" >
-                        Intersection
-                    </button>
-                </div>        <!-- Cancel -->
-            </div>
-            <button id="cancelCombineButton" class="BTN">
-                Annuler
-            
-            </button>
-        </div>
+   
     <div id="spinner" class="tectrid-spinner" style="display:inline;"> Chargement...</div>
     <!--WebGL-->
     <canvas id="renderCanvas"></canvas>
