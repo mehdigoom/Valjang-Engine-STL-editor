@@ -31,7 +31,7 @@
     <script src="appSDK.js"></script>
     <script src="appBootstrapSpecific.js"></script>
     <script src="appload.js"></script>
-
+    <!-- Pop-up messages -->
 
     
 
@@ -66,7 +66,7 @@
     </script>
     <script id="ChoseObject" type="text/html">
         <div class="container" >
-            <div id="myCarousel"  data-ride="carousel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
             
 
                
@@ -195,14 +195,21 @@
     alt="REDO glyphicon glyphicon-chevron-right"
     class="redo" />
 
-  
+    <!--div class = "aplatir"></div-->
+    <!--div class = "tampon"></div-->
+    <!--div class = "etirer"></div-->
+    <!--div class = "dessiner"></div-->
+    <!--div class = "creuser"></div-->
+    <!--div class = "mirroir"></div-->
+    <!--div class = "galerie"></div-->
+    <!--div class = "imprimer"></div-->
 
     </div><div  >
          
         <!--Top </div> left-->
         <div id="mainUI" class="Barre" >
               
-           
+            <!--color-->
           
         <!--Top    <div class="mirroir"></div> right-->
         
@@ -248,22 +255,7 @@
                     <p>Mirroir</p>
 
                     
-                            <!--BUG A CORRIGER !-->
-                        
-      
-                      
-        
-        
-            <input id="sliderSize" data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
-            <input id="sliderStrength"  data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.01" data-slider-value="0.5" data-slider-tooltip="hide" />
-            <button id="drawButton" class = "dessiner" userdata="brushButton">dessiner</button>
-            <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
-            <button id="digButton" class = "creuser" userdata="brushButton">creuser</button>
-            <button id="flattenButton" class = "aplatir" userdata="brushButton">aplatir</button>
-            
-            <button id="dragButton" class = "etirer" userdata="brushButton">etirer</button>
-        
-        
+                </div>
         <!--botton right-->
       
         <!--bottom left-->
@@ -284,17 +276,17 @@
         
     </div>
     
-    <div id="combineUI" style="display:none;">
+    <div id="combineUI" style="display:none;"class ="Barre">
             <!-- Rotate and scale -->
             <div>
-                <div class ="Barre">
-                    <img  id="moveButton"  src="src/MOVE.png" class="BTN apsolute "style = "width: 100px; height: 100px;" >
+                <div >
+                    <img  id="moveButton"  src="src/MOVE.png" class="BTN"style = "width: 100px; height: 100px;" >
                 Deplacer
                 </img>
-                    <img id="rotateButton" src="src/ROTATE.png"class="BTN apsolute "style = "width: 100px; height: 100px;">
+                    <img id="rotateButton" src="src/ROTATE.png"class="BTN"style = "width: 100px; height: 100px;">
                     Rotation
                     </img>
-                    <img id="scaleButton" src="src/SCALE.png" class="BTN apsolute"style = "width: 100px; height: 100px;">
+                    <img id="scaleButton" src="src/SCALE.png" class="BTN"style = "width: 100px; height: 100px;">
                       Redimansioner 
                     </img>
        
@@ -303,18 +295,18 @@
             <!-- Merge, substract, intersect -->
             <div >
                 <div >
-                    <button id="mergeButton" class="BTN apsolute" >
+                    <button id="mergeButton" class="BTN" >
                         Ajouter matiére
                     </button>
-                    <button id="subtractButton" class="BTN apsolute" >
+                    <button id="subtractButton" class="BTN" >
                         Creusé forme
                     </button>
-                    <button hidden id="intersectButton" class="BTN apsolute" >
+                    <button hidden id="intersectButton" class="BTN" >
                         Intersection
                     </button>
                 </div>        <!-- Cancel -->
             </div>
-            <button id="cancelCombineButton" class="BTN apsolute">
+            <button id="cancelCombineButton" class="BTN">
                 Annuler
             
             </button>
@@ -322,7 +314,7 @@
     <div id="spinner" class="tectrid-spinner" style="display:inline;"> Chargement...</div>
     <!--WebGL-->
     <canvas id="renderCanvas"></canvas>
-
+    <!-- astro print -->
    
 
     

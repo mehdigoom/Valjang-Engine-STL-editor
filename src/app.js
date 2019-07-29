@@ -1124,7 +1124,7 @@ if(this._isInCombineMode){
         // Show cursor
         this._uiRingCursor.isVisible = true;
         //appelle fonction  this.Gengrille()
-      
+    
         this.Gengrille()
         this.GenRegle()
         this.Genfleche()
