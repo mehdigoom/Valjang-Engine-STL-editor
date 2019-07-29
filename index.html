@@ -31,7 +31,7 @@
     <script src="appSDK.js"></script>
     <script src="appBootstrapSpecific.js"></script>
     <script src="appload.js"></script>
-    <!-- Pop-up messages -->
+
 
     
 
@@ -66,7 +66,7 @@
     </script>
     <script id="ChoseObject" type="text/html">
         <div class="container" >
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel"  data-ride="carousel">
             
 
                
@@ -195,21 +195,14 @@
     alt="REDO glyphicon glyphicon-chevron-right"
     class="redo" />
 
-    <!--div class = "aplatir"></div-->
-    <!--div class = "tampon"></div-->
-    <!--div class = "etirer"></div-->
-    <!--div class = "dessiner"></div-->
-    <!--div class = "creuser"></div-->
-    <!--div class = "mirroir"></div-->
-    <!--div class = "galerie"></div-->
-    <!--div class = "imprimer"></div-->
+  
 
     </div><div  >
          
         <!--Top </div> left-->
         <div id="mainUI" class="Barre" >
               
-            <!--color-->
+           
           
         <!--Top    <div class="mirroir"></div> right-->
         
@@ -256,37 +249,23 @@
 
                     
                 </div>
-        <!--botton right-->
-      
-        <!--bottom left-->
- 
-        <!--Undo/redo (left and right side)-->
-        <!--button id="undoButton" class="btn ombre" >
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        Undo</button-->
-
-     
-
-        <!--button id="redoButton" class="btn ombre" >
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        Redo</button>-->
-
+        
        
 
         
     </div>
     
-    <div id="combineUI" style="display:none;"class ="Barre">
+    <div id="combineUI" style="display:none;">
             <!-- Rotate and scale -->
             <div>
-                <div >
-                    <img  id="moveButton"  src="src/MOVE.png" class="BTN"style = "width: 100px; height: 100px;" >
+                <div class ="Barre">
+                    <img  id="moveButton"  src="src/MOVE.png" class="BTN apsolute "style = "width: 100px; height: 100px;" >
                 Deplacer
                 </img>
-                    <img id="rotateButton" src="src/ROTATE.png"class="BTN"style = "width: 100px; height: 100px;">
+                    <img id="rotateButton" src="src/ROTATE.png"class="BTN apsolute "style = "width: 100px; height: 100px;">
                     Rotation
                     </img>
-                    <img id="scaleButton" src="src/SCALE.png" class="BTN"style = "width: 100px; height: 100px;">
+                    <img id="scaleButton" src="src/SCALE.png" class="BTN apsolute"style = "width: 100px; height: 100px;">
                       Redimansioner 
                     </img>
        
@@ -295,26 +274,26 @@
             <!-- Merge, substract, intersect -->
             <div >
                 <div >
-                    <button id="mergeButton" class="BTN" >
+                    <button id="mergeButton" class="BTN apsolute" >
                         Ajouter matiére
                     </button>
-                    <button id="subtractButton" class="BTN" >
+                    <button id="subtractButton" class="BTN apsolute" >
                         Creusé forme
                     </button>
-                    <button hidden id="intersectButton" class="BTN" >
+                    <button hidden id="intersectButton" class="BTN apsolute" >
                         Intersection
                     </button>
                 </div>        <!-- Cancel -->
             </div>
-            <button id="cancelCombineButton" class="BTN">
+            <button id="cancelCombineButton" class="BTN apsolute">
                 Annuler
             
             </button>
         </div>
     <div id="spinner" class="tectrid-spinner" style="display:inline;"> Chargement...</div>
     <!--WebGL-->
-    <canvas id="renderCanvas" class="Canvas"  ></canvas>
-    <!-- astro print -->
+    <canvas id="renderCanvas"></canvas>
+
    
 
     

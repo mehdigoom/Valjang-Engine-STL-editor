@@ -1,5 +1,5 @@
 ﻿html, body {
-    display:flex;
+ 
     width   : 100%;
     height  : 100%;
     margin  : 0;
@@ -8,10 +8,12 @@
 }
 
 
+
 .Canvas{
+    
     background:#08afe283;
   width:100%;
-  height:100ù;
+  height:100%;
 }
 
 .unselectable {
