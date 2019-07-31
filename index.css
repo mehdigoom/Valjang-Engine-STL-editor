@@ -2009,5 +2009,25 @@
                  width: 200px;
                  text-align: center;
   }
-  
-  
+  .creuserinit
+{
+    animation: creuser 2s; 
+}
+  .aplatirinit {
+
+    animation: aplatir 2s; 
+  }
+
+
+  .dessinerinit{
+    animation: dessiner 2s; 
+  }
+  .etirerinit{
+    animation: etirer 2s; 
+  }
+  .tamponint{
+    animation: tampon 2s;   
+  }
+  .imprimerint{
+    animation: imprimer 2s;
+  }
