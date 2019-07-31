@@ -1134,7 +1134,8 @@ if(this._isInCombineMode){
             var version = parseFloat(testVersion[1]);
             var testEdge = window.navigator.userAgent.match(/Edge\/\d+/); // on teste si le useragent contient Edge
             if(version >= 10.0 && testEdge){
-               alert("EDGE n'est pas compatible avec cette platforme. Merci d'utilisé Google Chrome ou Firefox.")
+               alert("Oups ! Ton navigateur n'est pas totalment compatible avec notre platforme. Merci d'utilisé Google Chrome ou Firefox. Vous pouvez toute fois vous servire de la platforme. Cela rique de causé des bugs. Promis c'est pas de notre faute ! ;)")
+               
             }
         }
 this.raduislimit = this._modelRadius*2
