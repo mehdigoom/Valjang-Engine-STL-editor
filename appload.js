@@ -2,6 +2,8 @@ var Module = null;
 
 function InitModule()
 {
+   
+
     Module = {};
     Module.onRuntimeInitialized = function ()
     {

@@ -1128,6 +1128,15 @@ if(this._isInCombineMode){
         this.Gengrille()
         this.GenRegle()
         this.Genfleche()
+        //test du navigateur
+        var testVersion = window.navigator.userAgent.match(/Windows NT (([0-9])+\.([0-9])+)/); // on récupère la version du système
+        if(testVersion) {
+            var version = parseFloat(testVersion[1]);
+            var testEdge = window.navigator.userAgent.match(/Edge\/\d+/); // on teste si le useragent contient Edge
+            if(version >= 10.0 && testEdge){
+               alert("EDGE n'est pas compatible avec cette platforme. Merci d'utilisé Google Chrome ou Firefox.")
+            }
+        }
 this.raduislimit = this._modelRadius*2
 this._mesh.material.unfreeze();
      
