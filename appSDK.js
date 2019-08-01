@@ -10,6 +10,21 @@ function AppSDK_Init()
 
     // start animation
     window.app.animate();
+
+//ajout d'un delay le temps du chargement des animations 
+        var element = document.getElementById("mainUI");
+        //element.classList.add("hiden");
+        var delayInMilliseconds = 4000;
+        setTimeout(function() {
+            element.classList.remove("hiden");
+          }, delayInMilliseconds);
+         
+
+
+
+
+
+
 }
 
 // ========== Generate meshItem ==========
