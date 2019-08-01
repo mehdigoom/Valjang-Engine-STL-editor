@@ -3,6 +3,7 @@ var activmanipulator= Boolean("true");
 var raduislimit
 var Ymax
 var Ysize
+
 (function (ManipulatorMode) {
     ManipulatorMode[ManipulatorMode["Move"] = 0] = "Move";
     ManipulatorMode[ManipulatorMode["Rotate"] = 1] = "Rotate";
@@ -879,6 +880,7 @@ plane.position.y =-200
       
 
         //BOUCLE
+   
        
 if(this._isInCombineMode){
     
@@ -1154,7 +1156,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
     };
     AppMain.prototype.GenBox = function () {
         var generator = new Module.GenBox();
-        var mesh = generator.Generate(180.0, 100.0, 100.0);
+        var mesh = generator.Generate(10.0, 100.0, 100.0);
         generator.delete();
         return mesh;
     };
