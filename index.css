@@ -1949,6 +1949,8 @@
   
   position: absolute; 
   display: flex;
+  overflow:hidden;
+  
   bottom: -10%;
   left: 25%;
   right: 25%;
@@ -2019,7 +2021,7 @@
       margin-top: -60px;
   }
   .BTN{
-      display: flex;
+   -webkit-margin-bottom-collapse: unset;
       background-repeat: no-repeat;
       position:relative;
       bottom: 20px;

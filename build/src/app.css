@@ -30,28 +30,6 @@
 	background: #D35600;
 }
 
-/* Buttons color */
-.btn-default, .btn-default:active, .btn-default:visited {
-    background-color: #D47610 !important;
-    color: #FFFFFF !important;
-    border-color: #777777 !important;
-}
-
-.btn-default:hover {
-    background-color: #D68730 !important;
-    border-color: #777777 !important;
-}
-
-.btn-primary, .btn-primary:active, .btn-primary:hover, .btn-primary:visited {
-    background-color: #ED8C23 !important;
-    color: #FFFFFF !important;
-    border-color: #777777 !important;
-}
-
-.btn-info, .btn-info:hover, .btn-info:active, .btn-info:visited {
-    background-color: #FA753A !important;
-    border-color: #777777 !important;
-}
 
 /* Checkboxes (slider shaped) */
 .slider-switch > input[type="checkbox"] {

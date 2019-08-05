@@ -1,0 +1,22 @@
+{
+  "name": "valjang-engine-stl-editor",
+  "version": "1.0.0",
+  "description": "By Valjang.fr for Dood Studio",
+  "main": "appBootstrapSpecific.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdigoom/Valjang-Engine-STL-editor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehdigoom/Valjang-Engine-STL-editor/issues"
+  },
+  "homepage": "https://github.com/mehdigoom/Valjang-Engine-STL-editor#readme",
+  "dependencies": {
+    "rfs": "^8.0.4"
+  }
+}
