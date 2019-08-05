@@ -1,4 +1,11 @@
 /* Safari, Opera, Chrome, Outil Aplatir */
+@import "~rfs/scss.scss";
+
+@import "~rfs/sass.sass";
+
+@import "~rfs/less.less";
+
+@import "~rfs/stylus.styl";
 @-webkit-keyframes aplatir { 
     
     0% {
@@ -1952,6 +1959,7 @@
   {
   
   position: absolute; 
+
   display: flex;
   overflow:hidden;
   left: 25%;
@@ -2032,7 +2040,14 @@ align-items: center;
       vertical-align: middle
     
   }
-  
+  .BTN2{
+    -webkit-margin-bottom-collapse: unset;
+       background-repeat: no-repeat;
+       position:absolute;
+       bottom: 20px;
+       vertical-align: middle
+     
+   }
   
   
   
