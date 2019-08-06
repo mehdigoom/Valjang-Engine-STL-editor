@@ -2021,7 +2021,16 @@ align-items: center;
       border-radius: 400px;
       background-image: url("src/FullSCREEN.png");
   }
-  
+  .ajousoous{
+    position: relative;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
+    background-image: url("src/ajouter_soustraire.png");
+}
+
   
   
   .popup{
@@ -2062,4 +2071,8 @@ align-items: center;
     visibility: collapse;
   }
   
+
+  .barretxt{
+      bottom: -10%
+  }
  
