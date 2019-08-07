@@ -1,147 +1,114 @@
 /* Safari, Opera, Chrome, Outil Aplatir */
+
 @import "~rfs/scss.scss";
-
 @import "~rfs/sass.sass";
-
 @import "~rfs/less.less";
-
 @import "~rfs/stylus.styl";
-@-webkit-keyframes aplatir { 
-    
+@-webkit-keyframes aplatir {
     0% {
         background-image: url("src/Aplatir_animation_1.png")
     }
-  
     7.1% {
         background-image: url("src/Aplatir_animation_2.png")
     }
-  
     14.2% {
         background-image: url("src/Aplatir_animation_3.png")
     }
-  
     21.3% {
         background-image: url("src/Aplatir_animation_4.png")
     }
-  
     28.4% {
         background-image: url("src/Aplatir_animation_5.png")
     }
-  
     35.5% {
         background-image: url("src/Aplatir_animation_6.png")
     }
-  
     42.6% {
         background-image: url("src/Aplatir_animation_7.png")
     }
-  
     49.7% {
         background-image: url("src/Aplatir_animation_8.png")
     }
-  
     56.8% {
         background-image: url("src/Aplatir_animation_9.png")
     }
-  
     63.9% {
         background-image: url("src/Aplatir_animation_10.png")
     }
-  
     71% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     78.1% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     85.2% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     92.3% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     100% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  }
-  
-  /* Tous les autres navigateurs, Outil Aplatir */
-  @keyframes aplatir { 
-        
+}
+
+
+/* Tous les autres navigateurs, Outil Aplatir */
+
+@keyframes aplatir {
     0% {
         background-image: url("src/Aplatir_animation_1.png")
     }
-  
     7.1% {
         background-image: url("src/Aplatir_animation_2.png")
     }
-  
     14.2% {
         background-image: url("src/Aplatir_animation_3.png")
     }
-  
     21.3% {
         background-image: url("src/Aplatir_animation_4.png")
     }
-  
     28.4% {
         background-image: url("src/Aplatir_animation_5.png")
     }
-  
     35.5% {
         background-image: url("src/Aplatir_animation_6.png")
     }
-  
     42.6% {
         background-image: url("src/Aplatir_animation_7.png")
     }
-  
     49.7% {
         background-image: url("src/Aplatir_animation_8.png")
     }
-  
     56.8% {
         background-image: url("src/Aplatir_animation_9.png")
     }
-  
     63.9% {
         background-image: url("src/Aplatir_animation_10.png")
     }
-  
     71% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     78.1% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     85.2% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     92.3% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
     100% {
         background-image: url("src/Aplatir_animation_11.png")
     }
-  
-  }
-  
-  .aplatir
-  {
+}
+
+.aplatir {
     margin: 100px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
-    
     background-image: url("src/Aplatir_animation_1.png");
     background-image: url("src/Aplatir_animation_2.png");
     background-image: url("src/Aplatir_animation_3.png");
@@ -155,28 +122,26 @@
     background-image: url("src/Aplatir_animation_11.png");
     background-position-x: 0px;
     background-position-y: 0px;
-  }
-  
-  .aplatir:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Aplatir */
-    -webkit-animation: aplatir 1s infinite; 
-    -webkit-animation-direction:normal;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Aplatir */
-    animation: aplatir 1s infinite; 
-    animation-direction:normal;
-    animation-timing-function:linear;
-  }
-  
-  
-  /* Safari, Opera, Chrome, Outil Tampon */
+}
 
-  
-  /* Tous les autres navigateurs, Outil Tampon */
-  @keyframes tampon {
+.aplatir:hover {
+    /* Safari, Opera, Chrome, Outil Aplatir */
+    -webkit-animation: aplatir 1s infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Aplatir */
+    animation: aplatir 1s infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+/* Safari, Opera, Chrome, Outil Tampon */
+
+
+/* Tous les autres navigateurs, Outil Tampon */
+
+@keyframes tampon {
     0% {
         background-image: url("src/Tampon_animation_1.png")
     }
@@ -192,7 +157,6 @@
     9.5% {
         background-image: url("src/Tampon_animation_5.png")
     }
-    
     11.5% {
         background-image: url("src/Tampon_animation_6.png")
     }
@@ -268,13 +232,13 @@
     57.5% {
         background-image: url("src/Tampon_animation_21.png")
     }
-59.5% {
+    59.5% {
         background-image: url("src/Ajouter_1.png")
     }
     61.5% {
         background-image: url("src/Ajouter_2.png")
     }
-63.5% {
+    63.5% {
         background-image: url("src/Ajouter_3.png")
     }
     65.5% {
@@ -301,7 +265,6 @@
     79.5% {
         background-image: url("src/Ajouter_11.png")
     }
- 
     81.5% {
         background-image: url("src/Ajouter_12.png")
     }
@@ -329,18 +292,14 @@
     100% {
         background-image: url("src/Ajouter_19.png")
     }
- 
-  }
-  
-  .tampon
-  {
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
+}
 
-      
+.tampon {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
     background-image: url("src/Tampon_animation_1.png");
     background-image: url("src/Tampon_animation_2.png");
     background-image: url("src/Tampon_animation_3.png");
@@ -362,8 +321,6 @@
     background-image: url("src/Tampon_animation_19.png");
     background-image: url("src/Tampon_animation_20.png");
     background-image: url("src/Tampon_animation_21.png");
-    
-
     background-image: url("src/Ajouter_1.png");
     background-image: url("src/Ajouter_2.png");
     background-image: url("src/Ajouter_3.png");
@@ -383,171 +340,135 @@
     background-image: url("src/Ajouter_17.png");
     background-image: url("src/Ajouter_18.png");
     background-image: url("src/Ajouter_19.png");
-
-
-
     background-position-x: 0px;
     background-position-y: 0px;
-  }
-  
-  .tampon:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Tampon */
-    -webkit-animation: tampon 5s infinite; 
-    -webkit-animation-direction:alternate;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Tampon */
-    animation: tampon 3s infinite; 
-    animation-direction:alternate;
-    animation-timing-function:linear;
-  }
-  
-  
-  /* Safari, Opera, Chrome, Outil Etirer */
-  @-webkit-keyframes etirer { 
-    
+}
+
+.tampon:hover {
+    /* Safari, Opera, Chrome, Outil Tampon */
+    -webkit-animation: tampon 5s infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Tampon */
+    animation: tampon 3s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+
+/* Safari, Opera, Chrome, Outil Etirer */
+
+@-webkit-keyframes etirer {
     0% {
         background-image: url("src/Etirer_animation_1.png")
     }
-  
     6.7% {
         background-image: url("src/Etirer_animation_2.png")
     }
-  
     13.4% {
         background-image: url("src/Etirer_animation_3.png")
     }
-  
     20.1% {
         background-image: url("src/Etirer_animation_4.png")
     }
-  
     26.8% {
         background-image: url("src/Etirer_animation_5.png")
     }
-  
     33.5% {
         background-image: url("src/Etirer_animation_6.png")
     }
-  
     40.2% {
         background-image: url("src/Etirer_animation_7.png")
     }
-  
     46.9% {
         background-image: url("src/Etirer_animation_8.png")
     }
-  
     53.6% {
         background-image: url("src/Etirer_animation_9.png")
     }
-  
     60.3% {
         background-image: url("src/Etirer_animation_10.png")
     }
-  
     67% {
         background-image: url("src/Etirer_animation_11.png")
     }
-  
     73.7% {
         background-image: url("src/Etirer_animation_12.png")
     }
-  
     80.4% {
         background-image: url("src/Etirer_animation_13.png")
     }
-  
     87.1% {
         background-image: url("src/Etirer_animation_14.png")
     }
-  
     93.8% {
         background-image: url("src/Etirer_animation_15.png")
     }
-  
     100% {
         background-image: url("src/Etirer_animation_16.png")
     }
-  }
-  
-  /* Tous les autres navigateurs, Outil Etirer */
-  @keyframes etirer { 
-        
+}
+
+
+/* Tous les autres navigateurs, Outil Etirer */
+
+@keyframes etirer {
     0% {
         background-image: url("src/Etirer_animation_1.png")
     }
-  
     6.7% {
         background-image: url("src/Etirer_animation_2.png")
     }
-  
     13.4% {
         background-image: url("src/Etirer_animation_3.png")
     }
-  
     20.1% {
         background-image: url("src/Etirer_animation_4.png")
     }
-  
     26.8% {
         background-image: url("src/Etirer_animation_5.png")
     }
-  
     33.5% {
         background-image: url("src/Etirer_animation_6.png")
     }
-  
     40.2% {
         background-image: url("src/Etirer_animation_7.png")
     }
-  
     46.9% {
         background-image: url("src/Etirer_animation_8.png")
     }
-  
     53.6% {
         background-image: url("src/Etirer_animation_9.png")
     }
-  
     60.3% {
         background-image: url("src/Etirer_animation_10.png")
     }
-  
     67% {
         background-image: url("src/Etirer_animation_11.png")
     }
-  
     73.7% {
         background-image: url("src/Etirer_animation_12.png")
     }
-  
     80.4% {
         background-image: url("src/Etirer_animation_13.png")
     }
-  
     87.1% {
         background-image: url("src/Etirer_animation_14.png")
     }
-  
     93.8% {
         background-image: url("src/Etirer_animation_15.png")
     }
-  
     100% {
         background-image: url("src/Etirer_animation_16.png")
     }
-  }
-  
-  .etirer
-  {
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
+}
+
+.etirer {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
     background-image: url("src/Etirer_animation_1.png");
     background-image: url("src/Etirer_animation_2.png");
     background-image: url("src/Etirer_animation_3.png");
@@ -566,158 +487,127 @@
     background-image: url("src/Etirer_animation_16.png");
     background-position-x: 0px;
     background-position-y: 0px;
-  }
-  
-  .etirer:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Etirer */
-    -webkit-animation: etirer 1s infinite; 
-    -webkit-animation-direction:normal;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Etirer */
-    animation: etirer 1s infinite; 
-    animation-direction:normal;
-    animation-timing-function:linear;
-  }
-  
-  
-  /* Safari, Opera, Chrome, Outil Dessiner */
-  @-webkit-keyframes dessiner { 
-    
+}
+
+.etirer:hover {
+    /* Safari, Opera, Chrome, Outil Etirer */
+    -webkit-animation: etirer 1s infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Etirer */
+    animation: etirer 1s infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+/* Safari, Opera, Chrome, Outil Dessiner */
+
+@-webkit-keyframes dessiner {
     0% {
         background-image: url("src/Dessiner_animation_1.png")
     }
-  
     7.1% {
         background-image: url("src/Dessiner_animation_2.png")
     }
-  
     14.2% {
         background-image: url("src/Dessiner_animation_3.png")
     }
-  
     21.3% {
         background-image: url("src/Dessiner_animation_4.png")
     }
-  
     28.4% {
         background-image: url("src/Dessiner_animation_5.png")
     }
-  
     35.5% {
         background-image: url("src/Dessiner_animation_6.png")
     }
-  
     42.6% {
         background-image: url("src/Dessiner_animation_7.png")
     }
-  
     49.7% {
         background-image: url("src/Dessiner_animation_8.png")
     }
-  
     56.8% {
         background-image: url("src/Dessiner_animation_9.png")
     }
-  
     63.9% {
         background-image: url("src/Dessiner_animation_10.png")
     }
-  
     71% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     78.1% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     85.2% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     92.3% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     100% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  }
-  
-  /* Tous les autres navigateurs, Outil Dessiner */
-  @keyframes dessiner { 
-        
+}
+
+
+/* Tous les autres navigateurs, Outil Dessiner */
+
+@keyframes dessiner {
     0% {
         background-image: url("src/Dessiner_animation_1.png")
     }
-  
     7.1% {
         background-image: url("src/Dessiner_animation_2.png")
     }
-  
     14.2% {
         background-image: url("src/Dessiner_animation_3.png")
     }
-  
     21.3% {
         background-image: url("src/Dessiner_animation_4.png")
     }
-  
     28.4% {
         background-image: url("src/Dessiner_animation_5.png")
     }
-  
     35.5% {
         background-image: url("src/Dessiner_animation_6.png")
     }
-  
     42.6% {
         background-image: url("src/Dessiner_animation_7.png")
     }
-  
     49.7% {
         background-image: url("src/Dessiner_animation_8.png")
     }
-  
     56.8% {
         background-image: url("src/Dessiner_animation_9.png")
     }
-  
     63.9% {
         background-image: url("src/Dessiner_animation_10.png")
     }
-  
     71% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     78.1% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     85.2% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     92.3% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  
     100% {
         background-image: url("src/Dessiner_animation_11.png")
     }
-  }
-  
-  .dessiner
-  {
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
+}
+
+.dessiner {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
     background-image: url("src/Dessiner_animation_1.png");
     background-image: url("src/Dessiner_animation_2.png");
     background-image: url("src/Dessiner_animation_3.png");
@@ -731,438 +621,341 @@
     background-image: url("src/Dessiner_animation_11.png");
     background-position-x: 0px;
     background-position-y: 0px;
-  }
-  
-  .dessiner:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Dessiner */
-    -webkit-animation: dessiner 1s infinite; 
-    -webkit-animation-direction:normal;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Dessiner */
-    animation: dessiner 1s infinite; 
-    animation-direction:normal;
-    animation-timing-function:linear;
-  }
-  
-  
-  /* Safari, Opera, Chrome, Outil Creuser */
-  @-webkit-keyframes creuser { 
-    
+}
+
+.dessiner:hover {
+    /* Safari, Opera, Chrome, Outil Dessiner */
+    -webkit-animation: dessiner 1s infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Dessiner */
+    animation: dessiner 1s infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+/* Safari, Opera, Chrome, Outil Creuser */
+
+@-webkit-keyframes creuser {
     0% {
         background-image: url("src/Creuser_animation_1.png")
     }
-  
     7.1% {
         background-image: url("src/Creuser_animation_2.png")
     }
-  
     14.2% {
         background-image: url("src/Creuser_animation_3.png")
     }
-  
     21.3% {
         background-image: url("src/Creuser_animation_4.png")
     }
-  
     28.4% {
         background-image: url("src/Creuser_animation_5.png")
     }
-  
     35.5% {
         background-image: url("src/Creuser_animation_6.png")
     }
-  
     42.6% {
         background-image: url("src/Creuser_animation_7.png")
     }
-  
     49.7% {
         background-image: url("src/Creuser_animation_8.png")
     }
-  
     56.8% {
         background-image: url("src/Creuser_animation_9.png")
     }
-  
     63.9% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     71% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     78.1% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     85.2% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     92.3% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     100% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
-  }
-  
-  /* Tous les autres navigateurs, Outil Creuser */
-  @keyframes creuser { 
-        
+}
+
+
+/* Tous les autres navigateurs, Outil Creuser */
+
+@keyframes creuser {
     0% {
         background-image: url("src/Creuser_animation_1.png")
     }
-  
     7.1% {
         background-image: url("src/Creuser_animation_2.png")
     }
-  
     14.2% {
         background-image: url("src/Creuser_animation_3.png")
     }
-  
     21.3% {
         background-image: url("src/Creuser_animation_4.png")
     }
-  
     28.4% {
         background-image: url("src/Creuser_animation_5.png")
     }
-  
     35.5% {
         background-image: url("src/Creuser_animation_6.png")
     }
-  
     42.6% {
         background-image: url("src/Creuser_animation_7.png")
     }
-  
     49.7% {
         background-image: url("src/Creuser_animation_8.png")
     }
-  
     56.8% {
         background-image: url("src/Creuser_animation_9.png")
     }
-  
     63.9% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     71% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     78.1% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     85.2% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     92.3% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  
     100% {
         background-image: url("src/Creuser_animation_10.png")
     }
-  }
-  
-  .creuser
-  {
-  
-      
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
+}
+
+.creuser {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
     background-image: url("src/Creuser_animation_1.png");
-  
     background-position-y: 0px;
-  }
-  
-  .creuser:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Creuser */
-    -webkit-animation: creuser 0.9s infinite; 
-    -webkit-animation-direction:normal;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Creuser */
-    animation: creuser 0.9s infinite; 
-    animation-direction:normal;
-    animation-timing-function:linear;
-  }
-  
-  
-  /* Safari, Opera, Chrome, Outil Mirroir */
-  @-webkit-keyframes mirroir { 
-    
+}
+
+.creuser:hover {
+    /* Safari, Opera, Chrome, Outil Creuser */
+    -webkit-animation: creuser 0.9s infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Creuser */
+    animation: creuser 0.9s infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+/* Safari, Opera, Chrome, Outil Mirroir */
+
+@-webkit-keyframes mirroir {
     0% {
         background-image: url("src/Mirroir_animation_1.png")
     }
-  
     3.4% {
         background-image: url("src/Mirroir_animation_2.png")
     }
-  
     6.8% {
         background-image: url("src/Mirroir_animation_3.png")
     }
-  
     10.2% {
         background-image: url("src/Mirroir_animation_4.png")
     }
-  
     13.6% {
         background-image: url("src/Mirroir_animation_5.png")
     }
-  
     17% {
         background-image: url("src/Mirroir_animation_6.png")
     }
-  
     20.4% {
         background-image: url("src/Mirroir_animation_7.png")
     }
-  
     23.8% {
         background-image: url("src/Mirroir_animation_8.png")
     }
-  
     27.2% {
         background-image: url("src/Mirroir_animation_9.png")
     }
-  
     30.6% {
         background-image: url("src/Mirroir_animation_10.png")
     }
-  
     34% {
         background-image: url("src/Mirroir_animation_11.png")
     }
-  
     37.4% {
         background-image: url("src/Mirroir_animation_12.png")
     }
-  
     40.8% {
         background-image: url("src/Mirroir_animation_13.png")
     }
-  
     44.2% {
         background-image: url("src/Mirroir_animation_14.png")
     }
-  
     47.6% {
         background-image: url("src/Mirroir_animation_15.png")
     }
-  
     51% {
         background-image: url("src/Mirroir_animation_16.png")
     }
-  
     54.4% {
         background-image: url("src/Mirroir_animation_17.png")
     }
-  
     57.8% {
         background-image: url("src/Mirroir_animation_18.png")
     }
-  
     61.2% {
         background-image: url("src/Mirroir_animation_19.png")
     }
-  
     64.6% {
         background-image: url("src/Mirroir_animation_20.png")
     }
-  
     68% {
         background-image: url("src/Mirroir_animation_21.png")
     }
-  
     71.4% {
         background-image: url("src/Mirroir_animation_22.png")
     }
-  
     74.8% {
         background-image: url("src/Mirroir_animation_23.png")
     }
-  
     78.2% {
         background-image: url("src/Mirroir_animation_24.png")
     }
-  
     81.6% {
         background-image: url("src/Mirroir_animation_25.png")
     }
-  
     85% {
         background-image: url("src/Mirroir_animation_26.png")
     }
-  
     88.4% {
         background-image: url("src/Mirroir_animation_27.png")
     }
-  
     91.8% {
         background-image: url("src/Mirroir_animation_28.png")
     }
-  
     95.2% {
         background-image: url("src/Mirroir_animation_29.png")
     }
-  
     100% {
         background-image: url("src/Mirroir_animation_30.png")
     }
-  
-  }
-  
-  /* Tous les autres navigateurs, Outil Mirroir */
-  @keyframes mirroir { 
-        
+}
+
+
+/* Tous les autres navigateurs, Outil Mirroir */
+
+@keyframes mirroir {
     0% {
         background-image: url("src/Mirroir_animation_1.png")
     }
-  
     3.4% {
         background-image: url("src/Mirroir_animation_2.png")
     }
-  
     6.8% {
         background-image: url("src/Mirroir_animation_3.png")
     }
-  
     10.2% {
         background-image: url("src/Mirroir_animation_4.png")
     }
-  
     13.6% {
         background-image: url("src/Mirroir_animation_5.png")
     }
-  
     17% {
         background-image: url("src/Mirroir_animation_6.png")
     }
-  
     20.4% {
         background-image: url("src/Mirroir_animation_7.png")
     }
-  
     23.8% {
         background-image: url("src/Mirroir_animation_8.png")
     }
-  
     27.2% {
         background-image: url("src/Mirroir_animation_9.png")
     }
-  
     30.6% {
         background-image: url("src/Mirroir_animation_10.png")
     }
-  
     34% {
         background-image: url("src/Mirroir_animation_11.png")
     }
-  
     37.4% {
         background-image: url("src/Mirroir_animation_12.png")
     }
-  
     40.8% {
         background-image: url("src/Mirroir_animation_13.png")
     }
-  
     44.2% {
         background-image: url("src/Mirroir_animation_14.png")
     }
-  
     47.6% {
         background-image: url("src/Mirroir_animation_15.png")
     }
-  
     51% {
         background-image: url("src/Mirroir_animation_16.png")
     }
-  
     54.4% {
         background-image: url("src/Mirroir_animation_17.png")
     }
-  
     57.8% {
         background-image: url("src/Mirroir_animation_18.png")
     }
-  
     61.2% {
         background-image: url("src/Mirroir_animation_19.png")
     }
-  
     64.6% {
         background-image: url("src/Mirroir_animation_20.png")
     }
-  
     68% {
         background-image: url("src/Mirroir_animation_21.png")
     }
-  
     71.4% {
         background-image: url("src/Mirroir_animation_22.png")
     }
-  
     74.8% {
         background-image: url("src/Mirroir_animation_23.png")
     }
-  
     78.2% {
         background-image: url("src/Mirroir_animation_24.png")
     }
-  
     81.6% {
         background-image: url("src/Mirroir_animation_25.png")
     }
-  
     85% {
         background-image: url("src/Mirroir_animation_26.png")
     }
-  
     88.4% {
         background-image: url("src/Mirroir_animation_27.png")
     }
-  
     91.8% {
         background-image: url("src/Mirroir_animation_28.png")
     }
-  
     95.2% {
         background-image: url("src/Mirroir_animation_29.png")
     }
-  
     100% {
         background-image: url("src/Mirroir_animation_30.png")
     }
-  }
-  
-  .mirroir
-  {
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
-      position: absolute;
+}
+
+.mirroir {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
+    position: absolute;
     background-image: url("src/Mirroir_animation_1.png");
     background-image: url("src/Mirroir_animation_2.png");
     background-image: url("src/Mirroir_animation_3.png");
@@ -1192,209 +985,166 @@
     background-image: url("src/Mirroir_animation_27.png");
     background-image: url("src/Mirroir_animation_28.png");
     background-image: url("src/Mirroir_animation_29.png");
-    background-image: url("src/Mirroir_animation_30.png");    
+    background-image: url("src/Mirroir_animation_30.png");
     background-position-x: 0px;
     background-position-y: 0px;
-  }
-  
-  .mirroir:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Mirroir */
-    -webkit-animation: mirroir 1s infinite; 
-    -webkit-animation-direction:normal;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Mirroir */
-    animation: mirroir 1s infinite; 
-    animation-direction:normal;
-    animation-timing-function:linear;
-  }
-  
-  
-  /* Safari, Opera, Chrome, Outil Galerie */
-  @-webkit-keyframes galerie { 
-    
+}
+
+.mirroir:hover {
+    /* Safari, Opera, Chrome, Outil Mirroir */
+    -webkit-animation: mirroir 1s infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Mirroir */
+    animation: mirroir 1s infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+/* Safari, Opera, Chrome, Outil Galerie */
+
+@-webkit-keyframes galerie {
     0% {
         background-image: url("src/Galerie_animation_1.png")
     }
-  
     5% {
         background-image: url("src/Galerie_animation_2.png")
     }
-  
     10% {
         background-image: url("src/Galerie_animation_3.png")
     }
-  
     15% {
         background-image: url("src/Galerie_animation_4.png")
     }
-  
     20% {
         background-image: url("src/Galerie_animation_5.png")
     }
-  
     25% {
         background-image: url("src/Galerie_animation_6.png")
     }
-  
     30% {
         background-image: url("src/Galerie_animation_7.png")
     }
-  
     35% {
         background-image: url("src/Galerie_animation_8.png")
     }
-  
     40% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     45% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     50% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     55% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     60% {
         background-image: url("src/Galerie_animation_10.png")
     }
-  
     65% {
         background-image: url("src/Galerie_animation_11.png")
     }
-  
     70% {
         background-image: url("src/Galerie_animation_12.png")
     }
-  
     75% {
         background-image: url("src/Galerie_animation_13.png")
     }
-  
     80% {
         background-image: url("src/Galerie_animation_14.png")
     }
-  
     85% {
         background-image: url("src/Galerie_animation_15.png")
     }
-  
     90% {
         background-image: url("src/Galerie_animation_16.png")
     }
-  
     95% {
         background-image: url("src/Galerie_animation_17.png")
     }
-  
     100% {
         background-image: url("src/Galerie_animation_18.png")
     }
-  }
-  
-  /* Tous les autres navigateurs, Outil Galerie */
-  @keyframes galerie { 
-        
+}
+
+
+/* Tous les autres navigateurs, Outil Galerie */
+
+@keyframes galerie {
     0% {
         background-image: url("src/Galerie_animation_1.png")
     }
-  
     5% {
         background-image: url("src/Galerie_animation_2.png")
     }
-  
     10% {
         background-image: url("src/Galerie_animation_3.png")
     }
-  
     15% {
         background-image: url("src/Galerie_animation_4.png")
     }
-  
     20% {
         background-image: url("src/Galerie_animation_5.png")
     }
-  
     25% {
         background-image: url("src/Galerie_animation_6.png")
     }
-  
     30% {
         background-image: url("src/Galerie_animation_7.png")
     }
-  
     35% {
         background-image: url("src/Galerie_animation_8.png")
     }
-  
     40% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     45% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     50% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     55% {
         background-image: url("src/Galerie_animation_9.png")
     }
-  
     60% {
         background-image: url("src/Galerie_animation_10.png")
     }
-  
     65% {
         background-image: url("src/Galerie_animation_11.png")
     }
-  
     70% {
         background-image: url("src/Galerie_animation_12.png")
     }
-  
     75% {
         background-image: url("src/Galerie_animation_13.png")
     }
-  
     80% {
         background-image: url("src/Galerie_animation_14.png")
     }
-  
     85% {
         background-image: url("src/Galerie_animation_15.png")
     }
-  
     90% {
         background-image: url("src/Galerie_animation_16.png")
     }
-  
     95% {
         background-image: url("src/Galerie_animation_17.png")
     }
-  
     100% {
         background-image: url("src/Galerie_animation_18.png")
     }
-  }
-  
-  .galerie
-  {
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
+}
+
+.galerie {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
     background-image: url("src/Galerie_animation_1.png");
     background-image: url("src/Galerie_animation_2.png");
     background-image: url("src/Galerie_animation_3.png");
@@ -1415,210 +1165,164 @@
     background-image: url("src/Galerie_animation_18.png");
     background-position-x: 0px;
     background-position-y: 0px;
-  }
-  
-  .galerie:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Galerie */
-    -webkit-animation: galerie 1.5s infinite; 
-    -webkit-animation-direction:normal;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Galerie */
-    animation: galerie 1.5s infinite; 
-    animation-direction:normal;
-    animation-timing-function:linear;
-  }
-  
-  
-  /* Safari, Opera, Chrome, Outil Imprimer */
-  @-webkit-keyframes imprimer { 
-    
+}
+
+.galerie:hover {
+    /* Safari, Opera, Chrome, Outil Galerie */
+    -webkit-animation: galerie 1.5s infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Galerie */
+    animation: galerie 1.5s infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+/* Safari, Opera, Chrome, Outil Imprimer */
+
+@-webkit-keyframes imprimer {
     0% {
         background-image: url("src/Imprimer_animation_1.png")
     }
-  
     5% {
         background-image: url("src/Imprimer_animation_2.png")
     }
-  
     10% {
         background-image: url("src/Imprimer_animation_3.png")
     }
-  
     15% {
         background-image: url("src/Imprimer_animation_4.png")
     }
-  
     20% {
         background-image: url("src/Imprimer_animation_5.png")
     }
-  
     25% {
         background-image: url("src/Imprimer_animation_6.png")
     }
-  
     30% {
         background-image: url("src/Imprimer_animation_7.png")
     }
-  
     35% {
         background-image: url("src/Imprimer_animation_8.png")
     }
-  
     40% {
         background-image: url("src/Imprimer_animation_9.png")
     }
-  
     45% {
         background-image: url("src/Imprimer_animation_10.png")
     }
-  
     50% {
         background-image: url("src/Imprimer_animation_11.png")
     }
-  
     55% {
         background-image: url("src/Imprimer_animation_12.png")
     }
-  
     60% {
         background-image: url("src/Imprimer_animation_13.png")
     }
-  
     65% {
         background-image: url("src/Imprimer_animation_14.png")
     }
-  
     70% {
         background-image: url("src/Imprimer_animation_15.png")
     }
-  
     75% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     80% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     85% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     90% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     95% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     100% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  }
-  
-  /* Tous les autres navigateurs, Outil Imprimer */
-  @keyframes imprimer { 
-        
+}
+
+
+/* Tous les autres navigateurs, Outil Imprimer */
+
+@keyframes imprimer {
     0% {
         background-image: url("src/Imprimer_animation_1.png")
     }
-  
     5% {
         background-image: url("src/Imprimer_animation_2.png")
     }
-  
     10% {
         background-image: url("src/Imprimer_animation_3.png")
     }
-  
     15% {
         background-image: url("src/Imprimer_animation_4.png")
     }
-  
     20% {
         background-image: url("src/Imprimer_animation_5.png")
     }
-  
     25% {
         background-image: url("src/Imprimer_animation_6.png")
     }
-  
     30% {
         background-image: url("src/Imprimer_animation_7.png")
     }
-  
     35% {
         background-image: url("src/Imprimer_animation_8.png")
     }
-  
     40% {
         background-image: url("src/Imprimer_animation_9.png")
     }
-  
     45% {
         background-image: url("src/Imprimer_animation_10.png")
     }
-  
     50% {
         background-image: url("src/Imprimer_animation_11.png")
     }
-  
     55% {
         background-image: url("src/Imprimer_animation_12.png")
     }
-  
     60% {
         background-image: url("src/Imprimer_animation_13.png")
     }
-  
     65% {
         background-image: url("src/Imprimer_animation_14.png")
     }
-  
     70% {
         background-image: url("src/Imprimer_animation_15.png")
     }
-  
     75% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     80% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     85% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     90% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     95% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  
     100% {
         background-image: url("src/Imprimer_animation_16.png")
     }
-  }
-  
+}
 
-
-
-  .imprimer
-  {
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
-  
+.imprimer {
+    position: relative;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
     background-image: url("src/Imprimer_animation_1.png");
     background-image: url("src/Imprimer_animation_2.png");
     background-image: url("src/Imprimer_animation_3.png");
@@ -1637,210 +1341,183 @@
     background-image: url("src/Imprimer_animation_16.png");
     background-position-x: 0px;
     background-position-y: 0px;
-  }
-  
-  .imprimer:hover
-  {
-  
-  /* Safari, Opera, Chrome, Outil Imprimer */
-    -webkit-animation: imprimer 1s infinite; 
-    -webkit-animation-direction:normal;
-    -webkit-animation-timing-function:linear;
-  
-  /* Tous les autres navigateurs, Outil Imprimer */
-    animation: imprimer 1s infinite; 
-    animation-direction:normal;
-    animation-timing-function:linear;
-  }
-  
-  .creuserinit
-  {
-      animation: creuser 2s; 
-  }
-    .aplatirinit {
-  
-      animation: aplatir 2s; 
-    }
-  
-  
-    .dessinerinit{
-      animation: dessiner 2s; 
-    }
-    .etirerinit{
-      animation: etirer 2s; 
-    }
-    .tamponint{
-      animation: tampon 2s;   
-    }
-    .imprimerint{
-       
-      animation: imprimer 2s;
-      
-    } 
+}
 
+.imprimer:hover {
+    /* Safari, Opera, Chrome, Outil Imprimer */
+    -webkit-animation: imprimer 1s infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    /* Tous les autres navigateurs, Outil Imprimer */
+    animation: imprimer 1s infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
 
+.creuserinit {
+    animation: creuser 2s;
+}
 
+.aplatirinit {
+    animation: aplatir 2s;
+}
 
-  .BasDroite
-  {
-      position:absolute;
-      display:block;
-  
-      /* Position */
-      bottom:1px;
-      right:-1px;
-  }
-  
-  .BasGauche
-  {
-      position:absolute;
-      display:block;
-  
-  /* Position */
-  bottom:0px;
-  right:679px;
-  }
-  
-  .HautGauche
-  {
-      position:absolute;
-      display:block;
-  
-  /* Position */
-  top:0px;
-  right:676px;
-  }
-  
-  .ombre
-  {
-  /* Shadows */
-  box-shadow:
-  0px 0px 40px 0px rgb(3, 2, 2);
-  }
-  
-  .pulse {
-      margin:100px;
-      display: block;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #cca92c;
-      cursor: pointer;
-      box-shadow: 0 0 0 rgba(204,169,44, 0.4);0
-      animation: pulse 2s infinite;
+.dessinerinit {
+    animation: dessiner 2s;
+}
+
+.etirerinit {
+    animation: etirer 2s;
+}
+
+.tamponint {
+    animation: tampon 2s;
+}
+
+.imprimerint {
+    animation: imprimer 2s;
+}
+
+.BasDroite {
+    position: absolute;
+    display: block;
+    /* Position */
+    bottom: 1px;
+    right: -1px;
+}
+
+.BasGauche {
+    position: absolute;
+    display: block;
+    /* Position */
+    bottom: 0px;
+    right: 679px;
+}
+
+.HautGauche {
+    position: absolute;
+    display: block;
+    /* Position */
+    top: 0px;
+    right: 676px;
+}
+
+.ombre {
+    /* Shadows */
+    box-shadow: 0px 0px 40px 0px rgb(3, 2, 2);
+}
+
+.pulse {
+    margin: 100px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #cca92c;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+    0 animation: pulse 2s infinite;
+}
+
+.pulse:hover {
+    animation: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
     }
-    .pulse:hover {
-      animation: none;
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
     }
-    
-    @-webkit-keyframes pulse {
-      0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-      }
-      70% {
-          -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-      }
-      100% {
-          -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-      }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
     }
-    @keyframes pulse {
-      0% {
-        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-        box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-      }
-      70% {
-          -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-          box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-      }
-      100% {
-          -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-          box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-      }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
     }
-  
-  
-  
-    .Popup
-  {
-      position:absolute;
-      display:block;
-  
-      /* Position */
-      top:25%;
-      left:25%;
-      right: 25%;
-      bottom: 25%;
-  
-      /* Dimensions */
-      width:1185px;
-      height:234px;
-  
-      /* Shape */
-      border-radius:8.67% 8.67% 8.67% 8.67%;
-  
-      /* Background */
-      background-color:rgba(0, 0, 0, 0.52);
-  
-      /* Borders */
-      border-top:1px solid rgb(0, 0, 0);
-      border-bottom:1px solid rgb(0, 0, 0);
-      border-left:1px solid rgb(0, 0, 0);
-      border-right:1px solid rgb(0, 0, 0);
-  
-      /* Shadows */
-      box-shadow:
-      0px 0px 38px 0px rgb(81, 0, 255);
-  }
-  
-  
-   body {
-  
-    width   : 100%;
-    height  : 100%;
-    margin  : 0;
-    padding : 0;
-    background-color: rgb(140,190,250)
-  }
-  
-  #renderCanvas {
-    width   : 100%;
-    height  : 100%;
-    margin  : 0;
-    padding : 0;
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+.Popup {
+    position: absolute;
+    display: block;
+    /* Position */
+    top: 25%;
+    left: 25%;
+    right: 25%;
+    bottom: 25%;
+    /* Dimensions */
+    width: 1185px;
+    height: 234px;
+    /* Shape */
+    border-radius: 8.67% 8.67% 8.67% 8.67%;
+    /* Background */
+    background-color: rgba(0, 0, 0, 0.52);
+    /* Borders */
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    /* Shadows */
+    box-shadow: 0px 0px 38px 0px rgb(81, 0, 255);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(140, 190, 250)
+}
+
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     touch-action: none;
-  }
-  
-  
-  
-  
-  
-  /* Checkboxes (slider shaped) */
-  .slider-switch > input[type="checkbox"] {
-    display: none;   
-  }
-  
-  .slider-switch > label {
+}
+
+
+/* Checkboxes (slider shaped) */
+
+.slider-switch>input[type="checkbox"] {
+    display: none;
+}
+
+.slider-switch>label {
     cursor: pointer;
     height: 0px;
-    position: absolute; 
-    width: 40px;  
-  }
-  
-  .slider-switch > label::before {
+    position: absolute;
+    width: 40px;
+}
+
+.slider-switch>label::before {
     background: rgb(0, 0, 0);
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     content: '';
     height: 16px;
     margin-top: -8px;
-    position:absolute;
+    position: absolute;
     opacity: 0.3;
     transition: all 0.4s ease-in-out;
     width: 40px;
-  }
-  
-  .slider-switch > label::after {
+}
+
+.slider-switch>label::after {
     background: rgb(186, 186, 186);
     border-radius: 16px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -1852,23 +1529,26 @@
     top: -4px;
     transition: all 0.3s ease-in-out;
     width: 24px;
-  }
-  
-  .slider-switch > input[type="checkbox"]:checked + label::before {
+}
+
+.slider-switch>input[type="checkbox"]:checked+label::before {
     background: rgba(0, 16, 245, 0);
     opacity: 0.5;
-  }
-  
-  .slider-switch > input[type="checkbox"]:checked + label::after {
+}
+
+.slider-switch>input[type="checkbox"]:checked+label::after {
     background: rgb(70, 57, 189);
     left: 20px;
-  }
-  
-  
-  /* Spinner */
-  .tectrid-spinner{
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+}
+
+
+/* Spinner */
+
+.tectrid-spinner {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -1879,115 +1559,82 @@
     margin-top: -60px;
     pointer-events: none;
     animation: tectrid-spinner-spin 2s linear infinite;
-  }
-  
-  
-  .liste
-  {
-   
-      position:absolute;
-      display:block;
-      overflow:scroll;
-      /* Position */
-      
-      top:30%;
-      left:10px;
-     
-      /* Dimensions */
-      width:150px;
-      height:50%;
-      resize: both;
-  
-      /* Shape */
-      border-radius:10% 10% 10% 10%;
-  
-      /* Background */
-      background-color:rgba(0, 0, 0, 0.63);
-  
-  }
-  
-  
-  
-  
-  .active
-  {
-      visibility: visible;
-      display: block;
-  
-  
-      transform: translate(-50%,50%)
-    
-  }
-  
-  
-  .Barre
-  {
-  
-  position: absolute; 
+}
 
-  display: flex;
-  overflow:hidden;
-  left: 25%;
-  right: 25%;
-  bottom: -15%;
-align-items: center;
-  vertical-align: middle;
-  background-position-y: 78px;
-  background-image: url("src/FondVIEWER_blanc.png");
-  vertical-align:bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-  
-  
-  
-  }
-  
-  .undo{
-  
-  
-      opacity: 0.45;
-      max-width: 8%;
-      max-height: 8%;
-     
-   
+.liste {
     position: absolute;
-    top :50%;
+    display: block;
+    overflow: scroll;
+    /* Position */
+    top: 30%;
+    left: 10px;
+    /* Dimensions */
+    width: 150px;
+    height: 50%;
+    resize: both;
+    /* Shape */
+    border-radius: 10% 10% 10% 10%;
+    /* Background */
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.active {
+    visibility: visible;
+    display: block;
+    transform: translate(-50%, 50%)
+}
+
+.Barre {
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    left: 25%;
+    right: 25%;
+    bottom: -15%;
+    align-items: center;
+    vertical-align: middle;
+    background-position-y: 78px;
+    background-image: url("src/FondVIEWER_blanc.png");
+    vertical-align: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.undo {
+    opacity: 0.45;
+    max-width: 8%;
+    max-height: 8%;
+    position: absolute;
+    top: 50%;
     bottom: 50%;
     left: 10px
-    
-    
-    
-    }
-    .redo{
-      opacity: 0.45;
-    right:10px;
+}
+
+.redo {
+    opacity: 0.45;
+    right: 10px;
     max-width: 8%;
-      max-height: 8%;
-      top:50%;
-      bottom: 50%;
+    max-height: 8%;
+    top: 50%;
+    bottom: 50%;
     position: absolute;
-    }
-  
-  
-  
-    input[type="checkbox"] {
-      display:none;
-    }
-  
-  
-  
-  
-  .full{
-      position: absolute;
-      margin: 100px auto;
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      border-radius: 400px;
-      background-image: url("src/FullSCREEN.png");
-  }
-  .ajousoous{
-   
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.full {
+    position: absolute;
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    border-radius: 400px;
+    background-image: url("src/FullSCREEN.png");
+}
+
+.ajousoous {
     margin: 100px auto;
     width: 100px;
     height: 100px;
@@ -1996,97 +1643,86 @@ align-items: center;
     background-image: url("src/ajouter_soustraire.png");
 }
 
-  
-  
-  .popup{
-      top: 50%;
-      left: 50%;
-      width: 50%;
-      height:50%;
-      margin-left: -60px;
-      margin-top: -60px;
-  }
-  .BTN{
-   -webkit-margin-bottom-collapse: unset;
-      background-repeat: no-repeat;
-      position:relative;
-      bottom: 23px;
-      vertical-align: middle
-    
-  }
-  .BTN2{
+.popup {
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+}
+
+.BTN {
     -webkit-margin-bottom-collapse: unset;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 23px;
+    vertical-align: middle
+}
 
-       background-repeat: no-repeat;
-       position: relative;
-       bottom: 25%;
-       text-align: center;
-       
-     
-    
-     
-   }
-  
-  
-  
-  .scroll{
-      position: absolute;
-                 top: 10px;
-                 left: 0px;
-                 width: 200px;
-                 text-align: center;
-  }
-  .hiden{
+.BTN2 {
+    -webkit-margin-bottom-collapse: unset;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 25%;
+    text-align: center;
+}
+
+.scroll {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 200px;
+    text-align: center;
+}
+
+.hiden {
     visibility: collapse;
-  }
-  
-
-  .barretxt{
-      position:relative;
-      bottom: 100%;
-  }
- .switch{
- 
-     left: 50%;
- }
- .txtbarre{
-    position: absolute;
-top: 52%;
-left: 52%;
-     
 }
-.txtbarre2{
-    position: absolute;
-top: 52%;
-left: 42%;
-     
-}
-.Miroir{
-    position: absolute;
 
+.barretxt {
+    position: relative;
+    bottom: 100%;
+}
+
+.switch {
+    left: 50%;
+}
+
+.txtbarre {
+    position: absolute;
+    top: 52%;
+    left: 52%;
+}
+
+.txtbarre2 {
+    position: absolute;
+    top: 52%;
+    left: 42%;
+}
+
+.Miroir {
+    position: absolute;
     top: 47%;
     left: 48%;
 }
-.txtbarre3{
-position: absolute;
-top: 20%;
-left: 48%;
-     
-}
-.CombineUI{
-  
-    position: absolute; 
 
+.txtbarre3 {
+    position: absolute;
+    top: 20%;
+    left: 48%;
+}
+
+.CombineUI {
+    position: absolute;
     display: flex;
-    overflow:hidden;
+    overflow: hidden;
     left: 25%;
     right: 11%;
     bottom: 15%;
-  align-items: center;
-  
-
+    align-items: center;
     background-image: url("src/FondVIEWER_blanc.png");
-    vertical-align:bottom;
+    vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
 }
