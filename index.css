@@ -1608,6 +1608,9 @@
     }
   }
   
+
+
+
   .imprimer
   {
       margin: 100px auto;
@@ -1723,7 +1726,7 @@
       border-radius: 50%;
       background: #cca92c;
       cursor: pointer;
-      box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+      box-shadow: 0 0 0 rgba(204,169,44, 0.4);0
       animation: pulse 2s infinite;
     }
     .pulse:hover {
@@ -1852,7 +1855,7 @@
   }
   
   .slider-switch > input[type="checkbox"]:checked + label::before {
-    background: rgb(0, 16, 245);
+    background: rgba(0, 16, 245, 0);
     opacity: 0.5;
   }
   
@@ -1926,7 +1929,7 @@
   overflow:hidden;
   left: 25%;
   right: 25%;
-  bottom: -10%;
+  bottom: -15%;
 align-items: center;
   vertical-align: middle;
   background-position-y: 78px;
@@ -1984,7 +1987,7 @@ align-items: center;
       background-image: url("src/FullSCREEN.png");
   }
   .ajousoous{
-    position: relative;
+   
     margin: 100px auto;
     width: 100px;
     height: 100px;
@@ -2007,16 +2010,20 @@ align-items: center;
    -webkit-margin-bottom-collapse: unset;
       background-repeat: no-repeat;
       position:relative;
-      bottom: 20px;
+      bottom: 23px;
       vertical-align: middle
     
   }
   .BTN2{
     -webkit-margin-bottom-collapse: unset;
+
        background-repeat: no-repeat;
-       position:absolute;
-       bottom: 20px;
-       vertical-align: middle
+       position: relative;
+       bottom: 25%;
+       text-align: center;
+       
+     
+    
      
    }
   
@@ -2040,5 +2047,46 @@ align-items: center;
   }
  .switch{
  
-     padding-left: 50%;
+     left: 50%;
  }
+ .txtbarre{
+    position: absolute;
+top: 52%;
+left: 52%;
+     
+}
+.txtbarre2{
+    position: absolute;
+top: 52%;
+left: 42%;
+     
+}
+.Miroir{
+    position: absolute;
+
+    top: 47%;
+    left: 48%;
+}
+.txtbarre3{
+position: absolute;
+top: 20%;
+left: 48%;
+     
+}
+.CombineUI{
+  
+    position: absolute; 
+
+    display: flex;
+    overflow:hidden;
+    left: 25%;
+    right: 11%;
+    bottom: 15%;
+  align-items: center;
+  
+
+    background-image: url("src/FondVIEWER_blanc.png");
+    vertical-align:bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -204,41 +204,41 @@
     <!--div class = "galerie"></div-->
     <!--div class = "imprimer"></div-->
 
-    <div id="combineUI" style="display:none;">
+    <div id="combineUI" style="display:none;" class="CombineUI">
         <!-- Rotate and scale -->
         <div>
             <div >
                 <img  id="moveButton"  src="src/MOVE.png" class="BTN2"style = "width: 100px; height: 100px;" >
-            Deplacer
+       
             </img>
                 <img id="rotateButton" src="src/ROTATE.png"class="BTN2"style = "width: 100px; height: 100px;">
-                Rotation
+               
                 </img>
                 <img id="scaleButton" src="src/SCALE.png" class="BTN2"style = "width: 100px; height: 100px;">
-                  Redimansioner 
-                </img>
-   
-            </div>
-        </div>
-        <!-- Merge, substract, intersect -->
-        <div >
-            <div >
                 
-                <button id="mergeButton" class="BTN2" >
+                </img>
+                <button id="mergeButton" class="BTN2 " >
                     Ajouter matiére
                 </button>
                 <button id="subtractButton" class="BTN2" >
                     Creusé forme
                 </button>
                 <button hidden id="intersectButton" class="BTN" />
+                <button id="cancelCombineButton" class="BTN2">
+                    Annuler
                 
+                </button>
                 
             </div>        <!-- Cancel -->
         </div>
-        <button id="cancelCombineButton" class="BTN">
-            Annuler
-        
-        </button>
+    
+            </div>
+        </div>
+        <!-- Merge, substract, intersect -->
+        <div >
+            <div >
+                
+               
     </div>
          
         <!--Top </div> left-->
@@ -261,25 +261,25 @@
                         <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
                         <button id="digButton" class = "creuserinit creuser BTN" userdata="brushButton"></button>
                         <button id="flattenButton" class = " aplatirinit aplatir BTN" userdata="brushButton"></button>
-                        <input id="sliderSize" classe = "BTN switch"data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
-                        <p>Diamétre </p>
-                        <div class="slider-switch BTN ">
-                             
-                            <input id="mirrorSwitch"
+                        <input id="sliderSize" classe = "  BTN  "data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
+                        <p class="txtbarre2">Diamétre </p>
+                        <div class="slider-switch BTN Miroir ">
+                            
+                            <input id="mirrorSwitch" 
                                    type="checkbox"
                                    onchange="
                                        AppSDK_SwitchMirrorMode(this.checked);
                                    "/>
                                    
-                            <label for="mirrorSwitch" class=" BTN"></label>
+                            <label for="mirrorSwitch" class=" BTN "></label>
                             
         
                            
                         </div>
                         <br>
-                      <p>Miroir </p>
-                     <input id="sliderStrength"classe = "BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.5" data-slider-tooltip="hide" />
-                     <p>Force</p>
+                      <p class="txtbarre3">Miroir </p>
+                     <input id="sliderStrength"classe = "  BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.5" data-slider-tooltip="hide" />
+                     <p class="txtbarre">Force</p>
                   
 
 

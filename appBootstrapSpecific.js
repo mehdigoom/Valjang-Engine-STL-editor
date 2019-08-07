@@ -79,17 +79,24 @@ function SwitchCombineModeUI(onOrOff)
 {
     if(onOrOff)
     {
+        
         let combineUI = document.getElementById("combineUI");
-        let mainUI = document.getElementById("mainUI");
-        mainUI.style.display = "none";
+        //let mainUI = document.getElementById("mainUI");
+        //mainUI.style.display = "none";
         combineUI.style.display = "inline";
+        
+        
     }
     else
     {
+
+      
         let combineUI = document.getElementById("combineUI");
-        let mainUI = document.getElementById("mainUI");
-        mainUI.style.display = "inline";
+        //let mainUI = document.getElementById("mainUI");
+
+       // mainUI.style.display = "inline";
         combineUI.style.display = "none";
+      
     }
 }
 
