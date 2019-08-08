@@ -1568,14 +1568,11 @@ body {
     /* Position */
     top: 30%;
     left: 10px;
-    /* Dimensions */
     width: 150px;
     height: 50%;
-    resize: both;
-    /* Shape */
-    border-radius: 10% 10% 10% 10%;
-    /* Background */
-    background-color: rgba(0, 0, 0, 0.63);
+    background-image: url("src/2_FENETRE.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .active {
@@ -1590,11 +1587,11 @@ body {
     overflow: hidden;
     left: 25%;
     right: 25%;
-    bottom: -15%;
+    bottom: -5%;
     align-items: center;
     vertical-align: middle;
-    background-position-y: 78px;
-    background-image: url("src/FondVIEWER_blanc.png");
+    background-position-y: 95px;
+    background-image: url("src/1_BAR.png");
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1654,9 +1651,11 @@ input[type="checkbox"] {
 
 .BTN {
     -webkit-margin-bottom-collapse: unset;
+    width: 85px;
+    height: 85px;
     background-repeat: no-repeat;
     position: relative;
-    bottom: 23px;
+    bottom: -10px;
     vertical-align: middle
 }
 
@@ -1718,11 +1717,22 @@ input[type="checkbox"] {
     display: flex;
     overflow: hidden;
     left: 25%;
-    right: 11%;
-    bottom: 15%;
+    right: 10%;
+    bottom: 19%;
     align-items: center;
-    background-image: url("src/FondVIEWER_blanc.png");
+    background-image: url("src/3_BARRE.png");
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.BTNannulercombine {
+    position: absolute;
+    width: 4%;
+    height: 50%;
+    vertical-align: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url("src/3_ANNULER.png");
 }
