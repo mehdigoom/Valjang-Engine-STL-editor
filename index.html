@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
-<html >
+<html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-   
+
     <title>Sculpt engine demo using Valjang Engine</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- JQuery (needed by bootstrap) -->
@@ -15,8 +16,8 @@
     <script src="src/bootstrap-slider.min.js"></script>
     <!-- Bootstrap color selector -->
     <!-- link rel="stylesheet" href="src/bootstrap-colorselector.min.css"-->
-     <link rel="stylesheet" href="index.css">
-   
+    <link rel="stylesheet" href="index.css">
+
     <!-- Boot box -->
     <script src="src/bootbox.min.js"></script>
     <!-- PEP (to get input on apple devices and firefox mobile) -->
@@ -33,45 +34,42 @@
     <script src="appload.js"></script>
     <!-- Pop-up messages -->
 
-    
 
-    <script id="ChoosOutputFormat" type="text/html" >
-        
-      
-            <div class="Popup">
-                  <center>
-                      <font style="font-size:30px">Choisir format:</font></center>
-        <br>
-        <center>
-            <button  onclick="bootbox.hideAll();">Fermer</button>
-                <button id="stlButton"
-                        
-                        onclick="
+
+    <script id="ChoosOutputFormat" type="text/html">
+
+
+        <div class="Popup">
+            <center>
+                <font style="font-size:30px">Choisir format:</font>
+            </center>
+            <br>
+            <center>
+                <button onclick="bootbox.hideAll();">Fermer</button>
+                <button id="stlButton" onclick="
                             bootbox.hideAll();
                             AppSDK_SaveToFile('output', 'stl');
                         ">
                     STL 
                 </button>
-                <button id="objButton" 
-                
-                        onclick="
+                <button id="objButton" onclick="
                             bootbox.hideAll();
                             AppSDK_SaveToFile('output', 'obj');
                         "> 
                     OBJ 
                 </button>
-            </div>
+        </div>
 
         </center>
     </script>
     <script id="ChoseObject" type="text/html">
-        <div class="container" >
+        <div class="container">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            
 
-               
+
+
                 <div class="liste" role="listbox">
-                        <button onclick="javascript:bootbox.hideAll();">fermer</button>
+                    <button onclick="javascript:bootbox.hideAll();">fermer</button>
                     <div class="item">
                         <a href="javascript:bootbox.hideAll();SetMeshItemToScene(AppSDK_GenSphere());">
                             <img src="3d_models/sphere.jpg" alt="Sphere" style="   width:90%;">
@@ -144,12 +142,12 @@
                         </a>
                     </div>
                     <div class="item">
-                            <a href="javascript:bootbox.hideAll();Load3DModel('bust.stl');">
-                                <img src="3d_models/bust.PNG" alt="bust" style="   width:90%;">
-                            </a>
-                        </div>
+                        <a href="javascript:bootbox.hideAll();Load3DModel('bust.stl');">
+                            <img src="3d_models/bust.PNG" alt="bust" style="   width:90%;">
+                        </a>
+                    </div>
 
-                  
+
                 </div>
 
 
@@ -157,23 +155,21 @@
         </div>
     </script>
     <script id="CreateOrCombine" type="text/html">
-        
+
         <br>
         <center>
             <div class="Popup">
-                    <center><font style="font-size:30px">Apliquer le tampon?</font></center>
-                <button id="createButton" 
-                        
-                        onclick="
+                <center>
+                    <font style="font-size:30px">Apliquer le tampon?</font>
+                </center>
+                <button id="createButton" onclick="
                             bootbox.hideAll(); 
                            // AppSDK_CreateNewScene(meshItemToCreateOrCombine); 
                             //meshItemToCreateOrCombine = null;
                         ">
                     non j'ai fait un erreur!
                 </button>
-                <button id="combineButton"
-                        
-                        onclick="
+                <button id="combineButton" onclick="
                             bootbox.hideAll();
                             AppSDK_StartCombineToSceneMode(meshItemToCreateOrCombine);
                             SwitchCombineModeUI(true);
@@ -184,16 +180,11 @@
         </center>
     </script>
 </head>
-<body style="overflow:hidden; width:100%; height:100%; margin:0; padding:0;">
-    <img  id="undoButton" 
-    src="src/UNDO.png"
-    alt="UNDO" 
-    class="undo glyphicon glyphicon-chevron-right"/>
 
-    <img id="redoButton"
-    src="src/REDO.png"
-    alt="REDO glyphicon glyphicon-chevron-right"
-    class="redo" />
+<body style="overflow:hidden; width:100%; height:100%; margin:0; padding:0;">
+    <img id="undoButton" src="src/UNDO.png" alt="UNDO" class="undo glyphicon glyphicon-chevron-right" />
+
+    <img id="redoButton" src="src/REDO.png" alt="REDO glyphicon glyphicon-chevron-right" class="redo" />
 
     <!--div class = "aplatir"></div-->
     <!--div class = "tampon"></div-->
@@ -207,20 +198,20 @@
     <div id="combineUI" style="display:none;" class="CombineUI">
         <!-- Rotate and scale -->
         <div>
-            <div >
-                <img  id="moveButton"  src="src/MOVE.png" class="BTN2"style = "width: 100px; height: 100px;" >
-       
-            </img>
-                <img id="rotateButton" src="src/ROTATE.png"class="BTN2"style = "width: 100px; height: 100px;">
-               
+            <div>
+                <img id="moveButton" src="src/MOVE.png" class="BTN2" style="width: 100px; height: 100px;">
+
                 </img>
-                <img id="scaleButton" src="src/SCALE.png" class="BTN2"style = "width: 100px; height: 100px;">
-                
+                <img id="rotateButton" src="src/ROTATE.png" class="BTN2" style="width: 100px; height: 100px;">
+
                 </img>
-                <button id="mergeButton" class="BTN2 " >
+                <img id="scaleButton" src="src/SCALE.png" class="BTN2" style="width: 100px; height: 100px;">
+
+                </img>
+                <button id="mergeButton" class="BTN2 ">
                     Ajouter matiére
                 </button>
-                <button id="subtractButton" class="BTN2" >
+                <button id="subtractButton" class="BTN2">
                     Creusé forme
                 </button>
                 <button hidden id="intersectButton" class="BTN" />
@@ -228,103 +219,103 @@
                     Annuler
                 
                 </button>
-                
-            </div>        <!-- Cancel -->
-        </div>
-    
+
             </div>
+            <!-- Cancel -->
         </div>
-        <!-- Merge, substract, intersect -->
-        <div >
-            <div >
-                
-               
+
     </div>
-         
+    </div>
+    <!-- Merge, substract, intersect -->
+    <div>
+        <div>
+
+
+        </div>
+
         <!--Top </div> left-->
-        <div id="mainUI" class="Barre hiden " >
-              
+        <div id="mainUI" class="Barre hiden ">
+
             <!--color-->
-          
-        <!--Top    <div class="mirroir"></div> right-->
-        
-               
-           
-                
-                
-                       
-            
-                
-        <button id="dragButton" class = " etirerinit etirer BTN" userdata="brushButton"></button>                       
-                     
-                        <button id="drawButton" class = "dessinerinit dessiner BTN" userdata="brushButton"></button>
-                        <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
-                        <button id="digButton" class = "creuserinit creuser BTN" userdata="brushButton"></button>
-                        <button id="flattenButton" class = " aplatirinit aplatir BTN" userdata="brushButton"></button>
-                        <input id="sliderSize" classe = "  BTN  "data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
-                        <p class="txtbarre2">Diamétre </p>
-                        <div class="slider-switch BTN Miroir ">
-                            
-                            <input id="mirrorSwitch" 
-                                   type="checkbox"
-                                   onchange="
+
+            <!--Top    <div class="mirroir"></div> right-->
+
+
+
+
+
+
+
+
+            <button id="dragButton" class=" etirerinit etirer BTN" userdata="brushButton"></button>
+
+            <button id="drawButton" class="dessinerinit dessiner BTN" userdata="brushButton"></button>
+            <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
+            <button id="digButton" class="creuserinit creuser BTN" userdata="brushButton"></button>
+            <button id="flattenButton" class=" aplatirinit aplatir BTN" userdata="brushButton"></button>
+            <input id="sliderSize" classe="  BTN  " data-slider-id='CustomSlider' type="text" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
+            <p class="txtbarre2">Diamétre </p>
+            <div class="slider-switch BTN Miroir ">
+
+                <input id="mirrorSwitch" type="checkbox" onchange="
                                        AppSDK_SwitchMirrorMode(this.checked);
-                                   "/>
-                                   
-                            <label for="mirrorSwitch" class=" BTN "></label>
-                            
-        
-                           
-                        </div>
-                        <br>
-                      <p class="txtbarre3">Miroir </p>
-                     <input id="sliderStrength"classe = "  BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.5" data-slider-tooltip="hide" />
-                     <p class="txtbarre">Force</p>
-                  
+                                   " />
+
+                <label for="mirrorSwitch" class=" BTN "></label>
 
 
 
-                    
-                        
-        
-           
-                     <button class= " tamponint tampon BTN" id="openButton" >  </button>
-                     <button class= " galerie BTN" >  </button>
-                            <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
-                            <button id="fullScreenButton" class="full BTN"></button>
-                           
-                            <input  id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
-                            <button id="saveButton" class = "BTN imprimerint imprimer " userdata="unlocked"> </button>
-                            
-           
-        
-        <!--botton right-->
-      
-        <!--bottom left-->
- 
-        <!--Undo/redo (left and right side)-->
-        <!--button id="undoButton" class="btn ombre" >
+            </div>
+            <br>
+            <p class="txtbarre3">Miroir </p>
+            <input id="sliderStrength" classe="  BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.5" data-slider-tooltip="hide" />
+            <p class="txtbarre">Force</p>
+
+
+
+
+
+
+
+
+            <button class=" tamponint tampon BTN" id="openButton">  </button>
+            <button class=" galerie BTN">  </button>
+            <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
+            <button id="fullScreenButton" class="full BTN"></button>
+
+            <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
+            <button id="saveButton" class="BTN imprimerint imprimer " userdata="unlocked"> </button>
+
+
+
+            <!--botton right-->
+
+            <!--bottom left-->
+
+            <!--Undo/redo (left and right side)-->
+            <!--button id="undoButton" class="btn ombre" >
             <span class="glyphicon glyphicon-chevron-left"></span>
         Undo</button-->
 
-     
 
-        <!--button id="redoButton" class="btn ombre" >
+
+            <!--button id="redoButton" class="btn ombre" >
             <span class="glyphicon glyphicon-chevron-right"></span>
         Redo</button>-->
 
-       
 
-        
-    </div>
-    
-   
-    <div id="spinner" class="tectrid-spinner" style="display:inline;"> Chargement...</div>
-    <!--WebGL-->
-    <canvas id="renderCanvas"></canvas>
-    <!-- astro print -->
-   
 
-    
+
+        </div>
+
+
+        <div id="spinner" class="tectrid-spinner" style="display:inline;"> Chargement...</div>
+        <!--WebGL-->
+        <canvas id="renderCanvas"></canvas>
+        <!-- astro print -->
+
+
+
 </body>
+
 </html>
