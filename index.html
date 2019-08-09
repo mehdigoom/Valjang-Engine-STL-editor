@@ -199,24 +199,24 @@
         <!-- Rotate and scale -->
         <div>
             <div>
-                <img id="moveButton" src="src/MOVE.png" class="BTN2" style="width: 100px; height: 100px;">
+                <img id="moveButton" src="src/MOVE.png" class="BTN2">
 
                 </img>
-                <img id="rotateButton" src="src/ROTATE.png" class="BTN2" style="width: 100px; height: 100px;">
+                <img id="rotateButton" src="src/ROTATE.png" class="BTN2">
 
                 </img>
-                <img id="scaleButton" src="src/SCALE.png" class="BTN2" style="width: 100px; height: 100px;">
+                <img id="scaleButton" src="src/SCALE.png" class="BTN2">
 
                 </img>
-                <button id="mergeButton" class="BTN2 ">
-                    Ajouter matiére
+                <button id="mergeButton" class=" Ajout BTN2">
+                    
                 </button>
-                <button id="subtractButton" class="BTN2">
-                    Creusé forme
+                <button id="subtractButton" class="retirer BTN2 ">
+               
                 </button>
                 <button hidden id="intersectButton" class="BTN" />
-                <button id="cancelCombineButton" class="BTN2">
-                    Annuler
+                <button id="cancelCombineButton" class="BTN2 BTNannulercombine">
+               
                 
                 </button>
 
@@ -228,11 +228,8 @@
     </div>
     <!-- Merge, substract, intersect -->
     <div>
-        <div>
 
-
-        </div>
-
+        <div class="help"></div>
         <!--Top </div> left-->
         <div id="mainUI" class="Barre hiden ">
 
@@ -248,30 +245,33 @@
 
 
             <button id="dragButton" class=" etirerinit etirer BTN" userdata="brushButton"></button>
-            <input id="sliderSize" class="  BTN  " data-slider-id='CustomSlider' type="range" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
-            <input id="sliderStrength" class="  BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.5" data-slider-tooltip="hide" />
+
             <button id="drawButton" class="dessinerinit dessiner BTN" userdata="brushButton"></button>
+
+            <input id="sliderSize" class="  BTN  " data-slider-id='CustomSlider' type="range" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
+            <div class="txttaille"></div>
+            <div style="display: table-cell; padding-left: 5%;">
+                <div class="txtmiroir"></div>
+                <div class="slider-switch Miroir">
+                    <input id="mirrorSwitch" type="checkbox" onchange="
+                               AppSDK_SwitchMirrorMode(this.checked);
+                           " />
+                    <label for="mirrorSwitch" class="label-primary"></label>
+                </div>
+            </div>
+            <input id="sliderStrength" class="  BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.5" data-slider-tooltip="hide" />
+            <div class="txtforce"></div>
             <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
             <button id="digButton" class="creuserinit creuser BTN" userdata="brushButton"></button>
             <button id="flattenButton" class=" aplatirinit aplatir BTN" userdata="brushButton"></button>
 
-            <div class=" BTN Miroir ">
 
-                <input id="mirrorSwitch" type="checkbox" onchange="
-                                       AppSDK_SwitchMirrorMode(this.checked);
-                                   " />
-
-                <label for="mirrorSwitch" class=" BTN "></label>
-
-
-
-            </div>
 
 
 
             <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
-            <button class=" tamponint tampon BTN" id="openButton">  </button>
-            <button class=" galerie BTN">  </button>
+            <button class=" tamponint tampon posfusion" id="openButton">  </button>
+            <button class=" galerie  poslib">  </button>
             <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
             <button id="fullScreenButton" class="full BTN hiden"></button>
 
