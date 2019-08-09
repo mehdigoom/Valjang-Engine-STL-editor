@@ -203,7 +203,7 @@
 }
 
 .aplatir {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -238,7 +238,7 @@
 /* Safari, Opera, Chrome, Outil Tampon */
 
 .tampon {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -700,7 +700,7 @@
 }
 
 .etirer {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -839,7 +839,7 @@
 }
 
 .dessiner {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -973,7 +973,7 @@
 }
 
 .creuser {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -1186,7 +1186,7 @@
 }
 
 .mirroir {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -1376,7 +1376,7 @@
 }
 
 .galerie {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -1554,7 +1554,7 @@
 
 .imprimer {
     position: relative;
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -1809,12 +1809,12 @@ body {
     position: absolute;
     display: flex;
     overflow: hidden;
-    left: 25%;
-    right: 25%;
-    bottom: -5%;
+    left: 30%;
+    right: 30%;
+    bottom: 3%;
     align-items: center;
     vertical-align: middle;
-    background-position-y: 95px;
+    background-position-y: 40px;
     background-image: url("src/1_BAR.png");
     vertical-align: bottom;
     background-size: contain;
@@ -1847,7 +1847,7 @@ input[type="checkbox"] {
 
 .full {
     position: absolute;
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -1856,7 +1856,7 @@ input[type="checkbox"] {
 }
 
 .ajousoous {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 100px;
     height: 100px;
     background-size: 100%;
@@ -1875,22 +1875,20 @@ input[type="checkbox"] {
 
 .BTN {
     -webkit-margin-bottom-collapse: unset;
-    width: 85px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
     background-repeat: no-repeat;
     position: relative;
-    bottom: -10px;
+    bottom: -2px;
     vertical-align: middle
 }
 
 .BTN2 {
-    -webkit-margin-bottom-collapse: unset;
+    position: relative;
+    margin-block: 1px;
     width: 70px;
     height: 70px;
     background-repeat: no-repeat;
-    position: relative;
-    bottom: 25%;
-    text-align: center;
 }
 
 .scroll {
@@ -1959,7 +1957,7 @@ input[type="checkbox"] {
     border: none;
     width: 4%;
     height: 50%;
-    top: 0%;
+    bottom: 80%;
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1969,29 +1967,29 @@ input[type="checkbox"] {
 
 .posfusion {
     position: relative;
-    bottom: -10px;
-    width: 85px;
-    height: 85px;
-    left: 4%;
+    bottom: -2px;
+    width: 75px;
+    height: 75px;
+    left: 1%;
     border: none;
 }
 
 .poslib {
     position: relative;
-    bottom: -10px;
-    width: 85px;
-    height: 85px;
-    left: 4%;
+    bottom: -2px;
+    width: 75px;
+    height: 75px;
+    left: 2%;
     border: none;
 }
 
 .txtforce {
     position: absolute;
     border: none;
-    width: 4%;
-    height: 50%;
+    width: 6%;
+    height: 52%;
     top: 66%;
-    left: 31%;
+    left: 35%;
     background-image: url("src/1_FORCE.png");
     vertical-align: bottom;
     background-size: contain;
@@ -2001,23 +1999,10 @@ input[type="checkbox"] {
 .txttaille {
     position: absolute;
     border: none;
-    width: 4%;
-    height: 50%;
+    width: 6%;
+    height: 52%;
     top: 66%;
-    left: 24%;
-    background-image: url("src/1_TAILLE.png");
-    vertical-align: bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.txttaille {
-    position: absolute;
-    border: none;
-    width: 4%;
-    height: 50%;
-    top: 66%;
-    left: 24%;
+    left: 22%;
     background-image: url("src/1_TAILLE.png");
     vertical-align: bottom;
     background-size: contain;
@@ -2027,10 +2012,10 @@ input[type="checkbox"] {
 .txtmiroir {
     position: absolute;
     border: none;
-    width: 6%;
-    height: 52%;
-    top: 47%;
-    left: 26.2%;
+    width: 8%;
+    height: 54%;
+    top: 36%;
+    left: 27%;
     background-image: url("src/1_MIRROIR.png");
     vertical-align: bottom;
     background-size: contain;
@@ -2040,8 +2025,8 @@ input[type="checkbox"] {
 .help {
     position: absolute;
     border: none;
-    width: 6%;
-    height: 60%;
+    width: 4%;
+    height: 59%;
     bottom: 40%;
     left: 94%;
     background-image: url("src/1_LOGO.png");
