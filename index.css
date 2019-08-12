@@ -1814,7 +1814,7 @@ body {
     bottom: 3%;
     align-items: center;
     vertical-align: middle;
-    background-position-y: 40px;
+    background-position-y: 45px;
     background-image: url("src/1_BAR.png");
     vertical-align: bottom;
     background-size: contain;
@@ -1973,7 +1973,7 @@ input[type="checkbox"] {
     bottom: -2px;
     width: 75px;
     height: 75px;
-    left: 1%;
+    left: -1%;
     border: none;
 }
 
@@ -1982,7 +1982,7 @@ input[type="checkbox"] {
     bottom: -2px;
     width: 75px;
     height: 75px;
-    left: 2%;
+    left: 0%;
     border: none;
 }
 
