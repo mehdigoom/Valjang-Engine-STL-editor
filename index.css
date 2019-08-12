@@ -1809,8 +1809,8 @@ body {
     position: absolute;
     display: flex;
     overflow: hidden;
-    left: 30%;
-    right: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 3%;
     align-items: center;
     vertical-align: middle;
@@ -1878,9 +1878,11 @@ input[type="checkbox"] {
     width: 75px;
     height: 75px;
     background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     bottom: -2px;
-    vertical-align: middle
+    vertical-align: middle;
+    padding: 0;
 }
 
 .BTN2 {
@@ -1888,6 +1890,7 @@ input[type="checkbox"] {
     margin-block: 1px;
     width: 70px;
     height: 70px;
+    padding: 0;
     background-repeat: no-repeat;
 }
 
