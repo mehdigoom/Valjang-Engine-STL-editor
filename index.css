@@ -1791,7 +1791,8 @@ body {
     position: absolute;
     display: flex;
     overflow: hidden;
-    width: 40%;
+    width: 40rem;
+    min-width: 40%;
     left: 50%;
     transform: translateX(-50%);
     bottom: 3%;
