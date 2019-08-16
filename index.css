@@ -1863,6 +1863,7 @@ input[type="checkbox"] {
     width: 4rem;
     min-width: 4rem;
     height: 4rem;
+    margin: 1%;
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 0;
@@ -1916,7 +1917,7 @@ input[type="checkbox"] {
 .Miroir {
     position: absolute;
     top: 60%;
-    left: 23%;
+    left: 25%;
     width: 4%;
     height: 50%;
 }
@@ -1977,7 +1978,7 @@ input[type="checkbox"] {
     width: 6%;
     height: 52%;
     top: 66%;
-    left: 28%;
+    left: 32%;
     background-image: url("src/1_FORCE.png");
     vertical-align: bottom;
     background-size: contain;
@@ -1990,7 +1991,7 @@ input[type="checkbox"] {
     width: 6%;
     height: 52%;
     top: 66%;
-    left: 15%;
+    left: 20%;
     background-image: url("src/1_TAILLE.png");
     vertical-align: bottom;
     background-size: contain;
@@ -2003,7 +2004,7 @@ input[type="checkbox"] {
     width: 8%;
     height: 54%;
     top: 36%;
-    left: 22%;
+    left: 24%;
     background-image: url("src/1_MIRROIR.png");
     vertical-align: bottom;
     background-size: contain;
