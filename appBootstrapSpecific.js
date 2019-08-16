@@ -24,6 +24,7 @@ function LitCurBrushButton(brushButton) {
     // }
 }
 
+
 function SwitchSpinner(switchOnOff) {
     let spinner = document.getElementById('spinner');
     if (spinner != null)
@@ -334,6 +335,7 @@ function StartAppMain() {
         SwitchCombineModeUI(false);
         SwitchSpinner(false);
     }
+
 
 
 }
