@@ -1,8 +1,5 @@
 .Ajout {
-    width: 70px;
-    height: 70px;
-    background-size: 100%;
-    border-radius: 400px;
+    border-radius: 50%;
     background-image: url("src/Ajouter_1.png");
     background-image: url("src/Ajouter_2.png");
     background-image: url("src/Ajouter_3.png");
@@ -203,10 +200,7 @@
 }
 
 .aplatir {
-    margin: 50px auto;
-    width: 100px;
-    height: 100px;
-    background-size: 100%;
+    margin-right: 2rem;
     border-radius: 400px;
     background-image: url("src/Aplatir_animation_1.png");
     background-image: url("src/Aplatir_animation_2.png");
@@ -238,11 +232,9 @@
 /* Safari, Opera, Chrome, Outil Tampon */
 
 .tampon {
-    margin: 50px auto;
-    width: 100px;
-    height: 100px;
-    background-size: 100%;
-    border-radius: 400px;
+    margin-right: 2rem;
+    background-size: cover;
+    border-radius: 50%;
     background-image: url("src/Tampon_animation_1.png");
     background-image: url("src/Tampon_animation_2.png");
     background-image: url("src/Tampon_animation_3.png");
@@ -455,10 +447,8 @@
 }
 
 .retirer {
-    width: 70px;
-    height: 70px;
-    background-size: 100%;
-    border-radius: 400px;
+    margin-right: 2rem;
+    border-radius: 50%;
     background-image: url("src/Tampon_animation_1.png");
     background-image: url("src/Tampon_animation_2.png");
     background-image: url("src/Tampon_animation_3.png");
@@ -700,11 +690,7 @@
 }
 
 .etirer {
-    margin: 50px auto;
-    width: 100px;
-    height: 100px;
-    background-size: 100%;
-    border-radius: 400px;
+    border-radius: 50%;
     background-image: url("src/Etirer_animation_1.png");
     background-image: url("src/Etirer_animation_2.png");
     background-image: url("src/Etirer_animation_3.png");
@@ -839,11 +825,7 @@
 }
 
 .dessiner {
-    margin: 50px auto;
-    width: 100px;
-    height: 100px;
-    background-size: 100%;
-    border-radius: 400px;
+    border-radius: 50%;
     background-image: url("src/Dessiner_animation_1.png");
     background-image: url("src/Dessiner_animation_2.png");
     background-image: url("src/Dessiner_animation_3.png");
@@ -1809,16 +1791,18 @@ body {
     position: absolute;
     display: flex;
     overflow: hidden;
+    width: 40%;
     left: 50%;
     transform: translateX(-50%);
     bottom: 3%;
     align-items: center;
-    vertical-align: middle;
-    background-position-y: 45px;
+    justify-content: space-around;
     background-image: url("src/1_BAR.png");
-    vertical-align: bottom;
     background-size: contain;
+    border-radius: 50px;
     background-repeat: no-repeat;
+    background-position-y: 40px;
+    padding: 5px;
 }
 
 .undo {
@@ -1875,23 +1859,24 @@ input[type="checkbox"] {
 
 .BTN {
     -webkit-margin-bottom-collapse: unset;
-    width: 75px;
-    height: 75px;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    bottom: -2px;
-    vertical-align: middle;
+    background-size: 100%;
     padding: 0;
+    border: none;
 }
 
 .BTN2 {
-    position: relative;
-    margin-block: 1px;
-    width: 70px;
-    height: 70px;
-    padding: 0;
+    -webkit-margin-bottom-collapse: unset;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
+    border: none;
     background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0
 }
 
 .scroll {
@@ -1924,13 +1909,13 @@ input[type="checkbox"] {
 .txtbarre2 {
     position: absolute;
     top: 52%;
-    left: 42%;
+    left: 40%;
 }
 
 .Miroir {
     position: absolute;
     top: 60%;
-    left: 27%;
+    left: 23%;
     width: 4%;
     height: 50%;
 }
@@ -1970,19 +1955,18 @@ input[type="checkbox"] {
 
 .posfusion {
     position: relative;
-    bottom: -2px;
-    width: 75px;
-    height: 75px;
-    left: -1%;
+    width: 4rem;
+    min-width: 4rem;
+    margin-left: 10%;
+    height: 4rem;
     border: none;
 }
 
 .poslib {
     position: relative;
-    bottom: -2px;
-    width: 75px;
-    height: 75px;
-    left: 0%;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
     border: none;
 }
 
@@ -1992,7 +1976,7 @@ input[type="checkbox"] {
     width: 6%;
     height: 52%;
     top: 66%;
-    left: 35%;
+    left: 28%;
     background-image: url("src/1_FORCE.png");
     vertical-align: bottom;
     background-size: contain;
@@ -2005,7 +1989,7 @@ input[type="checkbox"] {
     width: 6%;
     height: 52%;
     top: 66%;
-    left: 22%;
+    left: 15%;
     background-image: url("src/1_TAILLE.png");
     vertical-align: bottom;
     background-size: contain;
@@ -2018,7 +2002,7 @@ input[type="checkbox"] {
     width: 8%;
     height: 54%;
     top: 36%;
-    left: 27%;
+    left: 22%;
     background-image: url("src/1_MIRROIR.png");
     vertical-align: bottom;
     background-size: contain;
