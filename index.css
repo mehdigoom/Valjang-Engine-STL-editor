@@ -1958,7 +1958,7 @@ input[type="checkbox"] {
     position: relative;
     width: 4rem;
     min-width: 4rem;
-    margin-left: 10%;
+    margin-left: 5%;
     height: 4rem;
     border: none;
 }
@@ -2021,4 +2021,8 @@ input[type="checkbox"] {
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.cruserMargin {
+    margin-left: 5%;
 }
