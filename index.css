@@ -1600,22 +1600,6 @@
     animation: imprimer 2s;
 }
 
-.BasDroite {
-    position: absolute;
-    display: block;
-    /* Position */
-    bottom: 1px;
-    right: -1px;
-}
-
-.BasGauche {
-    position: absolute;
-    display: block;
-    /* Position */
-    bottom: 0px;
-    right: 679px;
-}
-
 .HautGauche {
     position: absolute;
     display: block;
