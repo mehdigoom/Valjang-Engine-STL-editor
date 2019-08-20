@@ -1,8 +1,35 @@
 var Module = null;
 
 
-//======Backend===========
+
+//////CONFIGURATION HERE ////////
+
+
+//Use api Valjang? True = Yes, False = no.
+var GETApiValjang = false;
+
+// Use last version of ValjangEngine.js ? True = Yes, False = no.
+var ValjangEngineAutoUpdate = true;
+
+// You can Use this Variable For set Name clent. You can Set "BDD" for use Sql DataBase Client
+var NameOfClient = "Dood Studio"
+
+//Use Backend ? True = Yes, False = no.
+var Backend = true;
+
+// Set IP Backend server
 ServerBackend = "Plase set IP and port"
+
+
+
+
+///////////////////////////////////////////
+
+
+
+
+//======Backend===========
+
 
 function BDDGetAllModel(type) {
 
@@ -45,11 +72,13 @@ function BDDGetinfoDataBase() {
     retour = ServerBackend
 
     if (ServerBackend = "Plase set IP and port") {
-        alert("Backend not set. Err : 404")
+        alert("Backend not set. Err : 404. Please configure on appload.js.")
+
         retour = " Backend not set.Err: 404 "
+        console.error(retour)
     }
     if (ServerBackend = "") {
-        alert("Backend not set. Err : Nullset")
+        alert("Backend not set. Err : Nullset. Please configure on appload.js.")
     }
     var searchTerm = '192.168';
     var indexOfFirst = ServerBackend.indexOf(searchTerm);
@@ -62,7 +91,11 @@ function BDDGetinfoDataBase() {
     return (retour)
 }
 
-BDDGetinfoDataBase()
+
+if (Backend) {
+    BDDGetinfoDataBase()
+}
+
 
 function ValjangGetAPI() {
 
@@ -73,6 +106,9 @@ function ValjangGetAPI() {
 
     }
 
+}
+if (GETApiValjang) {
+    ValjangGetAPI();
 }
 
 function InitModule() {
