@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import reacDOM from 'react-dom';
 
 
 
@@ -12,7 +12,8 @@ function App() {
     <header>
     <p>panel admin</p>
     </header>
-     
+ 
+
  
      
      <form>
@@ -23,6 +24,8 @@ function App() {
     <input type="password" name="Password" />
   </label>
   <input type="submit" value="Envoyer" />
+
+
 </form>
 
 
