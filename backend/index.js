@@ -1,7 +1,7 @@
 const http = require('http');
 const database = require("./database");
 const hostname = '127.0.0.1';
-const port = 5050;
+const port = 5000;
 const cors = require("cors")
 http.createServer((req, res) => {
   res.statusCode = 200;
