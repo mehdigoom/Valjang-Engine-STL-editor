@@ -1,5 +1,6 @@
 var Module = null;
-
+//this variable is used to check if it is possible to connect to the backend
+var Onconnect = true;
 
 
 //////CONFIGURATION HERE ////////
@@ -18,7 +19,7 @@ var NameOfClient = "Dood Studio"
 var Backend = true;
 
 // Set IP Backend server
-ServerBackend = "Plase set IP and port"
+var ServerBackend = "http://35.180.189.176:5000";
 
 
 
@@ -71,20 +72,25 @@ function BDDGetModel(type, name) {
 function BDDGetinfoDataBase() {
     retour = ServerBackend
 
-    if (ServerBackend = "Plase set IP and port") {
+    if (ServerBackend == "Plase set IP and port") {
+        Onconnect = false;
         alert("Backend not set. Err : 404. Please configure on appload.js.")
 
         retour = " Backend not set.Err: 404 "
+        
         console.error(retour)
     }
     if (ServerBackend = "") {
+        Onconnect = false;
         alert("Backend not set. Err : Nullset. Please configure on appload.js.")
+        
     }
     var searchTerm = '192.168';
     var indexOfFirst = ServerBackend.indexOf(searchTerm);
     if (indexOfFirst == -1) {
 
     } else {
+        Onconnect = false;
         alert("Backend not open on internet. Err : Local-IP")
         console.log("INDEX :" + indexOfFirst)
     }
@@ -92,9 +98,7 @@ function BDDGetinfoDataBase() {
 }
 
 
-if (Backend) {
-    BDDGetinfoDataBase()
-}
+
 
 
 function ValjangGetAPI() {
@@ -157,4 +161,7 @@ if (1) {
     let cpplibScript = document.createElement('script');
     cpplibScript.src = "src/cpplib.js";
     document.head.appendChild(cpplibScript);
+}
+if (Backend) {
+    BDDGetinfoDataBase()
 }
