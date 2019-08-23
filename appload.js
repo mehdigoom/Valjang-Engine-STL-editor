@@ -19,7 +19,7 @@ var NameOfClient = "Dood Studio"
 var Backend = true;
 
 // Set IP Backend server
-var ServerBackend = "http://35.180.189.176:5000";
+var ServerBackend = "35.180.189.176:5000";
 
 
 
@@ -32,41 +32,21 @@ var ServerBackend = "http://35.180.189.176:5000";
 //======Backend===========
 
 
-function BDDGetAllModel(type) {
+function BDDGetclient() {
 
-    const userAction = async() => {
-        const response = await fetch('http://' + ServerBackend + "/" + +type + '/models');
-        const myJson = await response.json(); //extract JSON from the http response
-        // do something with myJson
-        return (myJson)
-    }
-
-}
-
-
-function BDDGetModel(type, name) {
-
-    const userAction = async() => {
-        const response = await fetch('http://' + ServerBackend + "/" + +type + '/models');
-        const myJson = await response.json(); //extract JSON from the http response
-        // do something with myJson
-        return (myJson)
-    }
+    fetch('http://35.180.189.176:5000/client')
+    .then(function (response) {
+        response.json()
+            .then(function (value) {
+                console.log(value);
+           
+         
+                return(value)
+                
+            });
+     });
 
 }
-
-
-function BDDGetModel(type, name) {
-
-    const userAction = async() => {
-        const response = await fetch('http://' + ServerBackend + "/" + +type + '/models');
-        const myJson = await response.json(); //extract JSON from the http response
-        // do something with myJson
-        return (myJson)
-    }
-
-}
-
 
 
 function BDDGetinfoDataBase() {
@@ -164,4 +144,6 @@ if (1) {
 }
 if (Backend) {
     BDDGetinfoDataBase()
+    console.log(BDDGetclient()) 
+    console.log("SERVEUR : "+ServerBackend)
 }
