@@ -16,6 +16,28 @@ const end = function end() {
   client.end();
 };
 
+
+const getClient = function getClient(clbk, id) {
+  let sql;
+
+  if (id) 
+    sql = `SELECT * FROM client WHERE id = ?`;
+
+  else 
+    sql = `SELECT * FROM client`;
+  
+  const query = client.query(sql, [id], (error, results, fields) => {
+      if (error) return clbk(error, null);
+      return clbk(null, results);
+  });
+  console.log("Last Query :", query.sql);
+}
+
+
+
+
+
+
 const getUsers = function getUsers(clbk, id) {
   let sql;
 
@@ -127,6 +149,7 @@ const loginUser = function loginUser(clbk, user) {
 }
 
 module.exports = {
+  getClient,
   addBasket,
   getUsers,
   getProducts,

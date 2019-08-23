@@ -20,6 +20,17 @@ app.get('/', (req, res) => {
   res.send('root at at api')
 });
 
+
+
+app.get('/client', (req, res) => {
+  database.getClient( (err, client) => {
+    if (err) return res.status(500).send(err);
+    return res.status(200).send(client);
+  }, null);
+});
+
+
+
 app.get('/users', (req, res) => {
   database.getUsers( (err, users) => {
     if (err) return res.status(500).send(err);
