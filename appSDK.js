@@ -1,3 +1,28 @@
+
+
+
+
+function ValjangGetAPI() {
+
+    const userAction = async() => {
+        const response = await fetch('http://Valjang.fr/Api.json');
+        const myJson = await response.json(); //extract JSON from the http response
+        return (myJson)
+
+    }
+
+}
+if (GETApiValjang) {
+    ValjangGetAPI();
+}
+
+
+
+
+
+
+
+
 // ========== Init ==========
 
 function AppSDK_Init() {
