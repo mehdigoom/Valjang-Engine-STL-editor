@@ -16,7 +16,7 @@
  ValjangEngineAutoUpdate = true;
 
 // You can Use this Variable For set Name client. You can Set "BDD" for use Sql DataBase Client
- NameOfClient = "Dood Studio"
+ NameOfClient = "BDD"
 
 //Use Backend ? True = Yes, False = no.
  Backend = true;
@@ -32,7 +32,7 @@
 
 
 
-//======Backend===========
+//======Backend function===========
 
 
 function BDDGetclient() {
@@ -41,10 +41,13 @@ function BDDGetclient() {
     .then(function (response) {
         response.json()
             .then(function (value) {
-                console.log(value);
+                var json = JSON.stringify(value)
+               var  obj = JSON.parse(json)
            
          
-                return(value)
+                this.NameOfClient = obj.name[0];
+                console.log("Client name: "+ NameOfClient) 
+                return(this.NameOfClient)
                 
             });
      });
@@ -63,7 +66,7 @@ function BDDGetinfoDataBase() {
         
         console.error(retour)
     }
-    if (ServerBackend = "") {
+    if (ServerBackend == "") {
         Onconnect = false;
         alert("Backend not set. Err : Nullset. Please configure on appload.js.")
         
@@ -79,12 +82,12 @@ function BDDGetinfoDataBase() {
     }
     return (retour)
 }
-
+console.log("Backend enebled ? :"+ Backend)
 if (Backend) {
-    console.log(Backend)
-    console.log("SERVEUR : "+ServerBackend)
+  
+    console.log("SERVEUR : "+BDDGetinfoDataBase())
     BDDGetinfoDataBase()
-    var val= BDDGetclient()
-    console.log(val) 
+  BDDGetclient()
+    
 
 }
