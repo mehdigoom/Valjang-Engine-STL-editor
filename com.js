@@ -31,8 +31,6 @@ IDclient ="0"
 ///////////////////////////////////////////
 
 
-
-
 //======Backend function===========
 
 function Getmodels(){
@@ -40,9 +38,15 @@ function Getmodels(){
   fetch(myRequest)
     .then(function(response) { return response.json(); })
     .then(function(data) {
+      var li
       for (var i = 0; i < data.length; i++) {
+        var elem = document.getElementById('liste')
         var Newdata = data[i]
-
+        var lien ="'"+ Newdata["link"]+"'"
+        var img = Newdata["image"]
+        
+        var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
+       elem.innerHTML = objet;
  
       }
 
