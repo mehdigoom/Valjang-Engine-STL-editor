@@ -35,6 +35,25 @@ const getClient = function getClient(clbk, id) {
 
 
 
+const getModel = function getModel(clbk, id) {
+  let sql;
+
+  if (id) 
+    sql = `SELECT * FROM model WHERE id = ?`;
+
+  else 
+    sql = `SELECT * FROM model`;
+  
+  const query = client.query(sql, [id], (error, results, fields) => {
+      if (error) return clbk(error, null);
+      return clbk(null, results);
+  });
+  console.log("Last Query :", query.sql);
+}
+
+
+
+
 
 
 
@@ -149,6 +168,7 @@ const loginUser = function loginUser(clbk, user) {
 }
 
 module.exports = {
+  getModel,
   getClient,
   addBasket,
   getUsers,

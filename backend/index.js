@@ -31,6 +31,15 @@ app.get('/client', (req, res) => {
 
 
 
+app.get('/model', (req, res) => {
+  database.getModel( (err, Model) => {
+    if (err) return res.status(500).send(err);
+    return res.status(200).send(Model);
+  }, null);
+});
+
+
+
 app.get('/users', (req, res) => {
   database.getUsers( (err, users) => {
     if (err) return res.status(500).send(err);

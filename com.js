@@ -17,14 +17,14 @@
 
 // You can Use this Variable For set Name client. You can Set "BDD" for use Sql DataBase Client
  NameOfClient = "BDD"
-// If you use BDD please set Your ID client
+// If you use the Database for your client name, please set Your ID client
 IDclient ="0"
 //Use Backend ? True = Yes, False = no.
  Backend = true;
 // Set IP Backend server
  ServerBackend = "http://35.180.189.176:5000";
 
- 
+
 
 
 
@@ -34,6 +34,22 @@ IDclient ="0"
 
 
 //======Backend function===========
+
+function Getmodels(){
+  var myRequest = new Request(ServerBackend+"/model");
+  fetch(myRequest)
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      for (var i = 0; i < data.length; i++) {
+        var Newdata = data[i]
+
+ 
+      }
+
+    });
+}
+
+
 
 //c'est moche mais sa marche !
 function BDDGetclient() {
