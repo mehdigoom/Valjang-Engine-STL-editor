@@ -17,13 +17,14 @@
 
 // You can Use this Variable For set Name client. You can Set "BDD" for use Sql DataBase Client
  NameOfClient = "BDD"
-
+// If you use BDD please set Your ID client
+IDclient ="0"
 //Use Backend ? True = Yes, False = no.
  Backend = true;
-
 // Set IP Backend server
- ServerBackend = "35.180.189.176:5000";
+ ServerBackend = "http://35.180.189.176:5000";
 
+ 
 
 
 
@@ -34,24 +35,20 @@
 
 //======Backend function===========
 
-
+//c'est moche mais sa marche !
 function BDDGetclient() {
+    var myRequest = new Request(ServerBackend+"/client");
+    fetch(myRequest)
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        for (var i = 0; i < data.length; i++) {
+         var Newdata = data[IDclient]
+         NameOfClient=Newdata["name"]
+         console.log("Nom du client: "+NameOfClient)
+         console.log("Client dans la BDD : "+ data.length)
+        }
 
-    fetch('http://35.180.189.176:5000/client')
-    .then(function (response) {
-        response.json()
-            .then(function (value) {
-                var json = JSON.stringify(value)
-               var  obj = JSON.parse(json)
-           
-         
-                this.NameOfClient = obj.name[0];
-                console.log("Client name: "+ NameOfClient) 
-                return(this.NameOfClient)
-                
-            });
-     });
-
+      });
 }
 
 
@@ -87,7 +84,10 @@ if (Backend) {
   
     console.log("SERVEUR : "+BDDGetinfoDataBase())
     BDDGetinfoDataBase()
-  BDDGetclient()
+  if(NameOfClient == "BDD"){
+    BDDGetclient()
+  }
+
     
 
 }
