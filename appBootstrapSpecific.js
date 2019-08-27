@@ -246,10 +246,10 @@ function InitGUIRelatedElements() {
         AppSDK_CombineCSGIntersect();
     };
 }
-
+//ex oReq oReq.open("GET", "./3d_models/" + filename, true);
 function Load3DModel(filename) {
     let oReq = new XMLHttpRequest();
-    oReq.open("GET", "./3d_models/" + filename, true);
+    oReq.open("GET", filename, true);
     oReq.responseType = "arraybuffer";
     oReq.onload = function(oEvent) {
         let arrayBuffer = oReq.response;

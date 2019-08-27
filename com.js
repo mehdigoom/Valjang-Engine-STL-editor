@@ -44,12 +44,13 @@ function Getmodels(){
         var Newdata = data[i]
         var lien ="'"+ Newdata["link"]+"'"
         var img = Newdata["image"]
-        
-        var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
-       elem.innerHTML = objet;
+
+        var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
+      
  
       }
-
+      var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
+      elem.innerHTML = closebtn +objet;
     });
 }
 
