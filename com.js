@@ -50,7 +50,7 @@ function Getmodels(){
  
       }
       var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
-      elem.innerHTML = closebtn +objet;
+      elem.innerHTML = closebtn + objet;
     });
 }
 
@@ -100,6 +100,8 @@ function BDDGetinfoDataBase() {
     }
     return (retour)
 }
+
+
 console.log("Backend enebled ? :"+ Backend)
 if (Backend) {
   
