@@ -48,7 +48,7 @@ function Getmodels(categorie){
    
    
       for (var i = 0; i < data.length; i++) {
-    
+        SwitchSpinner(true);
         var elem = document.getElementById('liste')
         var Newdata = data[i]
         if(categorie == Newdata["type"]){
@@ -56,7 +56,7 @@ function Getmodels(categorie){
           var img = Newdata["image"]
   
           var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
-        
+          
         }
         
  
@@ -64,6 +64,7 @@ function Getmodels(categorie){
    
       var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
       elem.innerHTML = closebtn + objet;
+      SwitchSpinner(false);
     });
 }
 
