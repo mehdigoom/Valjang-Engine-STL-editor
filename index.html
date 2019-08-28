@@ -72,7 +72,7 @@
                  
 
                         <script>
-                                this.Getmodels()
+                                this.Getmodels("T")
                                 </script>
                 </div>
 
@@ -80,6 +80,34 @@
             </div>
         </div>
     </script>
+
+
+
+    <script id="Chose" type="text/html">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+                <div id = "liste" class="liste" role="listbox">
+                 
+
+                        <script>
+                                this.Getmodels("G")
+                                </script>
+                </div>
+
+
+            </div>
+        </div>
+    </script>
+
+
+
+
+
+
+
+
     <script id="CreateOrCombine" type="text/html">
 
         <br>
@@ -191,7 +219,7 @@
 
             <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
             <button class=" tamponint tampon posfusion" id="openButton">  </button>
-            <button class=" galerie  poslib">  </button>
+            <button class=" galerie  poslib" id="openObject">  </button>
             <!--label for="loadButton" class="btn btn-default btn-sm"> Load file </label>-->
             <button id="fullScreenButton" class="full BTN hiden"></button>
 

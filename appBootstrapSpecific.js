@@ -208,7 +208,26 @@ function InitGUIRelatedElements() {
             backdrop: true,
             onEscape: function() {} // So that backdrop works on dialog
         });
+
+
+
     };
+
+
+
+    document.getElementById("openObject").onclick = function() {
+        bootbox.hideAll();
+        bootbox.dialog({
+
+            message: document.getElementById('Chose').innerHTML,
+            backdrop: true,
+            onEscape: function() {} // So that backdrop works on dialog
+        });
+
+
+
+    };
+
     // Undo/redo
     UpdateUndoRedoButtonStates();
     document.getElementById("undoButton").onclick = function() {

@@ -36,7 +36,7 @@ IDclient ="1"
 
 //======Backend function===========
 
-function Getmodels(){
+function Getmodels(categorie){
 
   var myRequest = new Request(ServerBackend+"/model");
   bootbox.hideAll();
@@ -48,14 +48,17 @@ function Getmodels(){
    
    
       for (var i = 0; i < data.length; i++) {
-      
+    
         var elem = document.getElementById('liste')
         var Newdata = data[i]
-        var lien ="'"+ Serveruplaud +Newdata["link"]+"'"
-        var img = Newdata["image"]
-
-        var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
-      
+        if(categorie == Newdata["type"]){
+          var lien ="'"+ Serveruplaud +Newdata["link"]+"'"
+          var img = Newdata["image"]
+  
+          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
+        
+        }
+        
  
       }
    
@@ -73,7 +76,7 @@ function BDDGetclient() {
       .then(function(response) { return response.json(); })
       .then(function(data) {
         for (var i = 0; i < data.length; i++) {
-         var Newdata = data[IDclient]
+          var Newdata = data[IDclient]
          NameOfClient=Newdata["name"]
          console.log("Nom du client: "+NameOfClient)
          console.log("Client dans la BDD : "+ data.length)
