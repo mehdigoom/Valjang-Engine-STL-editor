@@ -99,7 +99,7 @@ function BDDGetinfoDataBase() {
     }
     if (ServerBackend == "") {
         Onconnect = false;
-        alert("Backend not set. Err : Nullset. Please configure on appload.js.")
+        alert("Backend not set. Err : Nullset. Please configure on com.js.")
         
     }
     var searchTerm = '192.168';
