@@ -18,11 +18,14 @@
 // You can Use this Variable For set Name client. You can Set "BDD" for use Sql DataBase Client
  NameOfClient = "BDD"
 // If you use the Database for your client name, please set Your ID client
-IDclient ="0"
+IDclient ="1"
 //Use Backend ? True = Yes, False = no.
  Backend = true;
 // Set IP Backend server
  ServerBackend = "http://35.180.189.176:5000";
+
+ //set uplaud server
+ Serveruplaud = "http://35.180.189.176/model/"
 
 
 
@@ -34,21 +37,28 @@ IDclient ="0"
 //======Backend function===========
 
 function Getmodels(){
+
   var myRequest = new Request(ServerBackend+"/model");
+  bootbox.hideAll();
   fetch(myRequest)
+  
     .then(function(response) { return response.json(); })
+    
     .then(function(data) {
-      var li
+   
+   
       for (var i = 0; i < data.length; i++) {
+      
         var elem = document.getElementById('liste')
         var Newdata = data[i]
-        var lien ="'"+ Newdata["link"]+"'"
+        var lien ="'"+ Serveruplaud +Newdata["link"]+"'"
         var img = Newdata["image"]
 
         var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
       
  
       }
+   
       var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
       elem.innerHTML = closebtn + objet;
     });
