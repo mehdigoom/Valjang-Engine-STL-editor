@@ -1,31 +1,75 @@
-//dont tuch
 
 
 
-//this variable is used to check if it is possible to connect to the backend
- Onconnect = true;
 
 
-//////CONFIGURATION HERE ////////
+
+                                    //////CONFIGURATION HERE ////////
 
 
-//Use api Valjang? True = Yes, False = no.
- GETApiValjang = false;
+//Use  Valjang API? 
+//allows auto configuration of the backend 
+//no administrator panel if activate.
+//True = Yes, False = no. 
+ GETApi = true;
 
-// Use last version of ValjangEngine.js ? True = Yes, False = no.
- ValjangEngineAutoUpdate = true;
 
 // You can Use this Variable For set Name client. You can Set "BDD" for use Sql DataBase Client
- NameOfClient = "BDD"
+ NameOfClient = "BDD";
 // If you use the Database for your client name, please set Your ID client
-IDclient ="1"
-//Use Backend ? True = Yes, False = no.
+IDclient ="1";
+//Use Backend ? True = Yes, False = no. //If you use the valjang API this option will replace
  Backend = true;
-// Set IP Backend server
+// Set IP Backend server //If you use the valjang API this option will replace
  ServerBackend = "http://35.180.189.176:5000";
 
- //set uplaud server
- Serveruplaud = "http://35.180.189.176"
+ //set uplaud server //If you use the valjang API this option will replace
+ Serveruplaud = "http://35.180.189.176";
+
+//preload model ? true = yes, false = no.
+preload = false;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -33,8 +77,15 @@ IDclient ="1"
 
 ///////////////////////////////////////////
 
+//this variable is used to check if it is possible to connect to the backend
+Onconnect = true;
 
-//======Backend function===========
+//======Backend function===========//
+
+
+
+
+
 
 function Getmodels(categorie){
 
@@ -52,7 +103,13 @@ function Getmodels(categorie){
         var elem = document.getElementById('liste')
         var Newdata = data[i]
         var JS = ""
-        var name = Newdata["name"]
+        var mod =""
+        if (Newdata["statut"]== 1){
+            mod = "Modifiable"
+        }else{
+          mod = "Non Modifiable"
+        }
+    
         if(categorie == Newdata["type"]){
           var lien ="'"+ Serveruplaud+"/model/" +Newdata["link"]+"'"
           if(categorie =="G"){
@@ -62,7 +119,7 @@ function Getmodels(categorie){
           
           var img = Newdata["image"]
 
-          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'">'+name+'</a></div>'
+          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'">'+mod+'</a></div>'
           
         }
         
@@ -77,7 +134,7 @@ function Getmodels(categorie){
 
 
 
-//c'est moche mais sa marche !
+
 function BDDGetclient() {
     var myRequest = new Request(ServerBackend+"/client");
     fetch(myRequest)
@@ -87,13 +144,17 @@ function BDDGetclient() {
           var Newdata = data[IDclient]
          NameOfClient=Newdata["name"]
          console.log("Nom du client: "+NameOfClient)
-         console.log("Client dans la BDD : "+ data.length)
+        // console.log("Client dans la BDD : "+ data.length)
         }
 
       });
 }
 
-
+function GETApiValjang(){
+  Backend = true;
+  ServerBackend = "http://35.180.189.176:5000";
+  Serveruplaud = "http://35.180.189.176";
+}
 function BDDGetinfoDataBase() {
     retour = ServerBackend
 
@@ -124,14 +185,19 @@ function BDDGetinfoDataBase() {
 
 
 console.log("Backend enebled ? :"+ Backend)
+if(GETApi){
+  GETApiValjang()
+  console.log("SERVEUR : "+" valjangAPI (api.valjang.fr)")
+}else{
+  console.log("SERVEUR : "+BDDGetinfoDataBase())
+}
 if (Backend) {
-  
-    console.log("SERVEUR : "+BDDGetinfoDataBase())
+
+    
     BDDGetinfoDataBase()
   if(NameOfClient == "BDD"){
     BDDGetclient()
   }
 
-    
 
 }
