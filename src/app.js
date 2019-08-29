@@ -842,7 +842,7 @@ AppMain.prototype.Genfleche = function(){
 
 
 AppMain.prototype.Gengrille = function(){
-         scene.onMeshRemovedObservable.add(mesh => {
+    this._scene.onMeshRemovedObservable.add(mesh => {
             if (mesh.Plane) {
              mesh.Plane.dispose()
             }
