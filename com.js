@@ -119,7 +119,7 @@ function Getmodels(categorie){
             if(categorie =="G"){
               JS = "AppSDK_CreateNewScene(meshItemToCreateOrCombine); meshItemToCreateOrCombine = null;"
             }
-          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'">'+mod+'</a></div>'
+            var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'">'+mod+'</a></div>'
          }
 
           
