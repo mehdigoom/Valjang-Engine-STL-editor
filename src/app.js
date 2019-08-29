@@ -763,7 +763,7 @@ AppMain.prototype.Genfleche = function(){
     var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
     //plane.rotation.x = Math.PI / 2;
     plane.material = materialfleche;
-    plane.position.y =-100
+    plane.position.y =-50
     
     plane.position.x =200
     plane.rotation.y= Math.PI / 2;
@@ -783,7 +783,7 @@ AppMain.prototype.Genfleche = function(){
     var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
     //plane.rotation.x = Math.PI / 2;
     plane2.material = materialflecheX;
-    plane2.position.y =-200
+    plane2.position.y =-100
     plane2.rotation.z = Math.PI / 2;
     plane2.position.x =200
     plane2.rotation.y= Math.PI / 2;
@@ -817,7 +817,7 @@ AppMain.prototype.Genfleche = function(){
     plane2.rotation.x = Math.PI / 2;
 
 
-    plane2.position.y =-200
+    plane2.position.y =-100
     
     plane2.position.x =100
     plane2.rotation.y= Math.PI / 2;
@@ -854,7 +854,7 @@ materialPlane.diffuseTexture.hasAlpha = true;
 var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
 plane.rotation.x = Math.PI / 2;
 plane.material = materialPlane;
-plane.position.y =-200
+plane.position.y =-100
 
 
 
