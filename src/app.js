@@ -842,7 +842,7 @@ AppMain.prototype.Genfleche = function(){
 
 
 AppMain.prototype.Gengrille = function(){
-
+    
 
 var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
 materialPlane.diffuseTexture = new ValjangEngine.Texture("grille.png", this._scene);
@@ -1126,10 +1126,13 @@ if(this._isInCombineMode){
         // Show cursor
         this._uiRingCursor.isVisible = true;
         //appelle fonction  this.Gengrille()
-    
+   
         this.Gengrille()
         this.GenRegle()
         this.Genfleche()
+       
+ 
+       
         //test du navigateur
         var testVersion = window.navigator.userAgent.match(/Windows NT (([0-9])+\.([0-9])+)/); // on récupère la version du système
         if(testVersion) {

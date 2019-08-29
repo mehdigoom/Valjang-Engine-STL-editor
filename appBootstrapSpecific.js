@@ -274,6 +274,7 @@ function Load3DModel(filename) {
         let arrayBuffer = oReq.response;
         SetMeshItemToScene(AppSDK_LoadFromTextBuffer(arrayBuffer, filename));
         SwitchSpinner(false);
+        ValjangEngine.mesh.delete('Plane');
     };
     oReq.send(null);
 }
