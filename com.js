@@ -110,16 +110,19 @@ function Getmodels(categorie){
           mod = "Non Modifiable"
         }
     
-        if(categorie == Newdata["type"]){
-          var lien ="'"+ Serveruplaud+"/model/" +Newdata["link"]+"'"
-          if(categorie =="G"){
-            JS = "AppSDK_CreateNewScene(meshItemToCreateOrCombine); meshItemToCreateOrCombine = null;"
-          }
-          
-          
           var img = Newdata["image"]
-
+          if (Newdata === undefined) {
+            return 'Undefined value!';
+         }else{
+          if(categorie == Newdata["type"]){
+            var lien ="'"+ Serveruplaud+"/model/" +Newdata["link"]+"'"
+            if(categorie =="G"){
+              JS = "AppSDK_CreateNewScene(meshItemToCreateOrCombine); meshItemToCreateOrCombine = null;"
+            }
           var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'">'+mod+'</a></div>'
+         }
+
+          
           
         }
         
