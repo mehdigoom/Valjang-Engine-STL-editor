@@ -1758,11 +1758,14 @@ body {
     /* Position */
     top: 30%;
     left: 10px;
-    width: 150px;
-    height: 50%;
-    background-image: url("src/2_FENETRE.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    width: 170px;
+    height: 40%;
+    background-color: #f3f3f3;
+    border-radius: 30px;
+    background-position-y: 5%
+    
+ 
+   
 }
 
 .active {
