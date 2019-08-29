@@ -4,14 +4,14 @@
 
 
 
-                                    //////CONFIGURATION HERE ////////
+                                           //////CONFIGURATION HERE ////////
 
 
 //Use  Valjang API? 
 //allows auto configuration of the backend 
 //no administrator panel if activate.
 //True = Yes, False = no. 
- GETApi = true;
+ GETApi = false;
 
 
 // You can Use this Variable For set Name client. You can Set "BDD" for use Sql DataBase Client
