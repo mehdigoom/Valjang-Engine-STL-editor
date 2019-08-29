@@ -698,7 +698,7 @@ AppMain.prototype.GenRegle = function(){
     //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
     
     //Creation of a plane
-    var plane = ValjangEngine.Mesh.CreatePlane("Regle", this._modelRadius*4, this._scene);
+    var plane = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
     //plane.rotation.x = Math.PI / 2;
     plane.material = materialPlane;
     plane.position.y =-1
@@ -715,7 +715,7 @@ materialPlane2.diffuseTexture.hasAlpha = true;
 //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
 //Creation of a plane
-var plane2 = ValjangEngine.Mesh.CreatePlane("Regle", this._modelRadius*4, this._scene);
+var plane2 = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
 //plane.rotation.x = Math.PI / 2;
 plane2.material = materialPlane2;
 plane2.position.y =-1
@@ -734,7 +734,7 @@ materialPlane3.diffuseTexture.hasAlpha = true;
 //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
 //Creation of a plane
-var plane3 = ValjangEngine.Mesh.CreatePlane("Regle", this._modelRadius*4, this._scene);
+var plane3 = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
 //plane.rotation.x = Math.PI / 2;
 plane3.material = materialPlane3;
 plane3.position.y =-1
@@ -760,7 +760,7 @@ AppMain.prototype.Genfleche = function(){
     //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
     
     //Creation of a plane
-    var plane = ValjangEngine.Mesh.CreatePlane("Plane", this._modelRadius*2, this._scene);
+    var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
     //plane.rotation.x = Math.PI / 2;
     plane.material = materialfleche;
     plane.position.y =-100
@@ -780,7 +780,7 @@ AppMain.prototype.Genfleche = function(){
     //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
     
     //Creation of a plane
-    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", this._modelRadius*2, this._scene);
+    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
     //plane.rotation.x = Math.PI / 2;
     plane2.material = materialflecheX;
     plane2.position.y =-200
@@ -806,7 +806,7 @@ AppMain.prototype.Genfleche = function(){
     //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
     console.log("Raduis x2:"+this._modelRadius*2)
     //Creation of a plane
-    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", this._modelRadius*2, this._scene);
+    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
     //plane.rotation.x = Math.PI / 2;
     plane2.material = materialflecheZ;
    
@@ -851,7 +851,7 @@ materialPlane.diffuseTexture.hasAlpha = true;
 //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
 //Creation of a plane
-var plane = ValjangEngine.Mesh.CreatePlane("Plane", this._modelRadius*4, this._scene);
+var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
 plane.rotation.x = Math.PI / 2;
 plane.material = materialPlane;
 plane.position.y =-200
@@ -1125,15 +1125,11 @@ if(this._isInCombineMode){
         // Show cursor
         this._uiRingCursor.isVisible = true;
         //appelle fonction  this.Gengrille()
-      
-            if (mesh.Plane) {
-             mesh.Plane.dispose()
-            }else{
-                this.Gengrille()
+        
+                 this.Gengrille()
                 this.GenRegle()
-                this.Genfleche()
-            }
-       
+                 this.Genfleche()
+         
        
        
  
