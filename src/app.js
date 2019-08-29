@@ -1152,7 +1152,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
     };
     AppMain.prototype.GenSphere = function () {
         var generator = new Module.GenSphere();
-        var mesh = generator.Generate(100);
+        var mesh = generator.Generate(50);
        
         generator.delete();
         
