@@ -25,7 +25,7 @@ IDclient ="1"
  ServerBackend = "http://35.180.189.176:5000";
 
  //set uplaud server
- Serveruplaud = "http://35.180.189.176/"
+ Serveruplaud = "http://35.180.189.176"
 
 
 
@@ -52,7 +52,7 @@ function Getmodels(categorie){
         var elem = document.getElementById('liste')
         var Newdata = data[i]
         if(categorie == Newdata["type"]){
-          var lien ="'"+ Serveruplaud+"model" +Newdata["link"]+"'"
+          var lien ="'"+ Serveruplaud+"/model/" +Newdata["link"]+"'"
           var img = Newdata["image"]
   
           var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
