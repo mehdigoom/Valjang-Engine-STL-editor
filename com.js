@@ -25,7 +25,7 @@ IDclient ="1"
  ServerBackend = "http://35.180.189.176:5000";
 
  //set uplaud server
- Serveruplaud = "http://35.180.189.176/model/"
+ Serveruplaud = "http://35.180.189.176/"
 
 
 
@@ -38,7 +38,7 @@ IDclient ="1"
 
 function Getmodels(categorie){
 
-  var myRequest = new Request(ServerBackend);
+  var myRequest = new Request(ServerBackend+"/model");
   bootbox.hideAll();
   fetch(myRequest)
   
