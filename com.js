@@ -61,7 +61,7 @@ function Getmodels(categorie){
           
           var img = Newdata["image"]
   
-          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+js+'"></a></div>'
+          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'"></a></div>'
           
         }
         
