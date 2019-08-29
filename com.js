@@ -52,6 +52,7 @@ function Getmodels(categorie){
         var elem = document.getElementById('liste')
         var Newdata = data[i]
         var JS = ""
+        var name = Newdata["name"]
         if(categorie == Newdata["type"]){
           var lien ="'"+ Serveruplaud+"/model/" +Newdata["link"]+"'"
           if(categorie =="G"){
@@ -60,8 +61,8 @@ function Getmodels(categorie){
           
           
           var img = Newdata["image"]
-  
-          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'"></a></div>'
+
+          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'">'+name+'</a></div>'
           
         }
         
