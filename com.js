@@ -51,11 +51,17 @@ function Getmodels(categorie){
         SwitchSpinner(true);
         var elem = document.getElementById('liste')
         var Newdata = data[i]
+        var JS = ""
         if(categorie == Newdata["type"]){
           var lien ="'"+ Serveruplaud+"/model/" +Newdata["link"]+"'"
+          if(categorie =="G"){
+            JS = "AppSDK_CreateNewScene(meshItemToCreateOrCombine); meshItemToCreateOrCombine = null;"
+          }
+          
+          
           var img = Newdata["image"]
   
-          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');"></a></div>'
+          var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+js+'"></a></div>'
           
         }
         
