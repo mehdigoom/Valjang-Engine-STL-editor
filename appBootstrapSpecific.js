@@ -274,11 +274,7 @@ function Load3DModel(filename) {
         let arrayBuffer = oReq.response;
         SetMeshItemToScene(AppSDK_LoadFromTextBuffer(arrayBuffer, filename));
         SwitchSpinner(false);
-        ValjangEngine._scene.onMeshRemovedObservable.add(mesh => {
-            if (mesh.Plane) {
-             mesh.Plane.dispose()
-            }
-         });
+        
     };
     oReq.send(null);
 }
