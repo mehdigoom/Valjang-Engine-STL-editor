@@ -1919,14 +1919,19 @@ input[type="checkbox"] {
     position: absolute;
     display: flex;
     overflow: hidden;
-    left: 25%;
-    right: 10%;
-    bottom: 19%;
+    width: 40rem;
+    min-width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3%;
     align-items: center;
-    background-image: url("src/3_BARRE.png");
-    vertical-align: bottom;
+    justify-content: space-around;
+    background-image: url("src/1_BAR.png");
     background-size: contain;
+    border-radius: 50px;
     background-repeat: no-repeat;
+    background-position-y: 40px;
+    padding: 5px;
 }
 
 .BTNannulercombine {
