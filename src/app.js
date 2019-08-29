@@ -843,7 +843,7 @@ AppMain.prototype.Genfleche = function(){
 
 AppMain.prototype.Gengrille = function(){
     
-
+mesh.Plane.dispose()
 var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
 materialPlane.diffuseTexture = new ValjangEngine.Texture("grille.png", this._scene);
 materialPlane.specularColor = new ValjangEngine.Color3(1, 1, 1);
