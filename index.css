@@ -1916,17 +1916,17 @@ input[type="checkbox"] {
 }
 
 .CombineUI {
-    position: absolute;
+      position: absolute;
     display: flex;
     overflow: hidden;
     width: 40rem;
     min-width: 40%;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 3%;
+    bottom: 17%;
     align-items: center;
     justify-content: space-around;
-    background-image: url("src/1_BAR.png");
+    background-image: url("src/3_BARRE.png");
     background-size: contain;
     border-radius: 50px;
     background-repeat: no-repeat;
