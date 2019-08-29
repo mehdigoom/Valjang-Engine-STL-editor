@@ -1125,7 +1125,7 @@ if(this._isInCombineMode){
         // Show cursor
         this._uiRingCursor.isVisible = true;
         //appelle fonction  this.Gengrille()
-        this._scene.onMeshRemovedObservable.add(mesh => {
+      
             if (mesh.Plane) {
              mesh.Plane.dispose()
             }else{
@@ -1133,7 +1133,7 @@ if(this._isInCombineMode){
                 this.GenRegle()
                 this.Genfleche()
             }
-         });
+       
        
        
  
