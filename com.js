@@ -38,7 +38,7 @@ IDclient ="1"
 
 function Getmodels(categorie){
 
-  var myRequest = new Request(ServerBackend+"/model");
+  var myRequest = new Request(ServerBackend+"model");
   bootbox.hideAll();
   fetch(myRequest)
   
