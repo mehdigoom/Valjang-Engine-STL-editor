@@ -156,9 +156,11 @@ console.error("The 'object' variable is empty. It is possible that he has a prob
     if(categorie =="G"){
       elem.innerHTML = closebtn + objet;
     }else{
+
       elem.innerHTML = closebtn + objet;
       btn.classList.remove("hiden");
 btn.innerHTML= categorieFORM +categorieALPHABET
+
     }
     
     var close = document.getElementById('close')
@@ -166,11 +168,13 @@ btn.innerHTML= categorieFORM +categorieALPHABET
     
       bootbox.hideAll();
       btn.classList.add("hiden");
+
     }
     
    }
 
    SwitchSpinner(false);
+   
     });
   
 }
