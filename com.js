@@ -116,7 +116,7 @@ function Getmodels(categorie){
           mod = "Non Modifiable"
         }
         }
-      
+    
     
           var img = Newdata["image"]
          
@@ -174,7 +174,7 @@ btn.innerHTML= categorieFORM +categorieALPHABET
    }
 
    SwitchSpinner(false);
-   
+
     });
   
 }

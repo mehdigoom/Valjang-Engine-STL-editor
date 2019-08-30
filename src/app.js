@@ -883,6 +883,12 @@ plane.position.y =-100
        
 if(this._isInCombineMode){
     
+    var btn = document.getElementById('filtre')
+    btn.className.add("hiden")
+
+
+
+
     var firstMeshBBox = this._meshItem.GetBBox();
     this._modelRadius = Math.max(Math.max(firstMeshBBox.Extents().X(), firstMeshBBox.Extents().Y()), firstMeshBBox.Extents().Z());
     this._sculptingRadius = this._modelRadius * this._uiSculptingSize;
@@ -907,7 +913,7 @@ if(this._isInCombineMode){
     }
     // Retarget camera
     this._camera.setTarget(new ValjangEngine.Vector3((boundMin.x + boundMax.x) * 0.5, (boundMin.y + boundMax.y) * 0.5, (boundMin.z + boundMax.z) * 0.5));
-    this._camera.minZ = 0;
+    this._camera.minZ = 100;
     this._camera.radius = this._modelRadius * 3.4;
     this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
     this._camera.upperRadiusLimit = this._camera.radius * 2.0;
