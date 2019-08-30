@@ -884,7 +884,7 @@ plane.position.y =-100
 if(this._isInCombineMode){
     
     var btn = document.getElementById('filtre')
-    btn.className.add("hiden")
+    btn.classList.add("hiden");
 
 
 
