@@ -104,6 +104,7 @@ function Getmodels(categorie){
     
         var elem = document.getElementById('liste')
         var btn = document.getElementById('filtre')
+  
         var Newdata = data[i]
         var JS = ""
         var mod =""
@@ -124,13 +125,14 @@ function Getmodels(categorie){
             if(categorie =="G"){
               JS = 'javascript:bootbox.hideAll(); Load3DModel('+lien+'); AppSDK_CreateNewScene(meshItemToCreateOrCombine); meshItemToCreateOrCombine = null; '
             }else{
-              JS = 'javascript:bootbox.hideAll(); Load3DModel('+lien+');'
+              JS = 'javascript:bootbox.hideAll(); Load3DModel('+lien+'); '
             }
-
+    
+         
             if(objet === undefined){
-              var objet = '<div class="item"><img src="'+img+'"  style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
+              var objet = '<div  class="item"><img src="'+img+'" id="img" style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
             }else{
-              var objet = objet+'<div class="item"><img src="'+img+'" style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
+              var objet = objet+'<div class="item"><img src="'+img+'"id="img" style="   width:90%;" onclick="'+JS+' ">'+mod+'</a></div>'
             }
           
     
@@ -143,19 +145,29 @@ function Getmodels(categorie){
         
  
       }
+
    if(objet === undefined){
+     objet = "Error please check the console."
 console.error("The 'object' variable is empty. It is possible that he has a problem with the Backend or that the database is empty.")
    }else{
-    var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
+    var closebtn = '<button id="close">Fermer</button>'
     var categorieFORM  ='<img class="fit-picture"src="./src/2_SOUS_PARTI_1.png" >'
     var categorieALPHABET ='<img class="fit-picture2"src="./src/2_SOUS_PARTI_2.png" >'
     if(categorie =="G"){
       elem.innerHTML = closebtn + objet;
     }else{
       elem.innerHTML = closebtn + objet;
+      btn.classList.remove("hiden");
 btn.innerHTML= categorieFORM +categorieALPHABET
     }
-
+    
+    var close = document.getElementById('close')
+    close.onclick = function() {
+    
+      bootbox.hideAll();
+      btn.classList.add("hiden");
+    }
+    
    }
 
    SwitchSpinner(false);
