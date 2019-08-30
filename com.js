@@ -88,6 +88,11 @@ Onconnect = true;
 
 
 
+
+
+
+
+
 function Getmodels(categorie){
   SwitchSpinner(true);
   var myRequest = new Request(ServerBackend+"/model");
@@ -192,7 +197,7 @@ function BDDGetclient() {
          NameOfClient=Newdata["name"]
          console.log("Nom du client: "+NameOfClient)
         // console.log("Client dans la BDD : "+ data.length)
-        }
+        }return(NameOfClient)
 
       });
 
@@ -239,6 +244,9 @@ if(GETApi){
 }else{
   console.log("SERVEUR : "+BDDGetinfoDataBase())
 }
+
+
+
 if (Backend) {
 
     
