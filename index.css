@@ -2019,3 +2019,15 @@ input[type="checkbox"] {
 .cruserMargin {
     margin-left: 5%;
 }
+.fit-picture{
+    position: absolute;
+   
+    bottom: 40%;
+    left: 20%;
+}
+.fit-picture2{
+    position: absolute;
+   
+    bottom: 40%;
+    left: 10%;
+}

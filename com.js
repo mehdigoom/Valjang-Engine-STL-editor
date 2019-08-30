@@ -17,7 +17,7 @@
 // You can Use this Variable For set Name client. You can Set "BDD" for use Sql DataBase Client
  NameOfClient = "BDD";
 // If you use the Database for your client name, please set Your ID client
-IDclient ="1";
+IDclient ="0";
 //Use Backend ? True = Yes, False = no. //If you use the valjang API this option will replace
  Backend = true;
 // Set IP Backend server //If you use the valjang API this option will replace
@@ -80,6 +80,7 @@ preload = false;
 //this variable is used to check if it is possible to connect to the backend
 Onconnect = true;
 
+
 //======Backend function===========//
 
 
@@ -88,23 +89,25 @@ Onconnect = true;
 
 
 function Getmodels(categorie){
-
+  SwitchSpinner(true);
   var myRequest = new Request(ServerBackend+"/model");
-  bootbox.hideAll();
+
   fetch(myRequest)
   
     .then(function(response) { return response.json(); })
-    
+  
     .then(function(data) {
    
    
       for (var i = 0; i < data.length; i++) {
-        SwitchSpinner(true);
+       
+    
         var elem = document.getElementById('liste')
+        var btn = document.getElementById('filtre')
         var Newdata = data[i]
         var JS = ""
         var mod =""
-        //
+       
         if(categorie =="G"){
           if (Newdata["statut"]== 1){
             mod = "Modifiable"
@@ -125,9 +128,9 @@ function Getmodels(categorie){
             }
 
             if(objet === undefined){
-              var objet = '<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
+              var objet = '<div class="item"><img src="'+img+'"  style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
             }else{
-              var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
+              var objet = objet+'<div class="item"><img src="'+img+'" style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
             }
           
     
@@ -144,9 +147,15 @@ function Getmodels(categorie){
 console.error("The 'object' variable is empty. It is possible that he has a problem with the Backend or that the database is empty.")
    }else{
     var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
-    var categorieFORM 
-    var categorieALPHABET 
-    elem.innerHTML = closebtn + objet;
+    var categorieFORM  ='<img class="fit-picture"src="./src/2_SOUS_PARTI_1.png" >'
+    var categorieALPHABET ='<img class="fit-picture2"src="./src/2_SOUS_PARTI_2.png" >'
+    if(categorie =="G"){
+      elem.innerHTML = closebtn + objet;
+    }else{
+      elem.innerHTML = closebtn + objet;
+btn.innerHTML= categorieFORM +categorieALPHABET
+    }
+
    }
 
    SwitchSpinner(false);
