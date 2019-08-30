@@ -151,8 +151,8 @@ function Getmodels(categorie){
 console.error("The 'object' variable is empty. It is possible that he has a problem with the Backend or that the database is empty.")
    }else{
     var closebtn = '<button id="close">Fermer</button>'
-    var categorieFORM  ='<img class="fit-picture"src="./src/2_SOUS_PARTI_1.png" >'
-    var categorieALPHABET ='<img class="fit-picture2"src="./src/2_SOUS_PARTI_2.png" >'
+    var categorieFORM  ='<img id="FROM" class="fit-picture"src="./src/2_SOUS_PARTI_1.png" >'
+    var categorieALPHABET ='<img id="A" class="fit-picture2"src="./src/2_SOUS_PARTI_2.png" >'
     if(categorie =="G"){
       elem.innerHTML = closebtn + objet;
     }else{
