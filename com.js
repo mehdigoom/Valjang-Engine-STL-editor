@@ -104,35 +104,54 @@ function Getmodels(categorie){
         var Newdata = data[i]
         var JS = ""
         var mod =""
-        if (Newdata["statut"]== 1){
+        //
+        if(categorie =="G"){
+          if (Newdata["statut"]== 1){
             mod = "Modifiable"
         }else{
           mod = "Non Modifiable"
         }
+        }
+      
     
           var img = Newdata["image"]
-          if (Newdata === undefined) {
-            return 'Undefined value!';
-         }else{
+         
           if(categorie == Newdata["type"]){
             var lien ="'"+ Serveruplaud+"/model/" +Newdata["link"]+"'"
             if(categorie =="G"){
-              JS = "AppSDK_CreateNewScene(meshItemToCreateOrCombine); meshItemToCreateOrCombine = null;"
+              JS = 'javascript:bootbox.hideAll(); Load3DModel('+lien+'); AppSDK_CreateNewScene(meshItemToCreateOrCombine); meshItemToCreateOrCombine = null; '
+            }else{
+              JS = 'javascript:bootbox.hideAll(); Load3DModel('+lien+');'
             }
-            var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="javascript:bootbox.hideAll();Load3DModel('+lien+');'+JS+'">'+mod+'</a></div>'
-         }
+
+            if(objet === undefined){
+              var objet = '<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
+            }else{
+              var objet = objet+'<div class="item"><img src="'+img+'" alt="A" style="   width:90%;" onclick="'+JS+'">'+mod+'</a></div>'
+            }
+          
+    
+      
+          }
 
           
           
-        }
+        
         
  
       }
-   
-      var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
-      elem.innerHTML = closebtn + objet;
-      SwitchSpinner(false);
+   if(objet === undefined){
+console.error("The 'object' variable is empty. It is possible that he has a problem with the Backend or that the database is empty.")
+   }else{
+    var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
+    var categorieFORM =
+    var categorieALPHABET = 
+    elem.innerHTML = closebtn + objet;
+   }
+
+   SwitchSpinner(false);
     });
+  
 }
 
 
@@ -151,6 +170,7 @@ function BDDGetclient() {
         }
 
       });
+
 }
 
 function GETApiValjang(){
