@@ -144,8 +144,8 @@ function Getmodels(categorie){
 console.error("The 'object' variable is empty. It is possible that he has a problem with the Backend or that the database is empty.")
    }else{
     var closebtn = '<button onclick="bootbox.hideAll();">Fermer</button>'
-    var categorieFORM =
-    var categorieALPHABET = 
+    var categorieFORM 
+    var categorieALPHABET 
     elem.innerHTML = closebtn + objet;
    }
 
