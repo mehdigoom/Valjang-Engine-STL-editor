@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors())
 app.get('/', (req, res) => {
-  res.send('root at at api')
+  res.send('<meta http-equiv="refresh" content="durée;URL=http://valjang.fr"> ')
 });
 
 
