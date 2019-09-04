@@ -21,10 +21,10 @@ IDclient ="0";
 //Use Backend ? True = Yes, False = no. //If you use the valjang API this option will replace
  Backend = true;
 // Set IP Backend server //If you use the valjang API this option will replace
- ServerBackend = "http://35.180.189.176:5000";
+ ServerBackend = "http://15.188.48.149:5000";
 
  //set uplaud server //If you use the valjang API this option will replace
- Serveruplaud = "http://35.180.189.176";
+ Serveruplaud = "http://15.188.48.149";
 
 //preload model ? true = yes, false = no.
 preload = false;
