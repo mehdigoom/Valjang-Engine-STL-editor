@@ -3,10 +3,8 @@ import React from 'react';
 import './App.css';
 
 
-
-
-
 function App() {
+  
   return (
     <div className="App">
       <p>Bienvenue dans le panel administrateur du viewver 3D de </p>
