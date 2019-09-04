@@ -205,8 +205,8 @@ function BDDGetclient() {
 
 function GETApiValjang(){
   Backend = true;
-  ServerBackend = "http://35.180.189.176:5000";
-  Serveruplaud = "http://35.180.189.176";
+  ServerBackend = "http://15.188.48.149:5000";
+  Serveruplaud = "http://15.188.48.149";
 }
 function BDDGetinfoDataBase() {
     retour = ServerBackend
