@@ -2032,13 +2032,16 @@ input[type="checkbox"] {
 }
 
 .SCALE {
-    background-image: url(src/ROTATE.png);
+    background-color: transparent;
+    background-image: url(src/SCALE.png);
 }
 
 .ROTATE {
+    background-color: transparent;
     background-image: url(src/ROTATE.png);
 }
 
 .MOVE {
-    background-image: url(src/ROTATE.png);
+    background-color: transparent;
+    background-image: url(src/MOVE.png);
 }
