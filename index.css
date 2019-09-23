@@ -1928,7 +1928,6 @@ input[type="checkbox"] {
     background-size: contain;
     border-radius: 50px;
     background-repeat: no-repeat;
-    background-position-y: 40px;
     padding: 5px;
 }
 
