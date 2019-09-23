@@ -879,8 +879,8 @@ var AppMain = /** @class */ (function() {
             tampon.className.add("hiden")
         } else {
 
-            openbtn.className.remove("hiden")
-            tampon.className.remove("hiden")
+            openbtn.classList.remove("hiden")
+            tampon.classList.remove("hiden")
         }
 
 
