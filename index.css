@@ -1859,10 +1859,11 @@ input[type="checkbox"] {
     width: 4rem;
     min-width: 4rem;
     height: 4rem;
-    border: none;
+    margin: 1%;
     background-repeat: no-repeat;
     background-size: 100%;
-    padding: 0
+    padding: 0;
+    border: none;
 }
 
 .scroll {
@@ -1923,7 +1924,7 @@ input[type="checkbox"] {
     bottom: 17%;
     align-items: center;
     justify-content: space-around;
-    background-image: url("src/3_BAR.png");
+    background-image: url("src/3_BARRE.png");
     background-size: contain;
     border-radius: 50px;
     background-repeat: no-repeat;
