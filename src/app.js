@@ -875,8 +875,8 @@ var AppMain = /** @class */ (function() {
         tampon = document.getElementById('openObject')
         if (this._isInCombineMode) {
 
-            openbtn.className.add("hiden")
-            tampon.className.add("hiden")
+            openbtn.classList.add("hiden")
+            tampon.classList.add("hiden")
         } else {
 
             openbtn.classList.remove("hiden")
