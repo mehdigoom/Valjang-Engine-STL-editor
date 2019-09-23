@@ -1,15 +1,15 @@
 var ManipulatorMode;
-var activmanipulator= Boolean("true");
+var activmanipulator = Boolean("true");
 var raduislimit
 var Ymax
 var Ysize
 
-(function (ManipulatorMode) {
+    (function(ManipulatorMode) {
     ManipulatorMode[ManipulatorMode["Move"] = 0] = "Move";
     ManipulatorMode[ManipulatorMode["Rotate"] = 1] = "Rotate";
     ManipulatorMode[ManipulatorMode["Scale"] = 2] = "Scale";
 })(ManipulatorMode || (ManipulatorMode = {}));
-var Manipulator = /** @class */ (function () {
+var Manipulator = /** @class */ (function() {
     function Manipulator(engine, scene, camera) {
         this._scene = scene;
         this._engine = engine;
@@ -43,17 +43,17 @@ var Manipulator = /** @class */ (function () {
 
 
     }
-    Manipulator.prototype.Start = function () {
+    Manipulator.prototype.Start = function() {
         this._mode = ManipulatorMode.Move;
         this.StartMode(this._mode);
-        
+
     };
-    Manipulator.prototype.Stop = function () {
+    Manipulator.prototype.Stop = function() {
         this.StopMode(this._mode);
         this._curSelectedMesh = null;
         this._forcedMeshSelect = null;
     };
-    Manipulator.prototype.onPointerDown = function (e, p) {
+    Manipulator.prototype.onPointerDown = function(e, p) {
         var pickResult = p; //this._scene.pick(e.clientX, e.clientY);
         switch (this._mode) {
             case ManipulatorMode.Move:
@@ -83,7 +83,7 @@ var Manipulator = /** @class */ (function () {
                 break;
         }
     };
-    Manipulator.prototype.onPointerMove = function (e, p) {
+    Manipulator.prototype.onPointerMove = function(e, p) {
         if ((this._pickResult != null) && (this._pickResult.pickedMesh != null)) {
             switch (this._mode) {
                 case ManipulatorMode.Move:
@@ -116,8 +116,7 @@ var Manipulator = /** @class */ (function () {
                                 var pitchQuat = ValjangEngine.Quaternion.RotationYawPitchRoll(0.0, angle, 0.0);
                                 this._curSelectedMesh.rotationQuaternion = this._initialRot.multiply(pitchQuat);
                                 updateManipulatorsTransforms = true;
-                            }
-                            else if (this._pickResult.pickedMesh == this._meshRotYaw) {
+                            } else if (this._pickResult.pickedMesh == this._meshRotYaw) {
                                 // Check if we are rotating clockwize or not and modify angle accordingly
                                 var yAxis = this._curSelectedMesh.getWorldMatrix().getRow(1).toVector3();
                                 yAxis.normalize();
@@ -127,8 +126,7 @@ var Manipulator = /** @class */ (function () {
                                 var yawQuat = ValjangEngine.Quaternion.RotationYawPitchRoll(angle, 0.0, 0.0);
                                 this._curSelectedMesh.rotationQuaternion = this._initialRot.multiply(yawQuat);
                                 updateManipulatorsTransforms = true;
-                            }
-                            else if (this._pickResult.pickedMesh == this._meshRotRoll) {
+                            } else if (this._pickResult.pickedMesh == this._meshRotRoll) {
                                 // Check if we are rotating clockwize or not and modify angle accordingly
                                 var zAxis = this._curSelectedMesh.getWorldMatrix().getRow(2).toVector3();
                                 zAxis.normalize();
@@ -188,8 +186,7 @@ var Manipulator = /** @class */ (function () {
                             // Scale selected mesh
                             this._curSelectedMesh.scaling.x = Math.max(0.001, this._initialScale.x + resultingAbsoluteScale);
                             this._meshScaleX.scaling.x = this._curSelectedMesh.scaling.x;
-                        }
-                        else if (this._pickResult.pickedMesh == this._meshScaleY) {
+                        } else if (this._pickResult.pickedMesh == this._meshScaleY) {
                             // Project onto "up" dir
                             var yAxis = this._curSelectedMesh.getWorldMatrix().getRow(1).toVector3();
                             yAxis.normalize();
@@ -198,8 +195,7 @@ var Manipulator = /** @class */ (function () {
                             // Scale selected mesh
                             this._curSelectedMesh.scaling.y = Math.max(0.001, this._initialScale.y + resultingAbsoluteScale);
                             this._meshScaleY.scaling.y = this._curSelectedMesh.scaling.y;
-                        }
-                        else if (this._pickResult.pickedMesh == this._meshScaleZ) {
+                        } else if (this._pickResult.pickedMesh == this._meshScaleZ) {
                             // Project onto "at" dir
                             var zAxis = this._curSelectedMesh.getWorldMatrix().getRow(2).toVector3();
                             zAxis.normalize();
@@ -208,8 +204,7 @@ var Manipulator = /** @class */ (function () {
                             // Scale selected mesh
                             this._curSelectedMesh.scaling.z = Math.max(0.001, this._initialScale.z + resultingAbsoluteScale);
                             this._meshScaleZ.scaling.z = this._curSelectedMesh.scaling.z;
-                        }
-                        else if (this._pickResult.pickedMesh == this._meshScaleAll) {
+                        } else if (this._pickResult.pickedMesh == this._meshScaleAll) {
                             // Project onto skew dir (blend of at, up and right)
                             var xAxis = this._curSelectedMesh.getWorldMatrix().getRow(0).toVector3();
                             xAxis.x /= this._curSelectedMesh.scaling.x;
@@ -236,7 +231,7 @@ var Manipulator = /** @class */ (function () {
             }
         }
     };
-    Manipulator.prototype.onPointerUp = function (e, p) {
+    Manipulator.prototype.onPointerUp = function(e, p) {
         switch (this._mode) {
             case ManipulatorMode.Move:
                 if (this._pickResult != null) {
@@ -258,18 +253,18 @@ var Manipulator = /** @class */ (function () {
                 break;
         }
     };
-    Manipulator.prototype.ForceMeshSelection = function (mesh) {
-        
+    Manipulator.prototype.ForceMeshSelection = function(mesh) {
+
         this._forcedMeshSelect = mesh;
         this.SelectObject(mesh);
     };
-    Manipulator.prototype.SwitchToMode = function (mode) {
+    Manipulator.prototype.SwitchToMode = function(mode) {
         this.StopMode(this._mode);
         this._mode = mode;
         this.StartMode(this._mode);
-        
+
     };
-    Manipulator.prototype.StartMode = function (mode) {
+    Manipulator.prototype.StartMode = function(mode) {
         switch (mode) {
             case ManipulatorMode.Move:
                 this._curSelectedMesh.isPickable = true;
@@ -286,7 +281,7 @@ var Manipulator = /** @class */ (function () {
                     this._meshRotYaw.isVisible = true;
                     this._meshRotRoll.setAbsolutePosition(this._curSelectedMesh.getAbsolutePosition());
                     this._meshRotRoll.isVisible = true;
-                    
+
                 }
                 break;
             case ManipulatorMode.Scale:
@@ -308,7 +303,7 @@ var Manipulator = /** @class */ (function () {
                 break;
         }
     };
-    Manipulator.prototype.StopMode = function (mode) {
+    Manipulator.prototype.StopMode = function(mode) {
         switch (mode) {
             case ManipulatorMode.Move:
                 // Nothing to do
@@ -333,7 +328,7 @@ var Manipulator = /** @class */ (function () {
                 break;
         }
     };
-    Manipulator.prototype.SelectObject = function (mesh) {
+    Manipulator.prototype.SelectObject = function(mesh) {
         mesh.material = this._selectedMeshMaterial;
         this._curSelectedMesh = mesh;
         // Create manipulator meshes
@@ -419,11 +414,11 @@ var Manipulator = /** @class */ (function () {
         this._meshScaleAll.renderingGroupId = 1;
         this._meshScaleAll.material = this._allDirMeshMaterial;
         this._meshScaleAll.isVisible = false;
-        
+
     };
     return Manipulator;
 }());
-var ValjangEngineSubMesh = /** @class */ (function () {
+var ValjangEngineSubMesh = /** @class */ (function() {
     function ValjangEngineSubMesh(scene, parentNode, subMesh, material) {
         this._subMesh = subMesh;
         this._ID = subMesh.GetID();
@@ -434,7 +429,7 @@ var ValjangEngineSubMesh = /** @class */ (function () {
             this._ValjangEnginesMesh.material = material;
             this._ValjangEnginesMesh.material.freeze();
         }
-        
+
         var meshData = new ValjangEngine.VertexData();
         var buf = this._subMesh.Triangles();
         var triangles = new Uint32Array(buf.buffer, buf.byteOffset, buf.byteLength / 4);
@@ -449,22 +444,22 @@ var ValjangEngineSubMesh = /** @class */ (function () {
         this._ValjangEnginesMesh.isPickable = false;
         meshData.applyToMesh(this._ValjangEnginesMesh, true);
     }
-    ValjangEngineSubMesh.prototype.Cleanup = function () {
+    ValjangEngineSubMesh.prototype.Cleanup = function() {
         this._subMesh.delete();
         this._subMesh = null;
         this._ValjangEnginesMesh.dispose();
         this._ValjangEnginesMesh = null;
     };
-    ValjangEngineSubMesh.prototype.Update = function () {
-      
+    ValjangEngineSubMesh.prototype.Update = function() {
+
         var curVersionNumber = this._subMesh.GetVersionNumber();
         if (this._versionNumber != curVersionNumber) {
             this._versionNumber = curVersionNumber;
             this.UpdataMeshData();
-            
+
         }
     };
-    ValjangEngineSubMesh.prototype.UpdataMeshData = function () {
+    ValjangEngineSubMesh.prototype.UpdataMeshData = function() {
         var buf = this._subMesh.Triangles();
         var triangles = new Uint32Array(buf.buffer, buf.byteOffset, buf.byteLength / 4);
         buf = this._subMesh.Vertices();
@@ -475,15 +470,14 @@ var ValjangEngineSubMesh = /** @class */ (function () {
         if (this._ValjangEnginesMesh._geometry.getTotalVertices() < vertices.length / 3) {
             this._ValjangEnginesMesh.setVerticesData(ValjangEngine.VertexBuffer.PositionKind, vertices, true);
             this._ValjangEnginesMesh.setVerticesData(ValjangEngine.VertexBuffer.NormalKind, normals, true);
-        }
-        else {
+        } else {
             this._ValjangEnginesMesh.updateVerticesData(ValjangEngine.VertexBuffer.PositionKind, vertices, false, false);
             this._ValjangEnginesMesh.updateVerticesData(ValjangEngine.VertexBuffer.NormalKind, normals, false, false);
         }
         // Triangle indices
         this._ValjangEnginesMesh.setIndices(triangles);
     };
-    ValjangEngineSubMesh.prototype.GetID = function () {
+    ValjangEngineSubMesh.prototype.GetID = function() {
         return this._ID;
     };
     return ValjangEngineSubMesh;
@@ -491,14 +485,14 @@ var ValjangEngineSubMesh = /** @class */ (function () {
 /// <reference path="Manipulator.ts"/>
 /// <reference path="SubMesh.ts"/>
 var BrushType;
-(function (BrushType) {
+(function(BrushType) {
     BrushType[BrushType["Draw"] = 0] = "Draw";
     BrushType[BrushType["Flatten"] = 1] = "Flatten";
     BrushType[BrushType["Drag"] = 2] = "Drag";
     BrushType[BrushType["Dig"] = 3] = "Dig";
 })(BrushType || (BrushType = {}));
 var CsgType;
-(function (CsgType) {
+(function(CsgType) {
     CsgType[CsgType["Merge"] = 0] = "Merge";
     CsgType[CsgType["Subtract"] = 1] = "Subtract";
     CsgType[CsgType["Intersect"] = 2] = "Intersect";
@@ -509,7 +503,7 @@ var CsgType;
     return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace("/[\.\+\*]/g", "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 }*/
 // App class
-var AppMain = /** @class */ (function () {
+var AppMain = /** @class */ (function() {
     function AppMain(canvasElement) {
         this._isInCombineMode = false;
         this._uiCursorScreenPos = ValjangEngine.Vector2.Zero();
@@ -527,33 +521,33 @@ var AppMain = /** @class */ (function () {
         this._sculptLimitBoundingPercent = 0.0;
         this._cameraSpinningSpeed = 0.0; // In degrees per second
         this._cameraHasToSpin = false;
-       if (Module.SculptEngine.HasExpired())
+        if (Module.SculptEngine.HasExpired())
             alert("Product has expired on " + Module.SculptEngine.GetExpirationDate() + "\nIt won't function anymore, please update your version.");
-         //Create canvas and engine
+        //Create canvas and engine
         this._canvas = document.getElementById(canvasElement);
         this._engine = new ValjangEngine.Engine(this._canvas, true);
-}
-    AppMain.prototype.SetSculptingStrengthRatio = function (ratio) {
+    }
+    AppMain.prototype.SetSculptingStrengthRatio = function(ratio) {
         this._sculptingStrengthRatio = ratio;
     };
-    AppMain.prototype.SetSculptingRadiusRatio = function (ratio) {
+    AppMain.prototype.SetSculptingRadiusRatio = function(ratio) {
         ratio = this.clamp(ratio, 0.01, 1.0);
         this._uiSculptingSize = ratio;
         this._sculptingRadius = this._modelRadius * this._uiSculptingSize;
     };
-    AppMain.prototype.selectBrushType = function (brushType) {
+    AppMain.prototype.selectBrushType = function(brushType) {
         this._brushType = brushType;
     };
-    AppMain.prototype.changeColor = function (color) {
-        
+    AppMain.prototype.changeColor = function(color) {
 
-       
-        };
-    
-    AppMain.prototype.IsInFullScreen = function () {
+
+
+    };
+
+    AppMain.prototype.IsInFullScreen = function() {
         return this._fullScreen;
     };
-    AppMain.prototype.StartFullScreen = function (element) {
+    AppMain.prototype.StartFullScreen = function(element) {
         if (!this._fullScreen) {
             this._fullScreen = true;
             if (element.requestFullscreen)
@@ -566,7 +560,7 @@ var AppMain = /** @class */ (function () {
                 element.msRequestFullscreen();
         }
     };
-    AppMain.prototype.StopFullscreen = function () {
+    AppMain.prototype.StopFullscreen = function() {
         if (this._fullScreen) {
             this._fullScreen = true;
             if (document.exitFullscreen)
@@ -577,7 +571,7 @@ var AppMain = /** @class */ (function () {
                 document.webkitExitFullscreen();
         }
     };
-    AppMain.prototype.showBBoxes = function () {
+    AppMain.prototype.showBBoxes = function() {
         this._DEBUG_BoundingBoxRenderer.reset();
         var bboxes = this._meshItem.GetFragmentsBBox();
         for (var i = 0; i < bboxes.size(); ++i) {
@@ -588,9 +582,9 @@ var AppMain = /** @class */ (function () {
         }
         bboxes.delete();
     };
-    AppMain.prototype.CreateUIRingCursor = function () {
+    AppMain.prototype.CreateUIRingCursor = function() {
         // Create wireframe ring (diameter 1.0)
-        
+
         var nbSegments = 100;
         var stepAngle = (2.0 * Math.PI) / nbSegments;
         var circleVertices = [];
@@ -601,9 +595,9 @@ var AppMain = /** @class */ (function () {
         this._uiRingCursor = ValjangEngine.Mesh.CreateLines("UIRingCursor", circleVertices, this._scene);
         this._uiRingCursor.renderingGroupId = 1; // To avoid z-buffer test
         this._uiRingCursor.isVisible = true; // Hidden while an object isn't set in the scene
-        
+
     };
-    AppMain.prototype.CreateUISculptBoundary = function (bounds) {
+    AppMain.prototype.CreateUISculptBoundary = function(bounds) {
         // Create wireframe box
         var bMin = bounds.Min();
         var bMax = bounds.Max();
@@ -624,22 +618,22 @@ var AppMain = /** @class */ (function () {
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMin.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMax.X(), bMin.Y(), bMax.Z()));
         boxVertices.push(new ValjangEngine.Vector3(bMin.X(), bMin.Y(), bMax.Z()));
-        this.Ymax =bMax.Y()
-    this.Ysize = bMin.Y()
-    console.log("Ymax= "+ this.Ymax)
-    console.log("Ysize ="+ this.Ysize )
-        // Register it to ValjangEngine
+        this.Ymax = bMax.Y()
+        this.Ysize = bMin.Y()
+        console.log("Ymax= " + this.Ymax)
+        console.log("Ysize =" + this.Ysize)
+            // Register it to ValjangEngine
         if (this._uiSculptBoundary != null) {
             this._uiSculptBoundary.dispose();
             this._uiSculptBoundary = null;
-            
+
         }
         this._uiSculptBoundary = ValjangEngine.Mesh.CreateLines("UISculptBoundary", boxVertices, this._scene);
         this._uiSculptBoundary.isVisible = true;
 
-    
+
     };
-    AppMain.prototype.ReadaptToModelSize = function () {
+    AppMain.prototype.ReadaptToModelSize = function() {
         // Get model size (to adjust sculpting radius)
         var firstMeshBBox = this._meshItem.GetBBox();
         this._modelRadius = Math.max(Math.max(firstMeshBBox.Extents().X(), firstMeshBBox.Extents().Y()), firstMeshBBox.Extents().Z());
@@ -647,13 +641,13 @@ var AppMain = /** @class */ (function () {
         var boundFirstMin = firstMeshBBox.Min();
         var boundFirstMax = firstMeshBBox.Max();
         var boundMin = new ValjangEngine.Vector3(boundFirstMin.X(), boundFirstMin.Y(), boundFirstMin.Z());
-        var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y()*2, boundFirstMax.Z());
+        var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y() * 2, boundFirstMax.Z());
 
 
 
 
-       firstMeshBBox.delete();
-      
+        firstMeshBBox.delete();
+
         if (this._isInCombineMode && this._meshToCombine) {
             var secondMeshBoundingInfo = this._meshToCombine.getBoundingInfo();
             var secondMeshMatrix = this._meshToCombine.getWorldMatrix();
@@ -666,10 +660,10 @@ var AppMain = /** @class */ (function () {
             boundMax.y = Math.max(boundMax.y, secondMeshMaxBound.y);
             boundMax.z = Math.max(boundMax.z, secondMeshMaxBound.z);
             var delta = boundMax.subtract(boundMin);
-          
+
         }
-        
-       
+
+
         // Retarget camera
         this._camera.setTarget(new ValjangEngine.Vector3((boundMin.x + boundMax.x) * 0.5, (boundMin.y + boundMax.y) * 0.5, (boundMin.z + boundMax.z) * 0.5));
         this._camera.minZ = 0;
@@ -680,153 +674,151 @@ var AppMain = /** @class */ (function () {
         //console.log("Raduis Objet :"+this._modelRadius)
         //console.log("Valeur Max: "+boundMin +" et Valeur Min : "+boundMax )
 
-       console.log("Taille profondeur: "+ boundMax.x*2 + " mm")
-       console.log("Taille Largeur: "+ boundMax.z*2 + " mm")
-       console.log("Taille Hauteur: "+ boundMax.Y*2 + " mm")
-     
+        console.log("Taille profondeur: " + boundMax.x * 2 + " mm")
+        console.log("Taille Largeur: " + boundMax.z * 2 + " mm")
+        console.log("Taille Hauteur: " + boundMax.Y * 2 + " mm")
+
 
     };
 
 
 
-AppMain.prototype.GenRegle = function(){
-    var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-    materialPlane.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
-    materialPlane.specularColor = new ValjangEngine.Color3(0 ,0, 0);
-   materialPlane.diffuseTexture.hasAlpha = true;
-    
-    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
-    
-    //Creation of a plane
-    var plane = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
-    //plane.rotation.x = Math.PI / 2;
-    plane.material = materialPlane;
-    plane.position.y =-1
-    
-    plane.position.x =200
-    plane.rotation.y= Math.PI / 2;
-    plane.position.y =-1
-//----------------------REGLE 2--------------------------------
-var materialPlane2 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-materialPlane2.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
-materialPlane2.specularColor = new ValjangEngine.Color3(0 ,0, 0);
-materialPlane2.diffuseTexture.hasAlpha = true;
+    AppMain.prototype.GenRegle = function() {
+        var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+        materialPlane.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+        materialPlane.specularColor = new ValjangEngine.Color3(0, 0, 0);
+        materialPlane.diffuseTexture.hasAlpha = true;
 
-//materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+        //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
-//Creation of a plane
-var plane2 = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
-//plane.rotation.x = Math.PI / 2;
-plane2.material = materialPlane2;
-plane2.position.y =-1
+        //Creation of a plane
+        var plane = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
+        //plane.rotation.x = Math.PI / 2;
+        plane.material = materialPlane;
+        plane.position.y = -1
 
-plane2.position.x =0
-plane2.rotation.y= Math.PI / 1;
-plane2.position.z = -200
+        plane.position.x = 200
+        plane.rotation.y = Math.PI / 2;
+        plane.position.y = -1
+            //----------------------REGLE 2--------------------------------
+        var materialPlane2 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+        materialPlane2.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+        materialPlane2.specularColor = new ValjangEngine.Color3(0, 0, 0);
+        materialPlane2.diffuseTexture.hasAlpha = true;
 
-plane2.position.y =-1
-//----------------------REGLE 3--------------------------------
-var materialPlane3 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-materialPlane3.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
-materialPlane3.specularColor = new ValjangEngine.Color3(0 ,0, 0);
-materialPlane3.diffuseTexture.hasAlpha = true;
+        //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
-//materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+        //Creation of a plane
+        var plane2 = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
+        //plane.rotation.x = Math.PI / 2;
+        plane2.material = materialPlane2;
+        plane2.position.y = -1
 
-//Creation of a plane
-var plane3 = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
-//plane.rotation.x = Math.PI / 2;
-plane3.material = materialPlane3;
-plane3.position.y =-1
+        plane2.position.x = 0
+        plane2.rotation.y = Math.PI / 1;
+        plane2.position.z = -200
 
-plane3.position.x =-0
-plane3.position.z = 200
-plane3.rotation.y= Math.PI / 200;
+        plane2.position.y = -1
+            //----------------------REGLE 3--------------------------------
+        var materialPlane3 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+        materialPlane3.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+        materialPlane3.specularColor = new ValjangEngine.Color3(0, 0, 0);
+        materialPlane3.diffuseTexture.hasAlpha = true;
 
-plane3.position.y =-1
+        //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
+        //Creation of a plane
+        var plane3 = ValjangEngine.Mesh.CreatePlane("Regle", 400, this._scene);
+        //plane.rotation.x = Math.PI / 2;
+        plane3.material = materialPlane3;
+        plane3.position.y = -1
 
-}
+        plane3.position.x = -0
+        plane3.position.z = 200
+        plane3.rotation.y = Math.PI / 200;
 
-///FLECHE
-AppMain.prototype.Genfleche = function(){
-
-//Fleche Y
-    var materialfleche = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-    materialfleche.diffuseTexture = new ValjangEngine.Texture("Y.png", this._scene);
-    materialfleche.specularColor = new ValjangEngine.Color3(0, 100, 0);
-    materialfleche.diffuseTexture.hasAlpha = true;
-    
-    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
-    
-    //Creation of a plane
-    var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
-    //plane.rotation.x = Math.PI / 2;
-    plane.material = materialfleche;
-    plane.position.y =-50
-    
-    plane.position.x =200
-    plane.rotation.y= Math.PI / 2;
-  //  plane.position.y =-1
-    
-    //fleche X
-
-    
-    var materialflecheX = new ValjangEngine.StandardMaterial("texturePlaneX", this._scene);
-    materialflecheX.diffuseTexture = new ValjangEngine.Texture("X.png", this._scene);
-    materialflecheX.specularColor = new ValjangEngine.Color3(100, 0, 0);
-    materialflecheX.diffuseTexture.hasAlpha = true;
-    
-    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
-    
-    //Creation of a plane
-    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
-    //plane.rotation.x = Math.PI / 2;
-    plane2.material = materialflecheX;
-    plane2.position.y =-100
-    plane2.rotation.z = Math.PI / 2;
-    plane2.position.x =200
-    plane2.rotation.y= Math.PI / 2;
-    plane2.position.z =100
+        plane3.position.y = -1
 
 
+    }
+
+    ///FLECHE
+    AppMain.prototype.Genfleche = function() {
+
+        //Fleche Y
+        var materialfleche = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+        materialfleche.diffuseTexture = new ValjangEngine.Texture("Y.png", this._scene);
+        materialfleche.specularColor = new ValjangEngine.Color3(0, 100, 0);
+        materialfleche.diffuseTexture.hasAlpha = true;
+
+        //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+
+        //Creation of a plane
+        var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
+        //plane.rotation.x = Math.PI / 2;
+        plane.material = materialfleche;
+        plane.position.y = 95
+
+        plane.position.x = 200
+        plane.rotation.y = Math.PI / 2;
+        //  plane.position.y =-1
+
+        //fleche X
+
+
+        var materialflecheX = new ValjangEngine.StandardMaterial("texturePlaneX", this._scene);
+        materialflecheX.diffuseTexture = new ValjangEngine.Texture("X.png", this._scene);
+        materialflecheX.specularColor = new ValjangEngine.Color3(100, 0, 0);
+        materialflecheX.diffuseTexture.hasAlpha = true;
+
+        //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+
+        //Creation of a plane
+        var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
+        //plane.rotation.x = Math.PI / 2;
+        plane2.material = materialflecheX;
+        plane2.position.y = -100
+        plane2.rotation.z = Math.PI / 2;
+        plane2.position.x = 200
+        plane2.rotation.y = Math.PI / 2;
+        plane2.position.z = 204
 
 
 
 
-    //Fleche Z
+
+
+        //Fleche Z
 
 
 
-    var materialflecheZ = new ValjangEngine.StandardMaterial("texturePlaneZ", this._scene);
-    materialflecheZ.diffuseTexture = new ValjangEngine.Texture("Z.png", this._scene);
-    materialflecheZ.specularColor = new ValjangEngine.Color3(0, 0, 100);
-    materialflecheZ.diffuseTexture.hasAlpha = true;
-    
-    //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
-    console.log("Raduis x2:"+this._modelRadius*2)
-    //Creation of a plane
-    var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
-    //plane.rotation.x = Math.PI / 2;
-    plane2.material = materialflecheZ;
-   
-    plane2.rotation.z = Math.PI / 1;
+        var materialflecheZ = new ValjangEngine.StandardMaterial("texturePlaneZ", this._scene);
+        materialflecheZ.diffuseTexture = new ValjangEngine.Texture("Z.png", this._scene);
+        materialflecheZ.specularColor = new ValjangEngine.Color3(0, 0, 100);
+        materialflecheZ.diffuseTexture.hasAlpha = true;
 
-    plane2.rotation.y= Math.PI / 2;
-  
-    plane2.rotation.x = Math.PI / 2;
+        //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+        console.log("Raduis x2:" + this._modelRadius * 2)
+            //Creation of a plane
+        var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
+        //plane.rotation.x = Math.PI / 2;
+        plane2.material = materialflecheZ;
 
+        plane2.rotation.z = Math.PI / 1;
 
-    plane2.position.y =-100
-    
-    plane2.position.x =100
-    plane2.rotation.y= Math.PI / 2;
-    
-        }
+        plane2.rotation.y = Math.PI / 2;
+
+        plane2.rotation.x = Math.PI / 2;
 
 
+        plane2.position.y = -100
+
+        plane2.position.x = 0
+        plane2.rotation.y = Math.PI / 2;
+        plane2.position.z = 0
 
 
+    }
 
 
 
@@ -841,109 +833,112 @@ AppMain.prototype.Genfleche = function(){
 
 
 
-AppMain.prototype.Gengrille = function(){
 
-var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-materialPlane.diffuseTexture = new ValjangEngine.Texture("grille.png", this._scene);
-materialPlane.specularColor = new ValjangEngine.Color3(1, 1, 1);
-materialPlane.diffuseTexture.hasAlpha = true;
 
-//materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
-//Creation of a plane
-var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
-plane.rotation.x = Math.PI / 2;
-plane.material = materialPlane;
-plane.position.y =-100
+
+    AppMain.prototype.Gengrille = function() {
+
+        var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
+        materialPlane.diffuseTexture = new ValjangEngine.Texture("grille.png", this._scene);
+        materialPlane.specularColor = new ValjangEngine.Color3(1, 1, 1);
+        materialPlane.diffuseTexture.hasAlpha = true;
+
+        //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
+
+        //Creation of a plane
+        var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
+        plane.rotation.x = Math.PI / 2;
+        plane.material = materialPlane;
+        plane.position.y = -100
 
 
 
 
     }
-    AppMain.prototype.GetCurMeshItem = function () {
+    AppMain.prototype.GetCurMeshItem = function() {
         return this._meshItem;
     };
-    AppMain.prototype.GetCurMeshItemToCombine = function () {
+    AppMain.prototype.GetCurMeshItemToCombine = function() {
         return this._meshItemToCombine;
     };
-    AppMain.prototype.ClearMeshItemToCombine = function (eraseData) {
+    AppMain.prototype.ClearMeshItemToCombine = function(eraseData) {
         if (this._meshItemToCombine != null) {
             if (eraseData)
                 this._meshItemToCombine.delete();
             this._meshItemToCombine = null;
-            
+
         }
     };
-    AppMain.prototype.IsInCombineMode = function () {
-       
-      
+    AppMain.prototype.IsInCombineMode = function() {
+
+
 
         //BOUCLE
-   
-       
-if(this._isInCombineMode){
-    
-    var btn = document.getElementById('filtre')
-    btn.classList.add("hiden");
+
+
+        if (this._isInCombineMode) {
+
+            var btn = document.getElementById('filtre')
+            btn.classList.add("hiden");
 
 
 
 
-    var firstMeshBBox = this._meshItem.GetBBox();
-    this._modelRadius = Math.max(Math.max(firstMeshBBox.Extents().X(), firstMeshBBox.Extents().Y()), firstMeshBBox.Extents().Z());
-    this._sculptingRadius = this._modelRadius * this._uiSculptingSize;
-    var boundFirstMin = firstMeshBBox.Min();
-    var boundFirstMax = firstMeshBBox.Max();
-    var boundMin = new ValjangEngine.Vector3(boundFirstMin.X(), boundFirstMin.Y(), boundFirstMin.Z());
-    var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y(), boundFirstMax.Z());
-    firstMeshBBox.delete();
-    if (this._isInCombineMode && this._meshToCombine) {
-        var secondMeshBoundingInfo = this._meshToCombine.getBoundingInfo();
-        var secondMeshMatrix = this._meshToCombine.getWorldMatrix();
-        var secondMeshMinBound = ValjangEngine.Vector3.TransformCoordinates(secondMeshBoundingInfo.minimum, secondMeshMatrix);
-        var secondMeshMaxBound = ValjangEngine.Vector3.TransformCoordinates(secondMeshBoundingInfo.maximum, secondMeshMatrix);
-        boundMin.x = Math.min(boundMin.x, secondMeshMinBound.x);
-        boundMin.y = Math.min(boundMin.y, secondMeshMinBound.y);
-        boundMin.z = Math.min(boundMin.z, secondMeshMinBound.z);
-        boundMax.x = Math.max(boundMax.x, secondMeshMaxBound.x);
-        boundMax.y = Math.max(boundMax.y, secondMeshMaxBound.y);
-        boundMax.z = Math.max(boundMax.z, secondMeshMaxBound.z);
-        var delta = boundMax.subtract(boundMin);
-        this._modelRadius = Math.max(Math.max(delta.x, delta.y), delta.z) * 0.5;
-    }
-    // Retarget camera
-    this._camera.setTarget(new ValjangEngine.Vector3((boundMin.x + boundMax.x) * 0.5, (boundMin.y + boundMax.y) * 0.5, (boundMin.z + boundMax.z) * 0.5));
-    this._camera.minZ = 100;
-    this._camera.radius = this._modelRadius * 3.4;
-    this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
-    this._camera.upperRadiusLimit = this._camera.radius * 2.0;
-    
+            var firstMeshBBox = this._meshItem.GetBBox();
+            this._modelRadius = Math.max(Math.max(firstMeshBBox.Extents().X(), firstMeshBBox.Extents().Y()), firstMeshBBox.Extents().Z());
+            this._sculptingRadius = this._modelRadius * this._uiSculptingSize;
+            var boundFirstMin = firstMeshBBox.Min();
+            var boundFirstMax = firstMeshBBox.Max();
+            var boundMin = new ValjangEngine.Vector3(boundFirstMin.X(), boundFirstMin.Y(), boundFirstMin.Z());
+            var boundMax = new ValjangEngine.Vector3(boundFirstMax.X(), boundFirstMax.Y(), boundFirstMax.Z());
+            firstMeshBBox.delete();
+            if (this._isInCombineMode && this._meshToCombine) {
+                var secondMeshBoundingInfo = this._meshToCombine.getBoundingInfo();
+                var secondMeshMatrix = this._meshToCombine.getWorldMatrix();
+                var secondMeshMinBound = ValjangEngine.Vector3.TransformCoordinates(secondMeshBoundingInfo.minimum, secondMeshMatrix);
+                var secondMeshMaxBound = ValjangEngine.Vector3.TransformCoordinates(secondMeshBoundingInfo.maximum, secondMeshMatrix);
+                boundMin.x = Math.min(boundMin.x, secondMeshMinBound.x);
+                boundMin.y = Math.min(boundMin.y, secondMeshMinBound.y);
+                boundMin.z = Math.min(boundMin.z, secondMeshMinBound.z);
+                boundMax.x = Math.max(boundMax.x, secondMeshMaxBound.x);
+                boundMax.y = Math.max(boundMax.y, secondMeshMaxBound.y);
+                boundMax.z = Math.max(boundMax.z, secondMeshMaxBound.z);
+                var delta = boundMax.subtract(boundMin);
+                this._modelRadius = Math.max(Math.max(delta.x, delta.y), delta.z) * 0.5;
+            }
+            // Retarget camera
+            this._camera.setTarget(new ValjangEngine.Vector3((boundMin.x + boundMax.x) * 0.5, (boundMin.y + boundMax.y) * 0.5, (boundMin.z + boundMax.z) * 0.5));
+            this._camera.minZ = 100;
+            this._camera.radius = this._modelRadius * 3.4;
+            this._camera.lowerRadiusLimit = this._camera.radius * 0.5;
+            this._camera.upperRadiusLimit = this._camera.radius * 2.0;
 
-};
+
+        };
 
 
 
 
         return this._isInCombineMode;
-      
+
     };
 
-    AppMain.prototype.Textesaisie = function()
-    {
-        bootbox.prompt("Texte à apliqué", function(result){ 
-            console.log(result); 
+    AppMain.prototype.Textesaisie = function() {
+        bootbox.prompt("Texte à apliqué", function(result) {
+            console.log(result);
         });
     }
-    AppMain.prototype.StartCombineToSceneMode = function (meshItemToCombine) {
-        
-    
-        
-        
-        
+    AppMain.prototype.StartCombineToSceneMode = function(meshItemToCombine) {
+
+
+
+
+
         if (meshItemToCombine == null)
-        
+
             return;
-            
+
         this._cameraHasToSpin = false; // Strop camera spinning, if user starts to interact
         this._meshItemToCombine = meshItemToCombine;
         // Hide ring cursor
@@ -973,56 +968,57 @@ if(this._isInCombineMode){
         bbox.delete();
         bbox = null;
         var positionShift = firstModelRadius + secondModelRadius;
-        var position = ValjangEngine.Vector3.Up(); this._camera.getWorldMatrix().getRow(0).toVector3();
-       
+        var position = ValjangEngine.Vector3.Up();
+        this._camera.getWorldMatrix().getRow(0).toVector3();
+
         position.scaleInPlace(positionShift);
         this._meshToCombine.position = position;
-        
+
         this._meshToCombine.computeWorldMatrix(true);
         this._isInCombineMode = true;
         this.ReadaptToModelSize();
-       // position.scaleInPlace(this._uiRingCursor.position);
+        // position.scaleInPlace(this._uiRingCursor.position);
         // Set manipulator to handle that object
         this._manipulator.ForceMeshSelection(this._meshToCombine);
         this._manipulator.Start();
     };
-    AppMain.prototype.StopCombineToSceneMode = function () {
-        
+    AppMain.prototype.StopCombineToSceneMode = function() {
+
         if (this._isInCombineMode) {
-         
+
             this.ClearMeshItemToCombine(true);
-           this._manipulator.Stop();
+            this._manipulator.Stop();
             this._meshToCombine.dispose();
             this._meshToCombine = null;
             this._uiRingCursor.isVisible = true;
             this._isInCombineMode = false;
-           // this.ReadaptToModelSize();
-           
+            // this.ReadaptToModelSize();
+
         }
         //limite tempon 
-// BUG A CORRIGER !
+        // BUG A CORRIGER !
 
-        if(this._modelRadius >this.raduislimit){
+        if (this._modelRadius > this.raduislimit) {
             bootbox.alert({
                 message: "Oups, il y pas a la place :(",
 
             });
             AppSDK_Undo()
-            
-        }else if (this._modelRadius > Ysize) {
+
+        } else if (this._modelRadius > Ysize) {
             bootbox.alert({
                 message: "Oups, il y pas a la place :(",
-  
+
             });
             AppSDK_Undo()
         }
-            
-        
+
+
     };
 
-    AppMain.prototype.DoCSGOperation = function (opType) {
+    AppMain.prototype.DoCSGOperation = function(opType) {
         var that = this;
-        setTimeout(function () {
+        setTimeout(function() {
             var babWorldMtx = that._meshToCombine.getWorldMatrix();
             var otherMeshPos = new Module.Vector3(babWorldMtx.getTranslation().x, babWorldMtx.getTranslation().y, babWorldMtx.getTranslation().z);
             var otherMeshRight = new Module.Vector3(babWorldMtx.getRow(0).x, babWorldMtx.getRow(1).x, babWorldMtx.getRow(2).x);
@@ -1050,22 +1046,22 @@ if(this._isInCombineMode){
             AppSDK_EndCSGOperation();
         }, 100);
     };
-    AppMain.prototype.CSGMerge = function () {
+    AppMain.prototype.CSGMerge = function() {
         this.DoCSGOperation(CsgType.Merge);
     };
-    AppMain.prototype.CSGSubtract = function () {
+    AppMain.prototype.CSGSubtract = function() {
         this.DoCSGOperation(CsgType.Subtract);
     };
-    AppMain.prototype.CSGIntersect = function () {
+    AppMain.prototype.CSGIntersect = function() {
         this.DoCSGOperation(CsgType.Intersect);
     };
 
-    AppMain.prototype.limiteactualise = function(){
+    AppMain.prototype.limiteactualise = function() {
         this._meshItem.SetSculptingBoudary(sculptBound);
         this.CreateUISculptBoundary(sculptBound);
-        
+
     }
-    AppMain.prototype.CreateNewScene = function (meshItem) {
+    AppMain.prototype.CreateNewScene = function(meshItem) {
         if (this._meshItem != null)
             this._meshItem.delete();
         this._meshItem = meshItem;
@@ -1077,7 +1073,7 @@ if(this._isInCombineMode){
             var sculptBound = new Module.BBox(new Module.Vector3(bMin.X() * scaleRatio, bMin.Y() * scaleRatio, bMin.Z() * scaleRatio), new Module.Vector3(bMax.X() * scaleRatio, bMax.Y() * scaleRatio, bMax.Z() * scaleRatio));
             this._meshItem.SetSculptingBoudary(sculptBound);
             this.CreateUISculptBoundary(sculptBound);
-         
+
         }
         this._cameraHasToSpin = true;
         //this._meshItem.SetBBoxRenderer(this._DEBUG_BoundingBoxRenderer);
@@ -1096,7 +1092,7 @@ if(this._isInCombineMode){
         this._material = new ValjangEngine.StandardMaterial("meshMaterial", this._scene);
         //this._scene.ambientColor = new ValjangEngine.Color3(0.4, 0.4, 0.4);
         //this._material.ambientColor = new ValjangEngine.Color3(90.0 / 255.0, 90.0 / 255.0, 90.0 / 255.0);
-       // this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
+        // this._material.emissiveColor = new ValjangEngine.Color3(50.0 / 255.0, 25.0 / 255.0, 0.0 / 255.0);
         this._material.diffuseColor = new ValjangEngine.Color3(240.0 / 255.0, 220.0 / 255.0, 200.0 / 255.0);
         this._material.specularColor = new ValjangEngine.Color3(200.0 / 255.0, 200.0 / 255.0, 200.0 / 255.0);
         this._material.specularPower = 100;
@@ -1113,97 +1109,96 @@ if(this._isInCombineMode){
             meshData.indices = triangles;
             meshData.positions = vertices;
             meshData.normals = normals;
-           
+
             if (this._mesh == null) {
                 this._mesh = new ValjangEngine.Mesh("mesh", this._scene);
                 this._mesh.freezeWorldMatrix();
                 this._mesh.material = this._material;
-               // this._mesh.material.freeze();
+                // this._mesh.material.freeze();
             }
             this._mesh.sideOrientation = ValjangEngine.Mesh.FRONTSIDE;
             this._mesh.isPickable = false;
             meshData.applyToMesh(this._mesh, true);
-        }
-        else
+        } else
             this.UpdateValjangEngineMesh();
         // Update model size, sculpting radius, camera placement
         this.ReadaptToModelSize();
         // Show cursor
         this._uiRingCursor.isVisible = true;
         //appelle fonction  this.Gengrille()
-        
-                 this.Gengrille()
-                this.GenRegle()
-                 this.Genfleche()
-         
-       
-       
- 
-       
+
+        this.Gengrille()
+        this.GenRegle()
+        this.Genfleche()
+
+
+
+
+
         //test du navigateur
         var testVersion = window.navigator.userAgent.match(/Windows NT (([0-9])+\.([0-9])+)/); // on récupère la version du système
-        if(testVersion) {
+        if (testVersion) {
             var version = parseFloat(testVersion[1]);
             var testEdge = window.navigator.userAgent.match(/Edge\/\d+/); // on teste si le useragent contient Edge
-            if(version >= 10.0 && testEdge){
-               alert("Oups ! Ton navigateur n'est pas totalment compatible avec notre platforme. Merci d'utilisé Google Chrome, Firefox, Safarie.  Promis c'est pas de notre faute ! ;)")
-               
+            if (version >= 10.0 && testEdge) {
+                alert("Oups ! Ton navigateur n'est pas totalment compatible avec notre platforme. Merci d'utilisé Google Chrome, Firefox, Safarie.  Promis c'est pas de notre faute ! ;)")
+
             }
         }
-this.raduislimit = this._modelRadius*2
-this._mesh.material.unfreeze();
-     
-this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 255.0, 91 / 255.0);
+        this.raduislimit = this._modelRadius * 2
+        this._mesh.material.unfreeze();
+
+        this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 255.0, 91 / 255.0);
 
     };
-    AppMain.prototype.GenSphere = function () {
+    AppMain.prototype.GenSphere = function() {
         var generator = new Module.GenSphere();
         var mesh = generator.Generate(50);
-       
+
         generator.delete();
-        
+
         return mesh;
     };
-    AppMain.prototype.GenBox = function () {
+    AppMain.prototype.GenBox = function() {
         var generator = new Module.GenBox();
         var mesh = generator.Generate(10.0, 100.0, 100.0);
         generator.delete();
         return mesh;
     };
-    AppMain.prototype.GenCylinder = function () {
+    AppMain.prototype.GenCylinder = function() {
         var generator = new Module.GenCylinder();
         var mesh = generator.Generate(180.0, 50.0);
         generator.delete();
         return mesh;
     };
-    AppMain.prototype.GenCube = function () {
+    AppMain.prototype.GenCube = function() {
         var generator = new Module.GenBox();
         var mesh = generator.Generate(100.0, 100.0, 100.0);
         generator.delete();
         return mesh;
     };
-    AppMain.prototype.GenPyramid = function () {
+    AppMain.prototype.GenPyramid = function() {
         var generator = new Module.GenPyramid();
         var mesh = generator.Generate(100.0, 150.0, 100.0);
         generator.delete();
         return mesh;
     };
-    AppMain.prototype.GenDisk = function () {
+    AppMain.prototype.GenDisk = function() {
         var generator = new Module.GenCylinder();
         var mesh = generator.Generate(10.0, 100.0);
         generator.delete();
         return mesh;
     };
-    AppMain.prototype.SaveToFile = function (fileName, fileExt) {
+    AppMain.prototype.SaveToFile = function(fileName, fileExt) {
         saveAs(this.SaveToBlob(fileExt), fileName + "." + fileExt);
     };
-    AppMain.prototype.SetSculptLimitBoundingPercent = function (percent) {
+    AppMain.prototype.SetSculptLimitBoundingPercent = function(percent) {
         this._sculptLimitBoundingPercent = percent;
     };
-    AppMain.prototype.SetCameraSpinningSpeed = function (speed) {
+    AppMain.prototype.SetCameraSpinningSpeed = function(speed) {
         this._cameraSpinningSpeed = speed;
     };
-    AppMain.prototype.SaveToBlob = function (fileExt) {
+    AppMain.prototype.SaveToBlob = function(fileExt) {
         var bbox = this._meshItem.GetBBox();
         var bboxSize = bbox.Size();
         var maxSideSize = Math.max(bboxSize.X(), Math.max(bboxSize.Y(), bboxSize.Z()));
@@ -1222,8 +1217,8 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
             objBinFileData[i] = objStringFileData.charCodeAt(i);
         return new Blob([objBinFileData], { type: "application/octet-binary" });
     };
-    AppMain.prototype.UpdateValjangEngineMesh = function () {
-       
+    AppMain.prototype.UpdateValjangEngineMesh = function() {
+
         if (this._useSubMeshes) {
             // Update sub meshes internal structure
             this._meshItem.UpdateSubMeshes();
@@ -1231,7 +1226,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
 
 
 
-            
+
             for (var i = 0; i < this._meshItem.GetSubMeshCount(); ++i) {
                 var submesh = this._meshItem.GetSubMesh(i);
                 var subMeshID = submesh.GetID().toString();
@@ -1249,9 +1244,8 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                     }
                 }
             }
-            
-        }
-        else {
+
+        } else {
             var buf = this._meshItem.Triangles();
             var triangles = new Uint32Array(buf.buffer, buf.byteOffset, buf.byteLength / 4);
             buf = this._meshItem.Vertices();
@@ -1262,8 +1256,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
             if (this._mesh._geometry.getTotalVertices() < vertices.length / 3) {
                 this._mesh.setVerticesData(ValjangEngine.VertexBuffer.PositionKind, vertices, true);
                 this._mesh.setVerticesData(ValjangEngine.VertexBuffer.NormalKind, normals, true);
-            }
-            else {
+            } else {
                 this._mesh.updateVerticesData(ValjangEngine.VertexBuffer.PositionKind, vertices, false, false);
                 this._mesh.updateVerticesData(ValjangEngine.VertexBuffer.NormalKind, normals, false, false);
             }
@@ -1272,9 +1265,9 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
         }
     };
 
- 
-   
-    AppMain.prototype.createScene = function () {
+
+
+    AppMain.prototype.createScene = function() {
         var _this = this;
         // create a basic BJS Scene object
         this._scene = new ValjangEngine.Scene(this._engine);
@@ -1292,22 +1285,22 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
         this._camera.attachControl(this._canvas, false);
         // create a basic light, aiming 0,1,0 - meaning, to the sky
 
-       // POUR DEMO A SUPPRIMER 
-       // Load3DModel('bust.stl');
+        // POUR DEMO A SUPPRIMER 
+        // Load3DModel('bust.stl');
 
 
-//lumiere color et back 
+        //lumiere color et back 
 
         this._light = new ValjangEngine.PointLight('light1', new ValjangEngine.Vector3(0, 0, 0), this._scene);
         this._light.diffuse = new ValjangEngine.Color3(0.2, 0.2, 0.2);
-      
+
         // Ring cursor
         this.CreateUIRingCursor();
         // Create move, rot, scale manipulator
         this._manipulator = new Manipulator(this._engine, this._scene, this._camera);
         // Create starting model
         Module.SculptEngine.SetTriangleOrientationInverted(true);
-    
+
         // Bbox update
         //this.showBBoxes();
         // Set the target of the camera to the first imported mesh
@@ -1316,17 +1309,16 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
         else
             this._camera.target = ValjangEngine.Vector3.Zero();
         // Set background color
-        this._scene.clearColor.r = 140/ 255;
-        this._scene.clearColor.g = 190/ 255;
-        this._scene.clearColor.b = 250/ 255;
+        this._scene.clearColor.r = 140 / 255;
+        this._scene.clearColor.g = 190 / 255;
+        this._scene.clearColor.b = 250 / 255;
         // Move the light with the camera
-        this._scene.registerBeforeRender(function () {
+        this._scene.registerBeforeRender(function() {
             _this._light.position = _this._camera.position;
-            
+
             if (_this.IsInCombineMode()) {
-            
-            }
-            else if (_this._meshItem != null) {
+
+            } else if (_this._meshItem != null) {
                 /*let mat: ValjangEngine.Matrix = this._camera.getWorldMatrix();
                 this._light.position = this._camera.position.add(mat.getRow(0).toVector3().scale(this._modelRadius * 2)).add(mat.getRow(1).toVector3().scale(this._modelRadius * 2));*/
                 if (_this._sculptPoint != null) {
@@ -1335,7 +1327,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                         _this._sculptPoint = null;
                 }
                 // Update cursor
-             //   UPDATE CERCLE
+                //   UPDATE CERCLE
                 var babRay = _this._scene.createPickingRay(_this._uiCursorScreenPos.x, _this._uiCursorScreenPos.y, null, _this._camera);
                 var intersection = new Module.Vector3(0, 0, 0);
                 var intersectionNormal = new Module.Vector3(0, 0, 0);
@@ -1353,22 +1345,21 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                     up.normalize();
                     var mat = new ValjangEngine.Matrix();
                     ValjangEngine.Matrix.FromXYZAxesToRef(left.scale(_this._sculptingRadius), at.scale(_this._sculptingRadius), up.scale(_this._sculptingRadius), mat);
-                   //posision cecle
+                    //posision cecle
                     mat.setTranslation(new ValjangEngine.Vector3(intersection.X(), intersection.Y(), intersection.Z()));
                     _this._uiRingCursor.setPivotMatrix(mat);
                 }
-               
+
             }
         });
-        
+
 
         // input events
-        this._scene.onPointerDown = function (e, p) {
+        this._scene.onPointerDown = function(e, p) {
             if (_this.IsInCombineMode()) {
-               
+
                 _this._manipulator.onPointerDown(e, p);
-            }
-            else if (_this._meshItem != null) {
+            } else if (_this._meshItem != null) {
                 var babRay = _this._scene.createPickingRay(e.clientX, e.clientY, null, _this._camera);
                 var intersection = new Module.Vector3(0, 0, 0);
                 var rayOrigin = new Module.Vector3(babRay.origin.x, babRay.origin.y, babRay.origin.z);
@@ -1399,15 +1390,14 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                 rayDirection.delete();
                 rayOrigin.delete();
                 intersection.delete();
-                
+
             }
         };
-        
-        this._scene.onPointerMove = function (e, p) {
+
+        this._scene.onPointerMove = function(e, p) {
             if (_this.IsInCombineMode()) {
                 _this._manipulator.onPointerMove(e, p);
-            }
-            else if (_this._meshItem != null) {
+            } else if (_this._meshItem != null) {
                 if (_this._sculpting)
                     _this._sculptPoint = new ValjangEngine.Vector2(e.clientX, e.clientY);
                 _this._uiCursorScreenPos.x = e.clientX;
@@ -1416,11 +1406,10 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                     _this._scene.onPointerUp(e, p);
             }
         };
-        this._scene.onPointerUp = function (e, p) {
+        this._scene.onPointerUp = function(e, p) {
             if (_this.IsInCombineMode()) {
                 _this._manipulator.onPointerUp(e, p);
-            }
-            else if (_this._meshItem != null) {
+            } else if (_this._meshItem != null) {
                 if (_this._sculpting) {
                     _this._camera.attachControl(_this._canvas, true);
                     _this._sculpting = false;
@@ -1438,7 +1427,7 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                         case BrushType.Dig:
                             _this._brushDig.EndStroke();
                             break;
-                         
+
                     }
                     // Update model size, sculpting radius, camera placement
                     //this.ReadaptToModelSize();
@@ -1448,24 +1437,24 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
             }
         };
     };
-    AppMain.prototype.animate = function () {
+    AppMain.prototype.animate = function() {
         var _this = this;
         // run the render loop
-        this._engine.runRenderLoop(function () {
+        this._engine.runRenderLoop(function() {
             if (_this._cameraHasToSpin && (_this._cameraSpinningSpeed > 0.0) && (_this._camera != null))
                 _this._camera.alpha += _this._cameraSpinningSpeed * (_this._engine.getDeltaTime() / 1000.0) * (Math.PI / 180.0);
             _this._scene.render();
             //this._DEBUG_BoundingBoxRenderer.render();
         });
         // the canvas/window resize event handler
-        window.addEventListener('resize', function () {
+        window.addEventListener('resize', function() {
             _this._engine.resize();
         });
     };
-    AppMain.prototype.clamp = function (value, min, max) {
+    AppMain.prototype.clamp = function(value, min, max) {
         return Math.min(Math.max(value, min), max);
     };
-    AppMain.prototype.Sculpt = function (screenPoint) {
+    AppMain.prototype.Sculpt = function(screenPoint) {
         var babRay = this._scene.createPickingRay(screenPoint.x, screenPoint.y, null, this._camera);
         var intersection = new Module.Vector3(0, 0, 0);
         var rayOrigin = new Module.Vector3(babRay.origin.x, babRay.origin.y, babRay.origin.z);
@@ -1487,24 +1476,24 @@ this._mesh.material.emissiveColor = new ValjangEngine.Color3(11 / 255.0, 19 / 25
                 break;
         }
 
-     
+
         ray.delete();
         rayDirection.delete();
         rayOrigin.delete();
         intersection.delete();
         // Mesh update
         //Bloque model ici
-      
 
-                this.UpdateValjangEngineMesh();
-            
-            
-      
-   
+
+        this.UpdateValjangEngineMesh();
+
+
+
+
         // Bbox update
         //this.showBBoxes();
     };
-    
+
     return AppMain;
 }());
 //# sourceMappingURL=app.js.map
