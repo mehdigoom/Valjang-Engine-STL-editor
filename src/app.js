@@ -871,8 +871,8 @@ var AppMain = /** @class */ (function() {
         }
     };
     AppMain.prototype.IsInCombineMode = function() {
-        var openbtn = document.getElementById('openObject')
-        var tampon = document.getElementById('openObject')
+        openbtn = document.getElementById('openButton')
+        tampon = document.getElementById('openObject')
         if (this._isInCombineMode) {
 
             openbtn.className.add("hiden")
