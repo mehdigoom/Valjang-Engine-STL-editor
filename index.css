@@ -1763,9 +1763,6 @@ body {
     background-color: #f3f3f3;
     border-radius: 30px;
     background-position-y: 5%
-    
- 
-   
 }
 
 .active {
@@ -1916,7 +1913,7 @@ input[type="checkbox"] {
 }
 
 .CombineUI {
-      position: absolute;
+    position: absolute;
     display: flex;
     overflow: hidden;
     width: 40rem;
@@ -1926,7 +1923,7 @@ input[type="checkbox"] {
     bottom: 17%;
     align-items: center;
     justify-content: space-around;
-    background-image: url("src/3_BARRE.png");
+    background-image: url("src/3_BAR.png");
     background-size: contain;
     border-radius: 50px;
     background-repeat: no-repeat;
@@ -2019,16 +2016,16 @@ input[type="checkbox"] {
 .cruserMargin {
     margin-left: 5%;
 }
-.fit-picture{
+
+.fit-picture {
     position: absolute;
-   
     bottom: 40%;
     left: 0%;
     bottom: 20.7%
 }
-.fit-picture2{
+
+.fit-picture2 {
     position: absolute;
-   
     bottom: 20.7%;
     left: 8%;
 }
