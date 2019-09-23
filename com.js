@@ -1,7 +1,7 @@
 //////CONFIGURATION HERE ////////
 
 
-//Use  Valjang API? 
+//Use  Valjang API? (for demo version)
 //allows auto configuration of the backend 
 //no administrator panel if activate.
 //True = Yes, False = no. 

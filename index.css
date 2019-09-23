@@ -2030,3 +2030,15 @@ input[type="checkbox"] {
     bottom: 20.7%;
     left: 8%;
 }
+
+.SCALE {
+    background-image: "src/ROTATE.png";
+}
+
+.ROTATE {
+    background-image: "src/ROTATE.png";
+}
+
+.MOVE {
+    background-image: "src/ROTATE.png";
+}
