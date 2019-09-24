@@ -1,4 +1,5 @@
 import React from 'react';
+import login from './login'
 import logo from './img/DOOD_Logo600.png';
 import './App.css';
 
@@ -18,8 +19,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-   {renderlogo(false)}
+        
+      {renderlogo(false)}
        <p>Panel viewver admin</p>
+      {login()}
+      
       </header>
     </div>
   );
