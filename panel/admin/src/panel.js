@@ -5,8 +5,7 @@ import './App.css';
 
 
 
-return(result)
-}
+
 
 function panel() {
   return (
