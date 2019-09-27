@@ -750,14 +750,16 @@ var AppMain = /** @class */ (function() {
         materialfleche.diffuseTexture = new ValjangEngine.Texture("Y.png", this._scene);
         materialfleche.specularColor = new ValjangEngine.Color3(0, 100, 0);
         materialfleche.diffuseTexture.hasAlpha = true;
+      
 
         //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
         //Creation of a plane
-        var plane = ValjangEngine.Mesh.CreatePlane("Plane", 400, this._scene);
+        var plane = ValjangEngine.Mesh.CreatePlane("Plane", 100, this._scene);
         //plane.rotation.x = Math.PI / 2;
         plane.material = materialfleche;
         plane.position.y = 95
+       
 
         plane.position.x = 200
         plane.rotation.y = Math.PI / 2;
@@ -774,7 +776,7 @@ var AppMain = /** @class */ (function() {
         //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
 
         //Creation of a plane
-        var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
+        var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 100, this._scene);
         //plane.rotation.x = Math.PI / 2;
         plane2.material = materialflecheX;
         plane2.position.y = -100
@@ -800,7 +802,7 @@ var AppMain = /** @class */ (function() {
         //materialPlane.backFaceCulling = true;//Allways show the front and the back of an element
         console.log("Raduis x2:" + this._modelRadius * 2)
             //Creation of a plane
-        var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 400, this._scene);
+        var plane2 = ValjangEngine.Mesh.CreatePlane("Plane2", 100, this._scene);
         //plane.rotation.x = Math.PI / 2;
         plane2.material = materialflecheZ;
 
