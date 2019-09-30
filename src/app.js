@@ -758,8 +758,8 @@ var AppMain = /** @class */ (function() {
         var plane = ValjangEngine.Mesh.CreatePlane("Plane", 100, this._scene);
         //plane.rotation.x = Math.PI / 2;
         plane.material = materialfleche;
-        plane.position.y = 95
-       
+        plane.position.y = -50
+       plane.position.z = -200
 
         plane.position.x = 200
         plane.rotation.y = Math.PI / 2;
@@ -815,9 +815,9 @@ var AppMain = /** @class */ (function() {
 
         plane2.position.y = -100
 
-        plane2.position.x = 0
+        plane2.position.x = -50
         plane2.rotation.y = Math.PI / 2;
-        plane2.position.z = 0
+        plane2.position.z = -200
 
 
     }

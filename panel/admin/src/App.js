@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import  './App.css'
-import login from './login'
+import login from'./login';
 import logo from './img/DOOD_Logo600.png';
 import panel from './panel';
 import Async from 'react-async';
@@ -52,13 +52,15 @@ class App extends Component {
              
                     <p>Login to {client} Viewer</p>
                  
-        
+                    {this.rendercondition() // rendu dynamique des pages
+}
             </div>
           )
       }}
     </Async>
     )
 }
+
 
 HabdelChargeclient(Value){
   this.setState({
@@ -100,12 +102,15 @@ rendercondition(){
     
       
       <p>{this.BDDGetclient(this.state.clientID)} </p>
-{this.rendercondition() // rendu dynamique des pages
-}
-      
+
+     
+
+
      
       
       </header>
+  
+  
     </div>
     )
   }
