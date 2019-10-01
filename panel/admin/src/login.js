@@ -1,32 +1,32 @@
-import React from 'react';
-import logo from './img/DOOD_Logo600.png';
-import './App.css';
+import React, { Component } from 'react'
 
-loginProsses(login,password){
-  const options = {
-    method: 'POST',
-    url: '----API url------',
-    headers: {
-  Authorization: "Basic " + new Buffer("---API credentials---").toString("base64")
-    },
-    body: {
-       login,
-       password,
-    }
-    json: true  // JSON stringifies the body automatically
+class Form extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {ifcorrect: false};
   }
-  
-  request(options)
-    .then(function (response) {
-      // Handle success response data
+ postlogin(login,password){
+  fetch('http://public.valjang.fr:5000/user/login', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      firstParam: login,
+      secondParam: password,
     })
-    .catch(function (err) {
-      // Handle err response
-    })
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+    
 }
-
-function login() {
- 
+ registreorlogin(e){
+if(e == false){
   return (
     <div className="App">
       <header className="App-header">
@@ -38,12 +38,53 @@ function login() {
   <br></br>
   <label>
     password :
-    <input type="text" name="password" />
+    <input type="password" name="password" />
   </label>
   <br></br>
   <input type="submit" value="Envoyer" />
+
+</form>
+<br></br>
+      </header>
+    </div>
+  );
+}else{
+  return (
+    <div className="App">
+      <header className="App-header">
+      <form>
+  <label>
+    Login :
+    <input type="text" name="Login" />
+  </label>
+  <br></br>
+  <label>
+    password :
+    <input type="password" name="password" />
+  </label>
+
+  <label>
+  <br></br>
+    Mail:
+    <input type="text" name="password" />
+  </label>
+  <br></br>
+
+  <input type="submit" value="Valider" />*
+  
 </form>
       </header>
+    </div>
+  );
+}
+}
+
+}
+function login() {
+ 
+  return (
+    <div className="App">
+   {this.registreorlogin(false)}
     </div>
   );
 }
