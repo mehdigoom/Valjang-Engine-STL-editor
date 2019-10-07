@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import  './App.css'
-import login from'./login';
+
 import logo from './img/DOOD_Logo600.png';
 import panel from './panel';
 import Async from 'react-async';
@@ -22,9 +22,72 @@ class App extends Component {
       ServerBackend: "http://public.valjang.fr:5000",
       DoodLogo :true,
       clientID:"0",
+      ifcorrect: false,
+      title: '',
     }
     this.BDDGetclient = this.BDDGetclient.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
   }
+//send Login and password to backend
+handleSubmit(login, password) {
+  fetch('http://public.valjang.fr:5000/user/login', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      'email': login,
+      'password': password,
+    })
+  })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+};
+  
+handleChange(event) { this.setState({ title: event.target.value })
+console.log(this.state.title) };
+
+login(){
+  return (
+    <div className="App">
+
+      <header className="App-header">
+        <form >
+          <label>
+            Login :
+      <input type="text" name="title" value={this.state.title}  onChange={this.handleChange}/>
+          </label>
+          <br></br>
+          <label>
+            password :
+      <input type="password" name="password" />
+          </label>
+
+          <br></br>
+
+          <input type="submit" value="Valider" />
+
+        </form>
+      </header>
+    </div>
+
+  );
+}
+
+
+
+
+
+
+
   BDDGetclient(IDclient) {
     
     if (IDclient)
@@ -83,7 +146,7 @@ HabdelChargeclient(Value){
 
 rendercondition(){
   if(this.state.Iflogin == false){
-    return(login())
+    return(this.login())
   }else{
     return(panel())
   }
