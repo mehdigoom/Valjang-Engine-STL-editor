@@ -5,7 +5,6 @@ import logo from './img/DOOD_Logo600.png';
 import panel from './panel';
 import Async from 'react-async';
 
-
 const loadUsers = () =>
   fetch("http://public.valjang.fr:5000/client")
     .then(res => (res.ok ? res : Promise.reject(res)))
@@ -23,15 +22,17 @@ class App extends Component {
       DoodLogo :true,
       clientID:"0",
       ifcorrect: false,
-      title: '',
+      login: '',
+      password:'',
     }
     this.BDDGetclient = this.BDDGetclient.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChangePa = this.handleChangePa.bind(this);
 
   }
 //send Login and password to backend
-handleSubmit(login, password) {
+handleSubmit() {
   fetch('http://public.valjang.fr:5000/user/login', {
     method: 'POST',
     headers: {
@@ -39,8 +40,8 @@ handleSubmit(login, password) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      'email': login,
-      'password': password,
+      'email': this.state.login,
+      'password': this.state.password,
     })
   })
     .then(function (response) {
@@ -52,28 +53,30 @@ handleSubmit(login, password) {
 
 };
   
-handleChange(event) { this.setState({ title: event.target.value })
-console.log(this.state.title) };
+handleChange(event) { this.setState({ login: event.target.value })
+console.log(this.state.login) };
+handleChangePa(event) { this.setState({ password: event.target.value })
+console.log(this.state.password) };
 
 login(){
   return (
     <div className="App">
 
       <header className="App-header">
-        <form >
+        <form onSubmit={this.handleSubmit}>
           <label>
             Login :
-      <input type="text" name="title" value={this.state.title}  onChange={this.handleChange}/>
+      <input type="text" name="login" value={this.state.login}  onChange={this.handleChange}/>
           </label>
           <br></br>
           <label>
             password :
-      <input type="password" name="password" />
+      <input type="password" name="password" value={this.state.password}  onChange={this.handleChangePa}/>
           </label>
 
           <br></br>
 
-          <input type="submit" value="Valider" />
+          <input class="favorite styled" type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit()}/>
 
         </form>
       </header>

@@ -113,7 +113,7 @@ app.post('/user/login', (req, res) => {
     if (err) return res.status(500).send(err);
     else if (!user) return res.status(500).send("Bad informations ...");
     console.log('User', user)
-    res.status(200).send(user)
+    return res.status(200).send(user)
   }, req.body);
 });
 
