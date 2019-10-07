@@ -25,6 +25,7 @@ class App extends Component {
       login: '',
       password:'',
       message:'',
+      
     }
     this.BDDGetclient = this.BDDGetclient.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -33,7 +34,7 @@ class App extends Component {
 
   }
 //send Login and password to backend
-handleSubmit() {
+handleSubmit(event) {
   fetch('http://public.valjang.fr:5000/user/login', {
     method: 'POST',
     headers: {
