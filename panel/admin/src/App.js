@@ -21,9 +21,10 @@ class App extends Component {
       ServerBackend: "http://public.valjang.fr:5000",
       DoodLogo :true,
       clientID:"0",
-      ifcorrect: false,
+   
       login: '',
       password:'',
+      message:'',
     }
     this.BDDGetclient = this.BDDGetclient.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -46,6 +47,11 @@ handleSubmit() {
   })
     .then(function (response) {
       console.log(response);
+      if(response["status"]== 200){
+        
+      }else{
+       
+      }
     })
     .catch(function (error) {
       console.log(error);
@@ -117,7 +123,7 @@ login(){
              {this.renderlogo(true)}
              
                     <p>Login to {client} Viewer</p>
-                 
+                 <p>{this.state.message}</p>
                     {this.rendercondition() // rendu dynamique des pages
 }
             </div>
