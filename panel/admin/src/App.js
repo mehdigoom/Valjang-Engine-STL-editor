@@ -129,8 +129,8 @@ login(){
     return (
       <Async promiseFn={loadUsers}>
       {({ data, err, isLoading }) => {
-        if (isLoading) return ("Louading...")
-        if (err) return `Backend Hors service :'( : ${err.message}`
+        if (isLoading) return ("Please wait...")
+        if (err) return `Backend Out :'( : ${err.message}`
 
         if (data){
         var client ="" 
@@ -138,11 +138,13 @@ login(){
           var Newdata = data[IDclient]
           if(client =="" ){
             client= Newdata["name"]
+          
           }
         }
         
          
       }
+      
           return (
             <div>
             
@@ -179,7 +181,7 @@ rendercondition(){
   if(this.state.Iflogin == false){
     return(this.login())
   }else if(this.state.Iflogin == true){
-    return(panel())
+    return(panel(this.state.IDclient,this.state.client,this.state.login))
   }else{
     return("Err: BackEnd: Invalid reponses: "+this.state.Iflogin)
   }
