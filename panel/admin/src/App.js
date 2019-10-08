@@ -37,6 +37,7 @@ class App extends Component {
 //send Login and password to backend
 handleSubmit = async () => {
  var result
+ var message
   await fetch('http://public.valjang.fr:5000/user/login', {
     method: 'POST',
     headers: {
@@ -58,6 +59,7 @@ handleSubmit = async () => {
         else {
           console.log(response.ok);
           result = response.ok
+          message= "Err: Login incorrect"
         }
         
       })
@@ -67,8 +69,8 @@ handleSubmit = async () => {
     });
    console.log(result)
    this.setState({ 
-   Iflogin: result
-  
+   Iflogin: result,
+  message:message
     
   })
 
