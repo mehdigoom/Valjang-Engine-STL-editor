@@ -4,6 +4,7 @@ import  './App.css'
 import logo from './img/DOOD_Logo600.png';
 import panel from './panel';
 import Async from 'react-async';
+import { promises } from 'dns';
 
 const loadUsers = () =>
   fetch("http://public.valjang.fr:5000/client")
@@ -34,9 +35,9 @@ class App extends Component {
   
   }
 //send Login and password to backend
-handleSubmit= async () => {
-  
-  fetch('http://public.valjang.fr:5000/user/login', {
+handleSubmit = async () => {
+ var result
+  await fetch('http://public.valjang.fr:5000/user/login', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -49,24 +50,36 @@ handleSubmit= async () => {
   })
   
     .then(function (response) {
-      
-      console.log(response);
-      
-  
-    
-    })
+        console.log(response);
+        if (response.ok == true) {
+          console.log(response.ok);
+          result = response.ok
+        }
+        else {
+          console.log(response.ok);
+          result = response.ok
+        }
+        
+      })
     
     .catch(function (error) {
       console.log(error);
     });
-   // this.setState({  Iflogin:this.res["ok"]})
+   console.log(result)
+   this.setState({ 
+   Iflogin: result
+  
+    
+  })
+
 };
 
 handleChange(event) { this.setState({ login: event.target.value })
 console.log(this.state.login) };
 
 handleChangePa(event) { 
-  console.log("RESULTAT: "+this.handleSubmit())
+
+  console.log("RESULTAT: "+this.handleSubmit)
   this.setState({ 
   password: event.target.value, 
 
@@ -87,12 +100,13 @@ login(){
           <br></br>
           <label>
             password :
+            
       <input type="password" name="password" value={this.state.password}  onChange={this.handleChangePa}/>
           </label>
 
           <br></br>
 
-          <input class="favorite styled" type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit() }/>
+          <input class="favorite styled" type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit }/>
 
         </form>
       </header>
@@ -113,7 +127,7 @@ login(){
     return (
       <Async promiseFn={loadUsers}>
       {({ data, err, isLoading }) => {
-        if (isLoading) return ("Chargement...")
+        if (isLoading) return ("Louading...")
         if (err) return `Backend Hors service :'( : ${err.message}`
 
         if (data){
@@ -162,7 +176,7 @@ login(){
 rendercondition(){
   if(this.state.Iflogin == false){
     return(this.login())
-  }else if(this.state.Iflogin == false){
+  }else if(this.state.Iflogin == true){
     return(panel())
   }else{
     return("Err: BackEnd: Invalid reponses: "+this.state.Iflogin)
