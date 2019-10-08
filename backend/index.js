@@ -17,7 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors())
 app.get('/', (req, res) => {
-  res.send('<meta http-equiv="refresh" content="durée;URL=http://valjang.fr"> ')
+  res.send('<meta http-equiv="refresh" content="durée;URL=http://valjang.fr">')
+  console.log('Redirect To domaine API')
 });
 
 

@@ -31,10 +31,11 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChangePa = this.handleChangePa.bind(this);
-
+  
   }
 //send Login and password to backend
-handleSubmit(event) {
+handleSubmit= async () => {
+  
   fetch('http://public.valjang.fr:5000/user/login', {
     method: 'POST',
     headers: {
@@ -46,23 +47,31 @@ handleSubmit(event) {
       'password': this.state.password,
     })
   })
+  
     .then(function (response) {
+      
       console.log(response);
-      if(response["status"]== 200){
-        
-      }else{
-       
-      }
+      
+  
+    
     })
+    
     .catch(function (error) {
       console.log(error);
     });
-
+   // this.setState({  Iflogin:this.res["ok"]})
 };
-  
+
 handleChange(event) { this.setState({ login: event.target.value })
 console.log(this.state.login) };
-handleChangePa(event) { this.setState({ password: event.target.value })
+
+handleChangePa(event) { 
+  console.log("RESULTAT: "+this.handleSubmit())
+  this.setState({ 
+  password: event.target.value, 
+
+  
+})
 console.log(this.state.password) };
 
 login(){
@@ -83,7 +92,7 @@ login(){
 
           <br></br>
 
-          <input class="favorite styled" type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit()}/>
+          <input class="favorite styled" type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit() }/>
 
         </form>
       </header>
@@ -104,7 +113,7 @@ login(){
     return (
       <Async promiseFn={loadUsers}>
       {({ data, err, isLoading }) => {
-        if (isLoading) return "Connenxion à la base de donées."
+        if (isLoading) return ("Chargement...")
         if (err) return `Backend Hors service :'( : ${err.message}`
 
         if (data){
@@ -135,18 +144,14 @@ login(){
 }
 
 
-HabdelChargeclient(Value){
-  this.setState({
-    client : Value
-   });return(Value)
-}
+
 
   
 
  renderlogo (condition){
     let result = ""
     if (condition === true){
-     result =<img src={logo}/>
+     result =<img src={logo} className="App-logo"/>
     }else{
       result = ""
     }
@@ -157,8 +162,10 @@ HabdelChargeclient(Value){
 rendercondition(){
   if(this.state.Iflogin == false){
     return(this.login())
-  }else{
+  }else if(this.state.Iflogin == false){
     return(panel())
+  }else{
+    return("Err: BackEnd: Invalid reponses: "+this.state.Iflogin)
   }
 }
 
