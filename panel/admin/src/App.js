@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import  './App.css'
 
 import logo from './img/DOOD_Logo600.png';
-import panel from './panel';
 import Async from 'react-async';
 import { promises } from 'dns';
 
@@ -10,6 +9,14 @@ const loadUsers = () =>
   fetch("http://public.valjang.fr:5000/client")
     .then(res => (res.ok ? res : Promise.reject(res)))
     .then(res => res.json())
+
+
+
+
+const model = () =>
+  fetch("http://public.valjang.fr:5000/model")
+    .then(res => (res.ok ? res : Promise.reject(res)))
+    .then(res => res.json())  
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +29,8 @@ class App extends Component {
       ServerBackend: "http://public.valjang.fr:5000",
       DoodLogo :true,
       clientID:"0",
-   
+      select:"",
+      step:0,
       login: '',
       password:'',
       message:'',
@@ -34,6 +42,67 @@ class App extends Component {
     this.handleChangePa = this.handleChangePa.bind(this);
   
   }
+//---------------------PANEL------------------------------------//
+modifyModel = (id) => {
+  this.setState({ 
+    step: 1, 
+  select:id,
+    
+  })
+  
+};
+ Getmodel() {
+  return (<Async promiseFn={model}>
+    {({ data, err, isLoading }) => {
+      if (isLoading) return "Loading models..."
+      if (err) return `Something went wrong: ${err.message}`
+
+      if (data)
+        return (
+          <div>
+            <input class="favorite styled" type="button" id={model.name} value="Deconnecter" />
+            <div>
+              <input class="favorite styled" type="button" name="Loginbtn" value="Ajouter un model" />
+
+            </div>
+            {data.map(model => (
+              <div key={model.name} className="row">
+                <div className="col-md-12">
+                  <h1>{model.name}</h1>
+                  <img class="fit-picture" src={model.image} />
+                  <br></br>
+                  <input class="favorite styled" type="button" onClick={() => this.modifyModel(model.name)} step="1" id={model.name} value="Modifier" />
+                  <input class="favorite styled" type="button" id={model.name} value="Supprimer" />
+                  <input class="favorite styled" type="button" id={model.name} value="Voir dans le viwver" />
+                </div>
+              </div>
+            ))}
+          </div>
+        )
+    }}
+  </Async>)
+}
+
+
+
+
+//-------------------END--PANEL------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //send Login and password to backend
 handleSubmit = async () => {
  var result
@@ -181,7 +250,20 @@ rendercondition(){
   if(this.state.Iflogin == false){
     return(this.login())
   }else if(this.state.Iflogin == true){
-    return(panel(this.state.IDclient,this.state.client,this.state.login))
+    
+    if(this.state.step == 0){
+      return(this.Getmodel())
+    }else if(this.state.step == 1){
+      return("OK je modifie "+this.state.select)
+    }else{
+      return("Err: LocalBuild: Invalid step: "+this.state.step)}
+    
+    
+// Logic panel
+
+
+
+
   }else{
     return("Err: BackEnd: Invalid reponses: "+this.state.Iflogin)
   }
