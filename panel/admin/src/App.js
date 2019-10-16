@@ -29,12 +29,23 @@ class App extends Component {
       ServerBackend: "http://public.valjang.fr:5000",
       DoodLogo :true,
       clientID:"0",
-      select:"",
+      
       step:0,
       login: '',
       password:'',
       message:'',
-      
+      //Info modelselection
+      select:"",//Name model
+      description:"",
+      link:"",
+      type:"",
+      image:"",
+      price:"",
+      size:"",
+      tag:"",
+      statut:"",
+      created_at:"",
+      updated_at:"",
     }
     this.BDDGetclient = this.BDDGetclient.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -43,10 +54,20 @@ class App extends Component {
   
   }
 //---------------------PANEL------------------------------------//
-modifyModel = (id) => {
+modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,updated_at) => {
   this.setState({ 
     step: 1, 
   select:id,
+  description:"",
+      link:link,
+      type:type,
+      image:image,
+      price:price,
+      size:size,
+      tag:tag,
+      statut:statut,
+      created_at:created_at,
+      updated_at:updated_at,
     
   })
   
@@ -71,13 +92,45 @@ modifyModel = (id) => {
                   <h1>{model.name}</h1>
                   <img class="fit-picture" src={model.image} />
                   <br></br>
-                  <input class="favorite styled" type="button" onClick={() => this.modifyModel(model.name)} step="1" id={model.name} value="Modifier" />
+                  <input class="favorite styled" type="button" onClick={() => this.modifyModel(model.name,model.description,model.link,model.type,model.image,model.price,model.size,model.tag,model.statut,model.created_at,model.updated_at)} step="1" id={model.name} value="Modifier" />
                   <input class="favorite styled" type="button" id={model.name} value="Supprimer" />
                   <input class="favorite styled" type="button" id={model.name} value="Voir dans le viwver" />
                 </div>
               </div>
             ))}
           </div>
+        )
+    }}
+  </Async>)
+}
+//Render modif
+Rendermodif(){
+  return (<Async promiseFn={model}>
+    {({ data, err, isLoading }) => {
+      if (isLoading) return "Loading.."
+      if (err) return `Something went wrong: ${err.message}`
+if(data)
+       return (
+          <div>
+            
+            <form>
+      <label>
+    Changer le nom : {this.state.select}
+          <input type="text" name="name" value={this.state.name}/>
+    </label>
+            
+          <img class="fit-picture" src={this.state.image} />
+          <br></br>
+      Changer l'image (Lien)
+      {this.state.link}
+      <br></br>
+<input type="text" name="link" value={this.state.link}/>
+
+            </form>
+          
+            </div>
+            
+            
         )
     }}
   </Async>)
@@ -254,7 +307,7 @@ rendercondition(){
     if(this.state.step == 0){
       return(this.Getmodel())
     }else if(this.state.step == 1){
-      return("OK je modifie "+this.state.select)
+      return(this.Rendermodif())
     }else{
       return("Err: LocalBuild: Invalid step: "+this.state.step)}
     
