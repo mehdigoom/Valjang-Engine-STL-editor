@@ -58,7 +58,7 @@ modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,u
   this.setState({ 
     step: 1, 
   select:id,
-  description:"",
+  description:description,
       link:link,
       type:type,
       image:image,
@@ -90,7 +90,7 @@ modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,u
               <div key={model.name} className="row">
                 <div className="col-md-12">
                   <h1>{model.name}</h1>
-                  <img class="fit-picture" src={model.image} />
+                  <img className="fit-picture" src={model.image} />
                   <br></br>
                   <input class="favorite styled" type="button" onClick={() => this.modifyModel(model.name,model.description,model.link,model.type,model.image,model.price,model.size,model.tag,model.statut,model.created_at,model.updated_at)} step="1" id={model.name} value="Modifier" />
                   <input class="favorite styled" type="button" id={model.name} value="Supprimer" />
@@ -112,20 +112,39 @@ Rendermodif(){
 if(data)
        return (
           <div>
-            
+            <input class="favorite styled" type="button"  value="Retour" />
             <form>
       <label>
-    Changer le nom : {this.state.select}
-          <input type="text" name="name" value={this.state.name}/>
+    Changer le nom :
+          <input type="text" name="name" value={this.state.select}/>
     </label>
-            
-          <img class="fit-picture" src={this.state.image} />
+    <br></br>
+          <img className="fit-picture" src={this.state.image} />
           <br></br>
-      Changer l'image (Lien)
-      {this.state.link}
-      <br></br>
-<input type="text" name="link" value={this.state.link}/>
+      
+     
 
+          Changer l'image (Lien) <input type="text" name="link" value={this.state.link}/>
+<br></br>
+Tags : 
+<input type="text" name="link" value={this.state.tag}/>
+<br></br>
+Modifiable ? 
+<input type="text" name="link" value={this.state.statut}/>
+<br></br>
+Prix
+<input type="text" name="link" value={this.state.price}/>
+<br></br>
+Taille
+<input type="text" name="link" value={this.state.size}/>
+<br></br>
+Description
+<input type="text" name="link" value={this.state.description}/>
+<br></br>
+Crée le : {this.state.created_at}
+<br></br>
+modifier le : {this.state.updated_at}
+<br></br>
             </form>
           
             </div>
