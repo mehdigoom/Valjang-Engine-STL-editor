@@ -81,7 +81,7 @@ modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,u
       if (data)
         return (
           <div>
-            <input class="favorite styled" type="button" id={model.name} value="Deconnecter" />
+            <input class="favorite styled" type="button" id={model.name} onClick={() => this.setState({Iflogin:false})} value="Deconnecter" />
             <div>
               <input class="favorite styled" type="button" name="Loginbtn" value="Ajouter un model" />
 
@@ -112,7 +112,7 @@ Rendermodif(){
 if(data)
        return (
           <div>
-            <input class="favorite styled" type="button"  value="Retour" />
+            <input class="favorite styled" type="button" onClick={() => this.setState({step:0})} value="Retour" />
             <form>
       <label>
     Changer le nom :
@@ -130,7 +130,7 @@ Tags :
 <input type="text" name="link" value={this.state.tag}/>
 <br></br>
 Modifiable ? 
-<input type="text" name="link" value={this.state.statut}/>
+<input type="checkbox" name="link" value={this.state.statut}/>
 <br></br>
 Prix
 <input type="text" name="link" value={this.state.price}/>
@@ -294,7 +294,7 @@ login(){
                     <p>Login to {client} Viewer</p>
                  <p>{this.state.message}</p>
                     {this.rendercondition() // rendu dynamique des pages
-}
+                    }
             </div>
           )
       }}
