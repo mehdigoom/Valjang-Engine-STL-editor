@@ -93,7 +93,7 @@ modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,u
                   <img className="fit-picture" src={model.image} />
                   <br></br>
                   <input class="favorite styled" type="button" onClick={() => this.modifyModel(model.name,model.description,model.link,model.type,model.image,model.price,model.size,model.tag,model.statut,model.created_at,model.updated_at)} step="1" id={model.name} value="Modifier" />
-                  <input class="favorite styled" type="button" id={model.name} value="Supprimer" />
+                  <input class="favorite styled" type="button" id={model.name} value="Supprimer" onClick= {() =>this.modifyModel(model.name,model.description,model.link,model.type,model.image,model.price,model.size,model.tag,model.statut,model.created_at,model.updated_at)} step="1" id={model.name}/>
                   <input class="favorite styled" type="button" id={model.name} value="Voir dans le viwver" />
                 </div>
               </div>
@@ -153,6 +153,18 @@ modifier le : {this.state.updated_at}
         )
     }}
   </Async>)
+}
+
+popupsupprimer(id,image){
+  return(
+    <div>
+Voulez-supprimer {id} ? 
+<img className="fit-picture" src={image} />
+<input class="favorite styled" type="button" id="oui" value="Supprimer" />
+<input class="favorite styled" type="button" id="non"onClick={() => this.setState({step:0})} value="Non" />
+
+    </div>
+  )
 }
 
 
@@ -327,8 +339,12 @@ rendercondition(){
       return(this.Getmodel())
     }else if(this.state.step == 1){
       return(this.Rendermodif())
-    }else{
-      return("Err: LocalBuild: Invalid step: "+this.state.step)}
+    }else if(this.state.step ==2)
+    { this.popupsupprimer()}
+      else{
+        return("Err: LocalBuild: Invalid step: "+this.state.step)
+      }
+      
     
     
 // Logic panel
