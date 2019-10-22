@@ -124,7 +124,7 @@ if(data)
       
      
 
-          Changer l'image (Lien) <input type="text" name="link" value={this.state.link}/>
+          Changer l'image (Lien) <input type="text" name="link" value={this.state.image}/>
 <br></br>
 Tags : 
 <input type="text" name="link" value={this.state.tag}/>
