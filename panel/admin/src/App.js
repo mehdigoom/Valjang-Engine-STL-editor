@@ -81,7 +81,7 @@ modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,u
       if (data)
         return (
           <div>
-            <input class="favorite styled" type="button" id={model.name} onClick={() => this.setState({Iflogin:false})} value="Deconnecter" />
+            <input class="favorite styled" type="button" id={model.name} onClick={() => this.setState({Iflogin:false}} value="Deconnecter" />
             <div>
               <input class="favorite styled" type="button" name="Loginbtn" value="Ajouter un model" />
 
@@ -93,7 +93,7 @@ modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,u
                   <img className="fit-picture" src={model.image} />
                   <br></br>
                   <input class="favorite styled" type="button" onClick={() => this.modifyModel(model.name,model.description,model.link,model.type,model.image,model.price,model.size,model.tag,model.statut,model.created_at,model.updated_at)} step="1" id={model.name} value="Modifier" />
-                  <input class="favorite styled" type="button" id={model.name} value="Supprimer" onClick= {() =>this.modifyModel(model.name,model.description,model.link,model.type,model.image,model.price,model.size,model.tag,model.statut,model.created_at,model.updated_at)} step="1" id={model.name}/>
+                  <input class="favorite styled" type="button" id={model.name} value="Supprimer" onClick= {() =>this.modifyModel(model.name,model.description,model.link,model.type,model.image,model.price,model.size,model.tag,model.statut,model.created_at,model.updated_at)} step="2" id={model.name}/>
                   <input class="favorite styled" type="button" id={model.name} value="Voir dans le viwver" />
                 </div>
               </div>
