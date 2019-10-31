@@ -81,7 +81,7 @@ modifyModel = (id,description,link,type,image,price,size,tag,statut,created_at,u
       if (data)
         return (
           <div>
-            <input class="favorite styled" type="button" id={model.name} onClick={() => this.setState({Iflogin:false}} value="Deconnecter" />
+            <input class="favorite styled" type="button" id={model.name} onClick={() => this.setState({Iflogin:false})} value="Deconnecter" />
             <div>
               <input class="favorite styled" type="button" name="Loginbtn" value="Ajouter un model" />
 
