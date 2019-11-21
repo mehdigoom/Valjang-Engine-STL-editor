@@ -685,7 +685,7 @@ var AppMain = /** @class */ (function() {
 
     AppMain.prototype.GenRegle = function() {
         var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-        materialPlane.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+        materialPlane.diffuseTexture = new ValjangEngine.Texture("src/img/re.png", this._scene);
         materialPlane.specularColor = new ValjangEngine.Color3(0, 0, 0);
         materialPlane.diffuseTexture.hasAlpha = true;
 
@@ -702,7 +702,7 @@ var AppMain = /** @class */ (function() {
         plane.position.y = 100
             //----------------------REGLE 2--------------------------------
         var materialPlane2 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-        materialPlane2.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+        materialPlane2.diffuseTexture = new ValjangEngine.Texture("src/img/re.png", this._scene);
         materialPlane2.specularColor = new ValjangEngine.Color3(0, 0, 0);
         materialPlane2.diffuseTexture.hasAlpha = true;
 
@@ -721,7 +721,7 @@ var AppMain = /** @class */ (function() {
         plane2.position.y = 100
             //----------------------REGLE 3--------------------------------
         var materialPlane3 = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-        materialPlane3.diffuseTexture = new ValjangEngine.Texture("re.png", this._scene);
+        materialPlane3.diffuseTexture = new ValjangEngine.Texture("src/img/re.png", this._scene);
         materialPlane3.specularColor = new ValjangEngine.Color3(0, 0, 0);
         materialPlane3.diffuseTexture.hasAlpha = true;
 
@@ -747,7 +747,7 @@ var AppMain = /** @class */ (function() {
 
         //Fleche Y
         var materialfleche = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-        materialfleche.diffuseTexture = new ValjangEngine.Texture("Y.png", this._scene);
+        materialfleche.diffuseTexture = new ValjangEngine.Texture("src/img/Y.png", this._scene);
         materialfleche.specularColor = new ValjangEngine.Color3(0, 100, 0);
         materialfleche.diffuseTexture.hasAlpha = true;
       
@@ -769,7 +769,7 @@ var AppMain = /** @class */ (function() {
 
 
         var materialflecheX = new ValjangEngine.StandardMaterial("texturePlaneX", this._scene);
-        materialflecheX.diffuseTexture = new ValjangEngine.Texture("X.png", this._scene);
+        materialflecheX.diffuseTexture = new ValjangEngine.Texture("src/img/X.png", this._scene);
         materialflecheX.specularColor = new ValjangEngine.Color3(100, 0, 0);
         materialflecheX.diffuseTexture.hasAlpha = true;
 
@@ -795,7 +795,7 @@ var AppMain = /** @class */ (function() {
 
 
         var materialflecheZ = new ValjangEngine.StandardMaterial("texturePlaneZ", this._scene);
-        materialflecheZ.diffuseTexture = new ValjangEngine.Texture("Z.png", this._scene);
+        materialflecheZ.diffuseTexture = new ValjangEngine.Texture("src/img/Z.png", this._scene);
         materialflecheZ.specularColor = new ValjangEngine.Color3(0, 0, 100);
         materialflecheZ.diffuseTexture.hasAlpha = true;
 
@@ -842,7 +842,7 @@ var AppMain = /** @class */ (function() {
     AppMain.prototype.Gengrille = function() {
 
         var materialPlane = new ValjangEngine.StandardMaterial("texturePlane", this._scene);
-        materialPlane.diffuseTexture = new ValjangEngine.Texture("grille.png", this._scene);
+        materialPlane.diffuseTexture = new ValjangEngine.Texture("src/img/grille.png", this._scene);
         materialPlane.specularColor = new ValjangEngine.Color3(1, 1, 1);
         materialPlane.diffuseTexture.hasAlpha = true;
 

@@ -1,24 +1,24 @@
 .Ajout {
     border-radius: 50%;
-    background-image: url("src/Ajouter_1.png");
-    background-image: url("src/Ajouter_2.png");
-    background-image: url("src/Ajouter_3.png");
-    background-image: url("src/Ajouter_4.png");
-    background-image: url("src/Ajouter_5.png");
-    background-image: url("src/Ajouter_6.png");
-    background-image: url("src/Ajouter_7.png");
-    background-image: url("src/Ajouter_8.png");
-    background-image: url("src/Ajouter_9.png");
-    background-image: url("src/Ajouter_10.png");
-    background-image: url("src/Ajouter_11.png");
-    background-image: url("src/Ajouter_12.png");
-    background-image: url("src/Ajouter_13.png");
-    background-image: url("src/Ajouter_14.png");
-    background-image: url("src/Ajouter_15.png");
-    background-image: url("src/Ajouter_16.png");
-    background-image: url("src/Ajouter_17.png");
-    background-image: url("src/Ajouter_18.png");
-    background-image: url("src/Ajouter_19.png");
+    background-image: url("src/img/Ajouter_1.png");
+    background-image: url("src/img/Ajouter_2.png");
+    background-image: url("src/img/Ajouter_3.png");
+    background-image: url("src/img/Ajouter_4.png");
+    background-image: url("src/img/Ajouter_5.png");
+    background-image: url("src/img/Ajouter_6.png");
+    background-image: url("src/img/Ajouter_7.png");
+    background-image: url("src/img/Ajouter_8.png");
+    background-image: url("src/img/Ajouter_9.png");
+    background-image: url("src/img/Ajouter_10.png");
+    background-image: url("src/img/Ajouter_11.png");
+    background-image: url("src/img/Ajouter_12.png");
+    background-image: url("src/img/Ajouter_13.png");
+    background-image: url("src/img/Ajouter_14.png");
+    background-image: url("src/img/Ajouter_15.png");
+    background-image: url("src/img/Ajouter_16.png");
+    background-image: url("src/img/Ajouter_17.png");
+    background-image: url("src/img/Ajouter_18.png");
+    background-image: url("src/img/Ajouter_19.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -28,64 +28,64 @@
 
 @keyframes Ajout {
     0.5% {
-        background-image: url("src/Ajouter_1.png")
+        background-image: url("src/img/Ajouter_1.png")
     }
     3% {
-        background-image: url("src/Ajouter_2.png")
+        background-image: url("src/img/Ajouter_2.png")
     }
     5.5% {
-        background-image: url("src/Ajouter_3.png")
+        background-image: url("src/img/Ajouter_3.png")
     }
     8% {
-        background-image: url("src/Ajouter_4.png")
+        background-image: url("src/img/Ajouter_4.png")
     }
     10.5% {
-        background-image: url("src/Ajouter_5.png")
+        background-image: url("src/img/Ajouter_5.png")
     }
     13% {
-        background-image: url("src/Ajouter_6.png")
+        background-image: url("src/img/Ajouter_6.png")
     }
     15.5% {
-        background-image: url("src/Ajouter_7.png")
+        background-image: url("src/img/Ajouter_7.png")
     }
     18% {
-        background-image: url("src/Ajouter_8.png")
+        background-image: url("src/img/Ajouter_8.png")
     }
     20.5% {
-        background-image: url("src/Ajouter_9.png")
+        background-image: url("src/img/Ajouter_9.png")
     }
     23% {
-        background-image: url("src/Ajouter_10.png")
+        background-image: url("src/img/Ajouter_10.png")
     }
     25.5% {
-        background-image: url("src/Ajouter_11.png")
+        background-image: url("src/img/Ajouter_11.png")
     }
     28% {
-        background-image: url("src/Ajouter_12.png")
+        background-image: url("src/img/Ajouter_12.png")
     }
     30.5% {
-        background-image: url("src/Ajouter_13.png")
+        background-image: url("src/img/Ajouter_13.png")
     }
     50% {
-        background-image: url("src/Ajouter_14.png")
+        background-image: url("src/img/Ajouter_14.png")
     }
     55% {
-        background-image: url("src/Ajouter_15.png")
+        background-image: url("src/img/Ajouter_15.png")
     }
     60% {
-        background-image: url("src/Ajouter_16.png")
+        background-image: url("src/img/Ajouter_16.png")
     }
     70% {
-        background-image: url("src/Ajouter_17.png")
+        background-image: url("src/img/Ajouter_17.png")
     }
     80% {
-        background-image: url("src/Ajouter_18.png")
+        background-image: url("src/img/Ajouter_18.png")
     }
     90% {
-        background-image: url("src/Ajouter_19.png")
+        background-image: url("src/img/Ajouter_19.png")
     }
     100% {
-        background-image: url("src/Ajouter_19.png")
+        background-image: url("src/img/Ajouter_19.png")
     }
 }
 
@@ -102,49 +102,49 @@
 
 @-webkit-keyframes aplatir {
     0% {
-        background-image: url("src/Aplatir_animation_1.png")
+        background-image: url("src/img/Aplatir_animation_1.png")
     }
     7.1% {
-        background-image: url("src/Aplatir_animation_2.png")
+        background-image: url("src/img/Aplatir_animation_2.png")
     }
     14.2% {
-        background-image: url("src/Aplatir_animation_3.png")
+        background-image: url("src/img/Aplatir_animation_3.png")
     }
     21.3% {
-        background-image: url("src/Aplatir_animation_4.png")
+        background-image: url("src/img/Aplatir_animation_4.png")
     }
     28.4% {
-        background-image: url("src/Aplatir_animation_5.png")
+        background-image: url("src/img/Aplatir_animation_5.png")
     }
     35.5% {
-        background-image: url("src/Aplatir_animation_6.png")
+        background-image: url("src/img/Aplatir_animation_6.png")
     }
     42.6% {
-        background-image: url("src/Aplatir_animation_7.png")
+        background-image: url("src/img/Aplatir_animation_7.png")
     }
     49.7% {
-        background-image: url("src/Aplatir_animation_8.png")
+        background-image: url("src/img/Aplatir_animation_8.png")
     }
     56.8% {
-        background-image: url("src/Aplatir_animation_9.png")
+        background-image: url("src/img/Aplatir_animation_9.png")
     }
     63.9% {
-        background-image: url("src/Aplatir_animation_10.png")
+        background-image: url("src/img/Aplatir_animation_10.png")
     }
     71% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     78.1% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     85.2% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     92.3% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     100% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
 }
 
@@ -153,66 +153,66 @@
 
 @keyframes aplatir {
     0% {
-        background-image: url("src/Aplatir_animation_1.png")
+        background-image: url("src/img/Aplatir_animation_1.png")
     }
     7.1% {
-        background-image: url("src/Aplatir_animation_2.png")
+        background-image: url("src/img/Aplatir_animation_2.png")
     }
     14.2% {
-        background-image: url("src/Aplatir_animation_3.png")
+        background-image: url("src/img/Aplatir_animation_3.png")
     }
     21.3% {
-        background-image: url("src/Aplatir_animation_4.png")
+        background-image: url("src/img/Aplatir_animation_4.png")
     }
     28.4% {
-        background-image: url("src/Aplatir_animation_5.png")
+        background-image: url("src/img/Aplatir_animation_5.png")
     }
     35.5% {
-        background-image: url("src/Aplatir_animation_6.png")
+        background-image: url("src/img/Aplatir_animation_6.png")
     }
     42.6% {
-        background-image: url("src/Aplatir_animation_7.png")
+        background-image: url("src/img/Aplatir_animation_7.png")
     }
     49.7% {
-        background-image: url("src/Aplatir_animation_8.png")
+        background-image: url("src/img/Aplatir_animation_8.png")
     }
     56.8% {
-        background-image: url("src/Aplatir_animation_9.png")
+        background-image: url("src/img/Aplatir_animation_9.png")
     }
     63.9% {
-        background-image: url("src/Aplatir_animation_10.png")
+        background-image: url("src/img/Aplatir_animation_10.png")
     }
     71% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     78.1% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     85.2% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     92.3% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
     100% {
-        background-image: url("src/Aplatir_animation_11.png")
+        background-image: url("src/img/Aplatir_animation_11.png")
     }
 }
 
 .aplatir {
     margin-right: 2rem;
     border-radius: 400px;
-    background-image: url("src/Aplatir_animation_1.png");
-    background-image: url("src/Aplatir_animation_2.png");
-    background-image: url("src/Aplatir_animation_3.png");
-    background-image: url("src/Aplatir_animation_4.png");
-    background-image: url("src/Aplatir_animation_5.png");
-    background-image: url("src/Aplatir_animation_6.png");
-    background-image: url("src/Aplatir_animation_7.png");
-    background-image: url("src/Aplatir_animation_8.png");
-    background-image: url("src/Aplatir_animation_9.png");
-    background-image: url("src/Aplatir_animation_10.png");
-    background-image: url("src/Aplatir_animation_11.png");
+    background-image: url("src/img/Aplatir_animation_1.png");
+    background-image: url("src/img/Aplatir_animation_2.png");
+    background-image: url("src/img/Aplatir_animation_3.png");
+    background-image: url("src/img/Aplatir_animation_4.png");
+    background-image: url("src/img/Aplatir_animation_5.png");
+    background-image: url("src/img/Aplatir_animation_6.png");
+    background-image: url("src/img/Aplatir_animation_7.png");
+    background-image: url("src/img/Aplatir_animation_8.png");
+    background-image: url("src/img/Aplatir_animation_9.png");
+    background-image: url("src/img/Aplatir_animation_10.png");
+    background-image: url("src/img/Aplatir_animation_11.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -235,46 +235,46 @@
     margin-right: 2rem;
     background-size: cover;
     border-radius: 50%;
-    background-image: url("src/Tampon_animation_1.png");
-    background-image: url("src/Tampon_animation_2.png");
-    background-image: url("src/Tampon_animation_3.png");
-    background-image: url("src/Tampon_animation_4.png");
-    background-image: url("src/Tampon_animation_5.png");
-    background-image: url("src/Tampon_animation_6.png");
-    background-image: url("src/Tampon_animation_7.png");
-    background-image: url("src/Tampon_animation_8.png");
-    background-image: url("src/Tampon_animation_9.png");
-    background-image: url("src/Tampon_animation_10.png");
-    background-image: url("src/Tampon_animation_11.png");
-    background-image: url("src/Tampon_animation_12.png");
-    background-image: url("src/Tampon_animation_13.png");
-    background-image: url("src/Tampon_animation_14.png");
-    background-image: url("src/Tampon_animation_15.png");
-    background-image: url("src/Tampon_animation_16.png");
-    background-image: url("src/Tampon_animation_17.png");
-    background-image: url("src/Tampon_animation_18.png");
-    background-image: url("src/Tampon_animation_19.png");
-    background-image: url("src/Tampon_animation_20.png");
-    background-image: url("src/Tampon_animation_21.png");
-    background-image: url("src/Ajouter_1.png");
-    background-image: url("src/Ajouter_2.png");
-    background-image: url("src/Ajouter_3.png");
-    background-image: url("src/Ajouter_4.png");
-    background-image: url("src/Ajouter_5.png");
-    background-image: url("src/Ajouter_6.png");
-    background-image: url("src/Ajouter_7.png");
-    background-image: url("src/Ajouter_8.png");
-    background-image: url("src/Ajouter_9.png");
-    background-image: url("src/Ajouter_10.png");
-    background-image: url("src/Ajouter_11.png");
-    background-image: url("src/Ajouter_12.png");
-    background-image: url("src/Ajouter_13.png");
-    background-image: url("src/Ajouter_14.png");
-    background-image: url("src/Ajouter_15.png");
-    background-image: url("src/Ajouter_16.png");
-    background-image: url("src/Ajouter_17.png");
-    background-image: url("src/Ajouter_18.png");
-    background-image: url("src/Ajouter_19.png");
+    background-image: url("src/img/Tampon_animation_1.png");
+    background-image: url("src/img/Tampon_animation_2.png");
+    background-image: url("src/img/Tampon_animation_3.png");
+    background-image: url("src/img/Tampon_animation_4.png");
+    background-image: url("src/img/Tampon_animation_5.png");
+    background-image: url("src/img/Tampon_animation_6.png");
+    background-image: url("src/img/Tampon_animation_7.png");
+    background-image: url("src/img/Tampon_animation_8.png");
+    background-image: url("src/img/Tampon_animation_9.png");
+    background-image: url("src/img/Tampon_animation_10.png");
+    background-image: url("src/img/Tampon_animation_11.png");
+    background-image: url("src/img/Tampon_animation_12.png");
+    background-image: url("src/img/Tampon_animation_13.png");
+    background-image: url("src/img/Tampon_animation_14.png");
+    background-image: url("src/img/Tampon_animation_15.png");
+    background-image: url("src/img/Tampon_animation_16.png");
+    background-image: url("src/img/Tampon_animation_17.png");
+    background-image: url("src/img/Tampon_animation_18.png");
+    background-image: url("src/img/Tampon_animation_19.png");
+    background-image: url("src/img/Tampon_animation_20.png");
+    background-image: url("src/img/Tampon_animation_21.png");
+    background-image: url("src/img/Ajouter_1.png");
+    background-image: url("src/img/Ajouter_2.png");
+    background-image: url("src/img/Ajouter_3.png");
+    background-image: url("src/img/Ajouter_4.png");
+    background-image: url("src/img/Ajouter_5.png");
+    background-image: url("src/img/Ajouter_6.png");
+    background-image: url("src/img/Ajouter_7.png");
+    background-image: url("src/img/Ajouter_8.png");
+    background-image: url("src/img/Ajouter_9.png");
+    background-image: url("src/img/Ajouter_10.png");
+    background-image: url("src/img/Ajouter_11.png");
+    background-image: url("src/img/Ajouter_12.png");
+    background-image: url("src/img/Ajouter_13.png");
+    background-image: url("src/img/Ajouter_14.png");
+    background-image: url("src/img/Ajouter_15.png");
+    background-image: url("src/img/Ajouter_16.png");
+    background-image: url("src/img/Ajouter_17.png");
+    background-image: url("src/img/Ajouter_18.png");
+    background-image: url("src/img/Ajouter_19.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -284,154 +284,154 @@
 
 @keyframes tampon {
     0% {
-        background-image: url("src/Tampon_animation_1.png")
+        background-image: url("src/img/Tampon_animation_1.png")
     }
     2.5% {
-        background-image: url("src/Tampon_animation_2.png")
+        background-image: url("src/img/Tampon_animation_2.png")
     }
     5.5% {
-        background-image: url("src/Tampon_animation_3.png")
+        background-image: url("src/img/Tampon_animation_3.png")
     }
     7.5% {
-        background-image: url("src/Tampon_animation_4.png")
+        background-image: url("src/img/Tampon_animation_4.png")
     }
     9.5% {
-        background-image: url("src/Tampon_animation_5.png")
+        background-image: url("src/img/Tampon_animation_5.png")
     }
     11.5% {
-        background-image: url("src/Tampon_animation_6.png")
+        background-image: url("src/img/Tampon_animation_6.png")
     }
     13.5% {
-        background-image: url("src/Tampon_animation_7.png")
+        background-image: url("src/img/Tampon_animation_7.png")
     }
     15.5% {
-        background-image: url("src/Tampon_animation_8.png")
+        background-image: url("src/img/Tampon_animation_8.png")
     }
     17.5% {
-        background-image: url("src/Tampon_animation_9.png")
+        background-image: url("src/img/Tampon_animation_9.png")
     }
     19.5% {
-        background-image: url("src/Tampon_animation_10.png")
+        background-image: url("src/img/Tampon_animation_10.png")
     }
     21.5% {
-        background-image: url("src/Tampon_animation_11.png")
+        background-image: url("src/img/Tampon_animation_11.png")
     }
     23.5% {
-        background-image: url("src/Tampon_animation_12.png")
+        background-image: url("src/img/Tampon_animation_12.png")
     }
     25.5% {
-        background-image: url("src/Tampon_animation_13.png")
+        background-image: url("src/img/Tampon_animation_13.png")
     }
     27.5% {
-        background-image: url("src/Tampon_animation_14.png")
+        background-image: url("src/img/Tampon_animation_14.png")
     }
     29.5% {
-        background-image: url("src/Tampon_animation_15.png")
+        background-image: url("src/img/Tampon_animation_15.png")
     }
     31.5% {
-        background-image: url("src/Tampon_animation_16.png")
+        background-image: url("src/img/Tampon_animation_16.png")
     }
     33.5% {
-        background-image: url("src/Tampon_animation_17.png")
+        background-image: url("src/img/Tampon_animation_17.png")
     }
     35.5% {
-        background-image: url("src/Tampon_animation_18.png")
+        background-image: url("src/img/Tampon_animation_18.png")
     }
     37.5% {
-        background-image: url("src/Tampon_animation_19.png")
+        background-image: url("src/img/Tampon_animation_19.png")
     }
     39.5% {
-        background-image: url("src/Tampon_animation_20.png")
+        background-image: url("src/img/Tampon_animation_20.png")
     }
     41.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     43.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     45.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     47.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     49.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     51.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     52.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     53.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     55.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     57.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     59.5% {
-        background-image: url("src/Ajouter_1.png")
+        background-image: url("src/img/Ajouter_1.png")
     }
     61.5% {
-        background-image: url("src/Ajouter_2.png")
+        background-image: url("src/img/Ajouter_2.png")
     }
     63.5% {
-        background-image: url("src/Ajouter_3.png")
+        background-image: url("src/img/Ajouter_3.png")
     }
     65.5% {
-        background-image: url("src/Ajouter_4.png")
+        background-image: url("src/img/Ajouter_4.png")
     }
     67.5% {
-        background-image: url("src/Ajouter_5.png")
+        background-image: url("src/img/Ajouter_5.png")
     }
     69.5% {
-        background-image: url("src/Ajouter_6.png")
+        background-image: url("src/img/Ajouter_6.png")
     }
     71.5% {
-        background-image: url("src/Ajouter_7.png")
+        background-image: url("src/img/Ajouter_7.png")
     }
     73.5% {
-        background-image: url("src/Ajouter_8.png")
+        background-image: url("src/img/Ajouter_8.png")
     }
     75.5% {
-        background-image: url("src/Ajouter_9.png")
+        background-image: url("src/img/Ajouter_9.png")
     }
     77.5% {
-        background-image: url("src/Ajouter_10.png")
+        background-image: url("src/img/Ajouter_10.png")
     }
     79.5% {
-        background-image: url("src/Ajouter_11.png")
+        background-image: url("src/img/Ajouter_11.png")
     }
     81.5% {
-        background-image: url("src/Ajouter_12.png")
+        background-image: url("src/img/Ajouter_12.png")
     }
     83.5% {
-        background-image: url("src/Ajouter_13.png")
+        background-image: url("src/img/Ajouter_13.png")
     }
     85.5% {
-        background-image: url("src/Ajouter_14.png")
+        background-image: url("src/img/Ajouter_14.png")
     }
     87.5% {
-        background-image: url("src/Ajouter_15.png")
+        background-image: url("src/img/Ajouter_15.png")
     }
     89.5% {
-        background-image: url("src/Ajouter_16.png")
+        background-image: url("src/img/Ajouter_16.png")
     }
     91.5% {
-        background-image: url("src/Ajouter_17.png")
+        background-image: url("src/img/Ajouter_17.png")
     }
     93.5% {
-        background-image: url("src/Ajouter_18.png")
+        background-image: url("src/img/Ajouter_18.png")
     }
     95.5% {
-        background-image: url("src/Ajouter_19.png")
+        background-image: url("src/img/Ajouter_19.png")
     }
     100% {
-        background-image: url("src/Ajouter_19.png")
+        background-image: url("src/img/Ajouter_19.png")
     }
 }
 
@@ -449,27 +449,27 @@
 .retirer {
     margin-right: 2rem;
     border-radius: 50%;
-    background-image: url("src/Tampon_animation_1.png");
-    background-image: url("src/Tampon_animation_2.png");
-    background-image: url("src/Tampon_animation_3.png");
-    background-image: url("src/Tampon_animation_4.png");
-    background-image: url("src/Tampon_animation_5.png");
-    background-image: url("src/Tampon_animation_6.png");
-    background-image: url("src/Tampon_animation_7.png");
-    background-image: url("src/Tampon_animation_8.png");
-    background-image: url("src/Tampon_animation_9.png");
-    background-image: url("src/Tampon_animation_10.png");
-    background-image: url("src/Tampon_animation_11.png");
-    background-image: url("src/Tampon_animation_12.png");
-    background-image: url("src/Tampon_animation_13.png");
-    background-image: url("src/Tampon_animation_14.png");
-    background-image: url("src/Tampon_animation_15.png");
-    background-image: url("src/Tampon_animation_16.png");
-    background-image: url("src/Tampon_animation_17.png");
-    background-image: url("src/Tampon_animation_18.png");
-    background-image: url("src/Tampon_animation_19.png");
-    background-image: url("src/Tampon_animation_20.png");
-    background-image: url("src/Tampon_animation_21.png");
+    background-image: url("src/img/Tampon_animation_1.png");
+    background-image: url("src/img/Tampon_animation_2.png");
+    background-image: url("src/img/Tampon_animation_3.png");
+    background-image: url("src/img/Tampon_animation_4.png");
+    background-image: url("src/img/Tampon_animation_5.png");
+    background-image: url("src/img/Tampon_animation_6.png");
+    background-image: url("src/img/Tampon_animation_7.png");
+    background-image: url("src/img/Tampon_animation_8.png");
+    background-image: url("src/img/Tampon_animation_9.png");
+    background-image: url("src/img/Tampon_animation_10.png");
+    background-image: url("src/img/Tampon_animation_11.png");
+    background-image: url("src/img/Tampon_animation_12.png");
+    background-image: url("src/img/Tampon_animation_13.png");
+    background-image: url("src/img/Tampon_animation_14.png");
+    background-image: url("src/img/Tampon_animation_15.png");
+    background-image: url("src/img/Tampon_animation_16.png");
+    background-image: url("src/img/Tampon_animation_17.png");
+    background-image: url("src/img/Tampon_animation_18.png");
+    background-image: url("src/img/Tampon_animation_19.png");
+    background-image: url("src/img/Tampon_animation_20.png");
+    background-image: url("src/img/Tampon_animation_21.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -479,94 +479,94 @@
 
 @keyframes retirer {
     0% {
-        background-image: url("src/Tampon_animation_1.png")
+        background-image: url("src/img/Tampon_animation_1.png")
     }
     2.5% {
-        background-image: url("src/Tampon_animation_2.png")
+        background-image: url("src/img/Tampon_animation_2.png")
     }
     5.5% {
-        background-image: url("src/Tampon_animation_3.png")
+        background-image: url("src/img/Tampon_animation_3.png")
     }
     7.5% {
-        background-image: url("src/Tampon_animation_4.png")
+        background-image: url("src/img/Tampon_animation_4.png")
     }
     9.5% {
-        background-image: url("src/Tampon_animation_5.png")
+        background-image: url("src/img/Tampon_animation_5.png")
     }
     11.5% {
-        background-image: url("src/Tampon_animation_6.png")
+        background-image: url("src/img/Tampon_animation_6.png")
     }
     13.5% {
-        background-image: url("src/Tampon_animation_7.png")
+        background-image: url("src/img/Tampon_animation_7.png")
     }
     15.5% {
-        background-image: url("src/Tampon_animation_8.png")
+        background-image: url("src/img/Tampon_animation_8.png")
     }
     17.5% {
-        background-image: url("src/Tampon_animation_9.png")
+        background-image: url("src/img/Tampon_animation_9.png")
     }
     19.5% {
-        background-image: url("src/Tampon_animation_10.png")
+        background-image: url("src/img/Tampon_animation_10.png")
     }
     21.5% {
-        background-image: url("src/Tampon_animation_11.png")
+        background-image: url("src/img/Tampon_animation_11.png")
     }
     23.5% {
-        background-image: url("src/Tampon_animation_12.png")
+        background-image: url("src/img/Tampon_animation_12.png")
     }
     25.5% {
-        background-image: url("src/Tampon_animation_13.png")
+        background-image: url("src/img/Tampon_animation_13.png")
     }
     27.5% {
-        background-image: url("src/Tampon_animation_14.png")
+        background-image: url("src/img/Tampon_animation_14.png")
     }
     29.5% {
-        background-image: url("src/Tampon_animation_15.png")
+        background-image: url("src/img/Tampon_animation_15.png")
     }
     31.5% {
-        background-image: url("src/Tampon_animation_16.png")
+        background-image: url("src/img/Tampon_animation_16.png")
     }
     33.5% {
-        background-image: url("src/Tampon_animation_17.png")
+        background-image: url("src/img/Tampon_animation_17.png")
     }
     35.5% {
-        background-image: url("src/Tampon_animation_18.png")
+        background-image: url("src/img/Tampon_animation_18.png")
     }
     37.5% {
-        background-image: url("src/Tampon_animation_19.png")
+        background-image: url("src/img/Tampon_animation_19.png")
     }
     39.5% {
-        background-image: url("src/Tampon_animation_20.png")
+        background-image: url("src/img/Tampon_animation_20.png")
     }
     41.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     43.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     45.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     47.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     49.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     51.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     52.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     53.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     55.5% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
     100% {
-        background-image: url("src/Tampon_animation_21.png")
+        background-image: url("src/img/Tampon_animation_21.png")
     }
 }
 
@@ -586,52 +586,52 @@
 
 @-webkit-keyframes etirer {
     0% {
-        background-image: url("src/Etirer_animation_1.png")
+        background-image: url("src/img/Etirer_animation_1.png")
     }
     6.7% {
-        background-image: url("src/Etirer_animation_2.png")
+        background-image: url("src/img/Etirer_animation_2.png")
     }
     13.4% {
-        background-image: url("src/Etirer_animation_3.png")
+        background-image: url("src/img/Etirer_animation_3.png")
     }
     20.1% {
-        background-image: url("src/Etirer_animation_4.png")
+        background-image: url("src/img/Etirer_animation_4.png")
     }
     26.8% {
-        background-image: url("src/Etirer_animation_5.png")
+        background-image: url("src/img/Etirer_animation_5.png")
     }
     33.5% {
-        background-image: url("src/Etirer_animation_6.png")
+        background-image: url("src/img/Etirer_animation_6.png")
     }
     40.2% {
-        background-image: url("src/Etirer_animation_7.png")
+        background-image: url("src/img/Etirer_animation_7.png")
     }
     46.9% {
-        background-image: url("src/Etirer_animation_8.png")
+        background-image: url("src/img/Etirer_animation_8.png")
     }
     53.6% {
-        background-image: url("src/Etirer_animation_9.png")
+        background-image: url("src/img/Etirer_animation_9.png")
     }
     60.3% {
-        background-image: url("src/Etirer_animation_10.png")
+        background-image: url("src/img/Etirer_animation_10.png")
     }
     67% {
-        background-image: url("src/Etirer_animation_11.png")
+        background-image: url("src/img/Etirer_animation_11.png")
     }
     73.7% {
-        background-image: url("src/Etirer_animation_12.png")
+        background-image: url("src/img/Etirer_animation_12.png")
     }
     80.4% {
-        background-image: url("src/Etirer_animation_13.png")
+        background-image: url("src/img/Etirer_animation_13.png")
     }
     87.1% {
-        background-image: url("src/Etirer_animation_14.png")
+        background-image: url("src/img/Etirer_animation_14.png")
     }
     93.8% {
-        background-image: url("src/Etirer_animation_15.png")
+        background-image: url("src/img/Etirer_animation_15.png")
     }
     100% {
-        background-image: url("src/Etirer_animation_16.png")
+        background-image: url("src/img/Etirer_animation_16.png")
     }
 }
 
@@ -640,73 +640,73 @@
 
 @keyframes etirer {
     0% {
-        background-image: url("src/Etirer_animation_1.png")
+        background-image: url("src/img/Etirer_animation_1.png")
     }
     6.7% {
-        background-image: url("src/Etirer_animation_2.png")
+        background-image: url("src/img/Etirer_animation_2.png")
     }
     13.4% {
-        background-image: url("src/Etirer_animation_3.png")
+        background-image: url("src/img/Etirer_animation_3.png")
     }
     20.1% {
-        background-image: url("src/Etirer_animation_4.png")
+        background-image: url("src/img/Etirer_animation_4.png")
     }
     26.8% {
-        background-image: url("src/Etirer_animation_5.png")
+        background-image: url("src/img/Etirer_animation_5.png")
     }
     33.5% {
-        background-image: url("src/Etirer_animation_6.png")
+        background-image: url("src/img/Etirer_animation_6.png")
     }
     40.2% {
-        background-image: url("src/Etirer_animation_7.png")
+        background-image: url("src/img/Etirer_animation_7.png")
     }
     46.9% {
-        background-image: url("src/Etirer_animation_8.png")
+        background-image: url("src/img/Etirer_animation_8.png")
     }
     53.6% {
-        background-image: url("src/Etirer_animation_9.png")
+        background-image: url("src/img/Etirer_animation_9.png")
     }
     60.3% {
-        background-image: url("src/Etirer_animation_10.png")
+        background-image: url("src/img/Etirer_animation_10.png")
     }
     67% {
-        background-image: url("src/Etirer_animation_11.png")
+        background-image: url("src/img/Etirer_animation_11.png")
     }
     73.7% {
-        background-image: url("src/Etirer_animation_12.png")
+        background-image: url("src/img/Etirer_animation_12.png")
     }
     80.4% {
-        background-image: url("src/Etirer_animation_13.png")
+        background-image: url("src/img/Etirer_animation_13.png")
     }
     87.1% {
-        background-image: url("src/Etirer_animation_14.png")
+        background-image: url("src/img/Etirer_animation_14.png")
     }
     93.8% {
-        background-image: url("src/Etirer_animation_15.png")
+        background-image: url("src/img/Etirer_animation_15.png")
     }
     100% {
-        background-image: url("src/Etirer_animation_16.png")
+        background-image: url("src/img/Etirer_animation_16.png")
     }
 }
 
 .etirer {
     border-radius: 50%;
-    background-image: url("src/Etirer_animation_1.png");
-    background-image: url("src/Etirer_animation_2.png");
-    background-image: url("src/Etirer_animation_3.png");
-    background-image: url("src/Etirer_animation_4.png");
-    background-image: url("src/Etirer_animation_5.png");
-    background-image: url("src/Etirer_animation_6.png");
-    background-image: url("src/Etirer_animation_7.png");
-    background-image: url("src/Etirer_animation_8.png");
-    background-image: url("src/Etirer_animation_9.png");
-    background-image: url("src/Etirer_animation_10.png");
-    background-image: url("src/Etirer_animation_11.png");
-    background-image: url("src/Etirer_animation_12.png");
-    background-image: url("src/Etirer_animation_13.png");
-    background-image: url("src/Etirer_animation_14.png");
-    background-image: url("src/Etirer_animation_15.png");
-    background-image: url("src/Etirer_animation_16.png");
+    background-image: url("src/img/Etirer_animation_1.png");
+    background-image: url("src/img/Etirer_animation_2.png");
+    background-image: url("src/img/Etirer_animation_3.png");
+    background-image: url("src/img/Etirer_animation_4.png");
+    background-image: url("src/img/Etirer_animation_5.png");
+    background-image: url("src/img/Etirer_animation_6.png");
+    background-image: url("src/img/Etirer_animation_7.png");
+    background-image: url("src/img/Etirer_animation_8.png");
+    background-image: url("src/img/Etirer_animation_9.png");
+    background-image: url("src/img/Etirer_animation_10.png");
+    background-image: url("src/img/Etirer_animation_11.png");
+    background-image: url("src/img/Etirer_animation_12.png");
+    background-image: url("src/img/Etirer_animation_13.png");
+    background-image: url("src/img/Etirer_animation_14.png");
+    background-image: url("src/img/Etirer_animation_15.png");
+    background-image: url("src/img/Etirer_animation_16.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -727,49 +727,49 @@
 
 @-webkit-keyframes dessiner {
     0% {
-        background-image: url("src/Dessiner_animation_1.png")
+        background-image: url("src/img/Dessiner_animation_1.png")
     }
     7.1% {
-        background-image: url("src/Dessiner_animation_2.png")
+        background-image: url("src/img/Dessiner_animation_2.png")
     }
     14.2% {
-        background-image: url("src/Dessiner_animation_3.png")
+        background-image: url("src/img/Dessiner_animation_3.png")
     }
     21.3% {
-        background-image: url("src/Dessiner_animation_4.png")
+        background-image: url("src/img/Dessiner_animation_4.png")
     }
     28.4% {
-        background-image: url("src/Dessiner_animation_5.png")
+        background-image: url("src/img/Dessiner_animation_5.png")
     }
     35.5% {
-        background-image: url("src/Dessiner_animation_6.png")
+        background-image: url("src/img/Dessiner_animation_6.png")
     }
     42.6% {
-        background-image: url("src/Dessiner_animation_7.png")
+        background-image: url("src/img/Dessiner_animation_7.png")
     }
     49.7% {
-        background-image: url("src/Dessiner_animation_8.png")
+        background-image: url("src/img/Dessiner_animation_8.png")
     }
     56.8% {
-        background-image: url("src/Dessiner_animation_9.png")
+        background-image: url("src/img/Dessiner_animation_9.png")
     }
     63.9% {
-        background-image: url("src/Dessiner_animation_10.png")
+        background-image: url("src/img/Dessiner_animation_10.png")
     }
     71% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     78.1% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     85.2% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     92.3% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     100% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
 }
 
@@ -778,65 +778,65 @@
 
 @keyframes dessiner {
     0% {
-        background-image: url("src/Dessiner_animation_1.png")
+        background-image: url("src/img/Dessiner_animation_1.png")
     }
     7.1% {
-        background-image: url("src/Dessiner_animation_2.png")
+        background-image: url("src/img/Dessiner_animation_2.png")
     }
     14.2% {
-        background-image: url("src/Dessiner_animation_3.png")
+        background-image: url("src/img/Dessiner_animation_3.png")
     }
     21.3% {
-        background-image: url("src/Dessiner_animation_4.png")
+        background-image: url("src/img/Dessiner_animation_4.png")
     }
     28.4% {
-        background-image: url("src/Dessiner_animation_5.png")
+        background-image: url("src/img/Dessiner_animation_5.png")
     }
     35.5% {
-        background-image: url("src/Dessiner_animation_6.png")
+        background-image: url("src/img/Dessiner_animation_6.png")
     }
     42.6% {
-        background-image: url("src/Dessiner_animation_7.png")
+        background-image: url("src/img/Dessiner_animation_7.png")
     }
     49.7% {
-        background-image: url("src/Dessiner_animation_8.png")
+        background-image: url("src/img/Dessiner_animation_8.png")
     }
     56.8% {
-        background-image: url("src/Dessiner_animation_9.png")
+        background-image: url("src/img/Dessiner_animation_9.png")
     }
     63.9% {
-        background-image: url("src/Dessiner_animation_10.png")
+        background-image: url("src/img/Dessiner_animation_10.png")
     }
     71% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     78.1% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     85.2% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     92.3% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
     100% {
-        background-image: url("src/Dessiner_animation_11.png")
+        background-image: url("src/img/Dessiner_animation_11.png")
     }
 }
 
 .dessiner {
     border-radius: 50%;
-    background-image: url("src/Dessiner_animation_1.png");
-    background-image: url("src/Dessiner_animation_2.png");
-    background-image: url("src/Dessiner_animation_3.png");
-    background-image: url("src/Dessiner_animation_4.png");
-    background-image: url("src/Dessiner_animation_5.png");
-    background-image: url("src/Dessiner_animation_6.png");
-    background-image: url("src/Dessiner_animation_7.png");
-    background-image: url("src/Dessiner_animation_8.png");
-    background-image: url("src/Dessiner_animation_9.png");
-    background-image: url("src/Dessiner_animation_10.png");
-    background-image: url("src/Dessiner_animation_11.png");
+    background-image: url("src/img/Dessiner_animation_1.png");
+    background-image: url("src/img/Dessiner_animation_2.png");
+    background-image: url("src/img/Dessiner_animation_3.png");
+    background-image: url("src/img/Dessiner_animation_4.png");
+    background-image: url("src/img/Dessiner_animation_5.png");
+    background-image: url("src/img/Dessiner_animation_6.png");
+    background-image: url("src/img/Dessiner_animation_7.png");
+    background-image: url("src/img/Dessiner_animation_8.png");
+    background-image: url("src/img/Dessiner_animation_9.png");
+    background-image: url("src/img/Dessiner_animation_10.png");
+    background-image: url("src/img/Dessiner_animation_11.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -857,49 +857,49 @@
 
 @-webkit-keyframes creuser {
     0% {
-        background-image: url("src/Creuser_animation_1.png")
+        background-image: url("src/img/Creuser_animation_1.png")
     }
     7.1% {
-        background-image: url("src/Creuser_animation_2.png")
+        background-image: url("src/img/Creuser_animation_2.png")
     }
     14.2% {
-        background-image: url("src/Creuser_animation_3.png")
+        background-image: url("src/img/Creuser_animation_3.png")
     }
     21.3% {
-        background-image: url("src/Creuser_animation_4.png")
+        background-image: url("src/img/Creuser_animation_4.png")
     }
     28.4% {
-        background-image: url("src/Creuser_animation_5.png")
+        background-image: url("src/img/Creuser_animation_5.png")
     }
     35.5% {
-        background-image: url("src/Creuser_animation_6.png")
+        background-image: url("src/img/Creuser_animation_6.png")
     }
     42.6% {
-        background-image: url("src/Creuser_animation_7.png")
+        background-image: url("src/img/Creuser_animation_7.png")
     }
     49.7% {
-        background-image: url("src/Creuser_animation_8.png")
+        background-image: url("src/img/Creuser_animation_8.png")
     }
     56.8% {
-        background-image: url("src/Creuser_animation_9.png")
+        background-image: url("src/img/Creuser_animation_9.png")
     }
     63.9% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     71% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     78.1% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     85.2% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     92.3% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     100% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
 }
 
@@ -908,49 +908,49 @@
 
 @keyframes creuser {
     0% {
-        background-image: url("src/Creuser_animation_1.png")
+        background-image: url("src/img/Creuser_animation_1.png")
     }
     7.1% {
-        background-image: url("src/Creuser_animation_2.png")
+        background-image: url("src/img/Creuser_animation_2.png")
     }
     14.2% {
-        background-image: url("src/Creuser_animation_3.png")
+        background-image: url("src/img/Creuser_animation_3.png")
     }
     21.3% {
-        background-image: url("src/Creuser_animation_4.png")
+        background-image: url("src/img/Creuser_animation_4.png")
     }
     28.4% {
-        background-image: url("src/Creuser_animation_5.png")
+        background-image: url("src/img/Creuser_animation_5.png")
     }
     35.5% {
-        background-image: url("src/Creuser_animation_6.png")
+        background-image: url("src/img/Creuser_animation_6.png")
     }
     42.6% {
-        background-image: url("src/Creuser_animation_7.png")
+        background-image: url("src/img/Creuser_animation_7.png")
     }
     49.7% {
-        background-image: url("src/Creuser_animation_8.png")
+        background-image: url("src/img/Creuser_animation_8.png")
     }
     56.8% {
-        background-image: url("src/Creuser_animation_9.png")
+        background-image: url("src/img/Creuser_animation_9.png")
     }
     63.9% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     71% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     78.1% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     85.2% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     92.3% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
     100% {
-        background-image: url("src/Creuser_animation_10.png")
+        background-image: url("src/img/Creuser_animation_10.png")
     }
 }
 
@@ -960,7 +960,7 @@
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
-    background-image: url("src/Creuser_animation_1.png");
+    background-image: url("src/img/Creuser_animation_1.png");
     background-position-y: 0px;
 }
 
@@ -980,94 +980,94 @@
 
 @-webkit-keyframes mirroir {
     0% {
-        background-image: url("src/Mirroir_animation_1.png")
+        background-image: url("src/img/Mirroir_animation_1.png")
     }
     3.4% {
-        background-image: url("src/Mirroir_animation_2.png")
+        background-image: url("src/img/Mirroir_animation_2.png")
     }
     6.8% {
-        background-image: url("src/Mirroir_animation_3.png")
+        background-image: url("src/img/Mirroir_animation_3.png")
     }
     10.2% {
-        background-image: url("src/Mirroir_animation_4.png")
+        background-image: url("src/img/Mirroir_animation_4.png")
     }
     13.6% {
-        background-image: url("src/Mirroir_animation_5.png")
+        background-image: url("src/img/Mirroir_animation_5.png")
     }
     17% {
-        background-image: url("src/Mirroir_animation_6.png")
+        background-image: url("src/img/Mirroir_animation_6.png")
     }
     20.4% {
-        background-image: url("src/Mirroir_animation_7.png")
+        background-image: url("src/img/Mirroir_animation_7.png")
     }
     23.8% {
-        background-image: url("src/Mirroir_animation_8.png")
+        background-image: url("src/img/Mirroir_animation_8.png")
     }
     27.2% {
-        background-image: url("src/Mirroir_animation_9.png")
+        background-image: url("src/img/Mirroir_animation_9.png")
     }
     30.6% {
-        background-image: url("src/Mirroir_animation_10.png")
+        background-image: url("src/img/Mirroir_animation_10.png")
     }
     34% {
-        background-image: url("src/Mirroir_animation_11.png")
+        background-image: url("src/img/Mirroir_animation_11.png")
     }
     37.4% {
-        background-image: url("src/Mirroir_animation_12.png")
+        background-image: url("src/img/Mirroir_animation_12.png")
     }
     40.8% {
-        background-image: url("src/Mirroir_animation_13.png")
+        background-image: url("src/img/Mirroir_animation_13.png")
     }
     44.2% {
-        background-image: url("src/Mirroir_animation_14.png")
+        background-image: url("src/img/Mirroir_animation_14.png")
     }
     47.6% {
-        background-image: url("src/Mirroir_animation_15.png")
+        background-image: url("src/img/Mirroir_animation_15.png")
     }
     51% {
-        background-image: url("src/Mirroir_animation_16.png")
+        background-image: url("src/img/Mirroir_animation_16.png")
     }
     54.4% {
-        background-image: url("src/Mirroir_animation_17.png")
+        background-image: url("src/img/Mirroir_animation_17.png")
     }
     57.8% {
-        background-image: url("src/Mirroir_animation_18.png")
+        background-image: url("src/img/Mirroir_animation_18.png")
     }
     61.2% {
-        background-image: url("src/Mirroir_animation_19.png")
+        background-image: url("src/img/Mirroir_animation_19.png")
     }
     64.6% {
-        background-image: url("src/Mirroir_animation_20.png")
+        background-image: url("src/img/Mirroir_animation_20.png")
     }
     68% {
-        background-image: url("src/Mirroir_animation_21.png")
+        background-image: url("src/img/Mirroir_animation_21.png")
     }
     71.4% {
-        background-image: url("src/Mirroir_animation_22.png")
+        background-image: url("src/img/Mirroir_animation_22.png")
     }
     74.8% {
-        background-image: url("src/Mirroir_animation_23.png")
+        background-image: url("src/img/Mirroir_animation_23.png")
     }
     78.2% {
-        background-image: url("src/Mirroir_animation_24.png")
+        background-image: url("src/img/Mirroir_animation_24.png")
     }
     81.6% {
-        background-image: url("src/Mirroir_animation_25.png")
+        background-image: url("src/img/Mirroir_animation_25.png")
     }
     85% {
-        background-image: url("src/Mirroir_animation_26.png")
+        background-image: url("src/img/Mirroir_animation_26.png")
     }
     88.4% {
-        background-image: url("src/Mirroir_animation_27.png")
+        background-image: url("src/img/Mirroir_animation_27.png")
     }
     91.8% {
-        background-image: url("src/Mirroir_animation_28.png")
+        background-image: url("src/img/Mirroir_animation_28.png")
     }
     95.2% {
-        background-image: url("src/Mirroir_animation_29.png")
+        background-image: url("src/img/Mirroir_animation_29.png")
     }
     100% {
-        background-image: url("src/Mirroir_animation_30.png")
+        background-image: url("src/img/Mirroir_animation_30.png")
     }
 }
 
@@ -1076,94 +1076,94 @@
 
 @keyframes mirroir {
     0% {
-        background-image: url("src/Mirroir_animation_1.png")
+        background-image: url("src/img/Mirroir_animation_1.png")
     }
     3.4% {
-        background-image: url("src/Mirroir_animation_2.png")
+        background-image: url("src/img/Mirroir_animation_2.png")
     }
     6.8% {
-        background-image: url("src/Mirroir_animation_3.png")
+        background-image: url("src/img/Mirroir_animation_3.png")
     }
     10.2% {
-        background-image: url("src/Mirroir_animation_4.png")
+        background-image: url("src/img/Mirroir_animation_4.png")
     }
     13.6% {
-        background-image: url("src/Mirroir_animation_5.png")
+        background-image: url("src/img/Mirroir_animation_5.png")
     }
     17% {
-        background-image: url("src/Mirroir_animation_6.png")
+        background-image: url("src/img/Mirroir_animation_6.png")
     }
     20.4% {
-        background-image: url("src/Mirroir_animation_7.png")
+        background-image: url("src/img/Mirroir_animation_7.png")
     }
     23.8% {
-        background-image: url("src/Mirroir_animation_8.png")
+        background-image: url("src/img/Mirroir_animation_8.png")
     }
     27.2% {
-        background-image: url("src/Mirroir_animation_9.png")
+        background-image: url("src/img/Mirroir_animation_9.png")
     }
     30.6% {
-        background-image: url("src/Mirroir_animation_10.png")
+        background-image: url("src/img/Mirroir_animation_10.png")
     }
     34% {
-        background-image: url("src/Mirroir_animation_11.png")
+        background-image: url("src/img/Mirroir_animation_11.png")
     }
     37.4% {
-        background-image: url("src/Mirroir_animation_12.png")
+        background-image: url("src/img/Mirroir_animation_12.png")
     }
     40.8% {
-        background-image: url("src/Mirroir_animation_13.png")
+        background-image: url("src/img/Mirroir_animation_13.png")
     }
     44.2% {
-        background-image: url("src/Mirroir_animation_14.png")
+        background-image: url("src/img/Mirroir_animation_14.png")
     }
     47.6% {
-        background-image: url("src/Mirroir_animation_15.png")
+        background-image: url("src/img/Mirroir_animation_15.png")
     }
     51% {
-        background-image: url("src/Mirroir_animation_16.png")
+        background-image: url("src/img/Mirroir_animation_16.png")
     }
     54.4% {
-        background-image: url("src/Mirroir_animation_17.png")
+        background-image: url("src/img/Mirroir_animation_17.png")
     }
     57.8% {
-        background-image: url("src/Mirroir_animation_18.png")
+        background-image: url("src/img/Mirroir_animation_18.png")
     }
     61.2% {
-        background-image: url("src/Mirroir_animation_19.png")
+        background-image: url("src/img/Mirroir_animation_19.png")
     }
     64.6% {
-        background-image: url("src/Mirroir_animation_20.png")
+        background-image: url("src/img/Mirroir_animation_20.png")
     }
     68% {
-        background-image: url("src/Mirroir_animation_21.png")
+        background-image: url("src/img/Mirroir_animation_21.png")
     }
     71.4% {
-        background-image: url("src/Mirroir_animation_22.png")
+        background-image: url("src/img/Mirroir_animation_22.png")
     }
     74.8% {
-        background-image: url("src/Mirroir_animation_23.png")
+        background-image: url("src/img/Mirroir_animation_23.png")
     }
     78.2% {
-        background-image: url("src/Mirroir_animation_24.png")
+        background-image: url("src/img/Mirroir_animation_24.png")
     }
     81.6% {
-        background-image: url("src/Mirroir_animation_25.png")
+        background-image: url("src/img/Mirroir_animation_25.png")
     }
     85% {
-        background-image: url("src/Mirroir_animation_26.png")
+        background-image: url("src/img/Mirroir_animation_26.png")
     }
     88.4% {
-        background-image: url("src/Mirroir_animation_27.png")
+        background-image: url("src/img/Mirroir_animation_27.png")
     }
     91.8% {
-        background-image: url("src/Mirroir_animation_28.png")
+        background-image: url("src/img/Mirroir_animation_28.png")
     }
     95.2% {
-        background-image: url("src/Mirroir_animation_29.png")
+        background-image: url("src/img/Mirroir_animation_29.png")
     }
     100% {
-        background-image: url("src/Mirroir_animation_30.png")
+        background-image: url("src/img/Mirroir_animation_30.png")
     }
 }
 
@@ -1174,36 +1174,36 @@
     background-size: 100%;
     border-radius: 400px;
     position: absolute;
-    background-image: url("src/Mirroir_animation_1.png");
-    background-image: url("src/Mirroir_animation_2.png");
-    background-image: url("src/Mirroir_animation_3.png");
-    background-image: url("src/Mirroir_animation_4.png");
-    background-image: url("src/Mirroir_animation_5.png");
-    background-image: url("src/Mirroir_animation_6.png");
-    background-image: url("src/Mirroir_animation_7.png");
-    background-image: url("src/Mirroir_animation_8.png");
-    background-image: url("src/Mirroir_animation_9.png");
-    background-image: url("src/Mirroir_animation_10.png");
-    background-image: url("src/Mirroir_animation_11.png");
-    background-image: url("src/Mirroir_animation_12.png");
-    background-image: url("src/Mirroir_animation_13.png");
-    background-image: url("src/Mirroir_animation_14.png");
-    background-image: url("src/Mirroir_animation_15.png");
-    background-image: url("src/Mirroir_animation_16.png");
-    background-image: url("src/Mirroir_animation_17.png");
-    background-image: url("src/Mirroir_animation_18.png");
-    background-image: url("src/Mirroir_animation_19.png");
-    background-image: url("src/Mirroir_animation_20.png");
-    background-image: url("src/Mirroir_animation_21.png");
-    background-image: url("src/Mirroir_animation_22.png");
-    background-image: url("src/Mirroir_animation_23.png");
-    background-image: url("src/Mirroir_animation_24.png");
-    background-image: url("src/Mirroir_animation_25.png");
-    background-image: url("src/Mirroir_animation_26.png");
-    background-image: url("src/Mirroir_animation_27.png");
-    background-image: url("src/Mirroir_animation_28.png");
-    background-image: url("src/Mirroir_animation_29.png");
-    background-image: url("src/Mirroir_animation_30.png");
+    background-image: url("src/img/Mirroir_animation_1.png");
+    background-image: url("src/img/Mirroir_animation_2.png");
+    background-image: url("src/img/Mirroir_animation_3.png");
+    background-image: url("src/img/Mirroir_animation_4.png");
+    background-image: url("src/img/Mirroir_animation_5.png");
+    background-image: url("src/img/Mirroir_animation_6.png");
+    background-image: url("src/img/Mirroir_animation_7.png");
+    background-image: url("src/img/Mirroir_animation_8.png");
+    background-image: url("src/img/Mirroir_animation_9.png");
+    background-image: url("src/img/Mirroir_animation_10.png");
+    background-image: url("src/img/Mirroir_animation_11.png");
+    background-image: url("src/img/Mirroir_animation_12.png");
+    background-image: url("src/img/Mirroir_animation_13.png");
+    background-image: url("src/img/Mirroir_animation_14.png");
+    background-image: url("src/img/Mirroir_animation_15.png");
+    background-image: url("src/img/Mirroir_animation_16.png");
+    background-image: url("src/img/Mirroir_animation_17.png");
+    background-image: url("src/img/Mirroir_animation_18.png");
+    background-image: url("src/img/Mirroir_animation_19.png");
+    background-image: url("src/img/Mirroir_animation_20.png");
+    background-image: url("src/img/Mirroir_animation_21.png");
+    background-image: url("src/img/Mirroir_animation_22.png");
+    background-image: url("src/img/Mirroir_animation_23.png");
+    background-image: url("src/img/Mirroir_animation_24.png");
+    background-image: url("src/img/Mirroir_animation_25.png");
+    background-image: url("src/img/Mirroir_animation_26.png");
+    background-image: url("src/img/Mirroir_animation_27.png");
+    background-image: url("src/img/Mirroir_animation_28.png");
+    background-image: url("src/img/Mirroir_animation_29.png");
+    background-image: url("src/img/Mirroir_animation_30.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -1224,67 +1224,67 @@
 
 @-webkit-keyframes galerie {
     0% {
-        background-image: url("src/Galerie_animation_1.png")
+        background-image: url("src/img/Galerie_animation_1.png")
     }
     5% {
-        background-image: url("src/Galerie_animation_2.png")
+        background-image: url("src/img/Galerie_animation_2.png")
     }
     10% {
-        background-image: url("src/Galerie_animation_3.png")
+        background-image: url("src/img/Galerie_animation_3.png")
     }
     15% {
-        background-image: url("src/Galerie_animation_4.png")
+        background-image: url("src/img/Galerie_animation_4.png")
     }
     20% {
-        background-image: url("src/Galerie_animation_5.png")
+        background-image: url("src/img/Galerie_animation_5.png")
     }
     25% {
-        background-image: url("src/Galerie_animation_6.png")
+        background-image: url("src/img/Galerie_animation_6.png")
     }
     30% {
-        background-image: url("src/Galerie_animation_7.png")
+        background-image: url("src/img/Galerie_animation_7.png")
     }
     35% {
-        background-image: url("src/Galerie_animation_8.png")
+        background-image: url("src/img/Galerie_animation_8.png")
     }
     40% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     45% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     50% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     55% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     60% {
-        background-image: url("src/Galerie_animation_10.png")
+        background-image: url("src/img/Galerie_animation_10.png")
     }
     65% {
-        background-image: url("src/Galerie_animation_11.png")
+        background-image: url("src/img/Galerie_animation_11.png")
     }
     70% {
-        background-image: url("src/Galerie_animation_12.png")
+        background-image: url("src/img/Galerie_animation_12.png")
     }
     75% {
-        background-image: url("src/Galerie_animation_13.png")
+        background-image: url("src/img/Galerie_animation_13.png")
     }
     80% {
-        background-image: url("src/Galerie_animation_14.png")
+        background-image: url("src/img/Galerie_animation_14.png")
     }
     85% {
-        background-image: url("src/Galerie_animation_15.png")
+        background-image: url("src/img/Galerie_animation_15.png")
     }
     90% {
-        background-image: url("src/Galerie_animation_16.png")
+        background-image: url("src/img/Galerie_animation_16.png")
     }
     95% {
-        background-image: url("src/Galerie_animation_17.png")
+        background-image: url("src/img/Galerie_animation_17.png")
     }
     100% {
-        background-image: url("src/Galerie_animation_18.png")
+        background-image: url("src/img/Galerie_animation_18.png")
     }
 }
 
@@ -1293,67 +1293,67 @@
 
 @keyframes galerie {
     0% {
-        background-image: url("src/Galerie_animation_1.png")
+        background-image: url("src/img/Galerie_animation_1.png")
     }
     5% {
-        background-image: url("src/Galerie_animation_2.png")
+        background-image: url("src/img/Galerie_animation_2.png")
     }
     10% {
-        background-image: url("src/Galerie_animation_3.png")
+        background-image: url("src/img/Galerie_animation_3.png")
     }
     15% {
-        background-image: url("src/Galerie_animation_4.png")
+        background-image: url("src/img/Galerie_animation_4.png")
     }
     20% {
-        background-image: url("src/Galerie_animation_5.png")
+        background-image: url("src/img/Galerie_animation_5.png")
     }
     25% {
-        background-image: url("src/Galerie_animation_6.png")
+        background-image: url("src/img/Galerie_animation_6.png")
     }
     30% {
-        background-image: url("src/Galerie_animation_7.png")
+        background-image: url("src/img/Galerie_animation_7.png")
     }
     35% {
-        background-image: url("src/Galerie_animation_8.png")
+        background-image: url("src/img/Galerie_animation_8.png")
     }
     40% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     45% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     50% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     55% {
-        background-image: url("src/Galerie_animation_9.png")
+        background-image: url("src/img/Galerie_animation_9.png")
     }
     60% {
-        background-image: url("src/Galerie_animation_10.png")
+        background-image: url("src/img/Galerie_animation_10.png")
     }
     65% {
-        background-image: url("src/Galerie_animation_11.png")
+        background-image: url("src/img/Galerie_animation_11.png")
     }
     70% {
-        background-image: url("src/Galerie_animation_12.png")
+        background-image: url("src/img/Galerie_animation_12.png")
     }
     75% {
-        background-image: url("src/Galerie_animation_13.png")
+        background-image: url("src/img/Galerie_animation_13.png")
     }
     80% {
-        background-image: url("src/Galerie_animation_14.png")
+        background-image: url("src/img/Galerie_animation_14.png")
     }
     85% {
-        background-image: url("src/Galerie_animation_15.png")
+        background-image: url("src/img/Galerie_animation_15.png")
     }
     90% {
-        background-image: url("src/Galerie_animation_16.png")
+        background-image: url("src/img/Galerie_animation_16.png")
     }
     95% {
-        background-image: url("src/Galerie_animation_17.png")
+        background-image: url("src/img/Galerie_animation_17.png")
     }
     100% {
-        background-image: url("src/Galerie_animation_18.png")
+        background-image: url("src/img/Galerie_animation_18.png")
     }
 }
 
@@ -1363,24 +1363,24 @@
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
-    background-image: url("src/Galerie_animation_1.png");
-    background-image: url("src/Galerie_animation_2.png");
-    background-image: url("src/Galerie_animation_3.png");
-    background-image: url("src/Galerie_animation_4.png");
-    background-image: url("src/Galerie_animation_5.png");
-    background-image: url("src/Galerie_animation_6.png");
-    background-image: url("src/Galerie_animation_7.png");
-    background-image: url("src/Galerie_animation_8.png");
-    background-image: url("src/Galerie_animation_9.png");
-    background-image: url("src/Galerie_animation_10.png");
-    background-image: url("src/Galerie_animation_11.png");
-    background-image: url("src/Galerie_animation_12.png");
-    background-image: url("src/Galerie_animation_13.png");
-    background-image: url("src/Galerie_animation_14.png");
-    background-image: url("src/Galerie_animation_15.png");
-    background-image: url("src/Galerie_animation_16.png");
-    background-image: url("src/Galerie_animation_17.png");
-    background-image: url("src/Galerie_animation_18.png");
+    background-image: url("src/img/Galerie_animation_1.png");
+    background-image: url("src/img/Galerie_animation_2.png");
+    background-image: url("src/img/Galerie_animation_3.png");
+    background-image: url("src/img/Galerie_animation_4.png");
+    background-image: url("src/img/Galerie_animation_5.png");
+    background-image: url("src/img/Galerie_animation_6.png");
+    background-image: url("src/img/Galerie_animation_7.png");
+    background-image: url("src/img/Galerie_animation_8.png");
+    background-image: url("src/img/Galerie_animation_9.png");
+    background-image: url("src/img/Galerie_animation_10.png");
+    background-image: url("src/img/Galerie_animation_11.png");
+    background-image: url("src/img/Galerie_animation_12.png");
+    background-image: url("src/img/Galerie_animation_13.png");
+    background-image: url("src/img/Galerie_animation_14.png");
+    background-image: url("src/img/Galerie_animation_15.png");
+    background-image: url("src/img/Galerie_animation_16.png");
+    background-image: url("src/img/Galerie_animation_17.png");
+    background-image: url("src/img/Galerie_animation_18.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -1401,67 +1401,67 @@
 
 @-webkit-keyframes imprimer {
     0% {
-        background-image: url("src/Imprimer_animation_1.png")
+        background-image: url("src/img/Imprimer_animation_1.png")
     }
     5% {
-        background-image: url("src/Imprimer_animation_2.png")
+        background-image: url("src/img/Imprimer_animation_2.png")
     }
     10% {
-        background-image: url("src/Imprimer_animation_3.png")
+        background-image: url("src/img/Imprimer_animation_3.png")
     }
     15% {
-        background-image: url("src/Imprimer_animation_4.png")
+        background-image: url("src/img/Imprimer_animation_4.png")
     }
     20% {
-        background-image: url("src/Imprimer_animation_5.png")
+        background-image: url("src/img/Imprimer_animation_5.png")
     }
     25% {
-        background-image: url("src/Imprimer_animation_6.png")
+        background-image: url("src/img/Imprimer_animation_6.png")
     }
     30% {
-        background-image: url("src/Imprimer_animation_7.png")
+        background-image: url("src/img/Imprimer_animation_7.png")
     }
     35% {
-        background-image: url("src/Imprimer_animation_8.png")
+        background-image: url("src/img/Imprimer_animation_8.png")
     }
     40% {
-        background-image: url("src/Imprimer_animation_9.png")
+        background-image: url("src/img/Imprimer_animation_9.png")
     }
     45% {
-        background-image: url("src/Imprimer_animation_10.png")
+        background-image: url("src/img/Imprimer_animation_10.png")
     }
     50% {
-        background-image: url("src/Imprimer_animation_11.png")
+        background-image: url("src/img/Imprimer_animation_11.png")
     }
     55% {
-        background-image: url("src/Imprimer_animation_12.png")
+        background-image: url("src/img/Imprimer_animation_12.png")
     }
     60% {
-        background-image: url("src/Imprimer_animation_13.png")
+        background-image: url("src/img/Imprimer_animation_13.png")
     }
     65% {
-        background-image: url("src/Imprimer_animation_14.png")
+        background-image: url("src/img/Imprimer_animation_14.png")
     }
     70% {
-        background-image: url("src/Imprimer_animation_15.png")
+        background-image: url("src/img/Imprimer_animation_15.png")
     }
     75% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     80% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     85% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     90% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     95% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     100% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
 }
 
@@ -1470,67 +1470,67 @@
 
 @keyframes imprimer {
     0% {
-        background-image: url("src/Imprimer_animation_1.png")
+        background-image: url("src/img/Imprimer_animation_1.png")
     }
     5% {
-        background-image: url("src/Imprimer_animation_2.png")
+        background-image: url("src/img/Imprimer_animation_2.png")
     }
     10% {
-        background-image: url("src/Imprimer_animation_3.png")
+        background-image: url("src/img/Imprimer_animation_3.png")
     }
     15% {
-        background-image: url("src/Imprimer_animation_4.png")
+        background-image: url("src/img/Imprimer_animation_4.png")
     }
     20% {
-        background-image: url("src/Imprimer_animation_5.png")
+        background-image: url("src/img/Imprimer_animation_5.png")
     }
     25% {
-        background-image: url("src/Imprimer_animation_6.png")
+        background-image: url("src/img/Imprimer_animation_6.png")
     }
     30% {
-        background-image: url("src/Imprimer_animation_7.png")
+        background-image: url("src/img/Imprimer_animation_7.png")
     }
     35% {
-        background-image: url("src/Imprimer_animation_8.png")
+        background-image: url("src/img/Imprimer_animation_8.png")
     }
     40% {
-        background-image: url("src/Imprimer_animation_9.png")
+        background-image: url("src/img/Imprimer_animation_9.png")
     }
     45% {
-        background-image: url("src/Imprimer_animation_10.png")
+        background-image: url("src/img/Imprimer_animation_10.png")
     }
     50% {
-        background-image: url("src/Imprimer_animation_11.png")
+        background-image: url("src/img/Imprimer_animation_11.png")
     }
     55% {
-        background-image: url("src/Imprimer_animation_12.png")
+        background-image: url("src/img/Imprimer_animation_12.png")
     }
     60% {
-        background-image: url("src/Imprimer_animation_13.png")
+        background-image: url("src/img/Imprimer_animation_13.png")
     }
     65% {
-        background-image: url("src/Imprimer_animation_14.png")
+        background-image: url("src/img/Imprimer_animation_14.png")
     }
     70% {
-        background-image: url("src/Imprimer_animation_15.png")
+        background-image: url("src/img/Imprimer_animation_15.png")
     }
     75% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     80% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     85% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     90% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     95% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
     100% {
-        background-image: url("src/Imprimer_animation_16.png")
+        background-image: url("src/img/Imprimer_animation_16.png")
     }
 }
 
@@ -1541,22 +1541,22 @@
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
-    background-image: url("src/Imprimer_animation_1.png");
-    background-image: url("src/Imprimer_animation_2.png");
-    background-image: url("src/Imprimer_animation_3.png");
-    background-image: url("src/Imprimer_animation_4.png");
-    background-image: url("src/Imprimer_animation_5.png");
-    background-image: url("src/Imprimer_animation_6.png");
-    background-image: url("src/Imprimer_animation_7.png");
-    background-image: url("src/Imprimer_animation_8.png");
-    background-image: url("src/Imprimer_animation_9.png");
-    background-image: url("src/Imprimer_animation_10.png");
-    background-image: url("src/Imprimer_animation_11.png");
-    background-image: url("src/Imprimer_animation_12.png");
-    background-image: url("src/Imprimer_animation_13.png");
-    background-image: url("src/Imprimer_animation_14.png");
-    background-image: url("src/Imprimer_animation_15.png");
-    background-image: url("src/Imprimer_animation_16.png");
+    background-image: url("src/img/Imprimer_animation_1.png");
+    background-image: url("src/img/Imprimer_animation_2.png");
+    background-image: url("src/img/Imprimer_animation_3.png");
+    background-image: url("src/img/Imprimer_animation_4.png");
+    background-image: url("src/img/Imprimer_animation_5.png");
+    background-image: url("src/img/Imprimer_animation_6.png");
+    background-image: url("src/img/Imprimer_animation_7.png");
+    background-image: url("src/img/Imprimer_animation_8.png");
+    background-image: url("src/img/Imprimer_animation_9.png");
+    background-image: url("src/img/Imprimer_animation_10.png");
+    background-image: url("src/img/Imprimer_animation_11.png");
+    background-image: url("src/img/Imprimer_animation_12.png");
+    background-image: url("src/img/Imprimer_animation_13.png");
+    background-image: url("src/img/Imprimer_animation_14.png");
+    background-image: url("src/img/Imprimer_animation_15.png");
+    background-image: url("src/img/Imprimer_animation_16.png");
     background-position-x: 0px;
     background-position-y: 0px;
 }
@@ -1782,7 +1782,7 @@ body {
     bottom: 3%;
     align-items: center;
     justify-content: space-around;
-    background-image: url("src/1_BAR.png");
+    background-image: url("src/img/1_BAR.png");
     background-size: contain;
     border-radius: 50px;
     background-repeat: no-repeat;
@@ -1821,7 +1821,7 @@ input[type="checkbox"] {
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
-    background-image: url("src/FullSCREEN.png");
+    background-image: url("src/img/FullSCREEN.png");
 }
 
 .ajousoous {
@@ -1830,7 +1830,7 @@ input[type="checkbox"] {
     height: 100px;
     background-size: 100%;
     border-radius: 400px;
-    background-image: url("src/ajouter_soustraire.png");
+    background-image: url("src/img/ajouter_soustraire.png");
 }
 
 .popup {
@@ -1924,7 +1924,7 @@ input[type="checkbox"] {
     bottom: 17%;
     align-items: center;
     justify-content: space-around;
-    background-image: url("src/3_BARRE.png");
+    background-image: url("src/img/3_BARRE.png");
     background-size: contain;
     border-radius: 50px;
     background-repeat: no-repeat;
@@ -1941,7 +1941,7 @@ input[type="checkbox"] {
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
-    background-image: url("src/3_ANNULER.png");
+    background-image: url("src/img/3_ANNULER.png");
 }
 
 .posfusion {
@@ -1968,7 +1968,7 @@ input[type="checkbox"] {
     height: 52%;
     top: 66%;
     left: 32%;
-    background-image: url("src/1_FORCE.png");
+    background-image: url("src/img/1_FORCE.png");
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1981,7 +1981,7 @@ input[type="checkbox"] {
     height: 52%;
     top: 66%;
     left: 20%;
-    background-image: url("src/1_TAILLE.png");
+    background-image: url("src/img/1_TAILLE.png");
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1994,7 +1994,7 @@ input[type="checkbox"] {
     height: 54%;
     top: 36%;
     left: 24%;
-    background-image: url("src/1_MIRROIR.png");
+    background-image: url("src/img/1_MIRROIR.png");
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2007,7 +2007,7 @@ input[type="checkbox"] {
     height: 59%;
     bottom: 40%;
     left: 94%;
-    background-image: url("src/1_LOGO.png");
+    background-image: url("src/img/1_LOGO.png");
     vertical-align: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2032,15 +2032,15 @@ input[type="checkbox"] {
 
 .SCALE {
     background-color: transparent;
-    background-image: url(src/SCALE.png);
+    background-image: url(src/img/SCALE.png);
 }
 
 .ROTATE {
     background-color: transparent;
-    background-image: url(src/ROTATE.png);
+    background-image: url(src/img/ROTATE.png);
 }
 
 .MOVE {
     background-color: transparent;
-    background-image: url(src/MOVE.png);
+    background-image: url(src/img/MOVE.png);
 }

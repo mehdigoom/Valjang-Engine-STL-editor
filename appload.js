@@ -29,14 +29,14 @@ if (1) {
     request.onload = function() {
         Module.wasmBinary = request.response;
         let cpplibwasmScript = document.createElement('script');
-        cpplibwasmScript.src = "src/cpplib_wasm.js";
+        cpplibwasmScript.src = "src/lib/cpplib_wasm.js";
         document.head.appendChild(cpplibwasmScript);
         window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
             //alert("WASM failed to initialize, fallback to ASM.JS library.");
             // console.log("WASM failed to initialize, fallback to ASM.JS library.");
             InitModule();
             let cpplibasmjsScript = document.createElement('script');
-            cpplibasmjsScript.src = "src/cpplib.js";
+            cpplibasmjsScript.src = "src/lib/cpplib.js";
             document.head.appendChild(cpplibasmjsScript);
             window.onerror = null;
             return true;
@@ -45,6 +45,6 @@ if (1) {
 } else {
     InitModule();
     let cpplibScript = document.createElement('script');
-    cpplibScript.src = "src/cpplib.js";
+    cpplibScript.src = "src/lib/cpplib.js";
     document.head.appendChild(cpplibScript);
 }
