@@ -782,8 +782,9 @@ var AppMain = /** @class */ (function() {
         plane2.position.y = -100
         plane2.rotation.z = Math.PI / 2;
         plane2.position.x = 200
+        plane2.position.z = -200
         plane2.rotation.y = Math.PI / 2;
-        plane2.position.z = 204
+ 
 
 
 
@@ -817,7 +818,7 @@ var AppMain = /** @class */ (function() {
 
         plane2.position.x = -50
         plane2.rotation.y = Math.PI / 2;
-        plane2.position.z = -200
+        plane2.position.z = 200
 
 
     }

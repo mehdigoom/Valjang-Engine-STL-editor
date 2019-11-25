@@ -1,6 +1,6 @@
 
 
-
+// Actions on viewvers 
 
 function ValjangGetAPI() {
 
