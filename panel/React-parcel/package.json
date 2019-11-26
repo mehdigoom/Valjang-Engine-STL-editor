@@ -1,0 +1,49 @@
+{
+  "name": "react-parcel",
+  "version": "1.0.0",
+  "description": "React-parcel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test-shim.js",
+      "./test-setup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./test-preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx|js)"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdigoom/React-parcel.git"
+  },
+  "author": "Miro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehdigoom/React-parcel/issues"
+  },
+  "homepage": "https://github.com/mehdigoom/React-parcel#readme",
+  "devDependencies": {
+    "@types/enzyme": "^3.10.3",
+    "@types/jest": "^24.0.22",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0",
+    "less": "^3.10.3",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-test-renderer": "^16.11.0",
+    "typescript": "^3.7.2"
+  }
+}
