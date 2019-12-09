@@ -23,7 +23,7 @@ class App extends React.Component {
                
                
                
-                <Route path="/panel">=
+                <Route path="/panel">
                 <Panel />
                 </Route>
 
