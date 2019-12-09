@@ -1,11 +1,16 @@
 import * as React from "react"
-
+import login from './components/login'
 class App extends React.Component {
     render() {
         return (
-            
-            <h1>Viewer Panel</h1>
-            
+    <div>
+ <h1>Viewer Panel</h1>
+
+{login}
+
+    </div>
+           
+
         )
     }
 }
