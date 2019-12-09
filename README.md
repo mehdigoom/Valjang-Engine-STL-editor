@@ -1,6 +1,11 @@
 Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router - fetch / axios - less / sass | Dev - prod
 
 ## How to build
+## For build/run native project :
+
+ - juste run on classic web server.
+
+## For build/run panel (react-parcel)
 
 ### For developement
 
