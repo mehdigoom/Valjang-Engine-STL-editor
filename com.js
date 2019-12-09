@@ -56,20 +56,6 @@ preload = false;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ///////////////////////////////////////////
 
 //this variable is used to check if it is possible to connect to the backend
