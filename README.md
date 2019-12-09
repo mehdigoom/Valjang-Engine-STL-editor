@@ -63,8 +63,8 @@ Node is required only to build the project. It is not required to run it.
 
 ### ------├── Index.html
 ### ------├── Index.tsx (start code for react TS)
-### ------├── /compotents (all module and pages)
 ### ------├── /src (localhost:1234)
+### ------│----└── compotents (all module and pages)
 ### ------│----└── /img (all local img )
 ### ------│----└── /Style (LESS code for style)
 ### ------└── package.json
