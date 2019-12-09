@@ -1,14 +1,23 @@
 import * as React from "react"
-import login from './components/login'
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Login from './components/login'
 class App extends React.Component {
     render() {
         return (
-    <div>
- <h1>Viewer Panel</h1>
+            <Router>
 
-{login}
-
-    </div>
+            <main className="main-wrapper">
+              <Switch>
+                <Route path="/login">
+                  <Login />
+                </Route>
+                <Route path="/">
+                <Login />
+                </Route>
+              </Switch>
+            </main>
+          </Router>
            
 
         )
