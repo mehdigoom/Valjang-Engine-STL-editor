@@ -1,7 +1,11 @@
 
   
 
+  
+
 Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router - fetch / axios - less / sass | Dev - prod
+
+  
 
   
 
@@ -11,7 +15,11 @@ Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router -
 
   
 
+  
+
 ## For build/run native project :
+
+  
 
   
 
@@ -23,7 +31,11 @@ Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router -
 
   
 
+  
+
 ## For build/run panel (react-parcel)
+
+  
 
   
 
@@ -35,44 +47,52 @@ Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router -
 
   
 
+  
+
 **Get Node.js for your platform (https://nodejs.org/en/)**
 
   
 
+  
+  
 
   
 
-    1.  cd .\panel\React-parcel\ 
-    
-    2.`npm install`
-    
-      
-    
-     3.`npm run dev`
+1. cd .\panel\React-parcel\
+
+2.`npm install`
+
+3.`npm run dev`
+
+  
 
   
 
   
 
 ### For production
+
 **Get Node.js for your platform (https://nodejs.org/en/)**
-      
-       1.  cd .\panel\React-parcel\ 
-      
-    
-    2.  `npm install`
-    
-      
-    
-    3.  `npm run build`
+
+1. cd .\panel\React-parcel\
+
+2. `npm install`
+
+3. `npm run build`
 
   
-
-
+## Configurations
+  
+  Configure your database in com.js Or you can use ValjangAPI for démo version.
+  If you use ValjangAPi Admin-panel(React-parcel) is disable.
+  --------
+  
 
 ## What's inside?
 
-
+  
+  
+  
 
   
 
@@ -80,49 +100,79 @@ Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router -
 
   
 
+  
+
 ***Native Directory***
+
+  
 
   
 
 ### ------├── Index.html
 
+  
+
 ### ------├── /obj (All 3D model for local use)
+
+  
 
 ### ------├── /src (localhost:1234)
 
+  
+
 ### ------│----└── /img
+
+  
 
 ### ------│----└── /lib (all native librairies)
 
+  
+
 ### ------│----└── /Style
 
+  
+
 ### ------├── .gitignore
+
+  
 
 ### ------└── README.md
 
   
 
+  
+
 ***React- directory***
 
+  
+
 *../React-parcel*
+
 ### ------│
+
 ### ------├── Index.html
+
 ### ------├── Index.tsx (start code for react TS)
+
 ### ------├── /src (localhost:1234)
+
 ### ------│----└── compotents (all module and pages)
+
 ### ------│----└── /img (all local img )
+
 ### ------│----└── /Style (LESS code for style)
+
 ### ------└── package.json
 
   
-  
-  
-  
+
   
 
   
 
 1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+
+  
 
   
 
@@ -134,7 +184,11 @@ Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router -
 
   
 
+  
+
 3.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+
+  
 
   
 
@@ -146,7 +200,11 @@ Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router -
 
   
 
+  
+
 5.  **`README.md`**: A text file containing useful reference information about your project.
+
+  
 
   
 
@@ -158,7 +216,11 @@ Valjang Engine STL Editor - Typescript - jest - enzyme - parcel - react router -
 
   
 
+  
+
 ------------------
+
+  
 
   
 
@@ -166,7 +228,11 @@ Structure du JS
 
   
 
+  
+
 src/js
+
+  
 
   
 
@@ -174,6 +240,8 @@ compenents/ (Dump compenenet) Des composents normalement simple
 
   
 
+  
+  
 
   
 
@@ -183,7 +251,11 @@ compenents/ (Dump compenenet) Des composents normalement simple
 
   
 
+  
+
 Bundler: parcel-bundler
+
+  
 
   
 
@@ -191,7 +263,11 @@ Il va traduire nos fichiers par exemple les .less en .css.
 
   
 
+  
+
 Parcel est livrer avec un sourcemap.qui permert de mapper les fichier de destination avec les fichier source pour ajuster le code par le suite.
+
+  
 
   
 
@@ -199,5 +275,6 @@ Parcel recharge le render de la page a chaque sauvgarde du code.
 
   
 
--------------------
+  
 
+-------------------
