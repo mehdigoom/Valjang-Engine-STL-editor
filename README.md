@@ -174,7 +174,6 @@ compenents/ (Dump compenenet) Des composents normalement simple
 
   
 
-pages/ (Hoc hight order compenent) Des composents parent qui font apelle a dautres. Avec plus de logique des les dump
 
   
 
