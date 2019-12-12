@@ -1,6 +1,6 @@
 
 import * as React from "react";
-export interface IState {
+type  IState= {
     Iflogin:boolean,
     client:string,
     token :string,
@@ -15,8 +15,11 @@ export interface IState {
  
 
   }
-
 export class Login extends React.Component<any,IState> {
+  
+    
+    // L'export de notre fichier login.tsx est la class login qui a été extends par React
+// Mon login peut être désormais importé dans d'autres fichiers de mon projet
     constructor(props) {
         super(props);
         
@@ -70,32 +73,34 @@ export class Login extends React.Component<any,IState> {
        };
 
 
-      handleChange(event) { this.setState({ login: event.target.value })
-         console.log(this.props.login) };
-        handleChangePa(event) { 
+      handleChange(event) {
+        this.setState({ login: event.target.value 
+        })
+        
+         console.log(this.props.login) 
+        };
+       
+       
+       
+       
+       
+         handleChangePa(event) { 
 
   console.log("RESULTAT: "+this.handleSubmit)
   this.setState({ 
   password: event.target.value, 
 
   
-});
-
-
-
-
-
-
-
-}
+});}
 render() {
         
     return (
         
         <div className="App">
-
+<p>{this.props.message}</p>
         <header className="App-header">
           <form onSubmit={this.handleSubmit}>
+
             <label>
               Login :
         <input type="text" name="login" value={this.props.login}  onChange={this.handleChange}/>
@@ -118,6 +123,5 @@ render() {
     )
 
 }
-// L'export par défault de notre fichier login.tsx est la class login qui a été extends par React
-// Mon login peut être désormais importé dans d'autres fichiers de mon projet
+
 };

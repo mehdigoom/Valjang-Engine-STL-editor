@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {Login} from './components/login'
-import {IState} from './components/login'
+
 import Panel from './components/panel'
 class App extends React.Component {
     render() {
