@@ -4,7 +4,18 @@ class Login extends React.Component {
     render() {
         return (
             
-            <h1>Viewer login</h1>
+            <form>
+  <label>
+    Login
+    <input type="text" name="name" />
+
+  </label>
+  <label>
+    Password
+    <input type="text" name="name" />
+  </label>
+  <input type="submit" value="Envoyer" />
+</form>
             
         )
     }
