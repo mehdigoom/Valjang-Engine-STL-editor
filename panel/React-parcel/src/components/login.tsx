@@ -1,6 +1,28 @@
-import React, { Component } from 'react';
 
+import React from 'react'
 class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+          Iflogin:false,
+          client:"[no select]",
+          token : "",
+          ServerBackend: "http://public.valjang.fr:5000",
+          DoodLogo :true,
+          clientID:"0",
+          
+          step:0,
+          login: '',
+          password:'',
+          message:'',
+        
+       
+
+        }
+
+    }
+    
     render() {
         return (
             
