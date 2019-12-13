@@ -15,9 +15,9 @@ class App extends React.Component {
               
                 
                 
-                <Route path="/">
-                <Login/>
-                </Route>
+              <Route exact title="home-login" path="/">
+              <Login />
+            </Route>
                
                
                
