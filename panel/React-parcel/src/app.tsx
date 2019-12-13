@@ -25,7 +25,11 @@ class App extends React.Component {
                 <Panel />
                 </Route>
 
-
+              
+              
+                <Route path="/register">
+                <register />
+                </Route>
 
               </Switch>
             </main>

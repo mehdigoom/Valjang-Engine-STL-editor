@@ -15,7 +15,7 @@ type  IState= {
  
 
   }
-export class Login extends React.Component<any,IState> {
+export class register extends React.Component<any,IState> {
   
     
     // L'export de notre fichier login.tsx est la class login qui a été extends par React
@@ -98,6 +98,7 @@ render() {
         
         <div className="App">
 <p>{this.props.message}</p>
+<p>Inscription</p>
         <header className="App-header">
           <form onSubmit={this.handleSubmit}>
 
