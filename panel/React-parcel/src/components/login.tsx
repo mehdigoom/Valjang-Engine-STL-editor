@@ -120,7 +120,7 @@ render() {
             <input type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit }/>
   
           </form>
-          <Link to="/regster" activeClassName="active">Crée un compte</Link>
+          <Link to="/regster/" activeClassName="active">Crée un compte</Link>
         </header>
       </div>
         

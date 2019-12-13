@@ -21,13 +21,13 @@ class App extends React.Component {
                
                
                
-                <Route path="/panel">
+                <Route path="/panel/">
                 <Panel />
                 </Route>
 
               
               
-                <Route path="/register">
+                <Route path="/register/">
                 <Register />
                 </Route>
 
@@ -37,6 +37,7 @@ class App extends React.Component {
            
 
         )
+       
     }
 }
 
