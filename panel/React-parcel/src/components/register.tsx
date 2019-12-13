@@ -15,7 +15,7 @@ type  IState= {
  
 
   }
-export class register extends React.Component<any,IState> {
+export class Register extends React.Component<any,IState> {
   
     
     // L'export de notre fichier login.tsx est la class login qui a été extends par React
