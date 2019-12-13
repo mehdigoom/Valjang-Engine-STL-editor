@@ -1,5 +1,7 @@
 
 import * as React from "react";
+import img from "../img/DOOD_Logo600.png";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 type  IState= {
     Iflogin:boolean,
     client:string,
@@ -98,6 +100,7 @@ render() {
         
         <div className="App">
 <p>{this.props.message}</p>
+<img src={img}/>
         <header className="App-header">
           <form onSubmit={this.handleSubmit}>
 
@@ -117,6 +120,7 @@ render() {
             <input type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit }/>
   
           </form>
+          <Link to="/regster" activeClassName="active">Crée un compte</Link>
         </header>
       </div>
         
