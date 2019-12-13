@@ -3,7 +3,7 @@ import * as React from "react"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {Login} from './components/login'
 import {Register} from './components/register'
-import Panel from './components/panel'
+import {Panel} from './components/panel'
 class App extends React.Component {
     render() {
         return (
