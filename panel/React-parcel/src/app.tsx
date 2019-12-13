@@ -21,13 +21,13 @@ class App extends React.Component {
                
                
                
-                <Route path="/panel/">
+                <Route title="Your Panel" path="/panel/">
                 <Panel />
                 </Route>
 
               
               
-                <Route path="/register/">
+                <Route title="Joins Client" path="/register/">
                 <Register />
                 </Route>
 

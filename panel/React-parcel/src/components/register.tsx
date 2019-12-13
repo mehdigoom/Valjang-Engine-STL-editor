@@ -1,4 +1,4 @@
-
+import img from "../img/DOOD_Logo600.png";
 import * as React from "react";
 type  IState= {
     Iflogin:boolean,
@@ -97,6 +97,7 @@ render() {
     return (
         
         <div className="App">
+          <img src={img}/>
 <p>{this.props.message}</p>
 <p>Inscription</p>
         <header className="App-header">
