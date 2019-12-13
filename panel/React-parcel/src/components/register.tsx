@@ -116,7 +116,7 @@ render() {
   
             <br></br>
   
-            <input type="button" name="Loginbtn" value="Login" onClick={this.handleSubmit }/>
+            <input type="button" name="Loginbtn" value="Valider" onClick={this.handleSubmit }/>
   
           </form>
         </header>
