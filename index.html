@@ -1,240 +1,29 @@
-﻿<!DOCTYPE html>
-<html>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Sign In </h2>
+      <h2 class="inactive underlineHover">Sign Up </h2>
+      <link rel="stylesheet" href="login.css">
+      <!-- Icon -->
+      <div class="fadeIn first">
+      
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-
-    <title>Sculpt engine demo using Valjang Engine</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- JQuery (needed by bootstrap) -->
-    <script src="src/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <!--link rel="stylesheet" href="src/bootstrap.min.css" CAUSE DES BUGS ?-->
-    <script src="src/bootstrap.min.js"></script>
-    <script src="com.js"></script>
-    <!-- Bootstrap slider -->
-
-    <script src="src/bootstrap-slider.min.js"></script>
-    <!-- Bootstrap color selector -->
-    <!-- link rel="stylesheet" href="src/bootstrap-colorselector.min.css"-->
-    <link rel="stylesheet" href="index.css">
-
-    <!-- Boot box -->
-    <script src="src/bootbox.min.js"></script>
-    <!-- PEP (to get input on apple devices and firefox mobile) -->
-    <script src="src/pep.min.js"></script>
-    <!-- FileSaver.js -->
-    <script src="src/FileSaver.min.js"></script>
-    <!-- Blob.js -->
-    <script src="src/lib/blob.js"></script>
-    <!-- APP -->
-    <script src="src/lib/ValjangEngine.js"></script>
-    <link rel="stylesheet" href="src/app.css" type="text/css" />
-    <script src="appSDK.js"></script>
-    <script src="appBootstrapSpecific.js"></script>
-    <script src="appload.js"></script>
-    <!-- Pop-up messages -->
-
-    <link rel="stylesheet" href="src/bootstrap-slider.min.css">
-
-    <script id="ChoosOutputFormat" type="text/html">
-
-
-        <div class="Popup">
-            <center>
-                <font style="font-size:30px">Choisir format:</font>
-            </center>
-            <br>
-            <center>
-                <button onclick="bootbox.hideAll();">Fermer</button>
-                <button id="stlButton" onclick="
-                            bootbox.hideAll();
-                            AppSDK_SaveToFile('output', 'stl');
-                        ">
-                    STL 
-                </button>
-                <button id="objButton" onclick="
-                            bootbox.hideAll();
-                            AppSDK_SaveToFile('output', 'obj');
-                        "> 
-                    OBJ 
-                </button>
-        </div>
-
-        </center>
-    </script>
-    <script id="ChoseObject" type="text/html">
-        <div class="container">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-
-                <div id="liste" class="liste" role="listbox">
-
-
-                    <script>
-                        this.Getmodels("T")
-                    </script>
-
-                </div>
-
-
-            </div>
-            <div id="filtre" class="hiden">
-
-            </div>
-        </div>
-    </script>
-
-
-
-    <script id="Chose" type="text/html">
-        <div class="container">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-
-                <div id="liste" class="liste" role="listbox">
-
-
-                    <script>
-                        this.Getmodels("G")
-                    </script>
-                </div>
-
-
-            </div>
-        </div>
-    </script>
-
-
-
-
-
-
-
-
-    <script id="CreateOrCombine" type="text/html">
-
-        <br>
-        <center>
-            <div class="Popup">
-                <center>
-                    <font style="font-size:30px">Apliquer le tampon?</font>
-                </center>
-                <button id="createButton" onclick="
-                            bootbox.hideAll(); 
-                           
-                        ">
-                    non j'ai fait un erreur!
-                </button>
-                <button id="combineButton" onclick="
-                            bootbox.hideAll();
-                            AppSDK_StartCombineToSceneMode(meshItemToCreateOrCombine);
-                            SwitchCombineModeUI(true);
-                        ">
-                    Oui, je veux le placer.
-                </button>
-            </div>
-        </center>
-    </script>
-</head>
-
-<body style="overflow:hidden; width:100%; height:100%; margin:0; padding:0;">
-    <img id="undoButton" src="src/img/UNDO.png" alt="UNDO" class="undo glyphicon glyphicon-chevron-right" />
-
-    <img id="redoButton" src="src/img/REDO.png" alt="REDO glyphicon glyphicon-chevron-right" class="redo" />
-
+      </div>
   
-
-    <div id="combineUI" style="display:none;" class="CombineUI">
-        <!-- Rotate and scale -->
-        <div>
-            <div>
-                <button id="cancelCombineButton" class="BTN2 BTNannulercombine"> </button>
-                <button id="mergeButton" class=" Ajout BTN2"></button>
-                <button id="subtractButton" class="retirer BTN2 "></button>
-                <button id="moveButton" class="MOVE BTN2"></button>
-                <button id="rotateButton" class="ROTATE BTN2 "></button>
-                <button id="scaleButton" class="SCALE BTN2"></button>
-   
-
-                <button hidden id="intersectButton" class="BTN" />
-
-
-
-
-
-            </div>
-            <!-- Cancel -->
-        </div>
-
-    </div>
-    </div>
-    <!-- Merge, substract, intersect -->
-    <div>
-
-        <div class="help"></div>
-    
-        <div id="mainUI" class="Barre hiden ">
-
+      <!-- Login Form -->
+      <form>
+        <img class="picture"src="./panel/React-parcel/src/img/le logo.png" alt="logo">
+        <p>Welecom to STL editor</p>
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
   
-
-
-
-
-
-
-
-
-            <button id="dragButton" class=" etirerinit etirer BTN" userdata="brushButton"></button>
-
-            <button id="drawButton" class="dessinerinit dessiner BTN" userdata="brushButton"></button>
-
-            <input id="sliderSize" class="  BTN  " data-slider-id='CustomSlider' type="range" data-slider-min="0.05" data-slider-max="0.3" data-slider-step="0.01" data-slider-value="0.12" data-slider-tooltip="hide" />
-            <div class="txttaille"></div>
-            <div style="display: table-cell; padding-left: 10%;">
-                <div class="txtmiroir"></div>
-                <div class="slider-switch Miroir">
-                    <input id="mirrorSwitch" type="checkbox" onchange="
-                               AppSDK_SwitchMirrorMode(this.checked);
-                           " />
-                    <label for="mirrorSwitch" class="label-primary"></label>
-                </div>
-            </div>
-            <input id="sliderStrength" class="  BTN" data-slider-id='CustomSlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.5" data-slider-tooltip="hide" />
-            <div class="txtforce"></div>
-            <!--button id="inflateButton" userdata="brushButton" > Inflate </button>-->
-            <button id="digButton" class="creuserinit creuser BTN cruserMargin " userdata="brushButton"></button>
-            <button id="flattenButton" class=" aplatirinit aplatir BTN" userdata="brushButton"></button>
-
-
-
-
-
-            <input id="loadButton" style="display:none;" type="file" accept=".obj, .stl">
-            <button class=" tamponint tampon posfusion" id="openButton">  </button>
-            <button class=" galerie  poslib" id="openObject">  </button>
-           
-            <button id="fullScreenButton" class="full BTN hiden"></button>
-
-            <button id="saveButton" class="BTN imprimerint imprimer " userdata="unlocked"> </button>
-
-
-
-            
-
-
-
-
-        </div>
-
-
-        <div id="spinner" class="tectrid-spinner" style="display:inline;"> Chargement...</div>
-        <!--WebGL-->
-        <canvas id="renderCanvas"></canvas>
-        <!-- astro print -->
-
-
-
-</body>
-
-</html>
+      <!-- Remind Passowrd -->
+      
+      <div id="formFooter">
+        <a class="underlineHover" href="./editor.html">I do not want to connect</a>
+      </div>
+  
+    </div>
+  </div>
