@@ -41,6 +41,23 @@ h2 {
   min-height: 100%;
   padding: 20px;
 }
+.fun{
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: rgba(255, 255, 255, 0.541);
+  padding: 30px;
+  width: 10%;
+  left:90%;
+  bottom: 20%;
+  max-width: 450px;
+  position: absolute;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+  
+}
+
 
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
