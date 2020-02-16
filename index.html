@@ -1,9 +1,12 @@
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+
 <div class="wrapper fadeInDown">
     <div id="formContent">
       <!-- Tabs Titles -->
       <h2 class="active"> Sign In </h2>
       <a class="inactive underlineHover" type="link" href="./editor.html">Sign Up </a>
       <link rel="stylesheet" href="login.css">
+     
       <!-- Icon -->
       <div class="fadeIn first">
 
@@ -14,9 +17,10 @@
       <form>
         <img class="picture"src="./panel/React-parcel/src/img/le logo.png" alt="logo">
         <p>Welecom to STL editor</p>
+        <script src="com.js"></script>
         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
         <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-        <input type="submit" class="fadeIn fourth" value="Log In">
+        <input type="button" class="fadeIn fourth" value="Log In" onclick="this.login ();"> 
       </form>
 
       <!-- Remind Passowrd -->
@@ -29,7 +33,7 @@
     <div class="fun">
 
       <p>Fun fact</p>
-      <p>Loadding...</p>
+      <p id="fun">Loadding...</p>
     </div>
 
 </div>
