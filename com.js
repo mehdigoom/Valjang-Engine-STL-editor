@@ -67,46 +67,47 @@ Onconnect = true;
 
 
 
-
-
-
-function login(){
-    var result
- var message
- var login = document.getElementById("login").value;
- var password = document.getElementById("password").value;
- fetch('http://public.valjang.fr:5000/user/login', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      'email': login,
-      'password': password,
-    })
-  })
-  
-    .then(function (response) {
-        console.log(response);
-        if (response.ok == true) {
-          console.log(response.ok);
-          result = response.ok
-        }
-        else {
-          console.log(response.ok);
-          result = response.ok
-          message= "Err: Login incorrect"
-        }
-        
-      })
-    
-    .catch(function (error) {
-      console.log(error);
-    });
-    
+document.getElementById("btn").onclick = function(){
+    login()
 }
 
+async function login(){
+
+var result
+var message
+var login = document.getElementById("login").value;
+var password = document.getElementById("password").value;
+await fetch('http://public.valjang.fr:5000/user/login', {
+method: 'POST',
+headers: {
+ 'Accept': 'application/json',
+ 'Content-Type': 'application/json',
+},
+body: JSON.stringify({
+ 'email': login,
+ 'password': password,
+})
+})
+
+.then(function (response) {
+   console.log(response);
+   if (response.ok == true) {
+     console.log(response.ok);
+     result = response.ok
+   }
+   else {
+     console.log(response.ok);
+     result = response.ok
+     message= "Err: Login incorrect"
+   }
+   
+ })
+
+.catch(function (error) {
+ console.log(error);
+});
+
+}
 
 
 function Getmodels(categorie) {

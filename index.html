@@ -6,7 +6,7 @@
       <h2 class="active"> Sign In </h2>
       <a class="inactive underlineHover" type="link" href="./editor.html">Sign Up </a>
       <link rel="stylesheet" href="login.css">
-     
+    
       <!-- Icon -->
       <div class="fadeIn first">
 
@@ -14,13 +14,13 @@
       </div>
 
       <!-- Login Form -->
-      <form>
+      <form id="myForm">
         <img class="picture"src="./panel/React-parcel/src/img/le logo.png" alt="logo">
         <p>Welecom to STL editor</p>
-        <script src="com.js"></script>
+      
         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
         <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-        <input type="button" class="fadeIn fourth" value="Log In" onclick="this.login ();"> 
+        <input type="button" id="btn" class="fadeIn fourth" value="Log In" > 
       </form>
 
       <!-- Remind Passowrd -->
@@ -37,3 +37,4 @@
     </div>
 
 </div>
+<script src="com.js"></script>
