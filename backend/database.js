@@ -143,6 +143,16 @@ const addBasket = function addBasket(clbk, id,quantity,products_id,users_id) {
   });
 }
 
+const addUser = function addUser(clbk, user) {
+  let sql = "INSERT INTO users firstname = ?, lastname = ?, email = ?"
+  const payload = [user.firstname, user.lastname, user.email, user.id]
+  client.query(sql, payload, function (err, res) {
+    if (err) return clbk(err, null);
+    return clbk(null, res)
+  })
+}
+
+
 const updateUser = function updateUser(clbk, user) {
   let sql = "UPDATE users SET firstname = ?, lastname = ?, email = ? WHERE id = ?"
   const payload = [user.firstname, user.lastname, user.email, user.id]

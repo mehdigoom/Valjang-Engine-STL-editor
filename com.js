@@ -63,6 +63,34 @@ Onconnect = true;
 
 
 //======Backend function===========//
+//fun fact
+function rng(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+fun = document.getElementById("fun")
+fun.innerHTML = '<H1> Loading.. <H1/>'
+
+var myRequest = new Request(ServerBackend + "/model");
+
+fetch(myRequest)
+
+.then(function(response) { return response.json(); })
+
+.then(function(data) {
+
+    console.log(data)
+    numberdata = rng(data.length)
+
+fun.innerHTML = '<H1> Fun object <H1/> <img class="picture"src='+data[numberdata].image+">"+"<p class='funI'>"+data[numberdata].name+"</p>" 
+ });
+
+
+// end fun 
+
+
+
+
+
 
 
 
@@ -77,7 +105,7 @@ var result
 var message
 var login = document.getElementById("login").value;
 var password = document.getElementById("password").value;
-await fetch('http://public.valjang.fr:5000/user/login', {
+await fetch(Backend+'/user/login', {
 method: 'POST',
 headers: {
  'Accept': 'application/json',
@@ -111,7 +139,7 @@ body: JSON.stringify({
 
 
 function Getmodels(categorie) {
-    SwitchSpinner(true);
+   // SwitchSpinner(true);
     var myRequest = new Request(ServerBackend + "/model");
 
     fetch(myRequest)
@@ -195,7 +223,7 @@ function Getmodels(categorie) {
 
         }
 
-        SwitchSpinner(false);
+        //SwitchSpinner(false);
 
     });
 
