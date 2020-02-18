@@ -68,7 +68,7 @@ function rng(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 fun = document.getElementById("fun")
-fun.innerHTML = '<H1> Loading.. <H1/>'
+fun.innerHTML = '<p> Loading.. <p/>'
 
 var myRequest = new Request(ServerBackend + "/model");
 
