@@ -55,10 +55,10 @@ const getadmin = function getadmin(clbk, id) {
   let sql;
 
   if (id) 
-    sql = `SELECT * FROM admin WHERE id = ?`;
+    sql = `SELECT * FROM admins WHERE id = ?`;
 
   else 
-    sql = `SELECT * FROM admin`;
+    sql = `SELECT * FROM admins`;
   
   const query = client.query(sql, [id], (error, results, fields) => {
       if (error) return clbk(error, null);
