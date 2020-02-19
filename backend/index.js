@@ -30,6 +30,12 @@ app.get('/client', (req, res) => {
   }, null);
 });
 
+app.get('/admin', (req, res) => {
+  database.getadmin( (err, Model) => {
+    if (err) return res.status(500).send(err);
+    return res.status(200).send(Model);
+  }, null);
+});
 
 
 app.get('/model', (req, res) => {

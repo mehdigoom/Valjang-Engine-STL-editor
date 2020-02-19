@@ -61,7 +61,7 @@ preload = false;
 //this variable is used to check if it is possible to connect to the backend
 Onconnect = true;
 
-
+message = document.getElementById("message")
 //======Backend function===========//
 //fun fact
 function rng(max) {
@@ -101,11 +101,11 @@ document.getElementById("btn").onclick = function(){
 
 async function login(){
 
-var result
-var message
+
+message.innerHTML = "<p>Login...<p/>"
 var login = document.getElementById("login").value;
 var password = document.getElementById("password").value;
-await fetch(Backend+'/user/login', {
+await fetch(ServerBackend+'/user/login', {
 method: 'POST',
 headers: {
  'Accept': 'application/json',
@@ -122,20 +122,55 @@ body: JSON.stringify({
    if (response.ok == true) {
      console.log(response.ok);
      result = response.ok
+     message.innerHTML = "<p>Ok ! Please wait...<p/> "
+     var now = new Date();
+     
+var annee   = now.getFullYear();
+var mois    = ('0'+now.getMonth()+1).slice(-2);
+var jour    = ('0'+now.getDate()   ).slice(-2);
+     localStorage.setItem('Login',login)
+     localStorage.setItem('password',password)
+     localStorage.setItem('date',jour+mois+annee)
    }
    else {
      console.log(response.ok);
      result = response.ok
-     message= "Err: Login incorrect"
+    
+     message.innerHTML = "<p>Err: Wrong identifier<p/>"
    }
    
  })
 
 .catch(function (error) {
  console.log(error);
+ message.innerHTML = "<p>Err: Backend is down<p/>"
 });
 
 }
+
+
+function Getadmin(id){
+
+    var myRequest = new Request(ServerBackend + "/model");
+
+    fetch(myRequest)
+
+    .then(function(response) { return response.json(); })
+
+    .then(function(data) {
+
+
+      
+
+         
+
+
+
+
+
+    }); ////end admin
+}
+
 
 
 function Getmodels(categorie) {
