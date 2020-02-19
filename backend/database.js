@@ -4,7 +4,7 @@ var client= mysql.createConnection({
   host: 'localhost',
   user: 'miro',
   password: 'poseidon',
-  database: 'stleditor',
+  database: 'stl editor',
 });
   
 client.connect(function(err) {
