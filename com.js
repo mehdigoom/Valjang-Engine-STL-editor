@@ -60,7 +60,7 @@ preload = false;
 
 //this variable is used to check if it is possible to connect to the backend
 Onconnect = true;
-
+ifadmin =false;
 message = document.getElementById("message")
 //======Backend function===========//
 //fun fact
@@ -131,6 +131,7 @@ var jour    = ('0'+now.getDate()   ).slice(-2);
      localStorage.setItem('Login',login)
      localStorage.setItem('password',password)
      localStorage.setItem('date',jour+mois+annee)
+     Getadmin(login)
    }
    else {
      console.log(response.ok);
@@ -149,9 +150,9 @@ var jour    = ('0'+now.getDate()   ).slice(-2);
 }
 
 
-function Getadmin(id){
+function Getadmin(name){
 
-    var myRequest = new Request(ServerBackend + "/model");
+    var myRequest = new Request(ServerBackend + "/admin");
 
     fetch(myRequest)
 
@@ -160,9 +161,23 @@ function Getadmin(id){
     .then(function(data) {
 
 
-      
+        for (var i = 0; i < data.length; i++) {
+            var Newdata = data[i]
+            if(Newdata.name === name){
+                message.innerHTML = "<p>Admin detected... please wait...<p/>"
+                ifadmin = true
+            }
+        }
+redirect = document.getElementById("redirect")
+        if(ifadmin){
+            window.location = 'http://valjang.fr'
+            message.innerHTML = "<p>Admin detected... please wait...<p/>"
+        }else{
+            message.innerHTML = "<p>please wait...<p/>"
+            window.location = 'editor.html'
 
-         
+        }
+       
 
 
 
