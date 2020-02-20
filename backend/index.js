@@ -126,13 +126,13 @@ app.post('/user/login', (req, res) => {
 
 
 app.post('/user/adduser', (req, res) => {
- 
+ console.log(req)
   database.addUser( (err, User) => {
     console.log(err)
     if (err) return res.status(500).send(err);
     
     return res.status(200).send(User);
-  }, user.id,user.firstname, user.lastname,user.mail,user.password);
+  }, user.id,req.body.firstname, req.body.lastname,req.body.mail,req.body.password);
 });
 
 
