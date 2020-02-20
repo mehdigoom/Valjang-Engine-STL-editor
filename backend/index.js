@@ -125,13 +125,13 @@ app.post('/user/login', (req, res) => {
 });
 
 
-app.post('/user/adduser', (req, res) => {
-  database.addUser( (err, user) => {
+app.post('/adduser', (req, res) => {
+ 
+  database.addUser( (err, User) => {
+
     if (err) return res.status(500).send(err);
-    else if (user) return res.status(500).send("Bad informations ...");
-    console.log('User add', user)
-    return res.status(200).send(user)
-  }, req.body);
+    return res.status(200).send(User);
+  }, req.body.firstname, req.body.lastname,req.body.mail,req.body.password);
 });
 
 
