@@ -91,7 +91,7 @@ var jour    = ('0'+now.getDate()   ).slice(-2);
 
 .catch(function (error) {
  console.log(error);
- message.innerHTML = "<p>Err: Backend is down<p/>"
+ message.innerHTML = "<p>Err Backend:"+error+ " <p/>"
 });
 
 }
