@@ -132,7 +132,7 @@ app.post('/user/adduser', (req, res) => {
     if (err) return res.status(500).send(err);
     
     return res.status(200).send(User);
-  }, req.body.id,req.body.firstname, req.body.lastname,req.body.mail,req.body.password);
+  }, user.id,user.firstname, user.lastname,user.mail,user.password);
 });
 
 

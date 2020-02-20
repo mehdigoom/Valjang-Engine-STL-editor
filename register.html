@@ -59,7 +59,7 @@ var password = document.getElementById("password2").value
 var firstname = document.getElementById("firstname").value
 var lastname = document.getElementById("lastname").value
     var ok = true
-
+var id
 if(ok){
     await fetch(ServerBackend+'/user/adduser', {
         method: 'POST',
@@ -68,6 +68,7 @@ if(ok){
          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          'id': id,
         'firstname': firstname,
         'lastname': lastname,
          'mail': mail,
