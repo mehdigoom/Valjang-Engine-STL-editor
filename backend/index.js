@@ -124,16 +124,16 @@ app.post('/user/login', (req, res) => {
   }, req.body);
 });
 
-
 app.post('/user/adduser', (req, res) => {
- console.log(req)
-  database.addUser( (err, User) => {
+ 
+  database.addUser( (err, user) => {
+    console.log(req)
     console.log(err)
     if (err) return res.status(500).send(err);
-    
-    return res.status(200).send(User);
+    return res.status(200).send(user);
   }, req.body.firstname, req.body.lastname,req.body.mail,req.body.password);
 });
+
 
 
 app.listen(port, () => {
