@@ -55,11 +55,16 @@ async function Register(){
     message.innerHTML = "<p>Please wait...<p/>"
 var password = document.getElementById("password").value;
 var mail = document.getElementById("Mail").value
-var password = document.getElementById("password2").value
+var password2 = document.getElementById("password2").value
 var firstname = document.getElementById("firstname").value
 var lastname = document.getElementById("lastname").value
     var ok = true
-
+if(password && mail && password2 && firstname && lastname != ""){
+  ok = true
+}else{
+  ok = false
+  message.innerHTML = "<p>Err: Incomplete field<p/>"
+}
 if(ok){
     await fetch(ServerBackend+'/user/adduser', {
         method: 'POST',
@@ -86,7 +91,7 @@ if(ok){
         var annee   = now.getFullYear();
         var mois    = ('0'+now.getMonth()+1).slice(-2);
         var jour    = ('0'+now.getDate()   ).slice(-2);
-             localStorage.setItem('Login',login)
+             localStorage.setItem('Login',mail)
              localStorage.setItem('password',password)
              localStorage.setItem('date',jour+mois+annee)
              //Getadmin(login)
