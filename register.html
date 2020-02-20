@@ -58,13 +58,20 @@ var mail = document.getElementById("Mail").value
 var password2 = document.getElementById("password2").value
 var firstname = document.getElementById("firstname").value
 var lastname = document.getElementById("lastname").value
-    var ok = true
-if(password && mail && password2 && firstname && lastname != ""){
+    var ok = false
+   
+if(password && mail && password2 && firstname && lastname == ""){
+ if(password == password2){
   ok = true
-}else{
+ }else{
+  
   ok = false
-  message.innerHTML = "<p>Err: Incomplete field<p/>"
+ }
+}else{
+
+  ok = false
 }
+
 if(ok){
     await fetch(ServerBackend+'/user/adduser', {
         method: 'POST',
@@ -108,8 +115,6 @@ if(ok){
          console.log(error);
          message.innerHTML = "<p>Err: Backend is down<p/>"
         });
-}else{
-    message.innerHTML = "<p><p/>"
 }
 
 
