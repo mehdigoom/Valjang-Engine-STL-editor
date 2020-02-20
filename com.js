@@ -88,73 +88,6 @@ fun.innerHTML = '<H1> Fun object <H1/> <img class="picture"src='+data[numberdata
 // end fun 
 
 
-document.getElementById("register").onclick = function(){
-    Register()
-}
-
-async function Register(){
-
-
-    message.innerHTML = "<p>Please wait...<p/>"
-var password = document.getElementById("password").value;
-var mail = document.getElementById("Mail").value
-var password = document.getElementById("password2").value
-var firstname = document.getElementById("firstname").value
-var lastname = document.getElementById("lastname").value
-    var ok = true
-
-if(ok){
-    await fetch(ServerBackend+'/user/adduser', {
-        method: 'POST',
-        headers: {
-         'Accept': 'application/json',
-         'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-        'firstname': firstname,
-        'lastname': lastname,
-         'mail': mail,
-         'password': password,
-        })
-        })
-        
-        .then(function (response) {
-           console.log(response);
-           if (response.ok == true) {
-             console.log(response.ok);
-             result = response.ok
-             message.innerHTML = "<p>Ok ! Please wait...<p/> "
-             var now = new Date();
-             
-        var annee   = now.getFullYear();
-        var mois    = ('0'+now.getMonth()+1).slice(-2);
-        var jour    = ('0'+now.getDate()   ).slice(-2);
-             localStorage.setItem('Login',login)
-             localStorage.setItem('password',password)
-             localStorage.setItem('date',jour+mois+annee)
-             //Getadmin(login)
-           }
-           else {
-             console.log(response.ok);
-             result = response.ok
-            
-             message.innerHTML = "<p>Err: Wrong identifier<p/>"
-           }
-           
-         })
-        
-        .catch(function (error) {
-         console.log(error);
-         message.innerHTML = "<p>Err: Backend is down<p/>"
-        });
-}else{
-    message.innerHTML = "<p><p/>"
-}
-
-
-
-    
-    }
 
 
 
@@ -176,61 +109,6 @@ if(ok){
 
 
 
-//Login
-document.getElementById("btn").onclick = function(){
-    login()
-}
-
-async function login(){
-
-
-message.innerHTML = "<p>Login...<p/>"
-var login = document.getElementById("login").value;
-var password = document.getElementById("password").value;
-await fetch(ServerBackend+'/user/login', {
-method: 'POST',
-headers: {
- 'Accept': 'application/json',
- 'Content-Type': 'application/json',
-},
-body: JSON.stringify({
- 'email': login,
- 'password': password,
-})
-})
-
-.then(function (response) {
-   console.log(response);
-   if (response.ok == true) {
-     console.log(response.ok);
-     result = response.ok
-     message.innerHTML = "<p>Ok ! Please wait...<p/> "
-     var now = new Date();
-     
-var annee   = now.getFullYear();
-var mois    = ('0'+now.getMonth()+1).slice(-2);
-var jour    = ('0'+now.getDate()   ).slice(-2);
-     localStorage.setItem('Login',login)
-     localStorage.setItem('password',password)
-     localStorage.setItem('date',jour+mois+annee)
-     Getadmin(login)
-   }
-   else {
-     console.log(response.ok);
-     result = response.ok
-    
-     message.innerHTML = "<p>Err: Wrong identifier<p/>"
-   }
-   
- })
-
-.catch(function (error) {
- console.log(error);
- message.innerHTML = "<p>Err: Backend is down<p/>"
-});
-
-}
-//end login
 
 
 
