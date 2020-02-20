@@ -124,6 +124,17 @@ app.post('/user/login', (req, res) => {
   }, req.body);
 });
 
+
+app.post('/user/adduser', (req, res) => {
+  database.addUser( (err, user) => {
+    if (err) return res.status(500).send(err);
+    else if (!user) return res.status(500).send("Bad informations ...");
+    console.log('User add', user)
+    return res.status(200).send(user)
+  }, req.body);
+});
+
+
 app.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
