@@ -128,9 +128,9 @@ app.post('/user/login', (req, res) => {
 app.post('/user/adduser', (req, res) => {
  
   database.addUser( (err, User) => {
-
-    if (err) return res.status(500).send(err);
     console.log(err)
+    if (err) return res.status(500).send(err);
+    
     return res.status(200).send(User);
   }, req.body.firstname, req.body.lastname,req.body.mail,req.body.password);
 });
