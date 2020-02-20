@@ -159,7 +159,7 @@ const addBasket = function addBasket(clbk, id,quantity,products_id,users_id) {
 
 const addUser = function addUser(clbk, id,firstname, lastname, mail,password) {
 
-  let sql = "INSERT INTO users VALUES (?,?,?,?,?)";
+  let sql = "INSERT INTO users VALUES (0,?,?,?,?)";
   client.query(sql, [id,firstname, lastname, mail,password], (error, results, fields) => {
       if (error) return clbk(error, null);
       return clbk(null, results);
