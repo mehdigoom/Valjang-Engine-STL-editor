@@ -125,7 +125,7 @@ app.post('/user/login', (req, res) => {
 });
 
 
-app.post('/adduser', (req, res) => {
+app.post('/user/adduser', (req, res) => {
  
   database.addUser( (err, User) => {
 
