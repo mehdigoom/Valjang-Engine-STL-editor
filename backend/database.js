@@ -192,6 +192,7 @@ const loginUser = function loginUser(clbk, user) {
 }
 
 module.exports = {
+  addUser,
   getadmin,
   getModel,
   getClient,
