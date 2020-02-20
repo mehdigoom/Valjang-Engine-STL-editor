@@ -112,8 +112,9 @@ if(ok){
          })
         
         .catch(function (error) {
+          message.innerHTML = "<p>Err Backend:"+error+" <p/>"
          console.log(error);
-         message.innerHTML = "<p>Err Backend:"+error+" <p/>"
+        
         });
 }
 
