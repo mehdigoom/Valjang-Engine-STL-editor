@@ -58,22 +58,12 @@ var mail = document.getElementById("Mail").value
 var password2 = document.getElementById("password2").value
 var firstname = document.getElementById("firstname").value
 var lastname = document.getElementById("lastname").value
-    var ok = false
+
    
-if(password && mail && password2 && firstname && lastname == ""){
- if(password == password2){
-  ok = true
- }else{
-  
-  ok = false
- }
-}else{
 
-  ok = false
-}
 
-if(ok){
-    await fetch(ServerBackend+'/user/adduser', {
+
+    await fetch(ServerBackend +'/user/adduser', {
         method: 'POST',
         headers: {
          'Accept': 'application/json',
@@ -101,7 +91,7 @@ if(ok){
              localStorage.setItem('Login',mail)
              localStorage.setItem('password',password)
              localStorage.setItem('date',jour+mois+annee)
-             //Getadmin(login)
+             Getadmin(mail)
            }
            else {
              console.log(response.ok);
@@ -121,6 +111,6 @@ if(ok){
 
 
     
-    }
+    
 
 </script>
