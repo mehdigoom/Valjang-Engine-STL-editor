@@ -1,0 +1,28 @@
+{
+  "name": "valjang-engine-stl-editor",
+  "version": "1.0.0",
+  "description": "STL editor",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdigoom/Valjang-Engine-STL-editor.git"
+  },
+  "author": "Valjang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehdigoom/Valjang-Engine-STL-editor/issues"
+  },
+  "homepage": "https://github.com/mehdigoom/Valjang-Engine-STL-editor#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "cannon": "^0.6.2",
+    "jquery": "^3.4.1"
+  }
+}
