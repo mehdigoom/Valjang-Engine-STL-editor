@@ -1,5 +1,7 @@
 import React from 'react';
+import Login from './Pages/Login'
 import './App.css';
+import  './scripts/login';
 
 class App extends React.Component {
    constructor(props) {
@@ -15,16 +17,16 @@ class App extends React.Component {
    }
    
    render() {
-    function init() {
+   
+  
  
-    console.log(localStorage.getItem("login"))
 
-    }
+  
       return (
          <div>
 
-            <center><h2>{this.state.message}</h2></center>
-            {init()}
+<Login/>
+        
          </div>
       );
    }

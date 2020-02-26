@@ -75,9 +75,9 @@ body: JSON.stringify({
 var annee   = now.getFullYear();
 var mois    = ('0'+now.getMonth()+1).slice(-2);
 var jour    = ('0'+now.getDate()   ).slice(-2);
-     localStorage.setItem('Login',login)
-     localStorage.setItem('password',password)
-     localStorage.setItem('date',jour+mois+annee)
+localStorage.setItem('Login',login)
+localStorage.setItem('password',password)
+localStorage.setItem('date',jour+mois+annee)
      Getadmin(login)
    }
    else {
