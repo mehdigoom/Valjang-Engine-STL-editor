@@ -1,24 +1,32 @@
 import React from 'react';
 import './App.css';
 
+class App extends React.Component {
+   constructor(props) {
+      super(props);
+		
+      this.state = {
+        ifconnect : false,
+        user : "",
+        password:"",
+        redirect : false,
+        message :"Loading"
+      };
+   }
+   
+   render() {
+    function init() {
+ 
+    console.log(localStorage.getItem("login"))
 
-function init(){
-return("Loading...")
-}
-function App() {
-  return (
-    <div className="wrapper fadeInDown">
-      <header className="formContent">
-        
-        <h1 id="Load">
-          STL editor
-        </h1>
-        <a>
-        {init()}
-        </a>
-      </header>
-    </div>
-  );
-}
+    }
+      return (
+         <div>
 
+            <center><h2>{this.state.message}</h2></center>
+            {init()}
+         </div>
+      );
+   }
+}
 export default App;
