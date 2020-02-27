@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './Pages/Login'
+import LoginP from './Pages/Login'
 import './App.css';
 import  './scripts/login';
 
@@ -25,7 +25,7 @@ class App extends React.Component {
       return (
          <div>
 
-<Login/>
+<LoginP/>
         
          </div>
       );
