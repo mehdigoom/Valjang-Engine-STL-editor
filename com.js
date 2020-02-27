@@ -63,6 +63,62 @@ Onconnect = true;
 ifadmin =false;
 message = document.getElementById("message")
 //======Backend function===========//
+
+
+
+function Panel(){
+if(ifadmin){
+
+    var myRequest = new Request(ServerBackend + "/model");
+var from = document.getElementById("myForm")
+var fun = document.getElementById("fun")
+var up =document.getElementById("Sign Up")
+var int = document.getElementById("Sign In")
+var dont = document.getElementById("dont")
+var div = document.getElementById('Div')
+var form = document.getElementById("formContent")
+form.classList.remove('login')
+div.innerHTML = "<H1>Loading Panel... <H1/>"
+int.classList.add('hiden')
+up.classList.add('hiden')
+from.classList.add('hiden')
+fun.classList.add('hiden')
+dont.classList.add('hiden')
+form.classList.add('panel')
+var result
+    fetch(myRequest)
+    
+    .then(function(response) { return response.json(); })
+    
+    .then(function(data) {
+    
+        console.log(data)
+      //data.length
+      for (var i = 0; i < data.length; i++) {
+        newdata = data[i]
+      image = "<img class='picture'src="+newdata.image+"><br>" 
+      nom = "<p>"+newdata.name+"<p/><br>"
+     categorie = "<p>"+newdata.type+"<p/><br>"
+ modif = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='edit'>"
+ remove = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='remove'>"
+result = result + image + nom + categorie+modif+remove
+      }
+ 
+     });
+console.log(result)
+     div.innerHTML = "<div id='pan'>"+result+"<div/>"
+}else{
+    alert('Err: auth')
+}
+
+
+
+}
+
+
+
+
+
 //fun fact
 function rng(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -136,8 +192,9 @@ function Getadmin(name){
         }
 redirect = document.getElementById("redirect")
         if(ifadmin){
-            window.location = 'http://valjang.fr'
+           
             message.innerHTML = "<p>Admin detected... please wait...<p/>"
+            Panel()
         }else{
             message.innerHTML = "<p>please wait...<p/>"
             window.location = 'editor.html'

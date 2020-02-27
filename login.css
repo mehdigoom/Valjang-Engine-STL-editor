@@ -65,7 +65,7 @@ h2 {
   background: #fff;
   padding: 30px;
   width: 90%;
-  max-width: 450px;
+  
   position: relative;
   padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
@@ -82,8 +82,12 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
-
-
+.login{
+  max-width: 350px;
+}
+.panel{
+  max-width: 1700px;
+}
 /* TABS */
 
 h2.inactive {
@@ -185,7 +189,9 @@ input[type=text]:placeholder {
   color: #cccccc;
 }
 
-
+.hiden{
+  display: none;
+}
 
 /* ANIMATIONS */
 
