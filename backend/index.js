@@ -94,8 +94,7 @@ app.post('/addbasket', (req, res) => {
 
 app.delete('/delmodel/:id', (req, res) => {
   database.delModel( (err, model) => {
-    console.log("id"+id)
-    console.log("model",model)
+
     if (err) return res.status(500).send(err);
     return res.status(200).send(model);
   }, req.params.id);
