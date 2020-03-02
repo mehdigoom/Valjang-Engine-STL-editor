@@ -133,7 +133,7 @@ app.post('/user/adduser', (req, res) => {
   }, req.body.firstname, req.body.lastname,req.body.mail,req.body.password);
 });
 
-app.post('addmodel', (req, res) => {
+app.post('/addmodel', (req, res) => {
  
   database.addUser( (err, user) => {
     if (err) return res.status(500).send(err);

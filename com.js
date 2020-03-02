@@ -142,7 +142,7 @@ async function createmodel(){
 
    
 
-    await fetch(ServerBackend +'addmodel', {
+    await fetch(ServerBackend +'/addmodel', {
         method: 'POST',
         headers: {
          'Accept': 'application/json',
