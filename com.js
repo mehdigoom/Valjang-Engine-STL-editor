@@ -91,11 +91,12 @@ var result
     .then(function(response) { return response.json(); })
     
     .then(function(data) {
-    
+        titre = "<h1> Dashboard</h1>"
         console.log(data)
       //data.length
       for (var i = 0; i < data.length; i++) {
         newdata = data[i]
+       
         divh = "<div id="+newdata.id+">" 
       image = "<br><img class='picture'src="+newdata.image+"><br>" 
       nom = "<p>"+newdata.name+"<p/><br>"
@@ -111,7 +112,7 @@ var result
  }
  
       }
-      div.innerHTML = "<div id='pan'>"+"<input type='button' onclick = 'addmodel()' id='add' class='fadeIn fourth' value='add model'>"+result+"<div/>"
+      div.innerHTML = "<div id='pan'>"+titre +"<input type='button' onclick = 'addmodel()' id='add' class='fadeIn fourth' value='add model'>"+result+"<div/>"
      });
 
     
@@ -126,6 +127,18 @@ var result
 function editmodel(id){
     var div = document.getElementById('Div')
     div.innerHTML = "Loading..."
+    titre = "<h1> edit model</h1>"
+    name = "<input type='text' id='name' class='fadeIn third' name='login' placeholder='name'>"
+    description = "<input type='text' id='description' class='fadeIn third' name='login' placeholder='description'>"
+    Link = "<input type='text' id='Link' class='fadeIn third' name='login' placeholder='Link'>"
+    price = "<input type='text' id='price' class='fadeIn third' name='login' placeholder='price'>"
+    type = "<input type='text' id='type' class='fadeIn third' name='login' placeholder='type'>"
+    image= "<input type='text' id='image' class='fadeIn third' name='login' placeholder='image'>"
+    size= "<input type='text' id='size' class='fadeIn third' name='login' placeholder='size'>"
+    tag= "<input type='text' id='tag' class='fadeIn third' name='login' placeholder='tag'>"
+    btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' onclick='createmodel()' > "
+    back = "<input type='button' id='register' class='fadeIn fourth' value='back' onclick='Panel()' > "
+    div.innerHTML = titre+name+description+Link+price+type+image+size+tag+btn+back
 
 }
 async function createmodel(){
@@ -193,6 +206,7 @@ async function createmodel(){
 function addmodel(){
     var div = document.getElementById('Div')
     div.innerHTML = "Loading..."
+    titre = "<h1> Add model to database</h1>"
     name = "<input type='text' id='name' class='fadeIn third' name='login' placeholder='name'>"
     description = "<input type='text' id='description' class='fadeIn third' name='login' placeholder='description'>"
     Link = "<input type='text' id='Link' class='fadeIn third' name='login' placeholder='Link'>"
@@ -203,7 +217,7 @@ function addmodel(){
     tag= "<input type='text' id='tag' class='fadeIn third' name='login' placeholder='tag'>"
     btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' onclick='createmodel()' > "
     back = "<input type='button' id='register' class='fadeIn fourth' value='back' onclick='Panel()' > "
-    div.innerHTML = name+description+Link+price+type+image+size+tag+btn+back
+    div.innerHTML = titre +name+description+Link+price+type+image+size+tag+btn+back
 }
 
 function removemodel(id){
