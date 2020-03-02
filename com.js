@@ -129,7 +129,19 @@ alert(id)
 }
 
 function addmodel(){
-    alert("addmodel")
+    var div = document.getElementById('Div')
+    div.innerHTML = "Loading..."
+    name = "<input type='text' id='name' class='fadeIn third' name='login' placeholder='name'>"
+    description = "<input type='text' id='description' class='fadeIn third' name='login' placeholder='description'>"
+    Link = "<input type='text' id='Link' class='fadeIn third' name='login' placeholder='Link'>"
+    price = "<input type='text' id='price' class='fadeIn third' name='login' placeholder='price'>"
+    type = "<input type='text' id='type' class='fadeIn third' name='login' placeholder='type'>"
+    image= "<input type='text' id='image' class='fadeIn third' name='login' placeholder='image'>"
+    size= "<input type='text' id='size' class='fadeIn third' name='login' placeholder='size'>"
+    tag= "<input type='text' id='tag' class='fadeIn third' name='login' placeholder='tag'>"
+    btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' > "
+    back = "<input type='button' id='register' class='fadeIn fourth' value='back' > "
+    div.innerHTML = name+description+Link+price+type+image+size+tag+btn+back
 }
 
 function removemodel(id){
@@ -141,9 +153,6 @@ function removemodel(id){
         
         }).then(response =>{console.log(response) 
          })
-
-    
-       
        .catch(error => error);
    // 
  
