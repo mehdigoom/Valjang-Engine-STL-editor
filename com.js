@@ -136,7 +136,7 @@ function removemodel(id){
      
    
         return fetch(Backend+'/delmodel/'+id, {
-            method: 'POST',
+            method: 'DELETE',
         
         }).then(response => response.json())
 
