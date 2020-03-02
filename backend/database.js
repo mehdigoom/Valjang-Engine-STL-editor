@@ -165,7 +165,14 @@ const addUser = function addUser(clbk, id,firstname, lastname, mail,password) {
       return clbk(null, results);
   });
 }
+const addModel = function addModel(clbk, id,name, description, Link,price,type,image,size,tag) {
 
+  let sql = "INSERT INTO users VALUES (0,?,?,?,?,?,?,?,?)";
+  client.query(sql, [id,name, description, Link,price,type,image,size,tag], (error, results, fields) => {
+      if (error) return clbk(error, null);
+      return clbk(null, results);
+  });
+}
 
 
 const updateUser = function updateUser(clbk, user) {
@@ -193,6 +200,7 @@ const loginUser = function loginUser(clbk, user) {
 }
 
 module.exports = {
+  addModel,
   addUser,
   getadmin,
   getModel,

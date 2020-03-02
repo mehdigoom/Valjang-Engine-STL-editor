@@ -83,15 +83,7 @@ var lastname = document.getElementById("lastname").value
              console.log(response.ok);
              result = response.ok
              message.innerHTML = "<p>Ok ! Please wait...<p/> "
-             var now = new Date();
-             
-        var annee   = now.getFullYear();
-        var mois    = ('0'+now.getMonth()+1).slice(-2);
-        var jour    = ('0'+now.getDate()   ).slice(-2);
-             localStorage.setItem('Login',mail)
-             localStorage.setItem('password',password)
-             localStorage.setItem('date',jour+mois+annee)
-             Getadmin(mail)
+    
            }
            else {
              console.log(response.ok);

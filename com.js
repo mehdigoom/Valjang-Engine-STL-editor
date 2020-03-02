@@ -124,7 +124,64 @@ var result
 }
 
 function editmodel(id){
-alert(id)
+    var div = document.getElementById('Div')
+    div.innerHTML = "Loading..."
+
+}
+async function createmodel(){
+    var div = document.getElementById('Div')
+    div.innerHTML = "Plase wait..."
+    name = document.getElementById('name').value
+    description = document.getElementById('description').value
+    Link = document.getElementById('Link').value
+    price =document.getElementById('price').value
+    type =document.getElementById('type').value
+    image= document.getElementById('image').value
+    size= document.getElementById('size').value
+    tag= document.getElementById('tag').value
+
+   
+
+    await fetch(ServerBackend +'/addmodel', {
+        method: 'POST',
+        headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+        'name': name,
+        'description': description,
+        'Link': Link,
+        'price': price,
+        'type': type,
+        'image': image,
+        'size': size,
+        'tag': tag,
+        
+        })
+        })
+        
+        .then(function (response) {
+           console.log(response);
+           if (response.ok == true) {
+             console.log(response.ok);
+             result = response.ok
+             message.innerHTML = "<p>Ok ! Please wait...<p/> "
+    
+           }
+           else {
+             console.log(response.ok);
+             result = response.ok
+            
+           }
+           
+         })
+        
+        .catch(function (error) {
+          message.innerHTML = "<p>Err Backend:"+error+" <p/>"
+         console.log(error);
+        
+        });
 
 }
 
@@ -139,8 +196,8 @@ function addmodel(){
     image= "<input type='text' id='image' class='fadeIn third' name='login' placeholder='image'>"
     size= "<input type='text' id='size' class='fadeIn third' name='login' placeholder='size'>"
     tag= "<input type='text' id='tag' class='fadeIn third' name='login' placeholder='tag'>"
-    btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' > "
-    back = "<input type='button' id='register' class='fadeIn fourth' value='back' > "
+    btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' onclick='createmodel()' > "
+    back = "<input type='button' id='register' class='fadeIn fourth' value='back' onclick='Panel()' > "
     div.innerHTML = name+description+Link+price+type+image+size+tag+btn+back
 }
 
