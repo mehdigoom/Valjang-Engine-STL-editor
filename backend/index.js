@@ -135,9 +135,9 @@ app.post('/user/adduser', (req, res) => {
 
 app.post('/addmodel', (req, res) => {
  
-  database.addUser( (err, user) => {
+  database.addUser( (err, Model) => {
     if (err) return res.status(500).send(err);
-    return res.status(200).send(user);
+    return res.status(200).send(Model);
   }, req.body.name, req.body.description, req.body.Link,req.body.price,req.body.type,req.body.image,req.body.size,req.body.tag);
 });
 
