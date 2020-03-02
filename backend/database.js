@@ -133,7 +133,7 @@ const getProductsByCategory = function getProductsByCategory(clbk, category) {
 }
  
 const delModel = function delModel(clbk, id) {
-  let sql = "DELETE FROM model WHERE users_id = ?";
+  let sql = "DELETE FROM model WHERE id = ?";
   client.query(sql, [id], (error, results, fields) => {
       if (error) return clbk(error, null);
       return clbk(null, results);

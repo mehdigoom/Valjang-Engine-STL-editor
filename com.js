@@ -135,17 +135,16 @@ function removemodel(id){
     
      
    
-        return fetch(Backend+'/delproduct/'+id, {
-            method: 'GET',
-            body: formData
+        return fetch(Backend+'/delmodel/'+id, {
+            method: 'POST',
+        
         }).then(response => response.json())
 
     
-       .then((json) => {
-           console.log("ok")
-        })
+       
        .catch(error => error);
-   // '
+   // 
+   console.log(error)
 
 }
 
