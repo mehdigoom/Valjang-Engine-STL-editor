@@ -204,12 +204,13 @@ function addmodel(){
 
 function removemodel(id){
     
-    var div = document.getElementById(id)
-    div.innerHTML = ""
+   
          fetch(ServerBackend +'/delmodel/'+id, {
             method: 'DELETE',
         
-        }).then(response =>{console.log(response) 
+        }).then(response =>{console.log(response)
+            var div = document.getElementById(id)
+            div.innerHTML = ""
          })
        .catch(error => error);
    // 
