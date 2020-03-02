@@ -130,7 +130,7 @@ function editmodel(id){
 }
 async function createmodel(){
     var div = document.getElementById('Div')
-    div.innerHTML = "Plase wait..."
+    
     name = document.getElementById('name').value
     description = document.getElementById('description').value
     Link = document.getElementById('Link').value
@@ -142,7 +142,7 @@ async function createmodel(){
 
    
 
-    await fetch(ServerBackend +'/addmodel', {
+    await fetch(ServerBackend +'/user/addmodel', {
         method: 'POST',
         headers: {
          'Accept': 'application/json',
@@ -166,7 +166,7 @@ async function createmodel(){
            if (response.ok == true) {
              console.log(response.ok);
              result = response.ok
-             message.innerHTML = "<p>Ok ! Please wait...<p/> "
+           
     
            }
            else {
@@ -178,7 +178,7 @@ async function createmodel(){
          })
         
         .catch(function (error) {
-          message.innerHTML = "<p>Err Backend:"+error+" <p/>"
+       
          console.log(error);
         
         });
