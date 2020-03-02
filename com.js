@@ -98,9 +98,9 @@ var result
         newdata = data[i]
       image = "<br><img class='picture'src="+newdata.image+"><br>" 
       nom = "<p>"+newdata.name+"<p/><br>"
-     categorie = "<p>"+newdata.type+"<p/><br>"
- modif = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='edit'>"
- remove = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='remove'>"
+     categorie = "<p>Category : "+newdata.type+"<p/><br>"
+ modif = "<input type='button' id="+newdata.id+" class='fadeIn fourth' value='edit' onclick ='editmodel("+newdata.id+")'>"
+ remove = "<input type='button' id="+newdata.id+" class='fadeIn fourth' value='remove' onclick ='removemodel("+newdata.id+")'>"
 
  var result
  if(result == undefined){
@@ -110,7 +110,7 @@ var result
  }
  
       }
-      div.innerHTML = "<div id='pan'>"+result+"<div/>"
+      div.innerHTML = "<div id='pan'>"+"<input type='button' onclick = 'addmodel()' id='add' class='fadeIn fourth' value='add model'>"+result+"<div/>"
      });
 
     
@@ -122,6 +122,32 @@ var result
 
 }
 
+function editmodel(id){
+alert(id)
+
+}
+
+function addmodel(){
+    alert("addmodel")
+}
+
+function removemodel(id){
+    
+     
+   
+        return fetch(Backend+'/delproduct/'+id, {
+            method: 'GET',
+            body: formData
+        }).then(response => response.json())
+
+    
+       .then((json) => {
+           console.log("ok")
+        })
+       .catch(error => error);
+   // '
+
+}
 
 
 

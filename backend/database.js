@@ -132,8 +132,8 @@ const getProductsByCategory = function getProductsByCategory(clbk, category) {
   });
 }
  
-const delBasket = function delBasket(clbk, id) {
-  let sql = "DELETE FROM basket WHERE users_id = ?";
+const delModel = function delModel(clbk, id) {
+  let sql = "DELETE FROM model WHERE users_id = ?";
   client.query(sql, [id], (error, results, fields) => {
       if (error) return clbk(error, null);
       return clbk(null, results);
@@ -201,7 +201,7 @@ module.exports = {
   getUsers,
   getProducts,
   getBasket,
-  delBasket,
+  delModel,
   updateUser,
   loginUser,
   delProduct,

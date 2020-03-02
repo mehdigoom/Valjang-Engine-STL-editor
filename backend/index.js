@@ -92,10 +92,10 @@ app.post('/addbasket', (req, res) => {
   }, req.body.id,req.body.quantity, req.body.products_id,req.body.users_id);
 });
 
-app.delete('/delbasket/:id', (req, res) => {
-  database.delBasket( (err, basket) => {
+app.delete('/delmodel/:id', (req, res) => {
+  database.delModel( (err, model) => {
     if (err) return res.status(500).send(err);
-    return res.status(200).send(basket);
+    return res.status(200).send(model);
   }, req.params.id);
 });
 
