@@ -101,12 +101,18 @@ var result
      categorie = "<p>"+newdata.type+"<p/><br>"
  modif = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='edit'>"
  remove = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='remove'>"
- console.log(image + nom + categorie+modif+remove)
-result = result + image + nom + categorie+modif+remove
+
+ var result
+ if(result == undefined){
+    result = image + nom + categorie+modif+remove
+ }else{
+    result = result + image + nom + categorie+modif+remove
+ }
+ 
       }
       div.innerHTML = "<div id='pan'>"+result+"<div/>"
      });
-console.log(result)
+
     
 }else{
     alert('Err: auth')
