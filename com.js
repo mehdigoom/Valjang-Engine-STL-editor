@@ -142,7 +142,7 @@ async function createmodel(){
 
    
 
-    await fetch(ServerBackend +'/user/addmodel', {
+    await fetch(ServerBackend +'addmodel', {
         method: 'POST',
         headers: {
          'Accept': 'application/json',
@@ -166,12 +166,13 @@ async function createmodel(){
            if (response.ok == true) {
              console.log(response.ok);
              result = response.ok
-           
+             Panel()
     
            }
            else {
              console.log(response.ok);
              result = response.ok
+          
             
            }
            
