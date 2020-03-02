@@ -165,10 +165,10 @@ const addUser = function addUser(clbk, id,firstname, lastname, mail,password) {
       return clbk(null, results);
   });
 }
-const addModel = function addModel(clbk, name, description, Link,price,type,image,size,tag) {
+const addModel = function addModel(clbk, id,name, description, Link,price,type,image,size,tag,statut) {
 
-  let sql = "INSERT INTO model VALUES (0,?,?,?,?,?,?,?,?)";
-  client.query(sql, [id,name, description, Link,price,type,image,size,tag], (error, results, fields) => {
+  let sql = "INSERT INTO model VALUES (0,?,?,?,?,?,?,?,?,?)";
+  client.query(sql, [id,name, description, Link,price,type,image,size,tag,statut], (error, results, fields) => {
       if (error) return clbk(error, null);
       return clbk(null, results);
   });

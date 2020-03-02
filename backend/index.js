@@ -138,7 +138,7 @@ app.post('/addmodel', (req, res) => {
   database.addModel( (err, Model) => {
     if (err) return res.status(500).send(err);
     return res.status(200).send(Model);
-  }, req.body.name, req.body.description, req.body.Link,req.body.price,req.body.type,req.body.image,req.body.size,req.body.tag);
+  }, req.body.name, req.body.description, req.body.Link,req.body.price,req.body.type,req.body.image,req.body.size,req.body.tag,req.body.statut);
 });
 
 app.listen(port, () => {

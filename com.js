@@ -157,6 +157,7 @@ async function createmodel(){
         'image': image,
         'size': size,
         'tag': tag,
+        'statut':1,
         
         })
         })
