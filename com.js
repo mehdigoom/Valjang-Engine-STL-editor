@@ -96,17 +96,18 @@ var result
       //data.length
       for (var i = 0; i < data.length; i++) {
         newdata = data[i]
+        divh = "<div id="+newdata.id+">" 
       image = "<br><img class='picture'src="+newdata.image+"><br>" 
       nom = "<p>"+newdata.name+"<p/><br>"
      categorie = "<p>Category : "+newdata.type+"<p/><br>"
  modif = "<input type='button' id="+newdata.id+" class='fadeIn fourth' value='edit' onclick ='editmodel("+newdata.id+")'>"
  remove = "<input type='button' id="+newdata.id+" class='fadeIn fourth' value='remove' onclick ='removemodel("+newdata.id+")'>"
-
+ divb = "</div>" 
  var result
  if(result == undefined){
     result = image + nom + categorie+modif+remove
  }else{
-    result = result + image + nom + categorie+modif+remove
+    result = result +divh+ image + nom + categorie+modif+remove+divb
  }
  
       }
@@ -133,18 +134,19 @@ function addmodel(){
 
 function removemodel(id){
     
-     
-   
-        return fetch(Backend+'/delmodel/'+id, {
+    var div = document.getElementById(id)
+    div.innerHTML = ""
+         fetch(ServerBackend +'/delmodel/'+id, {
             method: 'DELETE',
         
-        }).then(response => response.json())
+        }).then(response =>{console.log(response) 
+         })
 
     
        
        .catch(error => error);
    // 
-   console.log(error)
+ 
 
 }
 
