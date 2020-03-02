@@ -96,17 +96,18 @@ var result
       //data.length
       for (var i = 0; i < data.length; i++) {
         newdata = data[i]
-      image = "<img class='picture'src="+newdata.image+"><br>" 
+      image = "<br><img class='picture'src="+newdata.image+"><br>" 
       nom = "<p>"+newdata.name+"<p/><br>"
      categorie = "<p>"+newdata.type+"<p/><br>"
  modif = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='edit'>"
  remove = "<input type='button' id="+newdata.name+" class='fadeIn fourth' value='remove'>"
+ console.log(image + nom + categorie+modif+remove)
 result = result + image + nom + categorie+modif+remove
       }
- 
+      div.innerHTML = "<div id='pan'>"+result+"<div/>"
      });
 console.log(result)
-     div.innerHTML = "<div id='pan'>"+result+"<div/>"
+    
 }else{
     alert('Err: auth')
 }
