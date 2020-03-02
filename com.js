@@ -164,6 +164,9 @@ async function createmodel(){
         
         .then(function (response) {
            console.log(response);
+           response.json().then(data => {
+               console.log('data :', data);
+           })
            if (response.ok == true) {
              console.log(response.ok);
              result = response.ok
