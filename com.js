@@ -124,21 +124,41 @@ var result
 
 }
 
-function editmodel(id){
+async function editmodel(id){
     var div = document.getElementById('Div')
     div.innerHTML = "Loading..."
-    titre = "<h1> edit model</h1>"
-    name = "<input type='text' id='name' class='fadeIn third' name='login' placeholder='name'>"
-    description = "<input type='text' id='description' class='fadeIn third' name='login' placeholder='description'>"
-    Link = "<input type='text' id='Link' class='fadeIn third' name='login' placeholder='Link'>"
-    price = "<input type='text' id='price' class='fadeIn third' name='login' placeholder='price'>"
-    type = "<input type='text' id='type' class='fadeIn third' name='login' placeholder='type'>"
-    image= "<input type='text' id='image' class='fadeIn third' name='login' placeholder='image'>"
-    size= "<input type='text' id='size' class='fadeIn third' name='login' placeholder='size'>"
-    tag= "<input type='text' id='tag' class='fadeIn third' name='login' placeholder='tag'>"
-    btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' onclick='createmodel()' > "
-    back = "<input type='button' id='register' class='fadeIn fourth' value='back' onclick='Panel()' > "
-    div.innerHTML = titre+name+description+Link+price+type+image+size+tag+btn+back
+    var myRequest = new Request(ServerBackend + "/model");
+    await fetch(myRequest)
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            for (var i = 0; i < data.length; i++) {
+                var newdata = data[i]
+             
+             if(id == newdata.id){
+
+                image1 = "<br><img class='picture'src="+newdata.image+"><br>" 
+                titre = "<h1> edit model</h1>"
+
+                name = "<input type='text' id='name' class='fadeIn third' name='login' placeholder='name' value='" +newdata.name+"'>"
+                description = "<input type='text' id='description' class='fadeIn third' name='login' placeholder='description' value='" +newdata.description+"'>"
+                Link = "<input type='text' id='Link' class='fadeIn third' name='login' placeholder='Link' value='" +newdata.link+"'>"
+                price = "<input type='text' id='price' class='fadeIn third' name='login' placeholder='price'value='" +newdata.price+"'>"
+                type = "<input type='text' id='type' class='fadeIn third' name='login' placeholder='type'value='" +newdata.type+"'>"
+                image= "<input type='text' id='image' class='fadeIn third' name='login' placeholder='image'value='" +newdata.image+"'>"
+                size= "<input type='text' id='size' class='fadeIn third' name='login' placeholder='size'value='" +newdata.size+"'>"
+                tag= "<input type='text' id='tag' class='fadeIn third' name='login' placeholder='tag'value='" +newdata.tag+"'>"
+                btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' onclick='createmodel()' > "
+                back = "<input type='button' id='register' class='fadeIn fourth' value='back' onclick='Panel()' > "
+                ids = "ID model : "+id
+             }
+             div.innerHTML = titre+ids+image1+name+description+Link+price+type+image+size+tag+btn+back
+            }
+            
+    
+
+        });
+    
+   
 
 }
 async function createmodel(){
