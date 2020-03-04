@@ -112,7 +112,7 @@ var result
  }
  
       }
-      div.innerHTML = "<div id='pan'>"+titre +"<input type='button' onclick = 'addmodel()' id='add' class='fadeIn fourth' value='add model'>"+result+"<div/>"
+      div.innerHTML = "<div id='pan'>"+titre +"<input type='button' onclick = 'addmodel()' id='add' class='fadeIn fourth' value='add model'>  <input type='button' onclick = 'users()' id='users' class='fadeIn fourth' value='edit users'>"+result+"<div/>"
      });
 
     
@@ -149,7 +149,7 @@ async function editmodel(id){
                 tag= "<input type='text' id='tag' class='fadeIn third' name='login' placeholder='tag'value='" +newdata.tag+"'>"
                 btn = "<input type='button' id='register' class='fadeIn fourth' value='Validate' onclick='createmodel()' > "
                 back = "<input type='button' id='register' class='fadeIn fourth' value='back' onclick='Panel()' > "
-                ids = "ID model : "+id
+                ids = "<p id ='"+id+"'> id model</p>"+id
              }
              div.innerHTML = titre+ids+image1+name+description+Link+price+type+image+size+tag+btn+back
             }
